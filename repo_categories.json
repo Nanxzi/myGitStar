@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T08:21:53Z",
+  "generated_at": "2026-06-15T10:32:10Z",
   "model_choice": "copilot",
   "min_categories": 5,
   "max_categories": 10,
@@ -18,23 +18,28 @@
       },
       {
         "id": "C3",
-        "name": "Productivity Tools",
-        "description": "Tools designed to enhance productivity through AI, including task management and collaborative frameworks."
+        "name": "Content Creation",
+        "description": "Tools and systems designed for generating and managing content, including writing and multimedia."
       },
       {
         "id": "C4",
-        "name": "Creative Writing",
-        "description": "Repositories that assist in creative writing processes, including novel writing and content generation."
+        "name": "Productivity Tools",
+        "description": "Applications and frameworks aimed at improving productivity through AI integration and task management."
       },
       {
         "id": "C6",
-        "name": "Web Automation",
-        "description": "Tools and frameworks for automating web interactions and browser tasks using AI agents."
+        "name": "Collaborative Development",
+        "description": "Platforms that facilitate collaboration among coding agents and enhance teamwork in software development."
       },
       {
         "id": "C7",
-        "name": "AI Skills Frameworks",
-        "description": "Repositories that provide frameworks for developing and managing skills in AI agents."
+        "name": "AI Frameworks",
+        "description": "Comprehensive frameworks for building and managing AI systems and agents."
+      },
+      {
+        "id": "C8",
+        "name": "Web Automation",
+        "description": "Tools designed for automating web interactions and enhancing browser capabilities."
       },
       {
         "id": "Other",
