@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T10:32:10Z",
+  "generated_at": "2026-06-16T09:34:44Z",
   "model_choice": "copilot",
   "min_categories": 5,
   "max_categories": 10,
@@ -9,7 +9,7 @@
       {
         "id": "C1",
         "name": "AI Agents",
-        "description": "Repositories focused on developing and enhancing AI agents for various tasks and interactions."
+        "description": "Repositories focused on developing and enhancing AI agents with various capabilities and functionalities."
       },
       {
         "id": "C2",
@@ -18,8 +18,8 @@
       },
       {
         "id": "C3",
-        "name": "Content Creation",
-        "description": "Tools and systems designed for generating and managing content, including writing and multimedia."
+        "name": "Creative Writing",
+        "description": "Tools and systems designed to assist in creative writing, including novel writing and content generation."
       },
       {
         "id": "C4",
@@ -28,18 +28,13 @@
       },
       {
         "id": "C6",
-        "name": "Collaborative Development",
-        "description": "Platforms that facilitate collaboration among coding agents and enhance teamwork in software development."
+        "name": "Web Automation",
+        "description": "Tools designed for automating web interactions and browser tasks, enhancing the capabilities of AI agents."
       },
       {
         "id": "C7",
-        "name": "AI Frameworks",
-        "description": "Comprehensive frameworks for building and managing AI systems and agents."
-      },
-      {
-        "id": "C8",
-        "name": "Web Automation",
-        "description": "Tools designed for automating web interactions and enhancing browser capabilities."
+        "name": "Collaborative Coding",
+        "description": "Platforms and frameworks that facilitate collaboration among coding agents to enhance software development."
       },
       {
         "id": "Other",
