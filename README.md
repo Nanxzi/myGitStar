@@ -10,7 +10,7 @@
 <p><b>Current account:</b> <a href="https://github.com/WuXiangM">WuXiangM</a></p>
 
 
-<p><b>Generated on:</b> 2026-06-16 09:34:44</p>
+<p><b>Generated on:</b> 2026-06-17 09:09:42</p>
 
 
 <p><b>AI Model:</b> copilot</p>
@@ -30,9 +30,11 @@
 
 - [AI Agents](#ai-agents) (0)
 
+- [AI Skill Development](#ai-skill-development) (0)
+
 - [Autonomous Research](#autonomous-research) (0)
 
-- [Collaborative Coding](#collaborative-coding) (0)
+- [Collaborative Agents](#collaborative-agents) (0)
 
 - [Creative Writing](#creative-writing) (0)
 
@@ -266,7 +268,15 @@
 ## AI Agents (Total 0)
 
 
-> Repositories focused on developing and enhancing AI agents with various capabilities and functionalities.
+> Repositories focused on developing and enhancing AI agents for various tasks and applications.
+
+
+<a id="ai-skill-development"></a>
+
+## AI Skill Development (Total 0)
+
+
+> Repositories focused on developing and implementing advanced skills for AI agents.
 
 
 <a id="autonomous-research"></a>
@@ -277,12 +287,12 @@
 > Projects that enable autonomous research processes, including idea generation and academic writing.
 
 
-<a id="collaborative-coding"></a>
+<a id="collaborative-agents"></a>
 
-## Collaborative Coding (Total 0)
+## Collaborative Agents (Total 0)
 
 
-> Platforms and frameworks that facilitate collaboration among coding agents to enhance software development.
+> Platforms that enable collaboration among coding agents or AI systems for improved teamwork.
 
 
 <a id="creative-writing"></a>
@@ -290,7 +300,7 @@
 ## Creative Writing (Total 0)
 
 
-> Tools and systems designed to assist in creative writing, including novel writing and content generation.
+> Repositories aimed at assisting in creative writing, including novel writing and content generation.
 
 
 <a id="productivity-tools"></a>
@@ -298,7 +308,7 @@
 ## Productivity Tools (Total 0)
 
 
-> Applications and frameworks aimed at improving productivity through AI integration and task management.
+> Tools designed to enhance productivity through AI integration, task management, and user interaction.
 
 
 <a id="web-automation"></a>
@@ -306,7 +316,7 @@
 ## Web Automation (Total 0)
 
 
-> Tools designed for automating web interactions and browser tasks, enhancing the capabilities of AI agents.
+> Tools and frameworks for automating web interactions, enhancing the capabilities of AI agents.
 
 
 <a id="other"></a>
@@ -314,7 +324,7 @@
 ## Other (Total 19)
 
 
-> Repositories that do not fit into the specified categories.
+> Repositories that do not fit into the above categories.
 
 
 ### 📌 [CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)
