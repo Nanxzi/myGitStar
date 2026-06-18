@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T09:09:42Z",
+  "generated_at": "2026-06-18T08:53:56Z",
   "model_choice": "copilot",
   "min_categories": 5,
   "max_categories": 10,
@@ -9,42 +9,42 @@
       {
         "id": "C1",
         "name": "AI Agents",
-        "description": "Repositories focused on developing and enhancing AI agents for various tasks and applications."
+        "description": "Repositories focused on developing and enhancing AI agents for various tasks and interactions."
       },
       {
         "id": "C2",
         "name": "Autonomous Research",
-        "description": "Projects that enable autonomous research processes, including idea generation and academic writing."
+        "description": "Projects that facilitate autonomous research processes, including idea generation and academic writing."
       },
       {
         "id": "C3",
         "name": "Productivity Tools",
-        "description": "Tools designed to enhance productivity through AI integration, task management, and user interaction."
+        "description": "Tools designed to enhance productivity through AI, including task management and collaborative platforms."
       },
       {
         "id": "C4",
         "name": "Creative Writing",
-        "description": "Repositories aimed at assisting in creative writing, including novel writing and content generation."
+        "description": "Repositories aimed at assisting in creative writing processes, including novel writing and content generation."
       },
       {
         "id": "C6",
         "name": "Web Automation",
-        "description": "Tools and frameworks for automating web interactions, enhancing the capabilities of AI agents."
+        "description": "Tools and frameworks for automating web interactions and browser tasks using AI."
       },
       {
         "id": "C7",
-        "name": "Collaborative Agents",
-        "description": "Platforms that enable collaboration among coding agents or AI systems for improved teamwork."
+        "name": "Skill Development",
+        "description": "Repositories focused on developing modular skills for AI systems to enhance their functionality."
       },
       {
         "id": "C8",
-        "name": "AI Skill Development",
-        "description": "Repositories focused on developing and implementing advanced skills for AI agents."
+        "name": "AI Frameworks",
+        "description": "Comprehensive frameworks for building and managing AI systems and agents."
       },
       {
         "id": "Other",
         "name": "Other",
-        "description": "Repositories that do not fit into the above categories."
+        "description": "Repositories that do not fit into the specified categories."
       },
       {
         "id": "Unknown",

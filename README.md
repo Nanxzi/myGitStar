@@ -10,7 +10,7 @@
 <p><b>Current account:</b> <a href="https://github.com/WuXiangM">WuXiangM</a></p>
 
 
-<p><b>Generated on:</b> 2026-06-17 09:09:42</p>
+<p><b>Generated on:</b> 2026-06-18 08:53:56</p>
 
 
 <p><b>AI Model:</b> copilot</p>
@@ -30,15 +30,15 @@
 
 - [AI Agents](#ai-agents) (0)
 
-- [AI Skill Development](#ai-skill-development) (0)
+- [AI Frameworks](#ai-frameworks) (0)
 
 - [Autonomous Research](#autonomous-research) (0)
-
-- [Collaborative Agents](#collaborative-agents) (0)
 
 - [Creative Writing](#creative-writing) (0)
 
 - [Productivity Tools](#productivity-tools) (0)
+
+- [Skill Development](#skill-development) (0)
 
 - [Web Automation](#web-automation) (0)
 
@@ -268,15 +268,15 @@
 ## AI Agents (Total 0)
 
 
-> Repositories focused on developing and enhancing AI agents for various tasks and applications.
+> Repositories focused on developing and enhancing AI agents for various tasks and interactions.
 
 
-<a id="ai-skill-development"></a>
+<a id="ai-frameworks"></a>
 
-## AI Skill Development (Total 0)
+## AI Frameworks (Total 0)
 
 
-> Repositories focused on developing and implementing advanced skills for AI agents.
+> Comprehensive frameworks for building and managing AI systems and agents.
 
 
 <a id="autonomous-research"></a>
@@ -284,15 +284,7 @@
 ## Autonomous Research (Total 0)
 
 
-> Projects that enable autonomous research processes, including idea generation and academic writing.
-
-
-<a id="collaborative-agents"></a>
-
-## Collaborative Agents (Total 0)
-
-
-> Platforms that enable collaboration among coding agents or AI systems for improved teamwork.
+> Projects that facilitate autonomous research processes, including idea generation and academic writing.
 
 
 <a id="creative-writing"></a>
@@ -300,7 +292,7 @@
 ## Creative Writing (Total 0)
 
 
-> Repositories aimed at assisting in creative writing, including novel writing and content generation.
+> Repositories aimed at assisting in creative writing processes, including novel writing and content generation.
 
 
 <a id="productivity-tools"></a>
@@ -308,7 +300,15 @@
 ## Productivity Tools (Total 0)
 
 
-> Tools designed to enhance productivity through AI integration, task management, and user interaction.
+> Tools designed to enhance productivity through AI, including task management and collaborative platforms.
+
+
+<a id="skill-development"></a>
+
+## Skill Development (Total 0)
+
+
+> Repositories focused on developing modular skills for AI systems to enhance their functionality.
 
 
 <a id="web-automation"></a>
@@ -316,7 +316,7 @@
 ## Web Automation (Total 0)
 
 
-> Tools and frameworks for automating web interactions, enhancing the capabilities of AI agents.
+> Tools and frameworks for automating web interactions and browser tasks using AI.
 
 
 <a id="other"></a>
@@ -324,7 +324,7 @@
 ## Other (Total 19)
 
 
-> Repositories that do not fit into the above categories.
+> Repositories that do not fit into the specified categories.
 
 
 ### 📌 [CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)
