@@ -2,8 +2,18 @@ name: Update myGitStar Summaries
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    # 每 3 天跑一次（节省 API 配额 + 及时发现描述变化）
+    - cron: '0 0 */3 * *'
   workflow_dispatch:
+    inputs:
+      update_mode:
+        description: '更新模式: missing_only (默认, 增量) / force_all (强制重生成全部)'
+        required: false
+        default: 'missing_only'
+        type: choice
+        options:
+          - missing_only
+          - force_all
 
 permissions:
   contents: write
@@ -48,17 +58,21 @@ jobs:
           min_cat = _to_int(d.get('content_min_categories', 5), 5)
           max_cat = _to_int(d.get('content_max_categories', 8), 8)
           min_repos_per_cat = _to_int(d.get('content_min_repos_per_category', 0), 0)
-          update_mode = str(d.get('update_mode', 'all') or 'all').strip().lower().replace('-', '_')
+          update_mode = str(d.get('update_mode', 'missing_only') or 'missing_only').strip().lower().replace('-', '_')
           if update_mode in ('missing', 'missingonly', 'missing_only', 'incremental'):
               update_mode = 'missing_only'
           elif update_mode in ('all', 'full'):
               update_mode = 'all'
+          elif update_mode in ('force_all', 'forceall', 'force'):
+              update_mode = 'force_all'
           else:
-              update_mode = 'all'
+              update_mode = 'missing_only'
           if min_cat < 1:
               min_cat = 1
           if max_cat < min_cat:
               max_cat = min_cat
+
+          max_api_calls = _to_int(d.get('max_api_calls_per_run', 0), 0)
 
           out_path = os.environ.get('GITHUB_OUTPUT')
           if not out_path:
@@ -70,6 +84,7 @@ jobs:
               f.write(f"min_categories={min_cat}\n")
               f.write(f"max_categories={max_cat}\n")
               f.write(f"min_repos_per_category={min_repos_per_cat}\n")
+              f.write(f"max_api_calls={max_api_calls}\n")
           PY
 
       - name: Print effective workflow settings
@@ -79,6 +94,17 @@ jobs:
           echo "min_categories=${{ steps.cfg.outputs.min_categories }}"
           echo "max_categories=${{ steps.cfg.outputs.max_categories }}"
           echo "min_repos_per_category=${{ steps.cfg.outputs.min_repos_per_category }}"
+          echo "max_api_calls=${{ steps.cfg.outputs.max_api_calls }}"
+
+      - name: Resolve effective update_mode (allow workflow_dispatch override)
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.update_mode }}" ]; then
+            echo "effective_update_mode=${{ github.event.inputs.update_mode }}" >> $GITHUB_OUTPUT
+          else
+            echo "effective_update_mode=${{ steps.cfg.outputs.update_mode }}" >> $GITHUB_OUTPUT
+          fi
+          echo "effective_update_mode=${{ steps.mode.outputs.effective_update_mode }}"
 
       - name: Ensure repo_summaries.json exists (classify-only mode)
         if: steps.cfg.outputs.classify_only == 'true'
@@ -93,9 +119,10 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_USERNAME: ${{ github.actor }}
+          MAX_API_CALLS: ${{ steps.cfg.outputs.max_api_calls }}
         run: |
           echo "DEBUG: GITHUB_ACTOR=$GITHUB_ACTOR, GITHUB_USERNAME=$GITHUB_USERNAME"
-          python scripts/summarize_stars.py --language en --out README_lang.md --update-mode ${{ steps.cfg.outputs.update_mode }}
+          python scripts/summarize_stars.py --language en --out README_lang.md --update-mode ${{ steps.mode.outputs.effective_update_mode }}
 
       - name: Classify repos by content from summaries
         env:
@@ -103,6 +130,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_ACTOR: ${{ github.actor }}
+          MAX_API_CALLS: ${{ steps.cfg.outputs.max_api_calls }}
           MYGITSTAR_FALLBACK_ON_429: '1'
           MYGITSTAR_MAX_CONSECUTIVE_429: '5'
           MYGITSTAR_RETRY_ATTEMPTS: '2'

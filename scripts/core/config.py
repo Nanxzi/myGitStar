@@ -80,14 +80,16 @@ def normalize_update_mode(mode: Any) -> str:
         return "missing_only"
     if s in {"all", "full"}:
         return "all"
-    return "all"
+    if s in {"force_all", "forceall", "force"}:
+        return "force_all"
+    return "missing_only"
 
 
 def resolve_update_mode(config: Dict[str, Any]) -> str:
     return normalize_update_mode(
         os.environ.get("MYGITSTAR_UPDATE_MODE")
         or (config.get("update_mode") if isinstance(config, dict) else None)
-        or "all"
+        or "missing_only"
     )
 
 

@@ -26,6 +26,9 @@ from scripts.core.json_store import (
     save_json_atomic,
     merge_summary_store,
     load_summary_store,
+    compute_description_hash,
+    make_metadata,
+    is_entry_fresh,
 )
 from scripts.github import get_starred_repos
 from scripts.output import (
@@ -241,6 +244,14 @@ def main():
         summary_store = load_summary_store(json_path)
         old_summaries = build_summary_index(summary_store)
 
+        # Build a description_lookup so we can do hash-based incremental
+        # selection (the legacy code only checked the *rendered* summary text).
+        description_lookup: Dict[str, str] = {}
+        for repo in starred:
+            key = str(repo.get("full_name") or "").strip()
+            if key:
+                description_lookup[key] = str(repo.get("description") or "")
+
         from scripts.core.summary_reader import load_old_summaries
         if not old_summaries:
             old_summaries = load_old_summaries(json_path, README_SUM_PATH, LANGUAGE)
@@ -248,7 +259,63 @@ def main():
             for full_name, summary in old_summaries.items():
                 summary_store[full_name] = {"full_name": full_name, "summary": summary}
 
-        repos_to_update = select_repos_for_update(classified, old_summaries, update_mode, LANGUAGE)
+        # Diagnostic: how many existing entries are already "fresh" (won't be
+        # re-summarised this run) and how many are unknown/stale.
+        fresh_count = 0
+        stale_unknown = []
+        for repo in starred:
+            key = str(repo.get("full_name") or "").strip()
+            if not key:
+                continue
+            entry = summary_store.get(key) or {}
+            if not isinstance(entry, dict):
+                entry = {}
+            if is_entry_fresh(entry, key, description_lookup.get(key, ""), refresh_after_days=0):
+                fresh_count += 1
+            else:
+                # Only flag truly unknown (no Summary at all) for the diagnostic
+                if not (entry.get("Summary") or "").strip():
+                    stale_unknown.append(key)
+        print(f"[DIAG] {fresh_count}/{len(starred)} repos already fresh; "
+              f"{len(stale_unknown)} still unknown: {stale_unknown[:5]}"
+              f"{'...' if len(stale_unknown) > 5 else ''}")
+
+        repos_to_update = select_repos_for_update(
+            classified,
+            old_summaries,
+            update_mode,
+            LANGUAGE,
+            description_lookup=description_lookup,
+        )
+
+        # API call budget: limit LLM calls per run. Default 0 (unlimited) so
+        # local runs are not constrained; the workflow sets MAX_API_CALLS env.
+        max_api_calls_env = os.environ.get("MAX_API_CALLS", "")
+        max_api_calls_cfg = config.get("max_api_calls_per_run", 0)
+        try:
+            max_api_calls = int(max_api_calls_env) if max_api_calls_env else int(max_api_calls_cfg or 0)
+        except Exception:
+            max_api_calls = 0
+        _api_calls_used = {"n": 0}
+        if max_api_calls and max_api_calls > 0:
+            def _budget_tracker() -> bool:
+                return _api_calls_used["n"] < max_api_calls
+            print(f"[BUDGET] max_api_calls={max_api_calls}")
+        else:
+            def _budget_tracker() -> bool:
+                return True
+
+        # Wrap summarize_func so we can also count API calls in the budget
+        # (the per-call counter in _api_call_counter stays unchanged).
+        _orig_summarize_func = None
+        def _budgeted_summarize_func(repo_dict):
+            if not _budget_tracker():
+                # Returning None tells the caller to preserve old summary.
+                print(f"[BUDGET] skipping call, would exceed {max_api_calls} limit")
+                return None
+            result = _orig_summarize_func(repo_dict)
+            _api_calls_used["n"] += 1
+            return result
 
         classified_to_process: Dict[str, List[Dict]] = {}
         for lang, repos in classified.items():
@@ -289,10 +356,25 @@ def main():
             retry_attempts=retry_attempts,
             api_call_counter=_api_call_counter,
         )
+        _orig_summarize_func = summarize_func
+
+        # Pick the model name to stamp into metadata.
+        if api_choice == "copilot":
+            _model_name_for_meta = default_copilot_model or "copilot"
+        elif api_choice == "openrouter":
+            _model_name_for_meta = default_openrouter_model or "openrouter"
+        elif api_choice == "gemini":
+            _model_name_for_meta = default_gemini_model or "gemini"
+        elif api_choice == "modelscope":
+            _model_name_for_meta = default_modelscope_model or "modelscope"
+        else:
+            _model_name_for_meta = api_choice
 
         all_repos_to_process: List[Dict] = []
         for lang, repos in classified_to_process.items():
-            repos_to_call = repos_to_update.get(lang, []) if update_mode == "missing_only" else repos
+            # `repos_to_update` already honours update_mode + description_hash
+            # (see select_repos_for_update), so we just consume its result.
+            repos_to_call = repos_to_update.get(lang, [])
             all_repos_to_process.extend(repos_to_call)
 
         printed_repos: set = set()
@@ -311,17 +393,20 @@ def main():
                 summaries = summarize_batch_combined(
                     this_batch,
                     old_summaries,
-                    summarize_func,
+                    _budgeted_summarize_func,
                     update_mode,
                     LANGUAGE,
                     batch_size,
                     batch_num,
+                    api_budget_tracker=_budget_tracker,
+                    description_lookup=description_lookup,
+                    model_name=_model_name_for_meta,
                 )
             else:
                 summaries = summarize_batch(
                     this_batch,
                     old_summaries,
-                    summarize_func,
+                    _budgeted_summarize_func,
                     update_mode,
                     LANGUAGE,
                     max_workers,
@@ -353,6 +438,26 @@ def main():
                 processed_repos,
             )
             lines.extend(section_lines)
+
+        # Final diagnostic: count budget spent, still-unknown repos, and
+        # last-errors so the workflow log makes it obvious what to do next.
+        if max_api_calls and max_api_calls > 0:
+            print(f"[BUDGET] used {_api_calls_used['n']}/{max_api_calls} LLM calls this run")
+        still_unknown = [
+            k for k, v in (summary_store or {}).items()
+            if not (isinstance(v, dict) and (v.get("Summary") or "").strip())
+        ]
+        if still_unknown:
+            reasons: Dict[str, str] = {}
+            for k in still_unknown:
+                entry = summary_store.get(k) or {}
+                if not isinstance(entry, dict):
+                    reasons[k] = "no_entry"
+                else:
+                    reasons[k] = entry.get("__last_error__") or "no_summary_field"
+            print(f"[DIAG] {len(still_unknown)} repos still unknown after this run:")
+            for k in still_unknown[:20]:
+                print(f"  - {k}: {reasons.get(k, '?')}")
 
         lines.extend(
             build_readme_footer(

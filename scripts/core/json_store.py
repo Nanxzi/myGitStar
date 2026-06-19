@@ -1,8 +1,42 @@
+import hashlib
 import json
 import os
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 REPO_ROOT = os.path.dirname(os.path.dirname(__file__))
+
+
+# ============================================================================
+# Schema constants
+# ============================================================================
+# Each entry in repo_summaries.json now carries metadata alongside the
+# content fields, so subsequent runs can do incremental updates without
+# re-calling the LLM for repos whose upstream description has not changed.
+SUMMARY_CONTENT_FIELDS = (
+    "Repository Name",
+    "Repository URL",
+    "Brief Introduction",
+    "Innovations",
+    "Basic Usage",
+    "Summary",
+)
+SUMMARY_META_FIELDS = (
+    "last_summarized_at",       # ISO8601 UTC timestamp of last successful summary
+    "description_hash",         # sha256 of (full_name + description) at summarize time
+    "summary_model",            # model identifier used to produce the summary
+    "summary_source",           # "ai" | "reused" | "backfill" | "manual"
+    "summary_attempts",         # number of LLM attempts that produced this entry
+)
+
+
+def compute_description_hash(full_name: str, description: str) -> str:
+    """Stable hash of (full_name + description). Used to detect upstream changes.
+
+    We include full_name so a repo that is forked/renamed still counts as
+    'changed' even if its description happens to collide.
+    """
+    payload = f"{str(full_name or '').strip()}\x00{str(description or '').strip()}".encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()[:16]
 
 
 def get_summary_json_path(language: str) -> str:
@@ -26,6 +60,86 @@ def save_json_atomic(data: dict, path: str) -> None:
     with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     os.replace(tmp_path, path)
+
+
+def make_metadata(
+    full_name: str,
+    description: str,
+    model: str,
+    source: str,
+    attempts: int = 1,
+    timestamp: Optional[str] = None,
+) -> Dict[str, Any]:
+    """Build the metadata dict to embed inside a summary entry.
+
+    This is the single place that knows how a summary is timestamped / hashed
+    so the format stays consistent across summarize + classify paths.
+    """
+    from datetime import datetime, timezone
+    return {
+        "last_summarized_at": timestamp or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "description_hash": compute_description_hash(full_name, description),
+        "summary_model": model or "unknown",
+        "summary_source": source,
+        "summary_attempts": int(attempts) if attempts else 1,
+    }
+
+
+def is_entry_fresh(
+    entry: Optional[Dict[str, Any]],
+    full_name: str,
+    description: str,
+    refresh_after_days: int = 0,
+) -> bool:
+    """Return True if the entry's summary is still considered fresh.
+
+    "Fresh" means:
+      - has the 4 user-visible content fields populated (Repository URL is
+        always re-derivable from full_name, so we don't require it), AND
+      - description_hash matches the current upstream description, AND
+      - if refresh_after_days > 0, last_summarized_at is within that window.
+
+    refresh_after_days=0 means "never auto-refresh even if old" - we still
+    invalidate when the description changes. This is the default for the
+    GitHub Actions workflow since we want to minimise API calls.
+    """
+    if not isinstance(entry, dict):
+        return False
+
+    required_fields = (
+        "Repository Name",
+        "Brief Introduction",
+        "Innovations",
+        "Summary",
+    )
+    for f in required_fields:
+        v = entry.get(f)
+        if v is None or (isinstance(v, str) and not v.strip()):
+            return False
+
+    # `Basic Usage` is allowed to be empty / "Not specified." - some repos
+    # genuinely have no usage snippet (e.g. libraries without examples).
+    basic = entry.get("Basic Usage")
+    if basic is not None and isinstance(basic, str) and not basic.strip():
+        pass  # ok
+
+    current_hash = compute_description_hash(full_name, description)
+    if entry.get("description_hash") and entry.get("description_hash") != current_hash:
+        return False
+
+    if refresh_after_days and refresh_after_days > 0:
+        ts = entry.get("__meta__", {}).get("last_summarized_at") if isinstance(entry.get("__meta__"), dict) else None
+        if not ts:
+            return False
+        try:
+            from datetime import datetime, timezone, timedelta
+            last = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            if datetime.now(timezone.utc) - last > timedelta(days=refresh_after_days):
+                return False
+        except Exception:
+            return False
+
+    return True
 
 
 def normalize_json_store(data: Any) -> Dict[str, Dict]:

@@ -1125,20 +1125,26 @@ class Taxonomy:
     categories: List[Dict[str, Any]]
 
 
-def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, str]]:
+def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, str], Optional[str]]:
+    """Load existing taxonomy + assignment map from repo_categories.json.
+
+    Returns (taxonomy, assignments_by_full_name, generated_at). The
+    generated_at timestamp lets the caller decide whether the cache is
+    still fresh enough to reuse.
+    """
     if not path or not os.path.exists(path):
-        return None, {}
+        return None, {}, None
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception:
-        return None, {}
+        return None, {}, None
     if not isinstance(data, dict):
-        return None, {}
+        return None, {}, None
     taxonomy_raw = data.get("taxonomy") or {}
     categories = taxonomy_raw.get("categories") if isinstance(taxonomy_raw, dict) else None
     if not isinstance(categories, list):
-        return None, {}
+        return None, {}, data.get("generated_at")
     try:
         taxonomy = Taxonomy(categories=[
             {
@@ -1161,7 +1167,47 @@ def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, s
             category_id = str(a.get("category_id") or "").strip()
             if full_name and category_id:
                 assignments_map[full_name] = category_id
-    return taxonomy, assignments_map
+    return taxonomy, assignments_map, data.get("generated_at")
+
+
+def _is_taxonomy_cache_fresh(generated_at: Optional[str], max_age_days: int) -> bool:
+    """Return True if the cached taxonomy is younger than max_age_days."""
+    if not generated_at or not max_age_days or max_age_days <= 0:
+        return False
+    try:
+        from datetime import datetime, timezone, timedelta
+        ts = datetime.strptime(generated_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        return datetime.now(timezone.utc) - ts <= timedelta(days=max_age_days)
+    except Exception:
+        return False
+
+
+def _is_assignment_still_valid(
+    assignment_category_id: str,
+    repo: Dict[str, Any],
+    taxonomy: Taxonomy,
+) -> bool:
+    """Decide whether a cached classification should be reused.
+
+    The assignment is considered reusable if:
+      * the category id still exists in the current taxonomy, AND
+      * the category is not 'Other' or 'Unknown' (these are easy defaults
+        the LLM often defaults to, so we'd rather re-evaluate), AND
+      * the repo's summary is non-empty (we don't re-classify Unknown repos
+        anyway, but be explicit).
+    """
+    if not assignment_category_id:
+        return False
+    valid_ids = {c["id"] for c in taxonomy.categories}
+    if assignment_category_id not in valid_ids:
+        return False
+    if assignment_category_id.lower() in ("other", "unknown"):
+        return False
+    # The repo should have a non-empty summary, otherwise the LLM cannot
+    # make a meaningful classification anyway.
+    summary = (repo.get("summary") or "").strip()
+    brief = (repo.get("brief_intro") or "").strip()
+    return bool(summary) or bool(brief)
 
 
 def _looks_like_language_category(cat: Dict[str, Any]) -> bool:
@@ -1602,11 +1648,45 @@ def main() -> int:
     taxonomy: Optional[Taxonomy] = None
     assignment_map: Dict[Any, str] = {}
     all_ids = {r.get("id") for r in repos}
-    repos_to_classify = repos
+    repos_to_classify: List[Dict[str, Any]] = []
+    reused_count = 0
+
+    # Step A: try to REUSE the existing taxonomy + per-repo assignments
+    # from repo_categories.json. This is the main API-saver for the
+    # classification step.
+    cache_max_age_days = 0
+    try:
+        if isinstance(config, dict):
+            cache_max_age_days = int(config.get("taxonomy_cache_max_age_days", 0) or 0)
+    except Exception:
+        cache_max_age_days = 0
+
+    if cache_max_age_days > 0 and os.path.exists(out_json_path):
+        cached_tax, cached_assigns, cached_at = load_existing_categories(out_json_path)
+        if cached_tax and len(cached_tax.categories) >= args.min_categories and _is_taxonomy_cache_fresh(cached_at, cache_max_age_days):
+            taxonomy = cached_tax
+            # Reuse per-repo assignments where still valid.
+            for r in repos:
+                rid = r.get("id")
+                full_name = str(r.get("full_name") or "").strip()
+                cached_cid = cached_assigns.get(full_name)
+                if cached_cid and _is_assignment_still_valid(cached_cid, r, taxonomy):
+                    assignment_map[rid] = cached_cid
+                    reused_count += 1
+                else:
+                    repos_to_classify.append(r)
+            print(f"[REUSE] Taxonomy cache is fresh (age_days<= {cache_max_age_days}); reused {reused_count}/{len(repos)} assignments; need LLM for {len(repos_to_classify)} repos")
+        else:
+            repos_to_classify = repos
+    else:
+        repos_to_classify = repos
+
+    # `unknown_repos` is needed regardless of which path we take (cache
+    # reuse vs. fresh taxonomy), so compute it once here.
+    unknown_repos = [r for r in repos if r.get("is_unknown")]
 
     if taxonomy is None:
         known_repos = [r for r in repos if not r.get("is_unknown")]
-        unknown_repos = [r for r in repos if r.get("is_unknown")]
         sample_size = max(5, min(args.sample_size, len(known_repos)))
         sample = _sample_repos_for_taxonomy(known_repos, sample_size)
         taxonomy_prompt = build_taxonomy_prompt(sample, min_categories=args.min_categories, max_categories=args.max_categories)
@@ -1731,7 +1811,26 @@ def main() -> int:
         "max_categories": args.max_categories,
         "min_repos_per_category": min_repos_per_category,
         "taxonomy": {"categories": taxonomy.categories},
-        "assignments": [{"id": r.get("id"), "full_name": r.get("full_name"), "category_id": assignment_map.get(r.get("id"), other_id)} for r in repos],
+        "assignments": [
+            {
+                "id": r.get("id"),
+                "full_name": r.get("full_name"),
+                "category_id": assignment_map.get(r.get("id"), other_id),
+                # 'reused' if we kept the cached assignment, 'ai' if we just
+                # asked the LLM, 'unknown' if the repo had no summary.
+                "classification_source": (
+                    "reused" if r.get("id") in assignment_map and r.get("id") not in {x.get("id") for x in repos_to_classify}
+                    else ("unknown" if r in unknown_repos else "ai")
+                ),
+            }
+            for r in repos
+        ],
+        "stats": {
+            "total_repos": len(repos),
+            "reused": reused_count,
+            "llm_classified": len(repos) - reused_count - len(unknown_repos),
+            "unknown": len(unknown_repos),
+        },
     }
 
     with open(out_json_path, "w", encoding="utf-8") as f:

@@ -247,7 +247,14 @@ def is_valid_summary(summary: str, language: str = "zh") -> bool:
 
 
 def build_repo_entry(repo: Dict, summary: Any) -> Dict:
+    """Build a {full_name: entry} row for repo_summaries.json.
+
+    The entry preserves ``__meta__`` (timestamp / hash / model) when present,
+    so incremental selection in the next run can still work.
+    """
+    meta = None
     if isinstance(summary, dict):
+        meta = summary.get("__meta__")
         entry = {
             "Repository Name": summary.get("Repository Name", repo.get("full_name")),
             "Repository URL": summary.get("Repository URL", repo.get("html_url")),
@@ -257,6 +264,12 @@ def build_repo_entry(repo: Dict, summary: Any) -> Dict:
             "Summary": summary.get("Summary", ""),
         }
         entry["Repository URL"] = repo.get("html_url") or entry.get("Repository URL", "")
+        # Preserve fields not surfaced to README but useful for next run:
+        for k in ("Stars", "Forks", "updated", "language", "__last_error__"):
+            if k in summary and k not in entry:
+                entry[k] = summary[k]
+        if meta:
+            entry["__meta__"] = meta
         return entry
 
     return {
@@ -274,20 +287,91 @@ def select_repos_for_update(
     old_summaries: Dict[str, str],
     mode: str,
     language: str = "zh",
+    description_lookup: Optional[Dict[str, str]] = None,
+    refresh_after_days: int = 0,
 ) -> Dict[str, List[Dict]]:
-    if mode != "missing_only":
+    """Decide which repos actually need an LLM call this run.
+
+    Modes:
+      - 'force_all': every repo needs summarising (skip freshness checks).
+      - 'all': every repo is re-examined, but hash-unchanged entries are reused.
+      - 'missing_only': only entries without a valid summary are re-summarised.
+
+    Args:
+        classified: language -> [repo, ...] from the GitHub API
+        old_summaries: full_name -> summary text or entry dict (legacy / quick lookup)
+        mode: 'force_all' / 'all' / 'missing_only'
+        language: 'en' or 'zh' (for content validation)
+        description_lookup: full_name -> raw GitHub description. When provided,
+            we can do a *content-hash* check: if the upstream description is
+            unchanged, we keep the old summary even in 'all' mode (saves API
+            budget). Pass None to fall back to plain text validation.
+        refresh_after_days: if > 0, also re-summarize entries older than this
+            many days (used for periodic refresh, 0 = never re-refresh).
+
+    Returns:
+        language -> [repo, ...] that still need summarising.
+    """
+    if mode == "force_all":
         return classified
+
+    if mode not in ("missing_only", "all"):
+        # Unknown mode => be conservative and only re-summarise missing ones.
+        mode = "missing_only"
+
+    if mode == "all" and not description_lookup:
+        # Without per-repo descriptions we cannot hash-check, so legacy 'all'
+        # really means 're-summarise everything'.
+        return classified
+
     filtered: Dict[str, List[Dict]] = {}
     for lang, repos in classified.items():
         needs_update = []
         for repo in repos:
             key = _repo_key(repo)
-            fallback = old_summaries.get(key, "")
-            if not is_valid_summary(fallback, language):
-                needs_update.append(repo)
+            entry = _resolve_entry(old_summaries, key)
+            desc = (description_lookup or {}).get(key, "") if description_lookup else ""
+
+            if mode == "missing_only":
+                # Quick path: keep the legacy validation for callers that
+                # don't pass per-repo descriptions.
+                if description_lookup is None:
+                    fallback = old_summaries.get(key, "")
+                    if is_valid_summary(fallback, language):
+                        continue
+                    needs_update.append(repo)
+                    continue
+
+            # Hash-based freshness check.
+            from scripts.core.json_store import is_entry_fresh
+            if is_entry_fresh(entry, key, desc, refresh_after_days=refresh_after_days):
+                continue
+
+            needs_update.append(repo)
         if needs_update:
             filtered[lang] = needs_update
     return filtered
+
+
+def _resolve_entry(old_summaries: Dict[str, Any], key: str) -> Optional[Dict[str, Any]]:
+    """`old_summaries` may carry either a legacy str value or a rich entry dict.
+
+    This helper returns the entry dict when available, else None.
+    """
+    if not key or key not in old_summaries:
+        return None
+    val = old_summaries.get(key)
+    if isinstance(val, dict):
+        return val
+    if isinstance(val, str) and val:
+        # Wrap legacy string summary so is_entry_fresh() can reason about it.
+        return {
+            "Brief Introduction": "",
+            "Innovations": "",
+            "Basic Usage": "",
+            "Summary": val,
+        }
+    return None
 
 
 def summarize_batch(
@@ -338,33 +422,114 @@ def summarize_batch_combined(
     language: str,
     batch_size: int = 5,
     batch_num: int = 1,
+    api_budget_tracker: Optional[Callable[[], bool]] = None,
+    description_lookup: Optional[Dict[str, str]] = None,
+    model_name: str = "unknown",
 ) -> List[Any]:
+    """Summarise a batch of repos with per-repo fallback and budget control.
+
+    New behaviour vs. the original implementation:
+      * When a combined batch succeeds but the parse misses some repos, the
+        missing repos are re-tried one-by-one (single-repo call) instead of
+        being silently written as empty. This is the fix for the 11-Unknown
+        regression we saw on 2026-06-18.
+      * `api_budget_tracker` is an optional callable that returns False when
+        the run has exhausted its per-run API budget. When False, we stop
+        scheduling new batches and preserve the existing summary (if any).
+      * Successful entries are stamped with metadata (last_summarized_at,
+        description_hash, model, source) so future runs can do hash-based
+        incremental selection.
+
+    `api_budget_tracker` signature: () -> bool (True = still has budget)
+    """
     results: List[Any] = [{} for _ in repos]
 
-    repos_need_call = []
-    repos_indices = []
+    repos_need_call: List[Dict] = []
+    repos_indices: List[int] = []
 
     for idx, repo in enumerate(repos):
-        existing_summary = old_summaries.get(repo["full_name"], {})
+        key = repo["full_name"]
+        existing_summary = old_summaries.get(key, {})
+        desc = (description_lookup or {}).get(key, "") if description_lookup else ""
+
+        # Hash-based reuse: skip repos whose upstream description is
+        # unchanged AND whose existing entry is well-formed. Disabled when
+        # update_mode == 'force_all' so the user can force a refresh.
+        if update_mode != "force_all" and (update_mode == "missing_only" or description_lookup is not None):
+            from scripts.core.json_store import is_entry_fresh, make_metadata
+            if isinstance(existing_summary, dict):
+                entry = existing_summary
+            elif isinstance(existing_summary, str) and existing_summary:
+                entry = {
+                    "Brief Introduction": "",
+                    "Innovations": "",
+                    "Basic Usage": "",
+                    "Summary": existing_summary,
+                }
+            else:
+                entry = None
+            if entry is not None and is_entry_fresh(entry, key, desc, refresh_after_days=0):
+                # Backfill __meta__ on legacy entries so the next run can do
+                # accurate hash-based checks and track freshness.
+                if "__meta__" not in entry or not entry["__meta__"].get("last_summarized_at"):
+                    entry["__meta__"] = make_metadata(
+                        full_name=key,
+                        description=desc,
+                        model=entry.get("__meta__", {}).get("summary_model", "legacy"),
+                        source="backfill",
+                        attempts=0,
+                    )
+                results[idx] = entry
+                print(f"[REUSE] repo: {key} | fresh (hash={entry.get('description_hash', '?')[:8]})")
+                continue
+
+        # Legacy compatibility: legacy string summary without metadata.
         if isinstance(existing_summary, dict) and existing_summary.get("Summary"):
             if update_mode == "missing_only":
                 results[idx] = existing_summary
-                print(f"[REUSE] repo: {repo['full_name']} | existing summary")
-            else:
-                repos_need_call.append(repo)
-                repos_indices.append(idx)
+                print(f"[REUSE] repo: {key} | existing summary (dict)")
+                continue
         elif isinstance(existing_summary, str) and existing_summary:
             if update_mode == "missing_only":
-                results[idx] = {"Repository Name": repo["full_name"], "Repository URL": repo.get("html_url", ""), "Brief Introduction": "", "Innovations": "", "Basic Usage": "", "Summary": existing_summary}
-                print(f"[REUSE] repo: {repo['full_name']} | existing summary (legacy format)")
-            else:
-                repos_need_call.append(repo)
-                repos_indices.append(idx)
-        else:
-            repos_need_call.append(repo)
-            repos_indices.append(idx)
+                results[idx] = {
+                    "Repository Name": key,
+                    "Repository URL": repo.get("html_url", ""),
+                    "Brief Introduction": "",
+                    "Innovations": "",
+                    "Basic Usage": "",
+                    "Summary": existing_summary,
+                }
+                print(f"[REUSE] repo: {key} | existing summary (legacy str)")
+                continue
 
+        repos_need_call.append(repo)
+        repos_indices.append(idx)
+
+    if not repos_need_call:
+        return results
+
+    # Process in sub-batches (each sub-batch is one LLM call).
     for i in range(0, len(repos_need_call), batch_size):
+        if api_budget_tracker is not None and not api_budget_tracker():
+            print(f"[BUDGET] API budget exhausted, preserving {len(repos_need_call) - i} repos for next run")
+            for j, repo in enumerate(repos_need_call[i:]):
+                idx = repos_indices[i + j]
+                key = repo["full_name"]
+                # Preserve any legacy summary we already have.
+                existing = old_summaries.get(key, {})
+                if isinstance(existing, dict) and existing.get("Summary"):
+                    results[idx] = existing
+                else:
+                    results[idx] = {
+                        "Repository Name": key,
+                        "Repository URL": repo.get("html_url", ""),
+                        "Brief Introduction": "",
+                        "Innovations": "",
+                        "Basic Usage": "",
+                        "Summary": "(deferred: API budget exhausted)",
+                    }
+            break
+
         batch = repos_need_call[i : i + batch_size]
         indices = repos_indices[i : i + batch_size]
         print(f"[COMBINED] Processing batch {batch_num}, {len(batch)} repos...")
@@ -374,38 +539,124 @@ def summarize_batch_combined(
         print(f"[DEBUG] Batch {batch_num} prompt length: {len(combined_prompt)} chars, repos: {[r['full_name'] for r in batch]}", flush=True)
         print(f"[DEBUG] Batch {batch_num} calling summarize_func...", flush=True)
 
+        parsed_results: Dict[str, Dict] = {}
         try:
             response_text = summarize_func(repo_with_prompt)
-            print(f"[DEBUG] Batch {batch_num} summarize_func returned, response_text type={type(response_text)}, len={len(response_text) if response_text else 0}", flush=True)
             if response_text:
-                parsed = parse_combined_summaries(response_text, batch)
-                for full_name, summary_dict in parsed.items():
-                    if summary_dict and summary_dict.get("Summary"):
-                        for idx, repo in zip(indices, batch):
-                            if repo["full_name"] == full_name:
-                                results[idx] = summary_dict
-                                print(f"[DEBUG] [repo]: {full_name} | [AI summary]: {repr(summary_dict.get('Summary', '').strip()[:80])}...")
-                                break
-                    else:
-                        api_name = summarize_func.__name__.replace("_summarize", "").upper()
-                        results[idx] = {"Repository Name": full_name, "Repository URL": "", "Brief Introduction": "", "Innovations": "", "Basic Usage": "", "Summary": old_summaries.get(full_name, f"{api_name} 解析失败或为空")}
-                        print(f"[WARN] repo: {full_name} | empty summary from LLM")
-            else:
-                print(f"[ERROR] Batch {batch_num} response is None or empty, repos: {[r['full_name'] for r in batch]}")
-                for idx, repo in zip(indices, batch):
-                    api_name = summarize_func.__name__.replace("_summarize", "").upper()
-                    results[idx] = {"Repository Name": repo["full_name"], "Repository URL": repo.get("html_url", ""), "Brief Introduction": "", "Innovations": "", "Basic Usage": "", "Summary": old_summaries.get(repo["full_name"], f"{api_name} API返回空")}
-                    print(f"[ERROR] repo: {repo['full_name']} | empty response")
+                parsed_results = parse_combined_summaries(response_text, batch)
         except Exception as exc:
             import traceback
-            print(f"[ERROR] Batch {batch_num} exception: {exc}")
-            print(f"[ERROR] Exception details: {traceback.format_exc()}")
-            for idx, repo in zip(indices, batch):
-                api_name = summarize_func.__name__.replace("_summarize", "").upper()
-                results[idx] = {"Repository Name": repo["full_name"], "Repository URL": repo.get("html_url", ""), "Brief Introduction": "", "Innovations": "", "Basic Usage": "", "Summary": old_summaries.get(repo["full_name"], f"{api_name} API调用失败")}
-                print(f"[ERROR] repo: {repo['full_name']} | {exc}")
+            print(f"[ERROR] Batch {batch_num} exception: {exc}", flush=True)
+            print(f"[ERROR] Exception details: {traceback.format_exc()}", flush=True)
+
+        # Per-repo fallback: any repo that the combined parse missed or
+        # produced an empty Summary for gets a single-repo retry.
+        missing: List[tuple] = []  # (idx, repo, attempts)
+        for idx, repo in zip(indices, batch):
+            key = repo["full_name"]
+            entry = parsed_results.get(key) or {}
+            summary_text = (entry.get("Summary") or "").strip()
+            brief = (entry.get("Brief Introduction") or "").strip()
+            if not summary_text or not brief or summary_text == "Not specified.":
+                missing.append((idx, repo, 1))
+
+        if missing:
+            print(f"[FALLBACK] Combined parse missed {len(missing)}/{len(batch)} repos, retrying individually...")
+            for idx, repo, attempt in missing:
+                if api_budget_tracker is not None and not api_budget_tracker():
+                    print(f"[BUDGET] skipping single-repo retry for {repo['full_name']}")
+                    results[idx] = _placeholder_entry(repo, old_summaries, "API budget exhausted")
+                    continue
+                try:
+                    single_prompt = generate_summarize_prompt(repo, language)
+                    single_text = summarize_func({"prompt": single_prompt, "full_name": repo["full_name"]})
+                    if single_text:
+                        single_dict = _parse_single_repo_summary(single_text, repo)
+                        if single_dict.get("Summary") and single_dict.get("Summary") != "Not specified.":
+                            parsed_results[repo["full_name"]] = single_dict
+                            print(f"[FALLBACK-OK] {repo['full_name']}: single-repo retry succeeded")
+                            continue
+                except Exception as e:
+                    print(f"[FALLBACK-ERR] {repo['full_name']}: {e}")
+                # Still missing after fallback: preserve old or placeholder.
+                results[idx] = _placeholder_entry(repo, old_summaries, "Combined+single LLM returned empty")
+
+        # Stamp metadata and finalise results.
+        from datetime import datetime, timezone
+        from scripts.core.json_store import make_metadata
+        for idx, repo in zip(indices, batch):
+            key = repo["full_name"]
+            entry = parsed_results.get(key) or {}
+            if not entry.get("Summary") or entry.get("Summary") == "Not specified.":
+                # Final fallback: keep old summary if any, else placeholder.
+                entry = _placeholder_entry(repo, old_summaries, "LLM returned empty after retry")
+            desc = (description_lookup or {}).get(key, repo.get("description", "") or "")
+            entry.setdefault("Repository Name", key)
+            entry.setdefault("Repository URL", repo.get("html_url", ""))
+            entry["__meta__"] = make_metadata(
+                full_name=key,
+                description=desc,
+                model=model_name,
+                source="ai",
+                attempts=1,
+            )
+            results[idx] = entry
 
     return results
+
+
+def _placeholder_entry(repo: Dict, old_summaries: Dict[str, Any], reason: str) -> Dict[str, Any]:
+    """Build a placeholder entry while preserving any previously-good summary.
+
+    The placeholder Summary keeps the previous content if it was valid so the
+    next run can re-try without losing data. The reason is recorded in
+    `__last_error__` (consumed by diagnostics, not the README renderer).
+    """
+    key = repo.get("full_name", "")
+    existing = old_summaries.get(key) if isinstance(old_summaries, dict) else None
+    if isinstance(existing, dict) and (existing.get("Summary") or "").strip():
+        out = dict(existing)
+        out["__last_error__"] = reason
+        return out
+    return {
+        "Repository Name": key,
+        "Repository URL": repo.get("html_url", ""),
+        "Brief Introduction": "",
+        "Innovations": "",
+        "Basic Usage": "",
+        "Summary": "",
+        "__last_error__": reason,
+    }
+
+
+def _parse_single_repo_summary(text: str, repo: Dict) -> Dict[str, Any]:
+    """Best-effort parse of a single-repo summary response (non-JSON)."""
+    import re
+    if not text:
+        return {}
+    out = {
+        "Repository Name": repo.get("full_name", ""),
+        "Repository URL": repo.get("html_url", ""),
+    }
+    # Match either English or Chinese labels.
+    pairs = [
+        (r"Brief Introduction\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Brief Introduction"),
+        (r"简要介绍\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Brief Introduction"),
+        (r"Innovations\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Innovations"),
+        (r"创新点\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Innovations"),
+        (r"Basic Usage\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Basic Usage"),
+        (r"简单用法\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Basic Usage"),
+        (r"Summary\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Summary"),
+        (r"总结\s*[:：]\s*(.+?)(?:\n\s*\d+\.|\n\n|$)", "Summary"),
+    ]
+    for pat, field in pairs:
+        m = re.search(pat, text, flags=re.IGNORECASE | re.DOTALL)
+        if m:
+            val = m.group(1).strip()
+            # Avoid overwriting a populated field with a short junk match.
+            if val and val != "Not specified.":
+                out[field] = val
+    return out
 
 
 def sort_repos_by_validity(

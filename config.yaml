@@ -98,9 +98,27 @@ gemini_max_output_tokens: 2000 # 最大输出token数（保守：2000）
 # Max repositories per run. Env var MAX_REPOS overrides this. 0/empty means no limit.
 max_repos: 30
 
-# 更新模式，可选值：'all'（全部更新）或 'missing_only'（仅更新缺失总结）
-# Update mode: 'all' or 'missing_only'
-update_mode: all
+# 更新模式，可选值：'all'（全部更新）、'missing_only'（仅更新缺失/变化）、'force_all'（强制全量，覆盖所有摘要）
+# - missing_only: 只对缺失/上游描述变化/无摘要的仓库调用 LLM（强烈推荐，省 API 配额）
+# - all: 走 description_hash 检查，描述未变的不重生成（同样省 API）
+# - force_all: 强制重生成所有（仅在 'description hash collision' 时使用）
+# Update mode: 'all' / 'missing_only' / 'force_all'
+update_mode: missing_only
+
+
+# 每次运行允许的最大 LLM 调用次数（0 = 不限制）
+# 配合 missing_only + description_hash，一般 workflow 一次只需 0~3 次调用
+# 也可由环境变量 MAX_API_CALLS 覆盖
+# Max LLM calls per run (0 = unlimited). Env MAX_API_CALLS overrides.
+max_api_calls_per_run: 30
+
+
+# Taxonomy 缓存最大有效天数。> 0 时会复用 repo_categories.json 中现有的分类体系
+# 和每个仓库的分类结果，只对新增 / 之前分到 Other/Unknown 的仓库重新调用 LLM
+# 设为 0 则每次都重新设计 taxonomy（默认）
+# Taxonomy cache max age in days. >0 reuses the cached taxonomy + assignments
+# from repo_categories.json when fresh. 0 = always redesign (legacy behaviour).
+taxonomy_cache_max_age_days: 14
 
 
 # 内容分类：类别数量区间（用于 scripts/classify_stars_by_content.py 设计 taxonomy）

@@ -361,4 +361,109 @@ Gemini API Key 前缀: AIza...
 [REUSE] repo: wri/global-pasture-watch | existing summary (legacy format)
 [REUSE] repo: automeris-io/WebPlotDigitizer | existing summary (legacy format)
 [REUSE] repo: vercel-labs/agent-browser | existing summary (legacy format)
-✅ /home/runner/work/myGitStar/myGitStar/README_lang_cn.md 已生成，共处理了 30 个仓库。
+✅ /home/runner/work/myGitStar/myGitStar/README_lang_cn.md 已生成，共处理了 30 个仓库。2026-06-19 09:17:53,759 INFO: DEBUG load_config: CONFIG_PATH_YAML=D:\Documents\Github\myGitStar\config.yaml
+2026-06-19 09:17:53,760 INFO: DEBUG load_config: raw yaml length=6915, first 200 chars="# 输出语言，可选值: 'zh' (中文), 'en' (英文)\n# Output language, options: 'zh', 'en'\nlanguage: en\n\n# 是否在生成的 README 顶部显示中英文快速跳转链接\n# 当为 true 时，优先显示与 `language` 对应的语言在前；为 false 则反向显示\nrepo_display_language: true\n\n# 模型"
+2026-06-19 09:17:53,763 INFO: DEBUG load_config: yaml.safe_load result keys=['language', 'repo_display_language', 'model_choice', 'github_username', 'default_copilot_model', 'default_openrouter_model', 'default_gemini_model', 'default_modelscope_model', 'modelscope_api_endpoint', 'readme_sum_path', 'max_workers', 'batch_size', 'batch_mode', 'classify_batch_size', 'request_timeout', 'rate_limit_delay', 'request_retry_delay', 'retry_attempts', 'global_qps', 'gemini_generation_retries', 'gemini_retry_backoff', 'gemini_retry_attempts', 'gemini_retry_delay', 'gemini_max_output_tokens', 'max_repos', 'update_mode', 'max_api_calls_per_run', 'taxonomy_cache_max_age_days', 'content_min_categories', 'content_max_categories', 'content_min_repos_per_category', 'content_taxonomy_sample_strategy', 'content_taxonomy_sample_seed', 'content_sort_categories_by_count', 'workflow_classify_only', 'STARRED_GITHUB_TOKEN', 'OPENROUTER_API_KEY', 'GEMINI_API_KEY', 'MODELSCOPE_API_KEY', 'test_first_repo']
+2026-06-19 09:17:53,763 INFO: All modules import OK
+2026-06-19 09:19:22,714 INFO: DEBUG load_config: CONFIG_PATH_YAML=D:\Documents\Github\myGitStar\config.yaml
+2026-06-19 09:19:22,714 INFO: DEBUG load_config: raw yaml length=6915, first 200 chars="# 输出语言，可选值: 'zh' (中文), 'en' (英文)\n# Output language, options: 'zh', 'en'\nlanguage: en\n\n# 是否在生成的 README 顶部显示中英文快速跳转链接\n# 当为 true 时，优先显示与 `language` 对应的语言在前；为 false 则反向显示\nrepo_display_language: true\n\n# 模型"
+2026-06-19 09:19:22,718 INFO: DEBUG load_config: yaml.safe_load result keys=['language', 'repo_display_language', 'model_choice', 'github_username', 'default_copilot_model', 'default_openrouter_model', 'default_gemini_model', 'default_modelscope_model', 'modelscope_api_endpoint', 'readme_sum_path', 'max_workers', 'batch_size', 'batch_mode', 'classify_batch_size', 'request_timeout', 'rate_limit_delay', 'request_retry_delay', 'retry_attempts', 'global_qps', 'gemini_generation_retries', 'gemini_retry_backoff', 'gemini_retry_attempts', 'gemini_retry_delay', 'gemini_max_output_tokens', 'max_repos', 'update_mode', 'max_api_calls_per_run', 'taxonomy_cache_max_age_days', 'content_min_categories', 'content_max_categories', 'content_min_repos_per_category', 'content_taxonomy_sample_strategy', 'content_taxonomy_sample_seed', 'content_sort_categories_by_count', 'workflow_classify_only', 'STARRED_GITHUB_TOKEN', 'OPENROUTER_API_KEY', 'GEMINI_API_KEY', 'MODELSCOPE_API_KEY', 'test_first_repo']
+2026-06-19 09:19:22,718 INFO: 1) import OK
+2026-06-19 09:19:22,719 INFO: 2) compute_description_hash: h1=89e9ab4d72f9bfb2, h2=89e9ab4d72f9bfb2, h3=29a62fe0c8223134 (case-different)
+2026-06-19 09:19:22,719 ERROR: Traceback (most recent call last):
+2026-06-19 09:19:22,719 ERROR:   File "D:\Documents\Github\myGitStar\scripts\__smoke_test.py", line 27, in <module>
+2026-06-19 09:19:22,720 ERROR: assert js.is_entry_fresh(e, 'foo/bar', 'a description', refresh_after_days=0) is True
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,720 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,721 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,722 ERROR: ^
+2026-06-19 09:19:22,723 ERROR: ^
+2026-06-19 09:19:22,723 ERROR: AssertionError
+2026-06-19 09:19:39,693 INFO: DEBUG load_config: CONFIG_PATH_YAML=D:\Documents\Github\myGitStar\config.yaml
+2026-06-19 09:19:39,693 INFO: DEBUG load_config: raw yaml length=6915, first 200 chars="# 输出语言，可选值: 'zh' (中文), 'en' (英文)\n# Output language, options: 'zh', 'en'\nlanguage: en\n\n# 是否在生成的 README 顶部显示中英文快速跳转链接\n# 当为 true 时，优先显示与 `language` 对应的语言在前；为 false 则反向显示\nrepo_display_language: true\n\n# 模型"
+2026-06-19 09:19:39,696 INFO: DEBUG load_config: yaml.safe_load result keys=['language', 'repo_display_language', 'model_choice', 'github_username', 'default_copilot_model', 'default_openrouter_model', 'default_gemini_model', 'default_modelscope_model', 'modelscope_api_endpoint', 'readme_sum_path', 'max_workers', 'batch_size', 'batch_mode', 'classify_batch_size', 'request_timeout', 'rate_limit_delay', 'request_retry_delay', 'retry_attempts', 'global_qps', 'gemini_generation_retries', 'gemini_retry_backoff', 'gemini_retry_attempts', 'gemini_retry_delay', 'gemini_max_output_tokens', 'max_repos', 'update_mode', 'max_api_calls_per_run', 'taxonomy_cache_max_age_days', 'content_min_categories', 'content_max_categories', 'content_min_repos_per_category', 'content_taxonomy_sample_strategy', 'content_taxonomy_sample_seed', 'content_sort_categories_by_count', 'workflow_classify_only', 'STARRED_GITHUB_TOKEN', 'OPENROUTER_API_KEY', 'GEMINI_API_KEY', 'MODELSCOPE_API_KEY', 'test_first_repo']
+2026-06-19 09:19:39,697 INFO: 1) import OK
+2026-06-19 09:19:39,697 INFO: 2) compute_description_hash: h1=89e9ab4d72f9bfb2, h2=89e9ab4d72f9bfb2, h3=29a62fe0c8223134 (case-different)
+2026-06-19 09:19:39,697 INFO: 3) is_entry_fresh(legacy entry, no hash) = True (correct)
+2026-06-19 09:19:39,697 INFO: 4) is_entry_fresh(empty Summary) = False (correct)
+2026-06-19 09:19:39,697 INFO: 5) is_entry_fresh(hash mismatch) = False (correct)
+2026-06-19 09:19:39,697 INFO: 6) is_entry_fresh(hash match) = True (correct)
+2026-06-19 09:19:39,697 INFO: 7) select_repos_for_update(missing_only) skips fresh entries (correct)
+2026-06-19 09:19:39,697 INFO: 8) select_repos_for_update(force_all) includes all (correct)
+2026-06-19 09:19:39,698 INFO: 9) Currently in repo_summaries.json: 184 entries, 134 without Summary
+2026-06-19 09:19:39,701 INFO: 10) config.yaml: update_mode=missing_only, max_api_calls=30, taxonomy_cache=14 (all OK)
+2026-06-19 09:19:39,701 INFO: 11) normalize_update_mode handles all/force/missing/garbage (correct)
+2026-06-19 09:19:39,701 INFO: === ALL CHECKS PASSED ===
