@@ -7,10 +7,10 @@
 <p><b>Reference Repository:</b> <a href="https://github.com/WuXiangM/myGitStar">WuXiangM/myGitStar</a></p>
 
 
-<p><b>Current account:</b> <a href="https://github.com/WuXiangM">WuXiangM</a></p>
+<p><b>Current account:</b> <a href="https://github.com/Nanxzi">Nanxzi</a></p>
 
 
-<p><b>Generated on:</b> 2026-06-18 08:53:56</p>
+<p><b>Generated on:</b> 2026-06-22 05:03:37</p>
 
 
 <p><b>AI Model:</b> copilot</p>

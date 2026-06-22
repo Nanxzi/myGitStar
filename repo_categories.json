@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T08:53:56Z",
+  "generated_at": "2026-06-22T05:03:37Z",
   "model_choice": "copilot",
   "min_categories": 5,
   "max_categories": 10,
@@ -57,152 +57,188 @@
     {
       "id": 1,
       "full_name": "NousResearch/hermes-agent",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 2,
       "full_name": "open-gigaai/giga-brain-0",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 3,
       "full_name": "aiming-lab/AutoResearchClaw",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 4,
       "full_name": "anthropics/skills",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 5,
       "full_name": "Usagi-org/ai-goofish-monitor",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 6,
       "full_name": "jimmc414/Kosmos",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 7,
       "full_name": "Fosowl/agenticSeek",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 8,
       "full_name": "langbot-app/LangBot",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 9,
       "full_name": "SamuelSchmidgall/AgentLaboratory",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 10,
       "full_name": "Significant-Gravitas/AutoGPT",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 11,
       "full_name": "heygen-com/hyperframes",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 12,
       "full_name": "multica-ai/multica",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 13,
       "full_name": "ExplosiveCoderflome/AI-Novel-Writing-Assistant",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 14,
       "full_name": "hAcKlyc/MyAgents",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 15,
       "full_name": "Narcooo/inkos",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 16,
       "full_name": "anomalyco/opencode",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 17,
       "full_name": "CherryHQ/cherry-studio",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 18,
       "full_name": "openclaw/openclaw",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 19,
       "full_name": "VoltAgent/awesome-openclaw-skills",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 20,
       "full_name": "microsoft/AI-For-Beginners",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 21,
       "full_name": "microsoft/generative-ai-for-beginners",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 22,
       "full_name": "QwenLM/Qwen3-VL",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 23,
       "full_name": "google/automl",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 24,
       "full_name": "fogsightai/fogsight",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 25,
       "full_name": "DearVa/Everywhere",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 26,
       "full_name": "msitarzewski/agency-agents",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 27,
       "full_name": "obra/superpowers",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 28,
       "full_name": "anthropics/claude-code",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     },
     {
       "id": 29,
       "full_name": "vercel-labs/agent-browser",
-      "category_id": "Other"
+      "category_id": "Other",
+      "classification_source": "ai"
     },
     {
       "id": 30,
       "full_name": "nomic-ai/gpt4all",
-      "category_id": "Unknown"
+      "category_id": "Unknown",
+      "classification_source": "unknown"
     }
-  ]
+  ],
+  "stats": {
+    "total_repos": 30,
+    "reused": 0,
+    "llm_classified": 19,
+    "unknown": 11
+  }
 }
