@@ -2,7 +2,7 @@ import os
 import time
 from typing import Any, Dict, Optional
 
-from scripts.ai.llm_caller import make_api_request
+from scripts.ai.llm_caller import make_api_request, RateLimitAbort
 
 
 API_ENDPOINTS = {
@@ -60,6 +60,9 @@ def copilot_summarize(
             if content is not None:
                 content = str(content).strip()
         return content if content else None
+    except RateLimitAbort:
+        # Let rate limit abort propagate to caller
+        raise
     except Exception as e:
         import traceback
         print(f"[ERROR] copilot_summarize: Exception: {type(e).__name__}: {e}", flush=True)

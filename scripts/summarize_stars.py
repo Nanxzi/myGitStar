@@ -420,6 +420,7 @@ def main():
                     update_mode,
                     LANGUAGE,
                     max_workers,
+                    api_budget_tracker=_budget_tracker,
                 )
 
             for repo, summary in zip(this_batch, summaries):
