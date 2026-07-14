@@ -62,18 +62,31 @@ def build_classification_prompt(taxonomy: Taxonomy, repos: List[Dict[str, Any]])
             }
         )
 
+    # Build category list for clarity
+    category_list = "\n".join([
+        f"  - {c['id']}: {c['name']} - {c.get('description', '')}"
+        for c in taxonomy.categories
+    ])
+
     return (
-        "You are a classifier.\n"
-        "Classify each GitHub repository into exactly ONE category from the provided taxonomy.\n"
-        "Use the repository title + content text (ignore stars/forks/updated).\n"
-        "Pick the BEST matching category; use 'Other' ONLY if the repository genuinely does not relate to any category's domain.\n"
-        "IMPORTANT: Avoid overusing 'Other'. If a repo mentions AI, agents, automation, LLMs, or similar topics, it almost certainly belongs in one of the specific categories, not 'Other'.\n"
-        "When a repo could fit multiple categories, choose the ONE most central theme.\n\n"
-        "Return STRICT JSON only.\n\n"
-        "Taxonomy JSON:\n"
-        + json.dumps({"categories": taxonomy.categories}, ensure_ascii=False, indent=2)
-        + "\n\n"
-        "Repositories to classify (id, full_name, title, text):\n"
+        "You are a GitHub repository classifier.\n\n"
+        "TASK: Classify each repository into exactly ONE category from the taxonomy below.\n\n"
+        "TAXONOMY:\n" + category_list + "\n\n"
+        "RULES:\n"
+        "1. Use ONLY the category IDs (C1, C2, C3, etc.) - NOT category names\n"
+        "2. Each repo must be assigned to exactly one category\n"
+        "3. Avoid 'Other' - most repos fit into specific categories\n"
+        "4. If a repo mentions AI, agents, LLMs, automation, or tools, it belongs in a specific category\n"
+        "5. When in doubt, choose the category that best matches the repo's PRIMARY purpose\n\n"
+        "OUTPUT FORMAT (strict JSON):\n"
+        "{\n"
+        '  "assignments": [\n'
+        '    {"id": 1, "category_id": "C1"},\n'
+        '    {"id": 2, "category_id": "C2"},\n'
+        "    ...\n"
+        "  ]\n"
+        "}\n\n"
+        "REPOSITORIES TO CLASSIFY:\n"
         + json.dumps(items, ensure_ascii=False, indent=2)
     )
 

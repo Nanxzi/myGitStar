@@ -30,13 +30,17 @@ from scripts.core.json_store import (
     make_metadata,
     is_entry_fresh,
 )
-from scripts.github import get_starred_repos
+from scripts.github import get_starred_repos, fetch_repo_readme
 from scripts.output import (
     classify_by_language,
     build_readme_header,
     build_table_of_contents,
     build_repo_section,
     build_readme_footer,
+    classify_by_content,
+    build_content_table_of_contents,
+    build_content_repo_section,
+    build_content_readme_footer,
 )
 from scripts.summary import (
     build_repo_entry,
@@ -282,7 +286,7 @@ def main():
 
         repos_to_update = select_repos_for_update(
             classified,
-            old_summaries,
+            summary_store,
             update_mode,
             LANGUAGE,
             description_lookup=description_lookup,
@@ -328,14 +332,6 @@ def main():
 
         current_time = time.strftime("%Y-%m-%d", time.localtime())
 
-        lines: List[str] = []
-        lines.extend(build_readme_header(LANGUAGE, GITHUB_USERNAME, api_name, len(starred), current_time))
-        lines.extend(build_table_of_contents(classified_to_process, LANGUAGE))
-
-        printed_repos: set = set()
-        printed_langs: set = set()
-        total_repos = sum(len(repos) for repos in classified_to_process.values())
-        processed_repos = 0
         repo_summary_map: Dict[str, Dict] = {}
 
         summarize_func = get_summarize_func(
@@ -372,16 +368,30 @@ def main():
 
         all_repos_to_process: List[Dict] = []
         for lang, repos in classified_to_process.items():
-            # `repos_to_update` already honours update_mode + description_hash
-            # (see select_repos_for_update), so we just consume its result.
             repos_to_call = repos_to_update.get(lang, [])
             all_repos_to_process.extend(repos_to_call)
+
+        # Fetch README content for repos that need summarization (token control)
+        if all_repos_to_process:
+            print(f"\n[README] 抓取 {len(all_repos_to_process)} 个仓库的 README...")
+            readme_fetched = 0
+            readme_failed = 0
+            for repo in all_repos_to_process:
+                full_name = repo.get("full_name", "")
+                if not full_name:
+                    continue
+                content = fetch_repo_readme(GITHUB_TOKEN, full_name, timeout=15.0, max_chars=3000)
+                if content:
+                    repo["readme_content"] = content
+                    readme_fetched += 1
+                else:
+                    readme_failed += 1
+            print(f"[README] 成功 {readme_fetched}, 失败 {readme_failed}")
 
         printed_repos: set = set()
         printed_langs: set = set()
         total_repos = len(all_repos_to_process)
         processed_repos = 0
-        repo_summary_map: Dict[str, Dict] = {}
 
         for i in range(0, len(all_repos_to_process), batch_size):
             this_batch = all_repos_to_process[i : i + batch_size]
@@ -392,7 +402,7 @@ def main():
                 print(f"[DEBUG] Calling summarize_batch_combined for {len(this_batch)} repos, batch_size={batch_size}")
                 summaries = summarize_batch_combined(
                     this_batch,
-                    old_summaries,
+                    summary_store,
                     _budgeted_summarize_func,
                     update_mode,
                     LANGUAGE,
@@ -405,7 +415,7 @@ def main():
             else:
                 summaries = summarize_batch(
                     this_batch,
-                    old_summaries,
+                    summary_store,
                     _budgeted_summarize_func,
                     update_mode,
                     LANGUAGE,
@@ -420,24 +430,6 @@ def main():
 
             summary_store = merge_summary_store(summary_store, repo_summary_map)
             save_json_atomic(summary_store, json_path)
-
-        for lang in sorted(classified_to_process.keys(), key=lambda x: -len(classified_to_process[x])):
-            if lang in printed_langs:
-                continue
-            repos = classified_to_process[lang]
-
-            section_lines, printed_repos, printed_langs, processed_repos = build_repo_section(
-                lang,
-                repos,
-                LANGUAGE,
-                summary_store,
-                old_summaries,
-                rate_limit_delay,
-                printed_repos,
-                printed_langs,
-                processed_repos,
-            )
-            lines.extend(section_lines)
 
         # Final diagnostic: count budget spent, still-unknown repos, and
         # last-errors so the workflow log makes it obvious what to do next.
@@ -459,9 +451,112 @@ def main():
             for k in still_unknown[:20]:
                 print(f"  - {k}: {reasons.get(k, '?')}")
 
-        lines.extend(
+        # === Generate READMEs ===
+        # 1. Content-classified README (README.md) - default
+        # 2. Language-classified README (README_lang.md)
+
+        repo_root = os.path.dirname(os.path.dirname(__file__))
+
+        # Load content classification data
+        categories_data = None
+        categories_path = os.path.join(repo_root, "repo_categories.json")
+        if os.path.exists(categories_path):
+            try:
+                import json as _json
+                with open(categories_path, "r", encoding="utf-8") as _f:
+                    categories_data = _json.load(_f)
+            except Exception:
+                categories_data = None
+
+        # --- Content-classified README (README.md) ---
+        if categories_data and categories_data.get("assignments"):
+            print("\n[README] 生成内容分类 README (README.md)...")
+            content_classified = classify_by_content(
+                starred,
+                categories_data.get("taxonomy", {}).get("categories", []),
+                categories_data.get("assignments", []),
+            )
+            sort_by_count = config.get("content_sort_categories_by_count", True)
+
+            content_lines: List[str] = []
+            content_lines.extend(build_readme_header(LANGUAGE, GITHUB_USERNAME, api_name, len(starred), current_time))
+            content_lines.extend(build_content_table_of_contents(content_classified, LANGUAGE, sort_by_count=sort_by_count))
+
+            content_printed_repos: set = set()
+            content_printed_cats: set = set()
+            content_processed = 0
+
+            # Sort categories: by count desc, Other last
+            cat_items = list(content_classified.items())
+            other_cats = [(k, v) for k, v in cat_items if k == "Other"]
+            non_other_cats = [(k, v) for k, v in cat_items if k != "Other"]
+            if sort_by_count:
+                non_other_cats.sort(key=lambda x: -len(x[1]))
+            sorted_cats = non_other_cats + other_cats
+
+            for cat_name, repos in sorted_cats:
+                section_lines, content_printed_repos, content_printed_cats, content_processed = build_content_repo_section(
+                    cat_name,
+                    repos,
+                    LANGUAGE,
+                    summary_store,
+                    old_summaries,
+                    rate_limit_delay,
+                    content_printed_repos,
+                    content_printed_cats,
+                    content_processed,
+                )
+                content_lines.extend(section_lines)
+
+            content_lines.extend(
+                build_content_readme_footer(
+                    content_processed,
+                    len(content_classified),
+                    current_time,
+                    api_name,
+                    (copilot_api_call_count, openrouter_api_call_count, gemini_api_call_count),
+                    LANGUAGE,
+                )
+            )
+
+            readme_md_path = os.path.join(repo_root, "README.md")
+            with open(readme_md_path, "w", encoding="utf-8") as f:
+                f.write("".join(content_lines))
+            print(f"✅ {readme_md_path} 已生成（内容分类），共 {content_processed} 个仓库。")
+        else:
+            print("\n[README] repo_categories.json 不存在或无分类数据，跳过内容分类 README 生成。")
+
+        # --- Language-classified README (README_lang.md) ---
+        print("\n[README] 生成语言分类 README (README_lang.md)...")
+        lang_lines: List[str] = []
+        lang_lines.extend(build_readme_header(LANGUAGE, GITHUB_USERNAME, api_name, len(starred), current_time))
+        lang_lines.extend(build_table_of_contents(classified_to_process, LANGUAGE))
+
+        lang_printed_repos: set = set()
+        lang_printed_langs: set = set()
+        lang_processed = 0
+
+        for lang in sorted(classified_to_process.keys(), key=lambda x: -len(classified_to_process[x])):
+            if lang in lang_printed_langs:
+                continue
+            repos = classified_to_process[lang]
+
+            section_lines, lang_printed_repos, lang_printed_langs, lang_processed = build_repo_section(
+                lang,
+                repos,
+                LANGUAGE,
+                summary_store,
+                old_summaries,
+                rate_limit_delay,
+                lang_printed_repos,
+                lang_printed_langs,
+                lang_processed,
+            )
+            lang_lines.extend(section_lines)
+
+        lang_lines.extend(
             build_readme_footer(
-                processed_repos,
+                lang_processed,
                 len(classified_to_process),
                 current_time,
                 api_name,
@@ -470,9 +565,10 @@ def main():
             )
         )
 
-        with open(README_SUM_PATH, "w", encoding="utf-8") as f:
-            f.write("".join(lines))
-        print(f"\n✅ {README_SUM_PATH} 已生成，共处理了 {processed_repos} 个仓库。")
+        readme_lang_path = os.path.join(repo_root, "README_lang.md")
+        with open(readme_lang_path, "w", encoding="utf-8") as f:
+            f.write("".join(lang_lines))
+        print(f"✅ {readme_lang_path} 已生成（语言分类），共 {lang_processed} 个仓库。")
 
     except Exception as e:
         print(f"❌ 程序执行失败: {e}")

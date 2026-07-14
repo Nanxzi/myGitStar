@@ -277,7 +277,7 @@ def call_llm(prompt: str) -> str:
         data = {
             "model": model_name,
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 1800,
+            "max_tokens": 4000,
             "temperature": 0.2,
         }
         resp = make_api_request(API_ENDPOINTS["copilot"], headers, data, retries=RETRY_ATTEMPTS, retry_delay=REQUEST_RETRY_DELAY)

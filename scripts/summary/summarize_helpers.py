@@ -4,36 +4,81 @@ import time
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 
+# Patterns that indicate prompt template leakage from the LLM
+_PROMPT_LEAK_PATTERNS = [
+    r"\*\*\s*\(Based on README.*?\)\s*\n?",
+    r"\*\*\s*\(within \d+ words?\)\s*\n?",
+    r"\*\*\s*\(50字以内\)\s*\n?",
+    r"\*\*\s*\(no description available\)\s*\n?",
+    r"\*\*\s*\(omit if none\)\s*\n?",
+    r"\*\*\s*\(如无则略\)\s*\n?",
+    r"\*\*\s*\(如无则写 Not specified\)\s*\n?",
+    r"\*\*\s*\(One sentence.*?\)\s*\n?",
+    r"\*\*\s*\(一句话总结.*?\)\s*\n?",
+    r"\*\*\s*\(Briefly describe.*?\)\s*\n?",
+    r"\*\*\s*\(简述.*?\)\s*\n?",
+    r"\*\*\s*\(Provide the simplest.*?\)\s*\n?",
+    r"\*\*\s*\(给出最简.*?\)\s*\n?",
+]
+
+
+def _clean_prompt_leak(text: str) -> str:
+    """Remove prompt template artifacts leaked by the LLM into field values."""
+    if not text:
+        return text
+    for pattern in _PROMPT_LEAK_PATTERNS:
+        text = re.sub(pattern, "", text, flags=re.IGNORECASE)
+    # Remove leading ** markers that LLM sometimes adds
+    text = re.sub(r"^\*\*\s*", "", text)
+    text = re.sub(r"\n\*\*\s*", "\n", text)
+    # Remove leading markdown heading markers (# ## ### etc.)
+    text = re.sub(r"^#+\s*", "", text)
+    return text.strip()
+
+
 def _repo_key(repo: Dict) -> str:
     return str(repo.get("full_name") or repo.get("Repository Name") or "").strip()
 
 
-def generate_summarize_prompt(repo: Dict[str, Any], language: str = "zh") -> str:
+def generate_summarize_prompt(repo: Dict[str, Any], language: str = "zh", readme_content: str = "") -> str:
     repo_name = repo["full_name"]
     desc = repo.get("description") or ""
     url = repo["html_url"]
 
+    # Brief Introduction = original description (no LLM needed)
+    brief_intro = desc if desc else "(no description available)"
+
     if language == "zh":
+        readme_section = ""
+        if readme_content:
+            readme_section = f"\n**仓库 README 内容（节选）：**\n{readme_content}\n"
+
         return (
             f"请对以下 GitHub 仓库进行内容总结，按如下格式输出：\n"
             f"1. **仓库名称：** {repo_name}\n"
-            f"2. **简要介绍：** （50字以内）\n"
-            f"3. **创新点：** （简述本仓库最有特色的地方）\n"
-            f"4. **简单用法：** （给出最简关键用法或调用示例，如无则略）\n"
-            f"5. **总结：** （一句话总结它的用途/价值）\n"
+            f"2. **简要介绍：** {brief_intro}\n"
+            f"3. **创新点：** （基于 README 内容，简述本仓库最有特色的地方，50字以内）\n"
+            f"4. **简单用法：** （基于 README 内容，给出最简关键用法或调用示例，如无则写 Not specified）\n"
+            f"5. **总结：** （一句话总结它的用途/价值，50字以内）\n"
             f"**仓库描述：** {desc}\n"
             f"**仓库地址：** {url}\n"
+            f"{readme_section}"
         )
     else:
+        readme_section = ""
+        if readme_content:
+            readme_section = f"\n**Repository README content (excerpt):**\n{readme_content}\n"
+
         return (
             f"Please summarize the following GitHub repository in the specified format:\n"
             f"1. **Repository Name:** {repo_name}\n"
-            f"2. **Brief Introduction:** (within 50 words)\n"
-            f"3. **Innovations:** (Briefly describe the most distinctive features)\n"
-            f"4. **Basic Usage:** (Provide the simplest key usage or example, omit if none)\n"
-            f"5. **Summary:** (One sentence summarizing its purpose/value)\n"
+            f"2. **Brief Introduction:** {brief_intro}\n"
+            f"3. **Innovations:** (Based on README, briefly describe the most distinctive features, within 50 words)\n"
+            f"4. **Basic Usage:** (Based on README, provide the simplest key usage or example, write 'Not specified' if none)\n"
+            f"5. **Summary:** (One sentence summarizing its purpose/value, within 50 words)\n"
             f"**Repository Description:** {desc}\n"
             f"**Repository URL:** {url}\n"
+            f"{readme_section}"
         )
 
 
@@ -44,12 +89,16 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
             repo_name = repo["full_name"]
             desc = repo.get("description") or ""
             url = repo["html_url"]
-            repo_list.append(
+            readme = repo.get("readme_content", "")
+            entry = (
                 f"## 仓库 {i}\n"
                 f"- 仓库名称: {repo_name}\n"
                 f"- 描述: {desc}\n"
                 f"- 地址: {url}"
             )
+            if readme:
+                entry += f"\n- README 内容（节选）:\n{readme}"
+            repo_list.append(entry)
 
         return (
             f"你是一个GitHub仓库总结助手。请对以下 {len(repos)} 个仓库分别进行总结，\n"
@@ -63,10 +112,10 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
             "要求：\n"
             "- Repository Name: 仓库全名（必须与输入完全一致）\n"
             "- Repository URL: 仓库地址\n"
-            "- Brief Introduction: 简要介绍（50字以内）\n"
-            "- Innovations: 创新点\n"
-            "- Basic Usage: 简单用法\n"
-            "- Summary: 一句话总结\n"
+            "- Brief Introduction: 直接使用仓库的原始描述（不要改写）\n"
+            "- Innovations: 基于 README 内容，创新点（50字以内）\n"
+            "- Basic Usage: 基于 README 内容，简单用法（如无则写 Not specified）\n"
+            "- Summary: 一句话总结（50字以内）\n"
             "- 只输出JSON数组，不要输出其他内容\n\n"
             "## 待总结的仓库：\n"
             + "\n\n".join(repo_list)
@@ -77,12 +126,16 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
             repo_name = repo["full_name"]
             desc = repo.get("description") or ""
             url = repo["html_url"]
-            repo_list.append(
+            readme = repo.get("readme_content", "")
+            entry = (
                 f"## Repository {i}\n"
                 f"- Name: {repo_name}\n"
                 f"- Description: {desc}\n"
                 f"- URL: {url}"
             )
+            if readme:
+                entry += f"\n- README content (excerpt):\n{readme}"
+            repo_list.append(entry)
 
         return (
             f"You are a GitHub repository summarization assistant. Please summarize the following {len(repos)} repositories.\n"
@@ -96,10 +149,10 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
             "Requirements:\n"
             "- Repository Name: full repository name (must match exactly)\n"
             "- Repository URL: repository URL\n"
-            "- Brief Introduction: brief intro (within 50 words)\n"
-            "- Innovations: key innovations\n"
-            "- Basic Usage: basic usage\n"
-            "- Summary: one sentence summary\n"
+            "- Brief Introduction: use the original description verbatim (do NOT rewrite)\n"
+            "- Innovations: based on README, key innovations (within 50 words)\n"
+            "- Basic Usage: based on README, basic usage (write 'Not specified' if none)\n"
+            "- Summary: one sentence summary (within 50 words)\n"
             "- Output only JSON array, nothing else\n\n"
             "## Repositories to summarize:\n"
             + "\n\n".join(repo_list)
@@ -153,6 +206,12 @@ def parse_combined_summaries(response_text: str, repos: List[Dict[str, Any]]) ->
                 innovations = item.get("Innovations", "") or item.get("创新点", "")
                 basic_usage = item.get("Basic Usage", "") or item.get("简单用法", "")
                 summary = item.get("Summary", "") or item.get("总结", "")
+
+                # Clean prompt leak artifacts from all fields
+                brief_intro = _clean_prompt_leak(brief_intro)
+                innovations = _clean_prompt_leak(innovations)
+                basic_usage = _clean_prompt_leak(basic_usage)
+                summary = _clean_prompt_leak(summary)
 
                 full_entry = {
                     "Repository Name": repo_name,
@@ -255,13 +314,19 @@ def build_repo_entry(repo: Dict, summary: Any) -> Dict:
     meta = None
     if isinstance(summary, dict):
         meta = summary.get("__meta__")
+        # Brief Introduction: use LLM output, fallback to original description
+        brief = summary.get("Brief Introduction", "") or ""
+        if brief.lower().strip() in ("not specified.", "not specified", ""):
+            brief = repo.get("description", "")
+        # Truncate to first paragraph only (Markdown single \n = space, causes layout issues)
+        brief = brief.split("\n\n")[0].split("\n")[0].strip()
         entry = {
             "Repository Name": summary.get("Repository Name", repo.get("full_name")),
             "Repository URL": summary.get("Repository URL", repo.get("html_url")),
-            "Brief Introduction": summary.get("Brief Introduction", ""),
-            "Innovations": summary.get("Innovations", ""),
-            "Basic Usage": summary.get("Basic Usage", ""),
-            "Summary": summary.get("Summary", ""),
+            "Brief Introduction": _clean_prompt_leak(brief),
+            "Innovations": _clean_prompt_leak(summary.get("Innovations", "")),
+            "Basic Usage": _clean_prompt_leak(summary.get("Basic Usage", "")),
+            "Summary": _clean_prompt_leak(summary.get("Summary", "")),
         }
         entry["Repository URL"] = repo.get("html_url") or entry.get("Repository URL", "")
         # Preserve fields not surfaced to README but useful for next run:
@@ -376,13 +441,13 @@ def _resolve_entry(old_summaries: Dict[str, Any], key: str) -> Optional[Dict[str
 
 def summarize_batch(
     repos: List[Dict],
-    old_summaries: Dict[str, str],
+    old_summaries: Dict[str, Any],
     summarize_func: Callable[[Dict], Optional[str]],
     update_mode: str,
     language: str,
     max_workers: int = 5,
-) -> List[str]:
-    results: List[str] = ["" for _ in repos]
+) -> List[Any]:
+    results: List[Any] = ["" for _ in repos]
 
     repos_with_prompts = []
     for repo in repos:
@@ -396,16 +461,29 @@ def summarize_batch(
             idx = future_to_idx[future]
             repo = repos[idx]
             try:
-                existing_summary = old_summaries.get(repo["full_name"], "")
-                reuse_existing = (update_mode == "missing_only") and is_valid_summary(existing_summary, language)
+                existing_entry = old_summaries.get(repo["full_name"], {})
+                # Extract Summary string from dict entry for validation
+                if isinstance(existing_entry, dict):
+                    existing_summary_str = existing_entry.get("Summary", "")
+                else:
+                    existing_summary_str = existing_entry or ""
+                
+                reuse_existing = (update_mode == "missing_only") and is_valid_summary(existing_summary_str, language)
                 if reuse_existing:
-                    summary = existing_summary
+                    # Return full dict entry to preserve __meta__ metadata
+                    summary = existing_entry if isinstance(existing_entry, dict) else existing_summary_str
                 else:
                     summary = future.result()
                     if summary is None:
                         api_name = summarize_func.__name__.replace("_summarize", "").upper()
                         summary = old_summaries.get(repo["full_name"], f"{api_name} API生成失败或429")
-                print(f"[DEBUG] [repo]: {repo['full_name']} | [AI summary]: {repr(summary.strip())}")
+                
+                # Only call strip() on strings
+                if isinstance(summary, str):
+                    print(f"[DEBUG] [repo]: {repo['full_name']} | [AI summary]: {repr(summary.strip())}")
+                else:
+                    summary_text = summary.get("Summary", "") if isinstance(summary, dict) else str(summary)
+                    print(f"[DEBUG] [repo]: {repo['full_name']} | [AI summary]: {repr(summary_text)}")
             except Exception as exc:
                 print(f"{repo['full_name']} 线程异常: {exc}")
                 api_name = summarize_func.__name__.replace("_summarize", "").upper()
@@ -544,6 +622,8 @@ def summarize_batch_combined(
             response_text = summarize_func(repo_with_prompt)
             if response_text:
                 parsed_results = parse_combined_summaries(response_text, batch)
+            else:
+                print(f"[DEBUG] Batch {batch_num}: summarize_func returned None/empty", flush=True)
         except Exception as exc:
             import traceback
             print(f"[ERROR] Batch {batch_num} exception: {exc}", flush=True)

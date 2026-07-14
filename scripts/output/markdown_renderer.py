@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
 from scripts.classification.classification_parser import Taxonomy, _clean_inline_md, _strip_leading_symbols, _trim_repo_block_before_language_section
+from scripts.summary.summarize_helpers import _clean_prompt_leak
 
 
 def _slugify_heading(text: str) -> str:
@@ -290,10 +291,13 @@ def render_markdown(
                 repo_summary = {}
 
             repo_name = repo_summary.get("Repository Name", full_name)
-            brief_intro = repo_summary.get("Brief Introduction", "")
-            innovations = repo_summary.get("Innovations", "")
-            basic_usage = repo_summary.get("Basic Usage", "")
-            summary_text = repo_summary.get("Summary", "")
+            brief_intro = _clean_prompt_leak(repo_summary.get("Brief Introduction", ""))
+            # Truncate brief to first paragraph to avoid Markdown layout issues
+            if brief_intro and ("\n" in brief_intro or "\r" in brief_intro):
+                brief_intro = brief_intro.split("\n\n")[0].split("\n")[0].strip()
+            innovations = _clean_prompt_leak(repo_summary.get("Innovations", ""))
+            basic_usage = _clean_prompt_leak(repo_summary.get("Basic Usage", ""))
+            summary_text = _clean_prompt_leak(repo_summary.get("Summary", ""))
 
             lines.append("1. **Repository Name:** " + repo_name + "\n")
             lines.append("2. **Brief Introduction:** " + (brief_intro or "Not specified.") + "\n")

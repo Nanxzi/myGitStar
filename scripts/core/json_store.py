@@ -124,7 +124,9 @@ def is_entry_fresh(
         pass  # ok
 
     current_hash = compute_description_hash(full_name, description)
-    if entry.get("description_hash") and entry.get("description_hash") != current_hash:
+    meta = entry.get("__meta__") if isinstance(entry.get("__meta__"), dict) else {}
+    stored_hash = meta.get("description_hash") or entry.get("description_hash")
+    if stored_hash and stored_hash != current_hash:
         return False
 
     if refresh_after_days and refresh_after_days > 0:

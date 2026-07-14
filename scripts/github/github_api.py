@@ -1,3 +1,4 @@
+import base64
 import time
 from typing import Any, Dict, List, Optional
 
@@ -54,3 +55,49 @@ def get_starred_repos(
 
     print(f"总共获取到 {len(repos)} 个星标仓库")
     return repos
+
+
+def fetch_repo_readme(
+    github_token: str,
+    full_name: str,
+    timeout: float = 15.0,
+    max_chars: int = 3000,
+) -> str:
+    """Fetch and decode a repo's README, truncated to max_chars.
+
+    Uses GET /repos/{owner}/{repo}/readme which returns base64-encoded content.
+    Returns empty string on any failure (non-critical data).
+    """
+    if not github_token:
+        return ""
+    try:
+        url = f"https://api.github.com/repos/{full_name}/readme"
+        headers = {
+            "Authorization": f"Bearer {github_token}",
+            "Accept": "application/vnd.github+json",
+        }
+        resp = requests.get(url, headers=headers, timeout=timeout)
+        if resp.status_code != 200:
+            return ""
+        data = resp.json()
+        content_b64 = data.get("content", "")
+        if not content_b64:
+            return ""
+        decoded = base64.b64decode(content_b64).decode("utf-8", errors="replace")
+        # Strip markdown code blocks and image links to save tokens
+        decoded = _strip_markdown_noise(decoded)
+        return decoded[:max_chars]
+    except Exception:
+        return ""
+
+
+def _strip_markdown_noise(text: str) -> str:
+    """Remove heavy markdown elements that waste LLM tokens."""
+    import re
+    # Remove image tags
+    text = re.sub(r"!\[.*?\]\(.*?\)", "", text)
+    # Remove HTML tags
+    text = re.sub(r"<[^>]+>", "", text)
+    # Collapse multiple blank lines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
