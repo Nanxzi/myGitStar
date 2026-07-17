@@ -25,7 +25,7 @@ _PROMPT_LEAK_PATTERNS = [
 def _clean_prompt_leak(text: str) -> str:
     """Remove prompt template artifacts leaked by the LLM into field values."""
     if not text:
-        return text
+        return ""
     for pattern in _PROMPT_LEAK_PATTERNS:
         text = re.sub(pattern, "", text, flags=re.IGNORECASE)
     # Remove leading ** markers that LLM sometimes adds
@@ -43,7 +43,7 @@ def _repo_key(repo: Dict) -> str:
 def generate_summarize_prompt(repo: Dict[str, Any], language: str = "zh", readme_content: str = "") -> str:
     repo_name = repo["full_name"]
     desc = repo.get("description") or ""
-    url = repo["html_url"]
+    url = repo.get("html_url") or ""
 
     # Brief Introduction = original description (no LLM needed)
     brief_intro = desc if desc else "(no description available)"
@@ -88,8 +88,8 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
         for i, repo in enumerate(repos, 1):
             repo_name = repo["full_name"]
             desc = repo.get("description") or ""
-            url = repo["html_url"]
-            readme = repo.get("readme_content", "")
+            url = repo.get("html_url") or ""
+            readme = repo.get("readme_content") or ""
             entry = (
                 f"## 仓库 {i}\n"
                 f"- 仓库名称: {repo_name}\n"
@@ -125,8 +125,8 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
         for i, repo in enumerate(repos, 1):
             repo_name = repo["full_name"]
             desc = repo.get("description") or ""
-            url = repo["html_url"]
-            readme = repo.get("readme_content", "")
+            url = repo.get("html_url") or ""
+            readme = repo.get("readme_content") or ""
             entry = (
                 f"## Repository {i}\n"
                 f"- Name: {repo_name}\n"
@@ -202,10 +202,10 @@ def parse_combined_summaries(response_text: str, repos: List[Dict[str, Any]]) ->
                 if not repo_name:
                     continue
 
-                brief_intro = item.get("Brief Introduction", "") or item.get("简要介绍", "")
-                innovations = item.get("Innovations", "") or item.get("创新点", "")
-                basic_usage = item.get("Basic Usage", "") or item.get("简单用法", "")
-                summary = item.get("Summary", "") or item.get("总结", "")
+                brief_intro = (item.get("Brief Introduction") or item.get("简要介绍") or "")
+                innovations = (item.get("Innovations") or item.get("创新点") or "")
+                basic_usage = (item.get("Basic Usage") or item.get("简单用法") or "")
+                summary = (item.get("Summary") or item.get("总结") or "")
 
                 # Clean prompt leak artifacts from all fields
                 brief_intro = _clean_prompt_leak(brief_intro)
@@ -215,7 +215,7 @@ def parse_combined_summaries(response_text: str, repos: List[Dict[str, Any]]) ->
 
                 full_entry = {
                     "Repository Name": repo_name,
-                    "Repository URL": item.get("Repository URL", "") or item.get("仓库地址", ""),
+                    "Repository URL": (item.get("Repository URL") or item.get("仓库地址") or ""),
                     "Brief Introduction": brief_intro,
                     "Innovations": innovations,
                     "Basic Usage": basic_usage,
@@ -317,7 +317,7 @@ def build_repo_entry(repo: Dict, summary: Any) -> Dict:
         # Brief Introduction: use LLM output, fallback to original description
         brief = summary.get("Brief Introduction", "") or ""
         if brief.lower().strip() in ("not specified.", "not specified", ""):
-            brief = repo.get("description", "")
+            brief = repo.get("description") or ""
         # Truncate to first paragraph only (Markdown single \n = space, causes layout issues)
         brief = brief.split("\n\n")[0].split("\n")[0].strip()
         entry = {
@@ -484,7 +484,7 @@ def summarize_batch(
         else:
             results[idx] = {
                 "Repository Name": key,
-                "Repository URL": repo.get("html_url", ""),
+                "Repository URL": repo.get("html_url") or "",
                 "Brief Introduction": "",
                 "Innovations": "",
                 "Basic Usage": "",
@@ -535,7 +535,7 @@ def summarize_batch(
                 else:
                     results[idx] = {
                         "Repository Name": repo["full_name"],
-                        "Repository URL": repo.get("html_url", ""),
+                        "Repository URL": repo.get("html_url") or "",
                         "Brief Introduction": "",
                         "Innovations": "",
                         "Basic Usage": "",
@@ -563,7 +563,7 @@ def summarize_batch(
                 else:
                     results[idx] = {
                         "Repository Name": key,
-                        "Repository URL": repo.get("html_url", ""),
+                        "Repository URL": repo.get("html_url") or "",
                         "Brief Introduction": "",
                         "Innovations": "",
                         "Basic Usage": "",
@@ -654,7 +654,7 @@ def summarize_batch_combined(
             if update_mode == "missing_only":
                 results[idx] = {
                     "Repository Name": key,
-                    "Repository URL": repo.get("html_url", ""),
+                    "Repository URL": repo.get("html_url") or "",
                     "Brief Introduction": "",
                     "Innovations": "",
                     "Basic Usage": "",
@@ -683,7 +683,7 @@ def summarize_batch_combined(
                 else:
                     results[idx] = {
                         "Repository Name": key,
-                        "Repository URL": repo.get("html_url", ""),
+                        "Repository URL": repo.get("html_url") or "",
                         "Brief Introduction": "",
                         "Innovations": "",
                         "Basic Usage": "",
@@ -773,9 +773,9 @@ def summarize_batch_combined(
             if not entry.get("Summary") or entry.get("Summary") == "Not specified.":
                 # Final fallback: keep old summary if any, else placeholder.
                 entry = _placeholder_entry(repo, old_summaries, "LLM returned empty after retry")
-            desc = (description_lookup or {}).get(key, repo.get("description", "") or "")
+            desc = (description_lookup or {}).get(key, repo.get("description") or "")
             entry.setdefault("Repository Name", key)
-            entry.setdefault("Repository URL", repo.get("html_url", ""))
+            entry.setdefault("Repository URL", repo.get("html_url") or "")
             entry["__meta__"] = make_metadata(
                 full_name=key,
                 description=desc,
@@ -795,7 +795,7 @@ def _placeholder_entry(repo: Dict, old_summaries: Dict[str, Any], reason: str) -
     next run can re-try without losing data. The reason is recorded in
     `__last_error__` (consumed by diagnostics, not the README renderer).
     """
-    key = repo.get("full_name", "")
+    key = repo.get("full_name") or ""
     existing = old_summaries.get(key) if isinstance(old_summaries, dict) else None
     if isinstance(existing, dict) and (existing.get("Summary") or "").strip():
         out = dict(existing)
@@ -803,7 +803,7 @@ def _placeholder_entry(repo: Dict, old_summaries: Dict[str, Any], reason: str) -
         return out
     return {
         "Repository Name": key,
-        "Repository URL": repo.get("html_url", ""),
+        "Repository URL": repo.get("html_url") or "",
         "Brief Introduction": "",
         "Innovations": "",
         "Basic Usage": "",
@@ -818,8 +818,8 @@ def _parse_single_repo_summary(text: str, repo: Dict) -> Dict[str, Any]:
     if not text:
         return {}
     out = {
-        "Repository Name": repo.get("full_name", ""),
-        "Repository URL": repo.get("html_url", ""),
+        "Repository Name": repo.get("full_name") or "",
+        "Repository URL": repo.get("html_url") or "",
     }
     # Match either English or Chinese labels.
     pairs = [
@@ -848,7 +848,7 @@ def sort_repos_by_validity(
     language: str = "zh",
 ) -> List[Dict]:
     try:
-        return sorted(repos, key=lambda r: is_valid_summary(old_summaries.get(r.get("full_name", ""), ""), language))
+        return sorted(repos, key=lambda r: is_valid_summary(old_summaries.get(r.get("full_name") or "", ""), language))
     except Exception:
         return repos
 

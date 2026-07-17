@@ -324,7 +324,7 @@ def main():
         classified_to_process: Dict[str, List[Dict]] = {}
         for lang, repos in classified.items():
             try:
-                sorted_repos = sorted(repos, key=lambda r: is_valid_summary(old_summaries.get(r.get("full_name", ""), ""), LANGUAGE))
+                sorted_repos = sorted(repos, key=lambda r: is_valid_summary(old_summaries.get(r.get("full_name") or "", ""), LANGUAGE))
             except Exception:
                 sorted_repos = repos
             if sorted_repos:
@@ -377,7 +377,7 @@ def main():
             readme_fetched = 0
             readme_failed = 0
             for repo in all_repos_to_process:
-                full_name = repo.get("full_name", "")
+                full_name = repo.get("full_name") or ""
                 if not full_name:
                     continue
                 content = fetch_repo_readme(GITHUB_TOKEN, full_name, timeout=15.0, max_chars=3000)

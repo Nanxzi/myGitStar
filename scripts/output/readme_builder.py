@@ -53,10 +53,10 @@ def _format_updated_at(updated_at: str) -> str:
     if not updated_at:
         return ""
     try:
-        dt = datetime.fromisoformat(updated_at.replace("Z", "+00:00"))
+        dt = datetime.fromisoformat(str(updated_at).replace("Z", "+00:00"))
         return dt.strftime("%Y-%m-%d")
     except Exception:
-        return updated_at[:10]
+        return str(updated_at)[:10]
 
 
 def _select_repos_for_update(
@@ -157,6 +157,15 @@ def build_table_of_contents(
         anchor = github_anchor(lang)
         count_str = f"（{count}个）" if language != "en" else f"(Total {count})"
         lines.append(f"- [{lang}](#{anchor}) {count_str}\n")
+        
+        # 显示该分类下的仓库列表
+        repos = classified[lang]
+        for repo in repos:
+            repo_name = repo.get("full_name", "")
+            if repo_name:
+                repo_anchor = github_anchor(repo_name)
+                lines.append(f"  - [{repo_name}](#{repo_anchor})\n")
+    
     lines.append("\n---\n\n")
     return lines
 
@@ -189,14 +198,14 @@ def build_repo_section(
         summary_entry = summary_store.get(repo["full_name"], {}) or old_summaries.get(repo["full_name"], {})
 
         if isinstance(summary_entry, dict):
-            repo_name = summary_entry.get("Repository Name", repo["full_name"])
-            brief = _clean_prompt_leak(summary_entry.get("Brief Introduction", ""))
+            repo_name = summary_entry.get("Repository Name") or repo["full_name"]
+            brief = _clean_prompt_leak(summary_entry.get("Brief Introduction") or "")
             # Truncate brief to first paragraph to avoid Markdown layout issues
             if brief and ("\n" in brief or "\r" in brief):
                 brief = brief.split("\n\n")[0].split("\n")[0].strip()
-            innovations = _clean_prompt_leak(summary_entry.get("Innovations", ""))
-            basic = _clean_prompt_leak(summary_entry.get("Basic Usage", ""))
-            summary_text = _clean_prompt_leak(summary_entry.get("Summary", ""))
+            innovations = _clean_prompt_leak(summary_entry.get("Innovations") or "")
+            basic = _clean_prompt_leak(summary_entry.get("Basic Usage") or "")
+            summary_text = _clean_prompt_leak(summary_entry.get("Summary") or "")
 
             if language == "en":
                 summary_parts = []
@@ -225,11 +234,13 @@ def build_repo_section(
             else:
                 summary = f"1. **仓库名称：** {repo['full_name']}\n2. **简要介绍：** 未指定。\n3. **创新点：** 未指定。\n4. **基本用法：** 未指定。\n5. **总结：** 未指定。"
 
-        url = repo["html_url"]
-        stars = repo.get("stargazers_count", 0)
-        forks = repo.get("forks_count", 0)
-        updated_at = _format_updated_at(repo.get("updated_at", ""))
+        url = repo.get("html_url") or ""
+        stars = repo.get("stargazers_count") or 0
+        forks = repo.get("forks_count") or 0
+        updated_at = _format_updated_at(repo.get("updated_at") or "")
 
+        repo_anchor = github_anchor(repo['full_name'])
+        lines.append(f'<a id="{repo_anchor}"></a>\n\n')
         lines.append(f"### 📌 [{repo['full_name']}]({url})\n\n")
 
         if language == "en":
@@ -297,14 +308,14 @@ def classify_by_content(
     # Build full_name -> category_id mapping
     name_to_cat: Dict[str, str] = {}
     for a in assignments:
-        full_name = a.get("full_name", "")
-        cat_id = a.get("category_id", "")
+        full_name = a.get("full_name") or ""
+        cat_id = a.get("category_id") or ""
         if full_name and cat_id:
             name_to_cat[full_name] = cat_id
 
     classified: Dict[str, List[Dict[str, Any]]] = {}
     for repo in repos:
-        full_name = repo.get("full_name", "")
+        full_name = repo.get("full_name") or ""
         cat_id = name_to_cat.get(full_name, "")
         cat_name = cat_map.get(cat_id, "Other") if cat_id else "Other"
         classified.setdefault(cat_name, []).append(repo)
@@ -336,6 +347,14 @@ def build_content_table_of_contents(
         count = len(repos)
         count_str = f"（{count}个）" if language != "en" else f"({count})"
         lines.append(f"- [{icon} {cat_name}](#{anchor}) {count_str}\n")
+        
+        # 显示该分类下的仓库列表
+        for repo in repos:
+            repo_name = repo.get("full_name") or ""
+            if repo_name:
+                repo_anchor = github_anchor(repo_name)
+                lines.append(f"  - [{repo_name}](#{repo_anchor})\n")
+    
     lines.append("\n---\n\n")
     return lines
 
@@ -369,14 +388,14 @@ def build_content_repo_section(
         summary_entry = summary_store.get(repo["full_name"], {}) or old_summaries.get(repo["full_name"], {})
 
         if isinstance(summary_entry, dict):
-            repo_name = summary_entry.get("Repository Name", repo["full_name"])
-            brief = _clean_prompt_leak(summary_entry.get("Brief Introduction", ""))
+            repo_name = summary_entry.get("Repository Name") or repo["full_name"]
+            brief = _clean_prompt_leak(summary_entry.get("Brief Introduction") or "")
             # Truncate brief to first paragraph to avoid Markdown layout issues
             if brief and ("\n" in brief or "\r" in brief):
                 brief = brief.split("\n\n")[0].split("\n")[0].strip()
-            innovations = _clean_prompt_leak(summary_entry.get("Innovations", ""))
-            basic = _clean_prompt_leak(summary_entry.get("Basic Usage", ""))
-            summary_text = _clean_prompt_leak(summary_entry.get("Summary", ""))
+            innovations = _clean_prompt_leak(summary_entry.get("Innovations") or "")
+            basic = _clean_prompt_leak(summary_entry.get("Basic Usage") or "")
+            summary_text = _clean_prompt_leak(summary_entry.get("Summary") or "")
 
             if language == "en":
                 summary_parts = []
@@ -405,11 +424,13 @@ def build_content_repo_section(
             else:
                 summary = f"1. **仓库名称：** {repo['full_name']}\n2. **简要介绍：** 未指定。\n3. **创新点：** 未指定。\n4. **基本用法：** 未指定。\n5. **总结：** 未指定。"
 
-        url = repo["html_url"]
-        stars = repo.get("stargazers_count", 0)
-        forks = repo.get("forks_count", 0)
-        updated_at = _format_updated_at(repo.get("updated_at", ""))
+        url = repo.get("html_url") or ""
+        stars = repo.get("stargazers_count") or 0
+        forks = repo.get("forks_count") or 0
+        updated_at = _format_updated_at(repo.get("updated_at") or "")
 
+        repo_anchor = github_anchor(repo['full_name'])
+        lines.append(f'<a id="{repo_anchor}"></a>\n\n')
         lines.append(f"### 📌 [{repo['full_name']}]({url})\n\n")
 
         if language == "en":

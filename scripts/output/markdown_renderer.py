@@ -273,13 +273,13 @@ def render_markdown(
             url = r.get("html_url") or f"https://github.com/{full_name}"
             stars = r.get("stargazers_count", 0)
             forks = r.get("forks_count", 0)
-            updated_at = r.get("updated_at", "")
+            updated_at = r.get("updated_at") or ""
             if updated_at:
                 try:
-                    dt = datetime.fromisoformat(updated_at.replace("Z", "+00:00"))
+                    dt = datetime.fromisoformat(str(updated_at).replace("Z", "+00:00"))
                     updated_at_str = dt.strftime("%Y-%m-%d")
                 except Exception:
-                    updated_at_str = updated_at[:10] if len(updated_at) >= 10 else updated_at
+                    updated_at_str = str(updated_at)[:10] if len(str(updated_at)) >= 10 else str(updated_at)
             else:
                 updated_at_str = ""
 
@@ -290,14 +290,14 @@ def render_markdown(
             if not isinstance(repo_summary, dict):
                 repo_summary = {}
 
-            repo_name = repo_summary.get("Repository Name", full_name)
-            brief_intro = _clean_prompt_leak(repo_summary.get("Brief Introduction", ""))
+            repo_name = repo_summary.get("Repository Name") or full_name
+            brief_intro = _clean_prompt_leak(repo_summary.get("Brief Introduction") or "")
             # Truncate brief to first paragraph to avoid Markdown layout issues
             if brief_intro and ("\n" in brief_intro or "\r" in brief_intro):
                 brief_intro = brief_intro.split("\n\n")[0].split("\n")[0].strip()
-            innovations = _clean_prompt_leak(repo_summary.get("Innovations", ""))
-            basic_usage = _clean_prompt_leak(repo_summary.get("Basic Usage", ""))
-            summary_text = _clean_prompt_leak(repo_summary.get("Summary", ""))
+            innovations = _clean_prompt_leak(repo_summary.get("Innovations") or "")
+            basic_usage = _clean_prompt_leak(repo_summary.get("Basic Usage") or "")
+            summary_text = _clean_prompt_leak(repo_summary.get("Summary") or "")
 
             lines.append("1. **Repository Name:** " + repo_name + "\n")
             lines.append("2. **Brief Introduction:** " + (brief_intro or "Not specified.") + "\n")

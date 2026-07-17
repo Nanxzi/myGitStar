@@ -116,12 +116,19 @@ def is_entry_fresh(
         v = entry.get(f)
         if v is None or (isinstance(v, str) and not v.strip()):
             return False
+        # Treat "Not specified." as invalid - it means LLM failed to generate content
+        if isinstance(v, str) and v.strip().lower() in ("not specified.", "not specified"):
+            return False
 
-    # `Basic Usage` is allowed to be empty / "Not specified." - some repos
-    # genuinely have no usage snippet (e.g. libraries without examples).
+    # `Basic Usage` is allowed to be empty - some repos genuinely have no
+    # usage snippet (e.g. libraries without examples).
+    # However, "Not specified." is treated as invalid and will trigger re-summarization.
     basic = entry.get("Basic Usage")
     if basic is not None and isinstance(basic, str) and not basic.strip():
-        pass  # ok
+        pass  # ok - empty is acceptable
+    # But "Basic Usage" with "Not specified." is considered invalid
+    if isinstance(basic, str) and basic.strip().lower() in ("not specified.", "not specified"):
+        return False
 
     current_hash = compute_description_hash(full_name, description)
     meta = entry.get("__meta__") if isinstance(entry.get("__meta__"), dict) else {}

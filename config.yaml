@@ -110,7 +110,7 @@ update_mode: missing_only
 # 配合 missing_only + description_hash，一般 workflow 一次只需 0~3 次调用
 # 也可由环境变量 MAX_API_CALLS 覆盖
 # Max LLM calls per run (0 = unlimited). Env MAX_API_CALLS overrides.
-max_api_calls_per_run: 30
+max_api_calls_per_run: 0
 
 
 # Taxonomy 缓存最大有效天数。> 0 时会复用 repo_categories.json 中现有的分类体系
@@ -119,6 +119,22 @@ max_api_calls_per_run: 30
 # Taxonomy cache max age in days. >0 reuses the cached taxonomy + assignments
 # from repo_categories.json when fresh. 0 = always redesign (legacy behaviour).
 taxonomy_cache_max_age_days: 14
+
+# Taxonomy 缓存：新增仓库比例阈值（0.0~1.0）
+# 当新增仓库占当前总仓库数的比例超过此值时，重新设计 taxonomy 以更好适应新的仓库分布。
+# 值越大越倾向于复用缓存（节省 API 调用），值越小越倾向于重新设计（分类更准确）。
+# Taxonomy cache: new repo ratio threshold (0.0~1.0).
+# Redesign taxonomy when new repos exceed this ratio of total repos.
+# Higher = more cache reuse (save API calls), lower = more redesign (better accuracy).
+taxonomy_cache_new_repo_ratio: 0.3
+
+# Taxonomy 缓存：分类稳定性阈值（0.0~1.0）
+# 当增量运行时的分类复用率低于此值时，输出警告提示分类不稳定。
+# 复用率 = 复用缓存的仓库数 / 总仓库数（排除 Unknown）。
+# Taxonomy cache: classification stability threshold (0.0~1.0).
+# Warn when reuse ratio falls below this value during incremental runs.
+# Reuse ratio = reused repos / total repos (excluding Unknown).
+taxonomy_cache_stability_threshold: 0.7
 
 
 # 内容分类：类别数量区间（用于 scripts/classify_stars_by_content.py 设计 taxonomy）

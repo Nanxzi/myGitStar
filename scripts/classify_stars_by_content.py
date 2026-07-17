@@ -1125,26 +1125,28 @@ class Taxonomy:
     categories: List[Dict[str, Any]]
 
 
-def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, str], Optional[str]]:
+def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, str], Dict[str, str], Optional[str]]:
     """Load existing taxonomy + assignment map from repo_categories.json.
 
-    Returns (taxonomy, assignments_by_full_name, generated_at). The
-    generated_at timestamp lets the caller decide whether the cache is
+    Returns (taxonomy, assignments_by_full_name, summaries_by_full_name, generated_at).
+    The generated_at timestamp lets the caller decide whether the cache is
     still fresh enough to reuse.
+    summaries_by_full_name maps full_name -> summary for repos classified as "Other",
+    so we can detect summary updates and trigger re-classification.
     """
     if not path or not os.path.exists(path):
-        return None, {}, None
+        return None, {}, {}, None
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception:
-        return None, {}, None
+        return None, {}, {}, None
     if not isinstance(data, dict):
-        return None, {}, None
+        return None, {}, {}, None
     taxonomy_raw = data.get("taxonomy") or {}
     categories = taxonomy_raw.get("categories") if isinstance(taxonomy_raw, dict) else None
     if not isinstance(categories, list):
-        return None, {}, data.get("generated_at")
+        return None, {}, {}, data.get("generated_at")
     try:
         taxonomy = Taxonomy(categories=[
             {
@@ -1158,6 +1160,7 @@ def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, s
     except Exception:
         taxonomy = None
     assignments_map: Dict[str, str] = {}
+    summaries_map: Dict[str, str] = {}
     assignments = data.get("assignments")
     if isinstance(assignments, list):
         for a in assignments:
@@ -1167,7 +1170,12 @@ def load_existing_categories(path: str) -> Tuple[Optional[Taxonomy], Dict[str, s
             category_id = str(a.get("category_id") or "").strip()
             if full_name and category_id:
                 assignments_map[full_name] = category_id
-    return taxonomy, assignments_map, data.get("generated_at")
+                # Store summary for Other/Unknown repos to detect updates
+                if category_id.lower() in ("other", "unknown"):
+                    summary = str(a.get("summary") or "").strip()
+                    if summary:
+                        summaries_map[full_name] = summary
+    return taxonomy, assignments_map, summaries_map, data.get("generated_at")
 
 
 def _is_taxonomy_cache_fresh(generated_at: Optional[str], max_age_days: int) -> bool:
@@ -1180,6 +1188,147 @@ def _is_taxonomy_cache_fresh(generated_at: Optional[str], max_age_days: int) -> 
         return datetime.now(timezone.utc) - ts <= timedelta(days=max_age_days)
     except Exception:
         return False
+
+
+def _should_refresh_taxonomy(
+    cached_tax: Optional[Taxonomy],
+    cached_assigns: Dict[str, str],
+    cached_at: Optional[str],
+    current_repos: List[Dict[str, Any]],
+    max_age_days: int,
+    min_categories: int,
+    max_categories: int,
+    min_repos_per_category: int,
+    new_repo_ratio_threshold: float = 0.3,
+) -> Tuple[bool, str]:
+    """Decide whether the cached taxonomy should be refreshed.
+
+    Returns (should_refresh, reason).
+    """
+    if cached_tax is None:
+        return True, "no cached taxonomy"
+
+    # Check time freshness
+    if not _is_taxonomy_cache_fresh(cached_at, max_age_days):
+        return True, f"cache expired (age > {max_age_days} days)"
+
+    # Check category count bounds
+    cat_count = len(cached_tax.categories)
+    if cat_count < min_categories:
+        return True, f"too few categories ({cat_count} < {min_categories})"
+    if cat_count > max_categories:
+        return True, f"too many categories ({cat_count} > {max_categories})"
+
+    # Check repo collection change
+    cached_repo_count = len(cached_assigns)
+    current_repo_count = len(current_repos)
+
+    if current_repo_count == 0:
+        return False, ""
+
+    # If too many new repos, refresh taxonomy to better fit the new distribution
+    new_repo_ratio = max(0, current_repo_count - cached_repo_count) / max(current_repo_count, 1)
+    if new_repo_ratio > new_repo_ratio_threshold:
+        return True, f"too many new repos ({new_repo_ratio:.0%} > {new_repo_ratio_threshold:.0%})"
+
+    # Check category quality: are any categories too small or too large?
+    if min_repos_per_category > 0 and cached_assigns:
+        # Count repos per category
+        cat_counts: Dict[str, int] = {}
+        for cid in cached_assigns.values():
+            cat_counts[cid] = cat_counts.get(cid, 0) + 1
+
+        # Check for undersized categories (excluding Other/Unknown)
+        undersized = []
+        for cat in cached_tax.categories:
+            cid = cat["id"]
+            if cid.lower() in ("other", "unknown"):
+                continue
+            count = cat_counts.get(cid, 0)
+            if count < min_repos_per_category:
+                undersized.append((cid, count))
+
+        if len(undersized) > 2:
+            names = [f"{cid}({c})" for cid, c in undersized[:3]]
+            return True, f"multiple undersized categories: {', '.join(names)}"
+
+    return False, ""
+
+
+def _check_taxonomy_quality(
+    taxonomy: Taxonomy,
+    assignment_map: Dict[Any, str],
+    min_repos_per_category: int,
+    min_categories: int,
+    max_categories: int,
+) -> List[str]:
+    """Check taxonomy quality and return a list of issues found.
+
+    Issues include:
+      - Categories with too few repos (< min_repos_per_category)
+      - Category count outside [min_categories, max_categories]
+      - Overly dominant category (exceeds balanced threshold based on min_categories)
+    """
+    issues = []
+
+    # Count repos per category
+    cat_counts: Dict[str, int] = {}
+    for cid in assignment_map.values():
+        cat_counts[cid] = cat_counts.get(cid, 0) + 1
+
+    total = sum(cat_counts.values()) if cat_counts else 1
+
+    # Check category count bounds
+    cat_count = len(taxonomy.categories)
+    if cat_count < min_categories:
+        issues.append(f"Too few categories: {cat_count} < {min_categories}")
+    if cat_count > max_categories:
+        issues.append(f"Too many categories: {cat_count} > {max_categories}")
+
+    # Check undersized categories
+    if min_repos_per_category > 0:
+        for cat in taxonomy.categories:
+            cid = cat["id"]
+            if cid.lower() in ("other", "unknown"):
+                continue
+            count = cat_counts.get(cid, 0)
+            if count < min_repos_per_category:
+                issues.append(f"Category '{cat['name']}' has only {count} repos (min={min_repos_per_category})")
+
+    # Check for overly dominant category
+    # Balanced threshold: if we have min_categories, no single category should dominate
+    # e.g., min_categories=5 means max ~30% per category; min_categories=12 means max ~15%
+    # Use a formula: max_ratio = 1.0 / min_categories * 1.5 (with some tolerance)
+    max_balanced_ratio = min(0.5, 1.0 / max(min_categories, 1) * 1.5)
+    for cat in taxonomy.categories:
+        cid = cat["id"]
+        if cid.lower() in ("other", "unknown"):
+            continue
+        count = cat_counts.get(cid, 0)
+        if total > 0 and count / total > max_balanced_ratio:
+            issues.append(f"Category '{cat['name']}' is overly dominant: {count}/{total} repos ({count/total:.0%} > {max_balanced_ratio:.0%})")
+
+    return issues
+
+
+def _check_classification_stability(
+    reused_count: int,
+    total_repos: int,
+    unknown_count: int,
+    stability_threshold: float,
+) -> Tuple[bool, float]:
+    """Check if classification results are stable across runs.
+
+    Returns (is_stable, reuse_ratio).
+    """
+    # Exclude unknown repos from the calculation
+    classifiable = total_repos - unknown_count
+    if classifiable <= 0:
+        return True, 1.0
+
+    reuse_ratio = reused_count / classifiable
+    is_stable = reuse_ratio >= stability_threshold
+    return is_stable, reuse_ratio
 
 
 def _is_assignment_still_valid(
@@ -1655,17 +1804,28 @@ def main() -> int:
     # from repo_categories.json. This is the main API-saver for the
     # classification step.
     cache_max_age_days = 0
+    new_repo_ratio_threshold = 0.3
+    stability_threshold = 0.7
     try:
         if isinstance(config, dict):
             cache_max_age_days = int(config.get("taxonomy_cache_max_age_days", 0) or 0)
+            new_repo_ratio_threshold = float(config.get("taxonomy_cache_new_repo_ratio", 0.3) or 0.3)
+            stability_threshold = float(config.get("taxonomy_cache_stability_threshold", 0.7) or 0.7)
     except Exception:
-        cache_max_age_days = 0
+        pass
 
     if cache_max_age_days > 0 and os.path.exists(out_json_path):
-        cached_tax, cached_assigns, cached_at = load_existing_categories(out_json_path)
-        if cached_tax and len(cached_tax.categories) >= args.min_categories and _is_taxonomy_cache_fresh(cached_at, cache_max_age_days):
+        cached_tax, cached_assigns, cached_summaries, cached_at = load_existing_categories(out_json_path)
+        should_refresh, refresh_reason = _should_refresh_taxonomy(
+            cached_tax, cached_assigns, cached_at, repos,
+            cache_max_age_days, args.min_categories, args.max_categories,
+            min_repos_per_category, new_repo_ratio_threshold,
+        )
+        if cached_tax and not should_refresh:
             taxonomy = cached_tax
             # Reuse per-repo assignments where still valid.
+            # Track repos previously in "Other"/"Unknown" for priority re-classification.
+            priority_repos: List[Dict[str, Any]] = []
             for r in repos:
                 rid = r.get("id")
                 full_name = str(r.get("full_name") or "").strip()
@@ -1674,9 +1834,25 @@ def main() -> int:
                     assignment_map[rid] = cached_cid
                     reused_count += 1
                 else:
+                    # Check if this repo was previously in "Other"/"Unknown" and now has updated summary
+                    if cached_cid and cached_cid.lower() in ("other", "unknown"):
+                        current_summary = (r.get("summary") or "").strip()
+                        brief = (r.get("brief_intro") or "").strip()
+                        cached_summary = cached_summaries.get(full_name, "")
+                        # Re-classify if summary was updated (different from cached)
+                        if (current_summary or brief) and current_summary != cached_summary:
+                            priority_repos.append(r)
+                            continue
                     repos_to_classify.append(r)
-            print(f"[REUSE] Taxonomy cache is fresh (age_days<= {cache_max_age_days}); reused {reused_count}/{len(repos)} assignments; need LLM for {len(repos_to_classify)} repos")
+            # Prioritize "Other"/"Unknown" repos with updated summaries - process them first
+            # so they get classified in earlier batches
+            repos_to_classify = priority_repos + repos_to_classify
+            if priority_repos:
+                print(f"[PRIORITY] {len(priority_repos)} repos previously in 'Other'/'Unknown' have updated summaries, will be classified first")
+            print(f"[REUSE] Taxonomy cache valid; reused {reused_count}/{len(repos)} assignments; need LLM for {len(repos_to_classify)} repos")
         else:
+            reason = refresh_reason if should_refresh else "no cached taxonomy"
+            print(f"[REFRESH] Taxonomy cache invalid ({reason}); will redesign taxonomy")
             repos_to_classify = repos
     else:
         repos_to_classify = repos
@@ -1804,6 +1980,30 @@ def main() -> int:
     )
     other_id = next((c["id"] for c in taxonomy.categories if c["name"].lower() == "other"), taxonomy.categories[-1]["id"])
 
+    # Check taxonomy quality and output warnings if issues found
+    quality_issues = _check_taxonomy_quality(
+        taxonomy,
+        assignment_map,
+        min_repos_per_category,
+        args.min_categories,
+        args.max_categories,
+    )
+    if quality_issues:
+        print(f"\n[WARNING] Taxonomy quality issues detected ({len(quality_issues)}):")
+        for issue in quality_issues[:5]:  # Show first 5 issues
+            print(f"  - {issue}")
+        if len(quality_issues) > 5:
+            print(f"  ... and {len(quality_issues) - 5} more issues")
+        print("Consider adjusting content_min_categories, content_max_categories, or content_min_repos_per_category in config.yaml\n")
+
+    # Check classification stability
+    is_stable, reuse_ratio = _check_classification_stability(
+        reused_count, len(repos), len(unknown_repos), stability_threshold
+    )
+    if not is_stable and reused_count > 0:
+        print(f"\n[WARNING] Classification stability is low: {reuse_ratio:.1%} (threshold: {stability_threshold:.1%})")
+        print("This may indicate taxonomy drift. Consider redesigning taxonomy by setting taxonomy_cache_max_age_days: 0\n")
+
     out = {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "model_choice": MODEL_CHOICE,
@@ -1821,6 +2021,12 @@ def main() -> int:
                 "classification_source": (
                     "reused" if r.get("id") in assignment_map and r.get("id") not in {x.get("id") for x in repos_to_classify}
                     else ("unknown" if r in unknown_repos else "ai")
+                ),
+                # Store summary for Other/Unknown repos to detect updates next run
+                "summary": (
+                    (r.get("summary") or "").strip()
+                    if assignment_map.get(r.get("id"), other_id).lower() in ("other", "unknown")
+                    else None
                 ),
             }
             for r in repos
