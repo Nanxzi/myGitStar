@@ -50,6 +50,7 @@ from scripts.summary import (
     summarize_batch_combined,
     get_summarize_func,
 )
+from scripts.ai.llm_caller import RateLimitAbort
 
 
 config = load_config()
@@ -127,8 +128,19 @@ def _api_call_counter():
     global copilot_api_call_count, openrouter_api_call_count, gemini_api_call_count, modelscope_api_call_count
     if model_choice == "copilot":
         copilot_api_call_count += 1
-        remaining = 150 - copilot_api_call_count
-        print(f"[Copilot API调用] 第 {copilot_api_call_count} 次调用，剩余可用: {remaining}")
+        # 从 config 读取 max_api_calls_per_run（0 = 不限制）
+        max_calls = config.get("max_api_calls_per_run", 0)
+        remaining = max_calls - copilot_api_call_count if max_calls > 0 else None
+        if max_calls > 0:
+            print(f"[Copilot API调用] 第 {copilot_api_call_count} 次调用，剩余可用: {remaining}")
+            # Stop when Copilot quota is exhausted
+            if remaining is not None and remaining <= 0:
+                raise RateLimitAbort(
+                    f"Copilot API quota exhausted: {copilot_api_call_count} calls made, remaining={remaining}. "
+                    "Stopping to avoid further overuse. Results will be saved and can be resumed next run."
+                )
+        else:
+            print(f"[Copilot API调用] 第 {copilot_api_call_count} 次调用（无上限）")
     elif model_choice == "openrouter":
         openrouter_api_call_count += 1
         print(f"[OpenRouter API调用] 第 {openrouter_api_call_count} 次调用")
@@ -398,30 +410,47 @@ def main():
             batch_num = i // batch_size + 1
             print(f"处理批次 {batch_num}，包含 {len(this_batch)} 个仓库...")
 
-            if batch_mode == "combined" and batch_size > 1:
-                print(f"[DEBUG] Calling summarize_batch_combined for {len(this_batch)} repos, batch_size={batch_size}")
-                summaries = summarize_batch_combined(
-                    this_batch,
-                    summary_store,
-                    _budgeted_summarize_func,
-                    update_mode,
-                    LANGUAGE,
-                    batch_size,
-                    batch_num,
-                    api_budget_tracker=_budget_tracker,
-                    description_lookup=description_lookup,
-                    model_name=_model_name_for_meta,
-                )
-            else:
-                summaries = summarize_batch(
-                    this_batch,
-                    summary_store,
-                    _budgeted_summarize_func,
-                    update_mode,
-                    LANGUAGE,
-                    max_workers,
-                    api_budget_tracker=_budget_tracker,
-                )
+            try:
+                if batch_mode == "combined" and batch_size > 1:
+                    print(f"[DEBUG] Calling summarize_batch_combined for {len(this_batch)} repos, batch_size={batch_size}")
+                    summaries = summarize_batch_combined(
+                        this_batch,
+                        summary_store,
+                        _budgeted_summarize_func,
+                        update_mode,
+                        LANGUAGE,
+                        batch_size,
+                        batch_num,
+                        api_budget_tracker=_budget_tracker,
+                        description_lookup=description_lookup,
+                        model_name=_model_name_for_meta,
+                    )
+                else:
+                    summaries = summarize_batch(
+                        this_batch,
+                        summary_store,
+                        _budgeted_summarize_func,
+                        update_mode,
+                        LANGUAGE,
+                        max_workers,
+                        api_budget_tracker=_budget_tracker,
+                    )
+            except RateLimitAbort as exc:
+                # Persist the partial results attached to the exception so
+                # already-completed repos in this batch are not lost, then
+                # stop the main loop so we don't keep hammering the
+                # rate-limited API.
+                print(f"[RATE_LIMIT] 主循环终止: {exc}")
+                partial = getattr(exc, "results", None) or []
+                for repo, summary in zip(this_batch, partial):
+                    key = _repo_key(repo)
+                    entry = build_repo_entry(repo, summary)
+                    if key:
+                        repo_summary_map[key] = entry
+                if partial:
+                    summary_store = merge_summary_store(summary_store, repo_summary_map)
+                    save_json_atomic(summary_store, json_path)
+                break
 
             for repo, summary in zip(this_batch, summaries):
                 key = _repo_key(repo)

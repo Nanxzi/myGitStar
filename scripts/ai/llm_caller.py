@@ -17,7 +17,14 @@ API_ENDPOINTS = {
 
 
 class RateLimitAbort(RuntimeError):
-    pass
+    """Raised when the LLM backend returns too many 429s or the per-run
+    API-call budget is exhausted. Carries an optional `results` payload so
+    the caller can still persist already-completed summaries before exiting.
+    """
+
+    def __init__(self, message: str, results: Optional[Any] = None):
+        super().__init__(message)
+        self.results = results
 
 
 MAX_CONSECUTIVE_429 = 5

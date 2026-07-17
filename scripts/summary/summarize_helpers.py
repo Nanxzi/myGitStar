@@ -449,9 +449,10 @@ def summarize_batch(
     api_budget_tracker: Optional[Callable[[], bool]] = None,
 ) -> List[Any]:
     from scripts.ai.llm_caller import RateLimitAbort
-    
+
     results: List[Any] = ["" for _ in repos]
     rate_limit_hit = False
+    rate_limit_exc: Optional[RateLimitAbort] = None
 
     repos_with_prompts = []
     for repo in repos:
@@ -525,9 +526,14 @@ def summarize_batch(
                     summary_text = summary.get("Summary", "") if isinstance(summary, dict) else str(summary)
                     print(f"[DEBUG] [repo]: {repo['full_name']} | [AI summary]: {repr(summary_text)}")
             except RateLimitAbort as exc:
+                # Fill placeholder for the repo that triggered the rate limit,
+                # cancel remaining futures, then re-raise so the caller (main
+                # loop in summarize_stars.py) can break out of subsequent
+                # batches instead of retrying the same rate-limited API.
                 print(f"[RATE_LIMIT] {repo['full_name']} 触发速率限制: {exc}")
                 print(f"[RATE_LIMIT] 主动停止后续请求，保存已有结果")
                 rate_limit_hit = True
+                rate_limit_exc = exc
                 # Preserve old summary for this repo
                 existing = old_summaries.get(repo["full_name"], {})
                 if isinstance(existing, dict) and existing.get("Summary"):
@@ -550,7 +556,7 @@ def summarize_batch(
                 api_name = summarize_func.__name__.replace("_summarize", "").upper()
                 summary = old_summaries.get(repo["full_name"], f"{api_name} API生成失败")
             results[idx] = summary if summary is not None else "*暂无AI总结*"
-    
+
     # Handle remaining repos if rate limit was hit
     if rate_limit_hit:
         for idx in submitted_indices:
@@ -569,7 +575,14 @@ def summarize_batch(
                         "Basic Usage": "",
                         "Summary": "(deferred: rate limit reached)",
                     }
-    
+
+    # Re-raise so the main loop knows to stop processing subsequent batches.
+    # Already-processed results above are preserved in the `results` list
+    # and attached to the exception so the caller can still persist them.
+    if rate_limit_hit and rate_limit_exc is not None:
+        rate_limit_exc.results = results
+        raise rate_limit_exc
+
     return results
 
 
@@ -719,7 +732,11 @@ def summarize_batch_combined(
                     results[idx_to_preserve] = existing
                 else:
                     results[idx_to_preserve] = _placeholder_entry(repo, old_summaries, "rate limit reached")
-            break
+            # Re-raise so the main loop can break out of subsequent batches
+            # instead of retrying the same rate-limited API. Attach the
+            # results list so already-completed repos are not lost.
+            exc.results = results
+            raise
         except Exception as exc:
             import traceback
             print(f"[ERROR] Batch {batch_num} exception: {exc}", flush=True)
@@ -758,7 +775,10 @@ def summarize_batch_combined(
                     # Preserve old summary for this and remaining missing repos
                     for remaining_idx, remaining_repo, _ in missing[missing.index((idx, repo, attempt)):]:
                         results[remaining_idx] = _placeholder_entry(remaining_repo, old_summaries, "rate limit reached")
-                    break
+                    # Re-raise so the main loop can break out. Attach
+                    # results so already-completed repos are not lost.
+                    exc.results = results
+                    raise
                 except Exception as e:
                     print(f"[FALLBACK-ERR] {repo['full_name']}: {e}")
                 # Still missing after fallback: preserve old or placeholder.
