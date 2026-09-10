@@ -456,6 +456,40 @@ def main():
             description_lookup=description_lookup,
         )
 
+        # Backfill __meta__ for legacy entries that carry valid content but
+        # no metadata (e.g. old pure-string entries). This is OFF-LINE — no
+        # LLM call — and works for both combined and concurrent modes. Once
+        # stamped with the current description_hash, such entries participate
+        # in hash-based incremental selection on future runs instead of being
+        # (a) permanently re-summarised on force_all or (b) silently skipped
+        # as "fresh" with no way to detect upstream description changes.
+        _backfilled = 0
+        for _key, _entry in (summary_store or {}).items():
+            _desc = description_lookup.get(_key, "").strip()
+            if not _desc:
+                # No upstream description (repo no longer starred / no desc):
+                # leave as-is, we cannot compute a trustworthy hash.
+                continue
+            if not isinstance(_entry, dict):
+                continue
+            if not (str(_entry.get("Summary") or "").strip()):
+                # No content yet -> needs a real LLM call, handle elsewhere.
+                continue
+            _meta = _entry.get("__meta__")
+            if isinstance(_meta, dict) and _meta.get("description_hash"):
+                continue  # already stamped
+            _entry["__meta__"] = make_metadata(
+                full_name=_key,
+                description=_desc,
+                model=(_meta.get("summary_model") if isinstance(_meta, dict) else None) or "legacy",
+                source="backfill",
+                attempts=0,
+            )
+            _backfilled += 1
+        if _backfilled:
+            save_json_atomic(summary_store, json_path)
+            print(f"[BACKFILL] Stamped __meta__ for {_backfilled} fresh-but-legacy entries (no API calls)")
+
         # API call budget: limit LLM calls per run. Default 0 (unlimited) so
         # local runs are not constrained; the workflow sets MAX_API_CALLS env.
         max_api_calls_env = os.environ.get("MAX_API_CALLS", "")

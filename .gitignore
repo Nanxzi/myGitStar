@@ -2,3 +2,4 @@ scripts/test/
 __pycache__/
 backup/
 my_docs/
+.openrouter_daily_counter.json

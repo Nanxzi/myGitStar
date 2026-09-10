@@ -1884,19 +1884,6 @@
     "summary": "*   **Repository Name:** linshenkx/prompt-optimizer\n*   **Brief Introduction:** An AI prompt optimizer for writing better prompts and getting better AI results.\n*   **Innovations:** Uses advanced LLMs to automatically rewrite, structure, and refine raw user queries into highly optimized, professional prompts. This significantly enhances output quality, reduces token consumption, and standardizes prompt formats across different AI models.\n*   **Basic Usage:** Not specified (no detailed usage examples were provided in the input text).\n*   **Summary:** This tool helps users transform basic drafts into high-performance prompts, maximizing the output quality and efficiency of AI models through structured optimization.",
     "full_name": "linshenkx/prompt-optimizer"
   },
-  "kamranahmedse/developer-roadmap": {
-    "Repository Name": "kamranahmedse/developer-roadmap",
-    "Repository URL": "https://github.com/kamranahmedse/developer-roadmap",
-    "Stars": 353562,
-    "Forks": 43964,
-    "updated": "2026-04-25",
-    "Brief Introduction": "",
-    "Innovations": "",
-    "Basic Usage": "",
-    "Summary": "",
-    "summary": "",
-    "full_name": "kamranahmedse/developer-roadmap"
-  },
   "Yuiffy/BiliGPT": {
     "Repository Name": "Yuiffy/BiliGPT",
     "Repository URL": "https://github.com/Yuiffy/BiliGPT",
@@ -2850,19 +2837,6 @@
     },
     "summary": "A free, open-source collection of Chinese K-12 and university PDF textbooks, promoting educational equity and helping overseas Chinese families access Chinese curriculum.",
     "full_name": "TapXWorld/ChinaTextbook"
-  },
-  "ayangweb/BongoCat": {
-    "Repository Name": "ayangweb/BongoCat",
-    "Repository URL": "https://github.com/ayangweb/BongoCat",
-    "Stars": 20472,
-    "Forks": 950,
-    "updated": "2026-04-25",
-    "Brief Introduction": "",
-    "Innovations": "",
-    "Basic Usage": "",
-    "Summary": "",
-    "summary": "",
-    "full_name": "ayangweb/BongoCat"
   },
   "jgm/pandoc": {
     "Repository Name": "jgm/pandoc",
