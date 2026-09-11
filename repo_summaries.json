@@ -10,7 +10,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "Hermes Agent aims to provide a customizable and evolving assistant that improves user productivity and engagement.",
     "summary": "Hermes Agent aims to provide a customizable and evolving assistant that improves user productivity and engagement.",
-    "full_name": "NousResearch/hermes-agent"
+    "full_name": "NousResearch/hermes-agent",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "d3bcb8452636e349",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "open-gigaai/giga-brain-0": {
     "Repository Name": "open-gigaai/giga-brain-0",
@@ -23,7 +30,14 @@
     "Basic Usage": "(No specific usage example provided.)",
     "Summary": "GigaBrain-0 aims to advance the capabilities of AI in understanding and acting upon visual and linguistic information seamlessly.",
     "summary": "GigaBrain-0 aims to advance the capabilities of AI in understanding and acting upon visual and linguistic information seamlessly.",
-    "full_name": "open-gigaai/giga-brain-0"
+    "full_name": "open-gigaai/giga-brain-0",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "38a80ad6c688e758",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "aiming-lab/AutoResearchClaw": {
     "Repository Name": "aiming-lab/AutoResearchClaw",
@@ -36,7 +50,14 @@
     "Basic Usage": "Users can engage in a conversation to develop research ideas and receive a structured paper based on their inputs.",
     "Summary": "AutoResearchClaw streamlines the research process from concept to publication, making academic writing more accessible and efficient.",
     "summary": "AutoResearchClaw streamlines the research process from concept to publication, making academic writing more accessible and efficient.",
-    "full_name": "aiming-lab/AutoResearchClaw"
+    "full_name": "aiming-lab/AutoResearchClaw",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "a340201224a17160",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "anthropics/skills": {
     "Repository Name": "anthropics/skills",
@@ -49,7 +70,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "The repository serves as a resource for developing and implementing advanced skills in AI agents to improve their functionality and user interaction.",
     "summary": "The repository serves as a resource for developing and implementing advanced skills in AI agents to improve their functionality and user interaction.",
-    "full_name": "anthropics/skills"
+    "full_name": "anthropics/skills",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "1a9a31f80426ea9f",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Usagi-org/ai-goofish-monitor": {
     "Repository Name": "Usagi-org/ai-goofish-monitor",
@@ -62,7 +90,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a powerful tool for users to efficiently discover desired products from the vast selection on Xianyu.",
     "summary": "This repository provides a powerful tool for users to efficiently discover desired products from the vast selection on Xianyu.",
-    "full_name": "Usagi-org/ai-goofish-monitor"
+    "full_name": "Usagi-org/ai-goofish-monitor",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "56668f4e3be53ea3",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "jimmc414/Kosmos": {
     "Repository Name": "jimmc414/Kosmos",
@@ -75,7 +110,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "Kosmos serves as a platform for advancing autonomous scientific research through AI-driven methodologies.",
     "summary": "Kosmos serves as a platform for advancing autonomous scientific research through AI-driven methodologies.",
-    "full_name": "jimmc414/Kosmos"
+    "full_name": "jimmc414/Kosmos",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "671e8a467265edaa",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Fosowl/agenticSeek": {
     "Repository Name": "Fosowl/agenticSeek",
@@ -156,7 +198,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "Hyperframes enables agents to efficiently create and render engaging video content from HTML.",
     "summary": "Hyperframes enables agents to efficiently create and render engaging video content from HTML.",
-    "full_name": "heygen-com/hyperframes"
+    "full_name": "heygen-com/hyperframes",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "07164af208dd3199",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "multica-ai/multica": {
     "Repository Name": "multica-ai/multica",
@@ -169,7 +218,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a framework for creating and managing collaborative coding agents to improve productivity and teamwork in software development.",
     "summary": "This repository provides a framework for creating and managing collaborative coding agents to improve productivity and teamwork in software development.",
-    "full_name": "multica-ai/multica"
+    "full_name": "multica-ai/multica",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "b68407dc69d9a59b",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "ExplosiveCoderflome/AI-Novel-Writing-Assistant": {
     "Repository Name": "ExplosiveCoderflome/AI-Novel-Writing-Assistant",
@@ -182,7 +238,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a comprehensive toolset for novice writers to develop their ideas into fully realized novels.",
     "summary": "This repository provides a comprehensive toolset for novice writers to develop their ideas into fully realized novels.",
-    "full_name": "ExplosiveCoderflome/AI-Novel-Writing-Assistant"
+    "full_name": "ExplosiveCoderflome/AI-Novel-Writing-Assistant",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "b58849b1339dfe60",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "hAcKlyc/MyAgents": {
     "Repository Name": "hAcKlyc/MyAgents",
@@ -195,7 +258,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "MyAgents serves as a versatile task center that merges AI capabilities with proactive agent functionalities for efficient desktop management.",
     "summary": "MyAgents serves as a versatile task center that merges AI capabilities with proactive agent functionalities for efficient desktop management.",
-    "full_name": "hAcKlyc/MyAgents"
+    "full_name": "hAcKlyc/MyAgents",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "0badee6eefb764f4",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Narcooo/inkos": {
     "Repository Name": "Narcooo/inkos",
@@ -208,7 +278,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "The project aims to streamline the novel writing process by leveraging AI while ensuring quality through human oversight.",
     "summary": "The project aims to streamline the novel writing process by leveraging AI while ensuring quality through human oversight.",
-    "full_name": "Narcooo/inkos"
+    "full_name": "Narcooo/inkos",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "81be2f7f7bc30018",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "anomalyco/opencode": {
     "Repository Name": "anomalyco/opencode",
@@ -221,7 +298,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository aims to streamline the coding process by providing innovative tools for developers.",
     "summary": "This repository aims to streamline the coding process by providing innovative tools for developers.",
-    "full_name": "anomalyco/opencode"
+    "full_name": "anomalyco/opencode",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "17fce0bd9f8e829d",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "CherryHQ/cherry-studio": {
     "Repository Name": "CherryHQ/cherry-studio",
@@ -234,7 +318,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "Cherry Studio aims to enhance productivity through innovative AI tools and assistants, streamlining user interactions with advanced language models.",
     "summary": "Cherry Studio aims to enhance productivity through innovative AI tools and assistants, streamlining user interactions with advanced language models.",
-    "full_name": "CherryHQ/cherry-studio"
+    "full_name": "CherryHQ/cherry-studio",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "fb38b5f2cc554e0f",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "openclaw/openclaw": {
     "Repository Name": "openclaw/openclaw",
@@ -247,7 +338,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "OpenClaw serves as a flexible AI assistant, adaptable to various environments and user needs.",
     "summary": "OpenClaw serves as a flexible AI assistant, adaptable to various environments and user needs.",
-    "full_name": "openclaw/openclaw"
+    "full_name": "openclaw/openclaw",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "2b7e390aec1b6495",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "VoltAgent/awesome-openclaw-skills": {
     "Repository Name": "VoltAgent/awesome-openclaw-skills",
@@ -260,7 +358,14 @@
     "Basic Usage": "N/A",
     "Summary": "This repository serves as an extensive resource for accessing a wide range of OpenClaw skills efficiently.",
     "summary": "This repository serves as an extensive resource for accessing a wide range of OpenClaw skills efficiently.",
-    "full_name": "VoltAgent/awesome-openclaw-skills"
+    "full_name": "VoltAgent/awesome-openclaw-skills",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "6856df667f4781ca",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "microsoft/AI-For-Beginners": {
     "Repository Name": "microsoft/AI-For-Beginners",
@@ -371,7 +476,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository offers a versatile platform for deploying AI agents tailored to specific tasks and personalities, enhancing productivity and creativity.",
     "summary": "This repository offers a versatile platform for deploying AI agents tailored to specific tasks and personalities, enhancing productivity and creativity.",
-    "full_name": "msitarzewski/agency-agents"
+    "full_name": "msitarzewski/agency-agents",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "0674030b97f8dc58",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "obra/superpowers": {
     "Repository Name": "obra/superpowers",
@@ -384,7 +496,14 @@
     "Basic Usage": "(Omitted as no specific usage is provided in the description)",
     "Summary": "This repository provides a practical framework and methodology for developing effective and reliable AI agents by structuring their skills and development process.",
     "summary": "This repository provides a practical framework and methodology for developing effective and reliable AI agents by structuring their skills and development process.",
-    "full_name": "obra/superpowers"
+    "full_name": "obra/superpowers",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "58fd488732cd23f3",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "anthropics/claude-code": {
     "Repository Name": "anthropics/claude-code",
@@ -414,7 +533,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a powerful tool for automating browser interactions, enhancing the capabilities of AI agents.",
     "summary": "This repository provides a powerful tool for automating browser interactions, enhancing the capabilities of AI agents.",
-    "full_name": "vercel-labs/agent-browser"
+    "full_name": "vercel-labs/agent-browser",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "b7f09273f1b861f8",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "nomic-ai/gpt4all": {
     "Repository Name": "nomic-ai/gpt4all",
@@ -444,7 +570,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "Minimind offers a streamlined approach to training a compact GPT model, facilitating quick experimentation in natural language processing.",
     "summary": "Minimind offers a streamlined approach to training a compact GPT model, facilitating quick experimentation in natural language processing.",
-    "full_name": "jingyaogong/minimind"
+    "full_name": "jingyaogong/minimind",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "544dcb672f38c70c",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Shubhamsaboo/awesome-llm-apps": {
     "Repository Name": "Shubhamsaboo/awesome-llm-apps",
@@ -534,7 +667,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository serves as a valuable resource for anyone looking to learn about and work with large language models through practical implementation.",
     "summary": "This repository serves as a valuable resource for anyone looking to learn about and work with large language models through practical implementation.",
-    "full_name": "Lordog/dive-into-llms"
+    "full_name": "Lordog/dive-into-llms",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "d1fbf27df358eb84",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "henry-gu/prompt-engineering-for-developers": {
     "Repository Name": "henry-gu/prompt-engineering-for-developers",
@@ -581,7 +721,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "WeKnora aims to improve the efficiency and accuracy of information retrieval and understanding through advanced AI techniques.",
     "summary": "WeKnora aims to improve the efficiency and accuracy of information retrieval and understanding through advanced AI techniques.",
-    "full_name": "Tencent/WeKnora"
+    "full_name": "Tencent/WeKnora",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "3daac9ad52d5615d",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "jingyaogong/minimind-v": {
     "Repository Name": "jingyaogong/minimind-v",
@@ -594,7 +741,14 @@
     "Basic Usage": "Not provided.",
     "Summary": "Minimind-v offers a quick and efficient way to train a powerful visual language model, enhancing accessibility for developers and researchers in multimodal AI.",
     "summary": "Minimind-v offers a quick and efficient way to train a powerful visual language model, enhancing accessibility for developers and researchers in multimodal AI.",
-    "full_name": "jingyaogong/minimind-v"
+    "full_name": "jingyaogong/minimind-v",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "d4417deb1050d6bf",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "antvis/Infographic": {
     "Repository Name": "antvis/Infographic",
@@ -607,7 +761,14 @@
     "Basic Usage": "Not provided.",
     "Summary": "This repository aims to enhance communication by visually representing information through AI-generated infographics.",
     "summary": "This repository aims to enhance communication by visually representing information through AI-generated infographics.",
-    "full_name": "antvis/Infographic"
+    "full_name": "antvis/Infographic",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "c19b5d388e9a9e05",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "automeris-io/WebPlotDigitizer": {
     "Repository Name": "automeris-io/WebPlotDigitizer",
@@ -620,7 +781,14 @@
     "Basic Usage": "Users can upload an image of a plot, select data points, and export the extracted data in multiple formats.",
     "Summary": "This tool provides an efficient way to convert visual data into usable numerical formats for analysis.",
     "summary": "This tool provides an efficient way to convert visual data into usable numerical formats for analysis.",
-    "full_name": "automeris-io/WebPlotDigitizer"
+    "full_name": "automeris-io/WebPlotDigitizer",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "bd7e3c32e3e74142",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Henrymachiyu/FIPO": {
     "Repository Name": "Henrymachiyu/FIPO",
@@ -633,7 +801,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "FIPO aims to improve reasoning in AI models by implementing a unique, value-free reinforcement learning strategy.",
     "summary": "FIPO aims to improve reasoning in AI models by implementing a unique, value-free reinforcement learning strategy.",
-    "full_name": "Henrymachiyu/FIPO"
+    "full_name": "Henrymachiyu/FIPO",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "9ca97ec06d28f3c1",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "roywright/pu_learning": {
     "Repository Name": "roywright/pu_learning",
@@ -680,7 +855,14 @@
     "Basic Usage": "Not provided.",
     "Summary": "UniScientist serves as a powerful tool for fostering collaboration and innovation in scientific research through a unified approach.",
     "summary": "UniScientist serves as a powerful tool for fostering collaboration and innovation in scientific research through a unified approach.",
-    "full_name": "UniPat-AI/UniScientist"
+    "full_name": "UniPat-AI/UniScientist",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "3868d24a91205d74",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "wri/global-pasture-watch": {
     "Repository Name": "wri/global-pasture-watch",
@@ -693,7 +875,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "The project aims to enhance understanding and management of grasslands worldwide for better environmental stewardship.",
     "summary": "The project aims to enhance understanding and management of grasslands worldwide for better environmental stewardship.",
-    "full_name": "wri/global-pasture-watch"
+    "full_name": "wri/global-pasture-watch",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "ddc6f42c0ab46fb8",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "datawhalechina/every-embodied": {
     "Repository Name": "datawhalechina/every-embodied",
@@ -706,7 +895,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository serves as a comprehensive guide for building embodied intelligent robots, enhancing understanding of the underlying technologies.",
     "summary": "This repository serves as a comprehensive guide for building embodied intelligent robots, enhancing understanding of the underlying technologies.",
-    "full_name": "datawhalechina/every-embodied"
+    "full_name": "datawhalechina/every-embodied",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "3f16da3b26eec6b8",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Anionex/banana-slides": {
     "Repository Name": "Anionex/banana-slides",
@@ -719,7 +915,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository offers a unique solution for generating personalized presentations using AI technology, streamlining the creation process for users.",
     "summary": "This repository offers a unique solution for generating personalized presentations using AI technology, streamlining the creation process for users.",
-    "full_name": "Anionex/banana-slides"
+    "full_name": "Anionex/banana-slides",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "5af1d4ba3a9ec472",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "HKUDS/Paper2Slides": {
     "Repository Name": "HKUDS/Paper2Slides",
@@ -732,7 +935,14 @@
     "Basic Usage": "Upload a research paper and initiate the \"one-click\" process to generate a complete presentation.",
     "Summary": "Paper2Slides automates the creation of presentations from academic papers, offering a swift and efficient solution for researchers and students to generate slides with minimal effort.",
     "summary": "Paper2Slides automates the creation of presentations from academic papers, offering a swift and efficient solution for researchers and students to generate slides with minimal effort.",
-    "full_name": "HKUDS/Paper2Slides"
+    "full_name": "HKUDS/Paper2Slides",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "36bc58c41452a94f",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Kevin-thu/StoryMem": {
     "Repository Name": "Kevin-thu/StoryMem",
@@ -745,7 +955,14 @@
     "Basic Usage": "(Omitted as specific usage instructions are not provided in the description)",
     "Summary": "StoryMem provides a novel approach to generate coherent, multi-shot narratives from long videos by integrating a memory-based mechanism.",
     "summary": "StoryMem provides a novel approach to generate coherent, multi-shot narratives from long videos by integrating a memory-based mechanism.",
-    "full_name": "Kevin-thu/StoryMem"
+    "full_name": "Kevin-thu/StoryMem",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "bb7570b4b7ccb755",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "funstory-ai/BabelDOC": {
     "Repository Name": "funstory-ai/BabelDOC",
@@ -758,7 +975,14 @@
     "Basic Usage": "(No specific usage example provided)",
     "Summary": "BabelDOC aims to simplify the process of translating documents across different languages and formats.",
     "summary": "BabelDOC aims to simplify the process of translating documents across different languages and formats.",
-    "full_name": "funstory-ai/BabelDOC"
+    "full_name": "funstory-ai/BabelDOC",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "efd3157a4d6fce1e",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "PDFMathTranslate/PDFMathTranslate": {
     "Repository Name": "PDFMathTranslate/PDFMathTranslate",
@@ -771,7 +995,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a comprehensive solution for bilingual translation of PDF documents, ensuring format preservation and compatibility with popular translation services.",
     "summary": "This repository provides a comprehensive solution for bilingual translation of PDF documents, ensuring format preservation and compatibility with popular translation services.",
-    "full_name": "PDFMathTranslate/PDFMathTranslate"
+    "full_name": "PDFMathTranslate/PDFMathTranslate",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "eae4d13bcdd457ad",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "zhu-xlab/GlobalBuildingAtlas": {
     "Repository Name": "zhu-xlab/GlobalBuildingAtlas",
@@ -784,7 +1015,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "The repository serves as a valuable resource for researchers and developers in urban studies, offering detailed building data for enhanced spatial analysis.",
     "summary": "The repository serves as a valuable resource for researchers and developers in urban studies, offering detailed building data for enhanced spatial analysis.",
-    "full_name": "zhu-xlab/GlobalBuildingAtlas"
+    "full_name": "zhu-xlab/GlobalBuildingAtlas",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "621bc363d92379ba",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "mrdoob/three.js": {
     "Repository Name": "mrdoob/three.js",
@@ -814,7 +1052,14 @@
     "Basic Usage": "N/A",
     "Summary": "MiroFish serves as a versatile tool for leveraging swarm intelligence to make accurate predictions in multiple fields.",
     "summary": "MiroFish serves as a versatile tool for leveraging swarm intelligence to make accurate predictions in multiple fields.",
-    "full_name": "666ghj/MiroFish"
+    "full_name": "666ghj/MiroFish",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "d16a4a9c5b7fc487",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "vllm-project/vllm": {
     "Repository Name": "vllm-project/vllm",
@@ -861,7 +1106,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a cutting-edge solution for managing extensive contexts in machine learning applications through its innovative memory architecture.",
     "summary": "This repository provides a cutting-edge solution for managing extensive contexts in machine learning applications through its innovative memory architecture.",
-    "full_name": "EverMind-AI/MSA"
+    "full_name": "EverMind-AI/MSA",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "d337ab38758f7ee2",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "fire-keeper/BlindWatermark": {
     "Repository Name": "fire-keeper/BlindWatermark",
@@ -874,7 +1126,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "BlindWatermark provides a solution for creators to safeguard their intellectual property through invisible watermarking technology.",
     "summary": "BlindWatermark provides a solution for creators to safeguard their intellectual property through invisible watermarking technology.",
-    "full_name": "fire-keeper/BlindWatermark"
+    "full_name": "fire-keeper/BlindWatermark",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "ede869b499885e89",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "ComposioHQ/awesome-claude-skills": {
     "Repository Name": "ComposioHQ/awesome-claude-skills",
@@ -887,7 +1146,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository serves as a valuable resource for anyone looking to optimize their use of Claude AI through curated skills and tools.",
     "summary": "This repository serves as a valuable resource for anyone looking to optimize their use of Claude AI through curated skills and tools.",
-    "full_name": "ComposioHQ/awesome-claude-skills"
+    "full_name": "ComposioHQ/awesome-claude-skills",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "bdf163be89a73f05",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "cheahjs/free-llm-api-resources": {
     "Repository Name": "cheahjs/free-llm-api-resources",
@@ -913,7 +1179,14 @@
     "Basic Usage": "(Omitted as no specific key usage or example was provided in the description)",
     "Summary": "Ultimate Vocal Remover GUI simplifies high-quality audio source separation, allowing users to easily remove vocals and other components from songs using deep neural networks through a user-friendly interface.",
     "summary": "Ultimate Vocal Remover GUI simplifies high-quality audio source separation, allowing users to easily remove vocals and other components from songs using deep neural networks through a user-friendly interface.",
-    "full_name": "Anjok07/ultimatevocalremovergui"
+    "full_name": "Anjok07/ultimatevocalremovergui",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "00d2a2ab3b412993",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "HisMax/RedInk": {
     "Repository Name": "HisMax/RedInk",
@@ -2167,7 +2440,14 @@
     "Basic Usage": "No specific usage example provided.",
     "Summary": "LinkSwift simplifies the process of downloading files from eight major cloud storage services by generating direct download links.",
     "summary": "LinkSwift simplifies the process of downloading files from eight major cloud storage services by generating direct download links.",
-    "full_name": "hmjz100/LinkSwift"
+    "full_name": "hmjz100/LinkSwift",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "f0b1dc00b31a1ead",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "glidea/banana-prompt-quicker": {
     "Repository Name": "glidea/banana-prompt-quicker",
@@ -2280,7 +2560,14 @@
     "Basic Usage": "(Omitted as no specific usage steps were provided in the description)",
     "Summary": "LiteMonitor provides a lightweight, highly customizable, and comprehensive solution for monitoring Windows hardware performance directly on the desktop or taskbar.",
     "summary": "LiteMonitor provides a lightweight, highly customizable, and comprehensive solution for monitoring Windows hardware performance directly on the desktop or taskbar.",
-    "full_name": "Diorser/LiteMonitor"
+    "full_name": "Diorser/LiteMonitor",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "0dab26e27c45efcf",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Flow-Launcher/Flow.Launcher": {
     "Repository Name": "Flow-Launcher/Flow.Launcher",
@@ -2293,7 +2580,14 @@
     "Basic Usage": "Invoke the launcher with a hotkey (e.g., Alt+Space), then type to search for files, launch applications, or execute commands.",
     "Summary": "Flow Launcher is an essential Windows productivity tool that streamlines file and application access, enhanced by a powerful, community-driven plugin system.",
     "summary": "Flow Launcher is an essential Windows productivity tool that streamlines file and application access, enhanced by a powerful, community-driven plugin system.",
-    "full_name": "Flow-Launcher/Flow.Launcher"
+    "full_name": "Flow-Launcher/Flow.Launcher",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "5f500816155114a8",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "ZyperWave/ZyperWinOptimize": {
     "Repository Name": "ZyperWave/ZyperWinOptimize",
@@ -2374,7 +2668,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "The repository facilitates quick deployment of an AI bot gateway that supports various Chinese IM platforms.",
     "summary": "The repository facilitates quick deployment of an AI bot gateway that supports various Chinese IM platforms.",
-    "full_name": "justlovemaki/openclaw-china-docker"
+    "full_name": "justlovemaki/openclaw-china-docker",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "1758f84dcf51f87b",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "githubnext/monaspace": {
     "Repository Name": "githubnext/monaspace",
@@ -2387,7 +2688,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "Monaspace aims to improve the coding experience through thoughtfully designed typography.",
     "summary": "Monaspace aims to improve the coding experience through thoughtfully designed typography.",
-    "full_name": "githubnext/monaspace"
+    "full_name": "githubnext/monaspace",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "bfc522db0d78b3fb",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "BtbN/FFmpeg-Builds": {
     "Repository Name": "BtbN/FFmpeg-Builds",
@@ -2483,7 +2791,14 @@
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a specialized tool for managing watermarks on Gemini devices, improving user experience and efficiency.",
     "summary": "This repository provides a specialized tool for managing watermarks on Gemini devices, improving user experience and efficiency.",
-    "full_name": "allenk/GeminiWatermarkTool"
+    "full_name": "allenk/GeminiWatermarkTool",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "7b7a9318a6fe1175",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "microsoft/WSL": {
     "Repository Name": "microsoft/WSL",
@@ -2530,7 +2845,14 @@
     "Basic Usage": "Users can easily register a domain by following the straightforward setup process outlined in the documentation.",
     "Summary": "FreeDomain democratizes web presence by providing free domain registration and management tools for all users.",
     "summary": "FreeDomain democratizes web presence by providing free domain registration and management tools for all users.",
-    "full_name": "DigitalPlatDev/FreeDomain"
+    "full_name": "DigitalPlatDev/FreeDomain",
+    "__meta__": {
+      "last_summarized_at": "2026-09-11T04:17:38Z",
+      "description_hash": "b5503bee50582e19",
+      "summary_model": "legacy",
+      "summary_source": "backfill",
+      "summary_attempts": 1
+    }
   },
   "Chuyu-Team/Dism-Multi-language": {
     "Repository Name": "Chuyu-Team/Dism-Multi-language",

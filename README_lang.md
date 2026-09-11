@@ -10,7 +10,7 @@
 <hr/>
 
 <p><b>Current account:</b> <a href="https://github.com/Nanxzi">Nanxzi</a></p>
-<p><b>Generated on:</b> 2026-09-10</p>
+<p><b>Generated on:</b> 2026-09-11</p>
 <p><b>AI Model:</b> OpenRouter (DeepSeek)</p>
 <p><b>Total repositories:</b> 200</p>
 
@@ -18,54 +18,48 @@
 
 ## 📖 Table of Contents
 
-- [Python](#python) (Total 83)
+- [Python](#python) (Total 82)
   - [VisionXLab/CrossEarth](#visionxlabcrossearth)
+  - [CharlesKeeling65/ManureCouplingStrategies](#charleskeeling65manurecouplingstrategies)
   - [ComposioHQ/awesome-claude-skills](#composiohqawesome-claude-skills)
+  - [EvanLi/Github-Ranking](#evanligithub-ranking)
   - [EverMind-AI/MSA](#evermind-aimsa)
+  - [HKUDS/CLI-Anything](#hkudscli-anything)
   - [Henrymachiyu/FIPO](#henrymachiyufipo)
   - [NousResearch/hermes-agent](#nousresearchhermes-agent)
+  - [OpenBMB/VoxCPM](#openbmbvoxcpm)
   - [PDFMathTranslate/PDFMathTranslate](#pdfmathtranslatepdfmathtranslate)
+  - [SamuelSchmidgall/AgentLaboratory](#samuelschmidgallagentlaboratory)
   - [Usagi-org/ai-goofish-monitor](#usagi-orgai-goofish-monitor)
+  - [Yuan1z0825/nature-skills](#yuan1z0825nature-skills)
   - [anthropics/skills](#anthropicsskills)
+  - [bilibili/Index-1.9B](#bilibiliindex-19b)
   - [datawhalechina/every-embodied](#datawhalechinaevery-embodied)
   - [fire-keeper/BlindWatermark](#fire-keeperblindwatermark)
-  - [jimmc414/Kosmos](#jimmc414kosmos)
-  - [jingyaogong/minimind](#jingyaogongminimind)
-  - [zhu-xlab/GlobalBuildingAtlas](#zhu-xlabglobalbuildingatlas)
-  - [CharlesKeeling65/ManureCouplingStrategies](#charleskeeling65manurecouplingstrategies)
-  - [EvanLi/Github-Ranking](#evanligithub-ranking)
-  - [HKUDS/CLI-Anything](#hkudscli-anything)
-  - [OpenBMB/VoxCPM](#openbmbvoxcpm)
-  - [SamuelSchmidgall/AgentLaboratory](#samuelschmidgallagentlaboratory)
-  - [Yuan1z0825/nature-skills](#yuan1z0825nature-skills)
-  - [bilibili/Index-1.9B](#bilibiliindex-19b)
   - [huggingface/lerobot](#huggingfacelerobot)
   - [jianchang512/pyvideotrans](#jianchang512pyvideotrans)
+  - [jimmc414/Kosmos](#jimmc414kosmos)
+  - [jingyaogong/minimind](#jingyaogongminimind)
   - [kijai/ComfyUI-FramePackWrapper](#kijaicomfyui-framepackwrapper)
   - [nunchux-ai/nunchaku](#nunchux-ainunchaku)
   - [roboflow/supervision](#roboflowsupervision)
   - [rohitg00/ai-engineering-from-scratch](#rohitg00ai-engineering-from-scratch)
   - [tadata-org/fastapi_mcp](#tadata-orgfastapi_mcp)
   - [zhouxiaoka/autoclip](#zhouxiaokaautoclip)
-  - [666ghj/MiroFish](#666ghjmirofish)
-  - [Anjok07/ultimatevocalremovergui](#anjok07ultimatevocalremovergui)
-  - [HKUDS/Paper2Slides](#hkudspaper2slides)
-  - [Kevin-thu/StoryMem](#kevin-thustorymem)
-  - [UniPat-AI/UniScientist](#unipat-aiuniscientist)
-  - [aiming-lab/AutoResearchClaw](#aiming-labautoresearchclaw)
-  - [funstory-ai/BabelDOC](#funstory-aibabeldoc)
-  - [jingyaogong/minimind-v](#jingyaogongminimind-v)
-  - [open-gigaai/giga-brain-0](#open-gigaaigiga-brain-0)
+  - [zhu-xlab/GlobalBuildingAtlas](#zhu-xlabglobalbuildingatlas)
   - [0xsline/GeminiImageApp](#0xslinegeminiimageapp)
   - [1Panel-dev/MaxKB](#1panel-devmaxkb)
-  - [1c7/chinese-independent-developer](#1c7chinese-independent-developer)
   - [666ghj/BettaFish](#666ghjbettafish)
+  - [666ghj/MiroFish](#666ghjmirofish)
   - [ATH-MaaS/Pixelle-Video](#ath-maaspixelle-video)
   - [AUTOMATIC1111/stable-diffusion-webui](#automatic1111stable-diffusion-webui)
+  - [Anjok07/ultimatevocalremovergui](#anjok07ultimatevocalremovergui)
   - [CloakHQ/CloakBrowser](#cloakhqcloakbrowser)
   - [Fosowl/agenticSeek](#fosowlagenticseek)
+  - [HKUDS/Paper2Slides](#hkudspaper2slides)
   - [HisMax/RedInk](#hismaxredink)
   - [Imbad0202/academic-research-skills](#imbad0202academic-research-skills)
+  - [Kevin-thu/StoryMem](#kevin-thustorymem)
   - [Lydorn/Polygonization-by-Frame-Field-Learning](#lydornpolygonization-by-frame-field-learning)
   - [NanmiCoder/MediaCrawler](#nanmicodermediacrawler)
   - [Nibir088/PRISM-CAFO](#nibir088prism-cafo)
@@ -73,8 +67,10 @@
   - [Rimagination/scansci-pdf](#rimaginationscansci-pdf)
   - [Shubhamsaboo/awesome-llm-apps](#shubhamsabooawesome-llm-apps)
   - [Significant-Gravitas/AutoGPT](#significant-gravitasautogpt)
+  - [UniPat-AI/UniScientist](#unipat-aiuniscientist)
   - [YILING0013/AI_NovelGenerator](#yiling0013ai_novelgenerator)
   - [Zie619/n8n-workflows](#zie619n8n-workflows)
+  - [aiming-lab/AutoResearchClaw](#aiming-labautoresearchclaw)
   - [anthropics/claude-code](#anthropicsclaude-code)
   - [arcee-ai/mergekit](#arcee-aimergekit)
   - [ashishpatel26/500-AI-Agents-Projects](#ashishpatel26500-ai-agents-projects)
@@ -82,18 +78,21 @@
   - [bubbliiiing/unet-keras](#bubbliiiingunet-keras)
   - [facebookresearch/sam-3d-body](#facebookresearchsam-3d-body)
   - [facebookresearch/sam-3d-objects](#facebookresearchsam-3d-objects)
+  - [funstory-ai/BabelDOC](#funstory-aibabeldoc)
   - [guofei9987/blind_watermark](#guofei9987blind_watermark)
   - [happycola233/tchMaterial-parser](#happycola233tchmaterial-parser)
   - [harry0703/MoneyPrinterTurbo](#harry0703moneyprinterturbo)
   - [headroomlabs-ai/headroom](#headroomlabs-aiheadroom)
   - [hpcaitech/Open-Sora](#hpcaitechopen-sora)
   - [huggingface/transformers](#huggingfacetransformers)
+  - [jingyaogong/minimind-v](#jingyaogongminimind-v)
   - [jonathanwilton/PUExtraTrees](#jonathanwiltonpuextratrees)
   - [langbot-app/LangBot](#langbot-applangbot)
   - [lllyasviel/FramePack](#lllyasvielframepack)
   - [microsoft/markitdown](#microsoftmarkitdown)
   - [mikf/gallery-dl](#mikfgallery-dl)
   - [nvbn/thefuck](#nvbnthefuck)
+  - [open-gigaai/giga-brain-0](#open-gigaaigiga-brain-0)
   - [opendatalab/MinerU](#opendatalabmineru)
   - [public-apis/public-apis](#public-apispublic-apis)
   - [robert-mcdermott/ai-knowledge-graph](#robert-mcdermottai-knowledge-graph)
@@ -103,24 +102,24 @@
   - [xming521/WeClone](#xming521weclone)
   - [zorzi-s/PolyWorldPretrainedNetwork](#zorzi-spolyworldpretrainednetwork)
 - [TypeScript](#typescript) (Total 32)
+  - [027xiguapi/code-box](#027xiguapicode-box)
   - [Anionex/banana-slides](#anionexbanana-slides)
   - [CherryHQ/cherry-studio](#cherryhqcherry-studio)
   - [ExplosiveCoderflome/AI-Novel-Writing-Assistant](#explosivecoderflomeai-novel-writing-assistant)
   - [Narcooo/inkos](#narcoooinkos)
-  - [anomalyco/opencode](#anomalycoopencode)
-  - [hAcKlyc/MyAgents](#hacklycmyagents)
-  - [heygen-com/hyperframes](#heygen-comhyperframes)
-  - [openclaw/openclaw](#openclawopenclaw)
-  - [027xiguapi/code-box](#027xiguapicode-box)
   - [OpenCut-app/OpenCut](#opencut-appopencut)
   - [RSSNext/Folo](#rssnextfolo)
+  - [anomalyco/opencode](#anomalycoopencode)
   - [antvis/mcp-server-chart](#antvismcp-server-chart)
+  - [hAcKlyc/MyAgents](#hacklycmyagents)
+  - [heygen-com/hyperframes](#heygen-comhyperframes)
   - [lfnovo/open-notebook](#lfnovoopen-notebook)
+  - [openclaw/openclaw](#openclawopenclaw)
   - [umami-software/umami](#umami-softwareumami)
-  - [antvis/Infographic](#antvisinfographic)
   - [Snouzy/workout-cool](#snouzyworkout-cool)
   - [Yuiffy/BiliGPT](#yuiffybiligpt)
   - [ahmedkhaleel2004/gitdiagram](#ahmedkhaleel2004gitdiagram)
+  - [antvis/Infographic](#antvisinfographic)
   - [cline/cline](#clinecline)
   - [crocofied/PortNote](#crocofiedportnote)
   - [firecrawl/firecrawl](#firecrawlfirecrawl)
@@ -135,13 +134,14 @@
   - [nilbuild/developer-roadmap](#nilbuilddeveloper-roadmap)
   - [teableio/teable](#teableioteable)
   - [xyTom/snippai](#xytomsnippai)
-- [Other](#other) (Total 13)
+- [Other](#other) (Total 14)
   - [btjawa/BiliTools](#btjawabilitools)
   - [punkpeye/awesome-mcp-servers](#punkpeyeawesome-mcp-servers)
   - [AiHubCN/Awesome-Chinese-LLM](#aihubcnawesome-chinese-llm)
   - [lukasmasuch/best-of-ml-python](#lukasmasuchbest-of-ml-python)
   - [multica-ai/andrej-karpathy-skills](#multica-aiandrej-karpathy-skills)
   - [ruanyf/weekly](#ruanyfweekly)
+  - [1c7/chinese-independent-developer](#1c7chinese-independent-developer)
   - [VoltAgent/awesome-openclaw-skills](#voltagentawesome-openclaw-skills)
   - [datawhalechina/so-large-lm](#datawhalechinaso-large-lm)
   - [elder-plinius/CL4R1T4S](#elder-pliniuscl4r1t4s)
@@ -153,10 +153,10 @@
   - [SheepChef/Abracadabra](#sheepchefabracadabra)
   - [yitong2333/Bionic-Reading](#yitong2333bionic-reading)
   - [automeris-io/WebPlotDigitizer](#automeris-iowebplotdigitizer)
-  - [hmjz100/LinkSwift](#hmjz100linkswift)
   - [decolua/9router](#decolua9router)
   - [fogsightai/fogsight](#fogsightaifogsight)
   - [glidea/banana-prompt-quicker](#glideabanana-prompt-quicker)
+  - [hmjz100/LinkSwift](#hmjz100linkswift)
   - [mrdoob/three.js](#mrdoobthreejs)
   - [playcanvas/engine](#playcanvasengine)
   - [poloclub/transformer-explainer](#poloclubtransformer-explainer)
@@ -164,23 +164,23 @@
   - [xanderfrangos/twinkle-tray](#xanderfrangostwinkle-tray)
 - [Jupyter Notebook](#jupyter-notebook) (Total 11)
   - [Lordog/dive-into-llms](#lordogdive-into-llms)
-  - [wri/global-pasture-watch](#wriglobal-pasture-watch)
   - [QwenLM/Qwen3-VL](#qwenlmqwen3-vl)
   - [google/automl](#googleautoml)
   - [phuijse/bagging_pu](#phuijsebagging_pu)
   - [roywright/pu_learning](#roywrightpu_learning)
+  - [wri/global-pasture-watch](#wriglobal-pasture-watch)
   - [henry-gu/prompt-engineering-for-developers](#henry-guprompt-engineering-for-developers)
   - [microsoft/AI-For-Beginners](#microsoftai-for-beginners)
   - [microsoft/generative-ai-for-beginners](#microsoftgenerative-ai-for-beginners)
   - [patchy631/ai-engineering-hub](#patchy631ai-engineering-hub)
   - [roboflow/notebooks](#roboflownotebooks)
 - [Shell](#shell) (Total 6)
+  - [BtbN/FFmpeg-Builds](#btbnffmpeg-builds)
   - [githubnext/monaspace](#githubnextmonaspace)
   - [justlovemaki/openclaw-china-docker](#justlovemakiopenclaw-china-docker)
   - [msitarzewski/agency-agents](#msitarzewskiagency-agents)
-  - [BtbN/FFmpeg-Builds](#btbnffmpeg-builds)
-  - [obra/superpowers](#obrasuperpowers)
   - [mattpocock/skills](#mattpocockskills)
+  - [obra/superpowers](#obrasuperpowers)
 - [Go](#go) (Total 6)
   - [Tencent/WeKnora](#tencentweknora)
   - [multica-ai/multica](#multica-aimultica)
@@ -242,7 +242,7 @@
 
 ---
 
-## 🐍 Python(Total 83)
+## 🐍 Python(Total 82)
 
 <a id="visionxlabcrossearth"></a>
 
@@ -258,17 +258,45 @@
 
 ---
 
+<a id="charleskeeling65manurecouplingstrategies"></a>
+
+### 📌 [CharlesKeeling65/ManureCouplingStrategies](https://github.com/CharlesKeeling65/ManureCouplingStrategies)
+
+**⭐ Stars:** 3 | **🍴 Forks:** 0 | **📅 Updated:** 2025-09-04
+
+1. **Repository Name:** CharlesKeeling65/ManureCouplingStrategies
+2. **Brief Introduction:** ManureTransport 是一个专为优化粅便养分运输和分配而设计的 Python 库。该库提供了一套完整的工具，用于解决农业领域中养殖场粅便资源向种植区的合理输送和分配问题，帮助农业生产实现资源的高效循环利用。
+3. **Innovations:** ManureTransport 提供优化算法解决粅便养分运输与分配问题，聚焦农业资源高效循环利用，结合养殖与种植场景，实现可持续农业资源配置。
+4. **Basic Usage:** Not specified
+5. **Summary:** ManureTransport 通过优化算法解决农业粅便资源运输与分配问题，提升资源利用效率，支持可持续农业实践。
+
+---
+
 <a id="composiohqawesome-claude-skills"></a>
 
 ### 📌 [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
 
-**⭐ Stars:** 74,773 | **🍴 Forks:** 8,627 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 74,839 | **🍴 Forks:** 8,633 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ComposioHQ/awesome-claude-skills
 2. **Brief Introduction:** A curated collection of exceptional Claude Skills, resources, and tools designed to enhance and customize Claude AI workflows.
 3. **Innovations:** This repository features a comprehensive list of innovative skills and resources that enable users to tailor their interactions with Claude AI, improving functionality and user experience.
 4. **Basic Usage:** Not specified.
 5. **Summary:** This repository serves as a valuable resource for anyone looking to optimize their use of Claude AI through curated skills and tools.
+
+---
+
+<a id="evanligithub-ranking"></a>
+
+### 📌 [EvanLi/Github-Ranking](https://github.com/EvanLi/Github-Ranking)
+
+**⭐ Stars:** 12,113 | **🍴 Forks:** 698 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** EvanLi/Github-Ranking
+2. **Brief Introduction:** :star:Github Ranking:star: Github stars and forks ranking list. Github Top100 stars list of different languages. Automatically update daily. | Github仓库排名，每日自动更新
+3. **Innovations:** Automatically updates daily a ranking of GitHub repositories by stars and forks across languages, providing top‑100 lists and detailed tables.
+4. **Basic Usage:** Not specified
+5. **Summary:** A daily‑updated ranking of GitHub repositories by stars and forks, offering top‑100 lists and language‑specific tables.
 
 ---
 
@@ -283,6 +311,20 @@
 3. **Innovations:** The repository features a novel latent-memory architecture that enhances attention mechanisms, allowing for significantly larger context sizes while maintaining computational efficiency.
 4. **Basic Usage:** Not specified.
 5. **Summary:** This repository provides a cutting-edge solution for managing extensive contexts in machine learning applications through its innovative memory architecture.
+
+---
+
+<a id="hkudscli-anything"></a>
+
+### 📌 [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything)
+
+**⭐ Stars:** 49,225 | **🍴 Forks:** 4,556 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** HKUDS/CLI-Anything
+2. **Brief Introduction:** "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/
+3. **Innovations:** Provides a universal CLI wrapper that auto-generates agent‑ready command interfaces for any executable, supports plug‑in architecture, and integrates directly with AI agents via a standardized API.
+4. **Basic Usage:** Not specified
+5. **Summary:** CLI‑Anything enables any software to be accessed as an agent‑native command‑line tool, simplifying AI automation and integration across diverse applications.
 
 ---
 
@@ -304,7 +346,7 @@
 
 ### 📌 [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 
-**⭐ Stars:** 243,917 | **🍴 Forks:** 50,365 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 244,269 | **🍴 Forks:** 50,544 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** NousResearch/hermes-agent
 2. **Brief Introduction:** Hermes Agent is an adaptive agent designed to evolve alongside user needs, enhancing interaction and efficiency in various tasks.
@@ -314,11 +356,25 @@
 
 ---
 
+<a id="openbmbvoxcpm"></a>
+
+### 📌 [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM)
+
+**⭐ Stars:** 36,936 | **🍴 Forks:** 4,199 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** OpenBMB/VoxCPM
+2. **Brief Introduction:** VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning
+3. **Innovations:** Tokenizer-free TTS enables multilingual speech generation, creative voice design, and true-to-life cloning without tokenization, enhancing flexibility and realism.
+4. **Basic Usage:** Not specified
+5. **Summary:** VoxCPM2 provides a tokenizer-free TTS system for multilingual, creative, and realistic speech generation, improving adaptability and naturalness.
+
+---
+
 <a id="pdfmathtranslatepdfmathtranslate"></a>
 
 ### 📌 [PDFMathTranslate/PDFMathTranslate](https://github.com/PDFMathTranslate/PDFMathTranslate)
 
-**⭐ Stars:** 36,816 | **🍴 Forks:** 3,312 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 36,842 | **🍴 Forks:** 3,311 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** PDFMathTranslate/PDFMathTranslate
 2. **Brief Introduction:** PDFMathTranslate offers a tool for translating PDF scientific papers while preserving their original formatting, utilizing various AI translation services.
@@ -328,11 +384,25 @@
 
 ---
 
+<a id="samuelschmidgallagentlaboratory"></a>
+
+### 📌 [SamuelSchmidgall/AgentLaboratory](https://github.com/SamuelSchmidgall/AgentLaboratory)
+
+**⭐ Stars:** 5,839 | **🍴 Forks:** 799 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** SamuelSchmidgall/AgentLaboratory
+2. **Brief Introduction:** Agent Laboratory is an end-to-end autonomous research workflow meant to assist you as the human researcher toward implementing your research ideas
+3. **Innovations:** Features an end-to-end autonomous research workflow utilizing multi-agent collaboration to automate the entire research lifecycle, from brainstorming and literature discovery to coding, experimentation, and paper writing.
+4. **Basic Usage:** Not specified
+5. **Summary:** 1. **Repository Name:** SamuelSchmidgall/AgentLaboratory
+
+---
+
 <a id="usagi-orgai-goofish-monitor"></a>
 
 ### 📌 [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor)
 
-**⭐ Stars:** 14,333 | **🍴 Forks:** 2,548 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 14,334 | **🍴 Forks:** 2,553 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Usagi-org/ai-goofish-monitor
 2. **Brief Introduction:** A multi-task real-time/timed monitoring and intelligent analysis system for Xianyu, built on Playwright and AI, featuring a comprehensive backend management UI.
@@ -342,11 +412,25 @@
 
 ---
 
+<a id="yuan1z0825nature-skills"></a>
+
+### 📌 [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)
+
+**⭐ Stars:** 40,719 | **🍴 Forks:** 2,214 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** Yuan1z0825/nature-skills
+2. **Brief Introduction:** A collection of skills for academic writing aligned with *Nature* journal standards and scientific figure creation.
+3. **Innovations:** Provides templates, guidelines, and tools for crafting *Nature*-style manuscripts and generating publication-ready scientific plots, emphasizing clarity, precision, and adherence to academic formatting.
+4. **Basic Usage:** Not specified
+5. **Summary:** A resource hub offering practical skills and tools to streamline academic writing for *Nature* journals and create professional scientific visualizations.
+
+---
+
 <a id="anthropicsskills"></a>
 
 ### 📌 [anthropics/skills](https://github.com/anthropics/skills)
 
-**⭐ Stars:** 175,456 | **🍴 Forks:** 20,770 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 175,700 | **🍴 Forks:** 20,791 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** anthropics/skills
 2. **Brief Introduction:** This repository contains various agent skills designed to enhance the capabilities of AI models, facilitating more sophisticated interactions and tasks.
@@ -356,11 +440,25 @@
 
 ---
 
+<a id="bilibiliindex-19b"></a>
+
+### 📌 [bilibili/Index-1.9B](https://github.com/bilibili/Index-1.9B)
+
+**⭐ Stars:** 1,031 | **🍴 Forks:** 52 | **📅 Updated:** 2026-09-09
+
+1. **Repository Name:** bilibili/Index-1.9B
+2. **Brief Introduction:** A lightweight multilingual LLM
+3. **Innovations:** Offers a 1.9B parameter model with 32K token context, multilingual focus, and open‑source research checkpoints adapted for llama.cpp and Ollama.
+4. **Basic Usage:** Not specified
+5. **Summary:** A compact 1.9B multilingual language model supporting up to 32K context and research checkpoints.
+
+---
+
 <a id="datawhalechinaevery-embodied"></a>
 
 ### 📌 [datawhalechina/every-embodied](https://github.com/datawhalechina/every-embodied)
 
-**⭐ Stars:** 3,625 | **🍴 Forks:** 363 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 3,641 | **🍴 Forks:** 363 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** datawhalechina/every-embodied
 2. **Brief Introduction:** A project designed for beginners to build their own embodied intelligent robots from scratch using Python, focusing on various models like VLA, OpenVLA, SmolVLA, and Pi0.
@@ -384,6 +482,34 @@
 
 ---
 
+<a id="huggingfacelerobot"></a>
+
+### 📌 [huggingface/lerobot](https://github.com/huggingface/lerobot)
+
+**⭐ Stars:** 27,400 | **🍴 Forks:** 5,615 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** huggingface/lerobot
+2. **Brief Introduction:** 🤗 LeRobot: Making AI for Robotics more accessible with end-to-end learning
+3. **Innovations:** Unified, Hugging Face‑compatible framework for robot learning; supports multiple modalities, datasets, and policies; provides end‑to‑end training, evaluation, and deployment tools; simplifies data handling and model integration for robotics research.
+4. **Basic Usage:** Not specified
+5. **Summary:** LeRobot democratizes robotics AI by offering an integrated, Hugging Face‑friendly platform for end‑to‑end robot learning, reducing complexity and accelerating research.
+
+---
+
+<a id="jianchang512pyvideotrans"></a>
+
+### 📌 [jianchang512/pyvideotrans](https://github.com/jianchang512/pyvideotrans)
+
+**⭐ Stars:** 18,962 | **🍴 Forks:** 2,340 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** jianchang512/pyvideotrans
+2. **Brief Introduction:** Translate the video from one language to another and embed dubbing & subtitles.
+3. **Innovations:** Combines real-time language translation with automated dubbing and subtitle generation, enabling seamless multilingual video content creation.
+4. **Basic Usage:** Not specified
+5. **Summary:** A tool for translating videos into multiple languages with integrated dubbing and subtitles, enhancing accessibility for global audiences.
+
+---
+
 <a id="jimmc414kosmos"></a>
 
 ### 📌 [jimmc414/Kosmos](https://github.com/jimmc414/Kosmos)
@@ -402,153 +528,13 @@
 
 ### 📌 [jingyaogong/minimind](https://github.com/jingyaogong/minimind)
 
-**⭐ Stars:** 60,352 | **🍴 Forks:** 7,817 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 60,584 | **🍴 Forks:** 7,851 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** jingyaogong/minimind
 2. **Brief Introduction:** This repository provides a framework to train a 26M-parameter GPT model from scratch in just two hours, making it accessible for experimentation and learning.
 3. **Innovations:** The project emphasizes efficiency in training large models with minimal parameters, enabling rapid prototyping and exploration of GPT architecture.
 4. **Basic Usage:** Not specified.
 5. **Summary:** Minimind offers a streamlined approach to training a compact GPT model, facilitating quick experimentation in natural language processing.
-
----
-
-<a id="zhu-xlabglobalbuildingatlas"></a>
-
-### 📌 [zhu-xlab/GlobalBuildingAtlas](https://github.com/zhu-xlab/GlobalBuildingAtlas)
-
-**⭐ Stars:** 2,210 | **🍴 Forks:** 214 | **📅 Updated:** 2026-09-09
-
-1. **Repository Name:** zhu-xlab/GlobalBuildingAtlas
-2. **Brief Introduction:** An open global dataset providing comprehensive building polygons, heights, and Level of Detail 1 (LoD1) 3D models for urban analysis and development.
-3. **Innovations:** Features a complete and standardized dataset of building geometries and heights, enabling advanced urban modeling, planning, and analysis across various geographical regions.
-4. **Basic Usage:** Not specified.
-5. **Summary:** The repository serves as a valuable resource for researchers and developers in urban studies, offering detailed building data for enhanced spatial analysis.
-
----
-
-<a id="charleskeeling65manurecouplingstrategies"></a>
-
-### 📌 [CharlesKeeling65/ManureCouplingStrategies](https://github.com/CharlesKeeling65/ManureCouplingStrategies)
-
-**⭐ Stars:** 3 | **🍴 Forks:** 0 | **📅 Updated:** 2025-09-04
-
-1. **Repository Name:** CharlesKeeling65/ManureCouplingStrategies
-2. **Brief Introduction:** ManureTransport 是一个专为优化粅便养分运输和分配而设计的 Python 库。该库提供了一套完整的工具，用于解决农业领域中养殖场粅便资源向种植区的合理输送和分配问题，帮助农业生产实现资源的高效循环利用。
-3. **Innovations:** ManureTransport 提供优化算法解决粅便养分运输与分配问题，聚焦农业资源高效循环利用，结合养殖与种植场景，实现可持续农业资源配置。
-4. **Basic Usage:** Not specified
-5. **Summary:** ManureTransport 通过优化算法解决农业粅便资源运输与分配问题，提升资源利用效率，支持可持续农业实践。
-
----
-
-<a id="evanligithub-ranking"></a>
-
-### 📌 [EvanLi/Github-Ranking](https://github.com/EvanLi/Github-Ranking)
-
-**⭐ Stars:** 12,108 | **🍴 Forks:** 697 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** EvanLi/Github-Ranking
-2. **Brief Introduction:** :star:Github Ranking:star: Github stars and forks ranking list. Github Top100 stars list of different languages. Automatically update daily. | Github仓库排名，每日自动更新
-3. **Innovations:** Automatically updates daily a ranking of GitHub repositories by stars and forks across languages, providing top‑100 lists and detailed tables.
-4. **Basic Usage:** Not specified
-5. **Summary:** A daily‑updated ranking of GitHub repositories by stars and forks, offering top‑100 lists and language‑specific tables.
-
----
-
-<a id="hkudscli-anything"></a>
-
-### 📌 [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything)
-
-**⭐ Stars:** 49,187 | **🍴 Forks:** 4,553 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** HKUDS/CLI-Anything
-2. **Brief Introduction:** "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/
-3. **Innovations:** Provides a universal CLI wrapper that auto-generates agent‑ready command interfaces for any executable, supports plug‑in architecture, and integrates directly with AI agents via a standardized API.
-4. **Basic Usage:** Not specified
-5. **Summary:** CLI‑Anything enables any software to be accessed as an agent‑native command‑line tool, simplifying AI automation and integration across diverse applications.
-
----
-
-<a id="openbmbvoxcpm"></a>
-
-### 📌 [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM)
-
-**⭐ Stars:** 36,913 | **🍴 Forks:** 4,196 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** OpenBMB/VoxCPM
-2. **Brief Introduction:** VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning
-3. **Innovations:** Tokenizer-free TTS enables multilingual speech generation, creative voice design, and true-to-life cloning without tokenization, enhancing flexibility and realism.
-4. **Basic Usage:** Not specified
-5. **Summary:** VoxCPM2 provides a tokenizer-free TTS system for multilingual, creative, and realistic speech generation, improving adaptability and naturalness.
-
----
-
-<a id="samuelschmidgallagentlaboratory"></a>
-
-### 📌 [SamuelSchmidgall/AgentLaboratory](https://github.com/SamuelSchmidgall/AgentLaboratory)
-
-**⭐ Stars:** 5,836 | **🍴 Forks:** 800 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** SamuelSchmidgall/AgentLaboratory
-2. **Brief Introduction:** Agent Laboratory is an end-to-end autonomous research workflow meant to assist you as the human researcher toward implementing your research ideas
-3. **Innovations:** Features an end-to-end autonomous research workflow utilizing multi-agent collaboration to automate the entire research lifecycle, from brainstorming and literature discovery to coding, experimentation, and paper writing.
-4. **Basic Usage:** Not specified
-5. **Summary:** 1. **Repository Name:** SamuelSchmidgall/AgentLaboratory
-
----
-
-<a id="yuan1z0825nature-skills"></a>
-
-### 📌 [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)
-
-**⭐ Stars:** 40,454 | **🍴 Forks:** 2,201 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** Yuan1z0825/nature-skills
-2. **Brief Introduction:** A collection of skills for academic writing aligned with *Nature* journal standards and scientific figure creation.
-3. **Innovations:** Provides templates, guidelines, and tools for crafting *Nature*-style manuscripts and generating publication-ready scientific plots, emphasizing clarity, precision, and adherence to academic formatting.
-4. **Basic Usage:** Not specified
-5. **Summary:** A resource hub offering practical skills and tools to streamline academic writing for *Nature* journals and create professional scientific visualizations.
-
----
-
-<a id="bilibiliindex-19b"></a>
-
-### 📌 [bilibili/Index-1.9B](https://github.com/bilibili/Index-1.9B)
-
-**⭐ Stars:** 1,031 | **🍴 Forks:** 52 | **📅 Updated:** 2026-09-09
-
-1. **Repository Name:** bilibili/Index-1.9B
-2. **Brief Introduction:** A lightweight multilingual LLM
-3. **Innovations:** Offers a 1.9B parameter model with 32K token context, multilingual focus, and open‑source research checkpoints adapted for llama.cpp and Ollama.
-4. **Basic Usage:** Not specified
-5. **Summary:** A compact 1.9B multilingual language model supporting up to 32K context and research checkpoints.
-
----
-
-<a id="huggingfacelerobot"></a>
-
-### 📌 [huggingface/lerobot](https://github.com/huggingface/lerobot)
-
-**⭐ Stars:** 27,368 | **🍴 Forks:** 5,609 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** huggingface/lerobot
-2. **Brief Introduction:** 🤗 LeRobot: Making AI for Robotics more accessible with end-to-end learning
-3. **Innovations:** Unified, Hugging Face‑compatible framework for robot learning; supports multiple modalities, datasets, and policies; provides end‑to‑end training, evaluation, and deployment tools; simplifies data handling and model integration for robotics research.
-4. **Basic Usage:** Not specified
-5. **Summary:** LeRobot democratizes robotics AI by offering an integrated, Hugging Face‑friendly platform for end‑to‑end robot learning, reducing complexity and accelerating research.
-
----
-
-<a id="jianchang512pyvideotrans"></a>
-
-### 📌 [jianchang512/pyvideotrans](https://github.com/jianchang512/pyvideotrans)
-
-**⭐ Stars:** 18,951 | **🍴 Forks:** 2,339 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** jianchang512/pyvideotrans
-2. **Brief Introduction:** Translate the video from one language to another and embed dubbing & subtitles.
-3. **Innovations:** Combines real-time language translation with automated dubbing and subtitle generation, enabling seamless multilingual video content creation.
-4. **Basic Usage:** Not specified
-5. **Summary:** A tool for translating videos into multiple languages with integrated dubbing and subtitles, enhancing accessibility for global audiences.
 
 ---
 
@@ -570,7 +556,7 @@
 
 ### 📌 [nunchux-ai/nunchaku](https://github.com/nunchux-ai/nunchaku)
 
-**⭐ Stars:** 3,949 | **🍴 Forks:** 277 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 3,947 | **🍴 Forks:** 277 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** nunchux-ai/nunchaku
 2. **Brief Introduction:** [ICLR2025 Spotlight] SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion Models
@@ -584,7 +570,7 @@
 
 ### 📌 [roboflow/supervision](https://github.com/roboflow/supervision)
 
-**⭐ Stars:** 49,945 | **🍴 Forks:** 4,753 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 49,957 | **🍴 Forks:** 4,755 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** roboflow/supervision
 2. **Brief Introduction:** We write your reusable computer vision tools. 💜
@@ -598,7 +584,7 @@
 
 ### 📌 [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)
 
-**⭐ Stars:** 53,807 | **🍴 Forks:** 9,379 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 54,163 | **🍴 Forks:** 9,434 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** rohitg00/ai-engineering-from-scratch
 2. **Brief Introduction:** Learn it. Build it. Ship it for others.
@@ -612,7 +598,7 @@
 
 ### 📌 [tadata-org/fastapi_mcp](https://github.com/tadata-org/fastapi_mcp)
 
-**⭐ Stars:** 12,003 | **🍴 Forks:** 961 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 12,004 | **🍴 Forks:** 962 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** tadata-org/fastapi_mcp
 2. **Brief Introduction:** Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
@@ -626,7 +612,7 @@
 
 ### 📌 [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip)
 
-**⭐ Stars:** 7,261 | **🍴 Forks:** 1,415 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 7,260 | **🍴 Forks:** 1,416 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** zhouxiaoka/autoclip
 2. **Brief Introduction:** AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具
@@ -636,129 +622,17 @@
 
 ---
 
-<a id="666ghjmirofish"></a>
+<a id="zhu-xlabglobalbuildingatlas"></a>
 
-### 📌 [666ghj/MiroFish](https://github.com/666ghj/MiroFish)
+### 📌 [zhu-xlab/GlobalBuildingAtlas](https://github.com/zhu-xlab/GlobalBuildingAtlas)
 
-**⭐ Stars:** 72,089 | **🍴 Forks:** 11,184 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 2,210 | **🍴 Forks:** 215 | **📅 Updated:** 2026-09-09
 
-1. **Repository Name:** 666ghj/MiroFish
-2. **Brief Introduction:** MiroFish is a simple and universal swarm intelligence engine designed for predicting various outcomes using collective behavior models.
-3. **Innovations:** The repository features a flexible architecture for swarm intelligence algorithms, enabling predictions across diverse domains and applications, along with user-friendly interfaces for easy integration.
-4. **Basic Usage:** N/A
-5. **Summary:** MiroFish serves as a versatile tool for leveraging swarm intelligence to make accurate predictions in multiple fields.
-
----
-
-<a id="anjok07ultimatevocalremovergui"></a>
-
-### 📌 [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)
-
-**⭐ Stars:** 26,172 | **🍴 Forks:** 2,004 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** Anjok07/ultimatevocalremovergui
-2. **Brief Introduction:** Ultimate Vocal Remover GUI (UVR) is a user-friendly graphical interface for a powerful vocal removal tool. It leverages advanced deep neural networks to accurately separate vocals, instrumentals, and other components from audio tracks, making high-quality audio source separation accessible to everyone.
-3. **Innovations:** Its primary innovation lies in providing an intuitive graphical user interface (GUI) for a highly effective vocal remover powered by state-of-the-art deep neural networks, making complex audio source separation accessible without command-line expertise.
-4. **Basic Usage:** (Omitted as no specific key usage or example was provided in the description)
-5. **Summary:** Ultimate Vocal Remover GUI simplifies high-quality audio source separation, allowing users to easily remove vocals and other components from songs using deep neural networks through a user-friendly interface.
-
----
-
-<a id="hkudspaper2slides"></a>
-
-### 📌 [HKUDS/Paper2Slides](https://github.com/HKUDS/Paper2Slides)
-
-**⭐ Stars:** 3,829 | **🍴 Forks:** 476 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** HKUDS/Paper2Slides
-2. **Brief Introduction:** Paper2Slides is an innovative tool designed to transform academic papers into presentation slides automatically. It streamlines the process of creating presentations, saving researchers and students significant time and effort by automating content extraction and slide generation.
-3. **Innovations:** The most distinctive feature is its "one-click" capability to convert an entire research paper into a structured presentation, leveraging automation to simplify a typically time-consuming task.
-4. **Basic Usage:** Upload a research paper and initiate the "one-click" process to generate a complete presentation.
-5. **Summary:** Paper2Slides automates the creation of presentations from academic papers, offering a swift and efficient solution for researchers and students to generate slides with minimal effort.
-
----
-
-<a id="kevin-thustorymem"></a>
-
-### 📌 [Kevin-thu/StoryMem](https://github.com/Kevin-thu/StoryMem)
-
-**⭐ Stars:** 768 | **🍴 Forks:** 75 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** Kevin-thu/StoryMem
-2. **Brief Introduction:** StoryMem is the official code for a system designed for multi-shot long video storytelling. It leverages a memory mechanism to generate coherent narratives from extended video content, addressing challenges in long-form video understanding and summarization.
-3. **Innovations:** Its core innovation lies in using a memory mechanism to enable multi-shot storytelling for long videos, ensuring narrative coherence and addressing the challenges of extended video content.
-4. **Basic Usage:** (Omitted as specific usage instructions are not provided in the description)
-5. **Summary:** StoryMem provides a novel approach to generate coherent, multi-shot narratives from long videos by integrating a memory-based mechanism.
-
----
-
-<a id="unipat-aiuniscientist"></a>
-
-### 📌 [UniPat-AI/UniScientist](https://github.com/UniPat-AI/UniScientist)
-
-**⭐ Stars:** 171 | **🍴 Forks:** 13 | **📅 Updated:** 2026-08-24
-
-1. **Repository Name:** UniPat-AI/UniScientist
-2. **Brief Introduction:** UniScientist aims to enhance scientific research intelligence by providing a unified framework for data integration and analysis across various scientific disciplines.
-3. **Innovations:** The repository features advanced algorithms for data synthesis, cross-disciplinary collaboration tools, and a comprehensive knowledge base that supports diverse scientific inquiries.
-4. **Basic Usage:** Not provided.
-5. **Summary:** UniScientist serves as a powerful tool for fostering collaboration and innovation in scientific research through a unified approach.
-
----
-
-<a id="aiming-labautoresearchclaw"></a>
-
-### 📌 [aiming-lab/AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)
-
-**⭐ Stars:** 14,383 | **🍴 Forks:** 1,668 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** aiming-lab/AutoResearchClaw
-2. **Brief Introduction:** AutoResearchClaw enables fully autonomous and self-evolving research processes, transforming ideas into academic papers through an interactive chat interface.
-3. **Innovations:** The repository features a unique chat-based interface that facilitates idea generation and paper writing, alongside self-evolving algorithms that adapt research methodologies over time.
-4. **Basic Usage:** Users can engage in a conversation to develop research ideas and receive a structured paper based on their inputs.
-5. **Summary:** AutoResearchClaw streamlines the research process from concept to publication, making academic writing more accessible and efficient.
-
----
-
-<a id="funstory-aibabeldoc"></a>
-
-### 📌 [funstory-ai/BabelDOC](https://github.com/funstory-ai/BabelDOC)
-
-**⭐ Stars:** 9,492 | **🍴 Forks:** 793 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** funstory-ai/BabelDOC
-2. **Brief Introduction:** BabelDOC is a document translation tool designed to facilitate seamless language conversion for various document formats.
-3. **Innovations:** It supports multiple file types, utilizes advanced translation algorithms, and offers a user-friendly interface for efficient document handling.
-4. **Basic Usage:** (No specific usage example provided)
-5. **Summary:** BabelDOC aims to simplify the process of translating documents across different languages and formats.
-
----
-
-<a id="jingyaogongminimind-v"></a>
-
-### 📌 [jingyaogong/minimind-v](https://github.com/jingyaogong/minimind-v)
-
-**⭐ Stars:** 8,600 | **🍴 Forks:** 956 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** jingyaogong/minimind-v
-2. **Brief Introduction:** A visual language model (VLM) that allows users to train a 67M-parameter model from scratch in just one hour.
-3. **Innovations:** This repository features rapid training capabilities for a large-scale visual model, enabling efficient experimentation and deployment in multimodal tasks.
-4. **Basic Usage:** Not provided.
-5. **Summary:** Minimind-v offers a quick and efficient way to train a powerful visual language model, enhancing accessibility for developers and researchers in multimodal AI.
-
----
-
-<a id="open-gigaaigiga-brain-0"></a>
-
-### 📌 [open-gigaai/giga-brain-0](https://github.com/open-gigaai/giga-brain-0)
-
-**⭐ Stars:** 2,643 | **🍴 Forks:** 208 | **📅 Updated:** 2026-09-09
-
-1. **Repository Name:** open-gigaai/giga-brain-0
-2. **Brief Introduction:** GigaBrain-0 is a vision-language-action model powered by world models, designed to enhance the interaction between visual inputs and language processing for intelligent actions.
-3. **Innovations:** This repository features advanced integration of vision and language understanding, enabling dynamic action generation based on contextual visual cues, leveraging world models for improved decision-making.
-4. **Basic Usage:** (No specific usage example provided.)
-5. **Summary:** GigaBrain-0 aims to advance the capabilities of AI in understanding and acting upon visual and linguistic information seamlessly.
+1. **Repository Name:** zhu-xlab/GlobalBuildingAtlas
+2. **Brief Introduction:** An open global dataset providing comprehensive building polygons, heights, and Level of Detail 1 (LoD1) 3D models for urban analysis and development.
+3. **Innovations:** Features a complete and standardized dataset of building geometries and heights, enabling advanced urban modeling, planning, and analysis across various geographical regions.
+4. **Basic Usage:** Not specified.
+5. **Summary:** The repository serves as a valuable resource for researchers and developers in urban studies, offering detailed building data for enhanced spatial analysis.
 
 ---
 
@@ -780,7 +654,7 @@
 
 ### 📌 [1Panel-dev/MaxKB](https://github.com/1Panel-dev/MaxKB)
 
-**⭐ Stars:** 22,753 | **🍴 Forks:** 3,140 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 22,762 | **🍴 Forks:** 3,142 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** 1Panel-dev/MaxKB
 2. **Brief Introduction:** 🔥 MaxKB is an open-source platform for building enterprise-grade agents.  强大易用的开源企业级智能体平台。
@@ -790,28 +664,11 @@
 
 ---
 
-<a id="1c7chinese-independent-developer"></a>
-
-### 📌 [1c7/chinese-independent-developer](https://github.com/1c7/chinese-independent-developer)
-
-**⭐ Stars:** 61,356 | **🍴 Forks:** 5,377 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** 1c7/chinese-independent-developer
-2. **Brief Introduction:** 👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
-3. **Innovations:** A community‑curated, continuously updated catalog that aggregates projects from Chinese independent developers across diverse domains, providing links, tags, and descriptions for easy discovery and reference.  
-Basic Usage:** Clone the repository and open the README to browse the curated list of projects.  
-Summary:** A community‑curated catalog of Chinese independent developers’ projects, helping discover and share innovative software across various domains.
-4. **Basic Usage:** Clone the repository and open the README to browse the curated list of projects.  
-Summary:** A community‑curated catalog of Chinese independent developers’ projects, helping discover and share innovative software across various domains.
-5. **Summary:** A community‑curated catalog of Chinese independent developers’ projects, helping discover and share innovative software across various domains.
-
----
-
 <a id="666ghjbettafish"></a>
 
 ### 📌 [666ghj/BettaFish](https://github.com/666ghj/BettaFish)
 
-**⭐ Stars:** 42,180 | **🍴 Forks:** 7,618 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 42,195 | **🍴 Forks:** 7,618 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** 666ghj/BettaFish
 2. **Brief Introduction:** 微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。
@@ -824,11 +681,25 @@ Summary:** A self‑contained, framework‑free multi‑agent tool that analyzes
 
 ---
 
+<a id="666ghjmirofish"></a>
+
+### 📌 [666ghj/MiroFish](https://github.com/666ghj/MiroFish)
+
+**⭐ Stars:** 72,129 | **🍴 Forks:** 11,185 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** 666ghj/MiroFish
+2. **Brief Introduction:** MiroFish is a simple and universal swarm intelligence engine designed for predicting various outcomes using collective behavior models.
+3. **Innovations:** The repository features a flexible architecture for swarm intelligence algorithms, enabling predictions across diverse domains and applications, along with user-friendly interfaces for easy integration.
+4. **Basic Usage:** N/A
+5. **Summary:** MiroFish serves as a versatile tool for leveraging swarm intelligence to make accurate predictions in multiple fields.
+
+---
+
 <a id="ath-maaspixelle-video"></a>
 
 ### 📌 [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video)
 
-**⭐ Stars:** 27,961 | **🍴 Forks:** 4,077 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 27,985 | **🍴 Forks:** 4,080 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ATH-MaaS/Pixelle-Video
 2. **Brief Introduction:** 🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine
@@ -845,7 +716,7 @@ Summary:** A fully automated AI engine designed to generate short videos with mi
 
 ### 📌 [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
-**⭐ Stars:** 164,881 | **🍴 Forks:** 30,546 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 164,890 | **🍴 Forks:** 30,547 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** AUTOMATIC1111/stable-diffusion-webui
 2. **Brief Introduction:** Stable Diffusion web UI
@@ -855,11 +726,25 @@ Summary:** A fully automated AI engine designed to generate short videos with mi
 
 ---
 
+<a id="anjok07ultimatevocalremovergui"></a>
+
+### 📌 [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)
+
+**⭐ Stars:** 26,186 | **🍴 Forks:** 2,004 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** Anjok07/ultimatevocalremovergui
+2. **Brief Introduction:** Ultimate Vocal Remover GUI (UVR) is a user-friendly graphical interface for a powerful vocal removal tool. It leverages advanced deep neural networks to accurately separate vocals, instrumentals, and other components from audio tracks, making high-quality audio source separation accessible to everyone.
+3. **Innovations:** Its primary innovation lies in providing an intuitive graphical user interface (GUI) for a highly effective vocal remover powered by state-of-the-art deep neural networks, making complex audio source separation accessible without command-line expertise.
+4. **Basic Usage:** (Omitted as no specific key usage or example was provided in the description)
+5. **Summary:** Ultimate Vocal Remover GUI simplifies high-quality audio source separation, allowing users to easily remove vocals and other components from songs using deep neural networks through a user-friendly interface.
+
+---
+
 <a id="cloakhqcloakbrowser"></a>
 
 ### 📌 [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser)
 
-**⭐ Stars:** 31,324 | **🍴 Forks:** 2,587 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 31,361 | **🍴 Forks:** 2,588 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** CloakHQ/CloakBrowser
 2. **Brief Introduction:** Stealth Chromium that passes every bot detection test.
@@ -873,7 +758,7 @@ Summary:** A fully automated AI engine designed to generate short videos with mi
 
 ### 📌 [Fosowl/agenticSeek](https://github.com/Fosowl/agenticSeek)
 
-**⭐ Stars:** 27,193 | **🍴 Forks:** 3,043 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 27,191 | **🍴 Forks:** 3,044 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Fosowl/agenticSeek
 2. **Brief Introduction:** Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.
@@ -883,11 +768,25 @@ Summary:** A fully automated AI engine designed to generate short videos with mi
 
 ---
 
+<a id="hkudspaper2slides"></a>
+
+### 📌 [HKUDS/Paper2Slides](https://github.com/HKUDS/Paper2Slides)
+
+**⭐ Stars:** 3,830 | **🍴 Forks:** 476 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** HKUDS/Paper2Slides
+2. **Brief Introduction:** Paper2Slides is an innovative tool designed to transform academic papers into presentation slides automatically. It streamlines the process of creating presentations, saving researchers and students significant time and effort by automating content extraction and slide generation.
+3. **Innovations:** The most distinctive feature is its "one-click" capability to convert an entire research paper into a structured presentation, leveraging automation to simplify a typically time-consuming task.
+4. **Basic Usage:** Upload a research paper and initiate the "one-click" process to generate a complete presentation.
+5. **Summary:** Paper2Slides automates the creation of presentations from academic papers, offering a swift and efficient solution for researchers and students to generate slides with minimal effort.
+
+---
+
 <a id="hismaxredink"></a>
 
 ### 📌 [HisMax/RedInk](https://github.com/HisMax/RedInk)
 
-**⭐ Stars:** 5,525 | **🍴 Forks:** 1,039 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 5,526 | **🍴 Forks:** 1,039 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** HisMax/RedInk
 2. **Brief Introduction:** Red Ink - A one-stop Xiaohongshu image-and-text generator based on the 🍌Nano Banana Pro🍌, "One Sentence, One Image: Generate Xiaohongshu Text and Images."
@@ -901,7 +800,7 @@ Summary:** A fully automated AI engine designed to generate short videos with mi
 
 ### 📌 [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills)
 
-**⭐ Stars:** 47,318 | **🍴 Forks:** 3,697 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 47,555 | **🍴 Forks:** 3,714 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Imbad0202/academic-research-skills
 2. **Brief Introduction:** Academic Research Skills for Claude Code: research → write → review → revise → finalize
@@ -914,11 +813,25 @@ Summary:** A reusable Claude Code template that streamlines the academic researc
 
 ---
 
+<a id="kevin-thustorymem"></a>
+
+### 📌 [Kevin-thu/StoryMem](https://github.com/Kevin-thu/StoryMem)
+
+**⭐ Stars:** 768 | **🍴 Forks:** 75 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** Kevin-thu/StoryMem
+2. **Brief Introduction:** StoryMem is the official code for a system designed for multi-shot long video storytelling. It leverages a memory mechanism to generate coherent narratives from extended video content, addressing challenges in long-form video understanding and summarization.
+3. **Innovations:** Its core innovation lies in using a memory mechanism to enable multi-shot storytelling for long videos, ensuring narrative coherence and addressing the challenges of extended video content.
+4. **Basic Usage:** (Omitted as specific usage instructions are not provided in the description)
+5. **Summary:** StoryMem provides a novel approach to generate coherent, multi-shot narratives from long videos by integrating a memory-based mechanism.
+
+---
+
 <a id="lydornpolygonization-by-frame-field-learning"></a>
 
 ### 📌 [Lydorn/Polygonization-by-Frame-Field-Learning](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning)
 
-**⭐ Stars:** 340 | **🍴 Forks:** 70 | **📅 Updated:** 2026-08-28
+**⭐ Stars:** 340 | **🍴 Forks:** 69 | **📅 Updated:** 2026-08-28
 
 1. **Repository Name:** Lydorn/Polygonization-by-Frame-Field-Learning
 2. **Brief Introduction:** This repository contains the code for our fast polygonal building extraction from overhead images pipeline.
@@ -932,7 +845,7 @@ Summary:** A reusable Claude Code template that streamlines the academic researc
 
 ### 📌 [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler)
 
-**⭐ Stars:** 64,735 | **🍴 Forks:** 12,563 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 64,798 | **🍴 Forks:** 12,570 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** NanmiCoder/MediaCrawler
 2. **Brief Introduction:** 一个功能强大的**多平台自媒体数据采集工具**，支持小红书、抖音、快手、B站、微博、贴吧、知乎等主流平台的公开信息抓取。
@@ -960,7 +873,7 @@ Summary:** A reusable Claude Code template that streamlines the academic researc
 
 ### 📌 [Peterande/D-FINE](https://github.com/Peterande/D-FINE)
 
-**⭐ Stars:** 3,322 | **🍴 Forks:** 320 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 3,324 | **🍴 Forks:** 320 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** Peterande/D-FINE
 2. **Brief Introduction:** D-FINE: Redefine Regression Task of DETRs as Fine-grained Distribution Refinement  [ICLR 2025 Spotlight]
@@ -974,7 +887,7 @@ Summary:** A reusable Claude Code template that streamlines the academic researc
 
 ### 📌 [Rimagination/scansci-pdf](https://github.com/Rimagination/scansci-pdf)
 
-**⭐ Stars:** 875 | **🍴 Forks:** 88 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 881 | **🍴 Forks:** 88 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Rimagination/scansci-pdf
 2. **Brief Introduction:** No description available
@@ -991,7 +904,7 @@ Summary:** This repository provides tools for efficiently transforming scanned d
 
 ### 📌 [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)
 
-**⭐ Stars:** 136,876 | **🍴 Forks:** 20,123 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 136,985 | **🍴 Forks:** 20,135 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Shubhamsaboo/awesome-llm-apps
 2. **Brief Introduction:** 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.
@@ -1005,7 +918,7 @@ Summary:** This repository provides tools for efficiently transforming scanned d
 
 ### 📌 [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
 
-**⭐ Stars:** 187,237 | **🍴 Forks:** 46,029 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 187,250 | **🍴 Forks:** 46,024 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Significant-Gravitas/AutoGPT
 2. **Brief Introduction:** AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
@@ -1015,11 +928,25 @@ Summary:** This repository provides tools for efficiently transforming scanned d
 
 ---
 
+<a id="unipat-aiuniscientist"></a>
+
+### 📌 [UniPat-AI/UniScientist](https://github.com/UniPat-AI/UniScientist)
+
+**⭐ Stars:** 171 | **🍴 Forks:** 13 | **📅 Updated:** 2026-08-24
+
+1. **Repository Name:** UniPat-AI/UniScientist
+2. **Brief Introduction:** UniScientist aims to enhance scientific research intelligence by providing a unified framework for data integration and analysis across various scientific disciplines.
+3. **Innovations:** The repository features advanced algorithms for data synthesis, cross-disciplinary collaboration tools, and a comprehensive knowledge base that supports diverse scientific inquiries.
+4. **Basic Usage:** Not provided.
+5. **Summary:** UniScientist serves as a powerful tool for fostering collaboration and innovation in scientific research through a unified approach.
+
+---
+
 <a id="yiling0013ai_novelgenerator"></a>
 
 ### 📌 [YILING0013/AI_NovelGenerator](https://github.com/YILING0013/AI_NovelGenerator)
 
-**⭐ Stars:** 6,045 | **🍴 Forks:** 1,050 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 6,053 | **🍴 Forks:** 1,049 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** YILING0013/AI_NovelGenerator
 2. **Brief Introduction:** 使用ai生成多章节的长篇小说，自动衔接上下文、伏笔
@@ -1036,7 +963,7 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ### 📌 [Zie619/n8n-workflows](https://github.com/Zie619/n8n-workflows)
 
-**⭐ Stars:** 56,569 | **🍴 Forks:** 7,609 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 56,572 | **🍴 Forks:** 7,612 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Zie619/n8n-workflows
 2. **Brief Introduction:** all of the workflows of n8n i could find (also from the site itself)
@@ -1046,11 +973,25 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ---
 
+<a id="aiming-labautoresearchclaw"></a>
+
+### 📌 [aiming-lab/AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)
+
+**⭐ Stars:** 14,395 | **🍴 Forks:** 1,669 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** aiming-lab/AutoResearchClaw
+2. **Brief Introduction:** AutoResearchClaw enables fully autonomous and self-evolving research processes, transforming ideas into academic papers through an interactive chat interface.
+3. **Innovations:** The repository features a unique chat-based interface that facilitates idea generation and paper writing, alongside self-evolving algorithms that adapt research methodologies over time.
+4. **Basic Usage:** Users can engage in a conversation to develop research ideas and receive a structured paper based on their inputs.
+5. **Summary:** AutoResearchClaw streamlines the research process from concept to publication, making academic writing more accessible and efficient.
+
+---
+
 <a id="anthropicsclaude-code"></a>
 
 ### 📌 [anthropics/claude-code](https://github.com/anthropics/claude-code)
 
-**⭐ Stars:** 144,585 | **🍴 Forks:** 23,081 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 144,695 | **🍴 Forks:** 23,104 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** anthropics/claude-code
 2. **Brief Introduction:** Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
@@ -1067,7 +1008,7 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ### 📌 [arcee-ai/mergekit](https://github.com/arcee-ai/mergekit)
 
-**⭐ Stars:** 7,344 | **🍴 Forks:** 787 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 7,345 | **🍴 Forks:** 788 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** arcee-ai/mergekit
 2. **Brief Introduction:** Tools for merging pretrained large language models.
@@ -1081,7 +1022,7 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ### 📌 [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects)
 
-**⭐ Stars:** 37,582 | **🍴 Forks:** 6,704 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 37,624 | **🍴 Forks:** 6,712 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ashishpatel26/500-AI-Agents-Projects
 2. **Brief Introduction:** The 500 AI Agents Projects is a curated collection of AI agent use cases across various industries. It showcases practical applications and provides links to open-source projects for implementation, illustrating how AI agents are transforming sectors such as healthcare, finance, education, retail, and more.
@@ -1098,7 +1039,7 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ### 📌 [aws/aws-cli](https://github.com/aws/aws-cli)
 
-**⭐ Stars:** 17,243 | **🍴 Forks:** 4,647 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 17,247 | **🍴 Forks:** 4,648 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** aws/aws-cli
 2. **Brief Introduction:** Universal Command Line Interface for Amazon Web Services
@@ -1126,7 +1067,7 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ### 📌 [facebookresearch/sam-3d-body](https://github.com/facebookresearch/sam-3d-body)
 
-**⭐ Stars:** 3,514 | **🍴 Forks:** 420 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 3,519 | **🍴 Forks:** 420 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** facebookresearch/sam-3d-body
 2. **Brief Introduction:** The repository provides code for running inference with the SAM 3D Body Model (3DB), links for downloading the trained model checkpoints and datasets, and example notebooks that show how to use the model.
@@ -1143,7 +1084,7 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ### 📌 [facebookresearch/sam-3d-objects](https://github.com/facebookresearch/sam-3d-objects)
 
-**⭐ Stars:** 7,378 | **🍴 Forks:** 877 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 7,380 | **🍴 Forks:** 878 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** facebookresearch/sam-3d-objects
 2. **Brief Introduction:** SAM 3D Objects
@@ -1156,11 +1097,25 @@ Summary:** Generates cohesive, multi‑chapter novels using AI that maintains na
 
 ---
 
+<a id="funstory-aibabeldoc"></a>
+
+### 📌 [funstory-ai/BabelDOC](https://github.com/funstory-ai/BabelDOC)
+
+**⭐ Stars:** 9,500 | **🍴 Forks:** 793 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** funstory-ai/BabelDOC
+2. **Brief Introduction:** BabelDOC is a document translation tool designed to facilitate seamless language conversion for various document formats.
+3. **Innovations:** It supports multiple file types, utilizes advanced translation algorithms, and offers a user-friendly interface for efficient document handling.
+4. **Basic Usage:** (No specific usage example provided)
+5. **Summary:** BabelDOC aims to simplify the process of translating documents across different languages and formats.
+
+---
+
 <a id="guofei9987blind_watermark"></a>
 
 ### 📌 [guofei9987/blind_watermark](https://github.com/guofei9987/blind_watermark)
 
-**⭐ Stars:** 14,757 | **🍴 Forks:** 1,452 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 14,759 | **🍴 Forks:** 1,452 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** guofei9987/blind_watermark
 2. **Brief Introduction:** Blind&Invisible Watermark ，图片盲水印，提取水印无须原图！
@@ -1193,7 +1148,7 @@ Summary:** A Python library for embedding imperceptible blind watermarks into im
 
 ### 📌 [happycola233/tchMaterial-parser](https://github.com/happycola233/tchMaterial-parser)
 
-**⭐ Stars:** 6,576 | **🍴 Forks:** 824 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 6,588 | **🍴 Forks:** 826 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** happycola233/tchMaterial-parser
 2. **Brief Introduction:** 国家中小学智慧教育平台 电子课本下载工具，帮助您从智慧教育平台中获取电子课本的 PDF 文件网址并进行下载，让您更方便地获取课本内容。
@@ -1207,7 +1162,7 @@ Summary:** A Python library for embedding imperceptible blind watermarks into im
 
 ### 📌 [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)
 
-**⭐ Stars:** 122,034 | **🍴 Forks:** 18,832 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 122,290 | **🍴 Forks:** 18,887 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** harry0703/MoneyPrinterTurbo
 2. **Brief Introduction:** 利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.
@@ -1221,7 +1176,7 @@ Summary:** A Python library for embedding imperceptible blind watermarks into im
 
 ### 📌 [headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)
 
-**⭐ Stars:** 71,134 | **🍴 Forks:** 5,452 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 71,405 | **🍴 Forks:** 5,474 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** headroomlabs-ai/headroom
 2. **Brief Introduction:** Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
@@ -1238,7 +1193,7 @@ Summary:** Headroom cuts token consumption of LLM inputs by up to 95% without sa
 
 ### 📌 [hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)
 
-**⭐ Stars:** 29,755 | **🍴 Forks:** 3,084 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 29,768 | **🍴 Forks:** 3,088 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** hpcaitech/Open-Sora
 2. **Brief Introduction:** Open-Sora: Democratizing Efficient Video Production for All
@@ -1252,13 +1207,27 @@ Summary:** Headroom cuts token consumption of LLM inputs by up to 95% without sa
 
 ### 📌 [huggingface/transformers](https://github.com/huggingface/transformers)
 
-**⭐ Stars:** 165,053 | **🍴 Forks:** 34,495 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 165,099 | **🍴 Forks:** 34,511 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** huggingface/transformers
 2. **Brief Introduction:** 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.
 3. **Innovations:** Centralizes model definitions enabling cross‑framework compatibility with many training and inference libraries, simplifying model usage and democratizing state‑of‑the‑art models.
 4. **Basic Usage:** Install via pip (`pip install "transformers[torch]"`) and use the Pipeline API for inference.
 5. **Summary:** Transformers provides a unified framework for defining, training, and deploying state‑of‑the‑art models across text, vision, audio, and multimodal tasks.
+
+---
+
+<a id="jingyaogongminimind-v"></a>
+
+### 📌 [jingyaogong/minimind-v](https://github.com/jingyaogong/minimind-v)
+
+**⭐ Stars:** 8,609 | **🍴 Forks:** 956 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** jingyaogong/minimind-v
+2. **Brief Introduction:** A visual language model (VLM) that allows users to train a 67M-parameter model from scratch in just one hour.
+3. **Innovations:** This repository features rapid training capabilities for a large-scale visual model, enabling efficient experimentation and deployment in multimodal tasks.
+4. **Basic Usage:** Not provided.
+5. **Summary:** Minimind-v offers a quick and efficient way to train a powerful visual language model, enhancing accessibility for developers and researchers in multimodal AI.
 
 ---
 
@@ -1280,7 +1249,7 @@ Summary:** Headroom cuts token consumption of LLM inputs by up to 95% without sa
 
 ### 📌 [langbot-app/LangBot](https://github.com/langbot-app/LangBot)
 
-**⭐ Stars:** 17,700 | **🍴 Forks:** 1,585 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 17,715 | **🍴 Forks:** 1,585 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** langbot-app/LangBot
 2. **Brief Introduction:** Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM, Ollama, SiliconFlow, Moonshot, openclaw / hermes agent, deerflow
@@ -1294,7 +1263,7 @@ Summary:** Headroom cuts token consumption of LLM inputs by up to 95% without sa
 
 ### 📌 [lllyasviel/FramePack](https://github.com/lllyasviel/FramePack)
 
-**⭐ Stars:** 17,248 | **🍴 Forks:** 1,739 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 17,249 | **🍴 Forks:** 1,740 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** lllyasviel/FramePack
 2. **Brief Introduction:** Lets make video diffusion practical!
@@ -1311,7 +1280,7 @@ Summary:** FramePack makes video diffusion practical by packing frames into one 
 
 ### 📌 [microsoft/markitdown](https://github.com/microsoft/markitdown)
 
-**⭐ Stars:** 182,235 | **🍴 Forks:** 13,393 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 182,480 | **🍴 Forks:** 13,413 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** microsoft/markitdown
 2. **Brief Introduction:** Python tool for converting files and office documents to Markdown.
@@ -1328,7 +1297,7 @@ Summary:** Markitdown simplifies converting Office documents and other files to 
 
 ### 📌 [mikf/gallery-dl](https://github.com/mikf/gallery-dl)
 
-**⭐ Stars:** 19,466 | **🍴 Forks:** 1,467 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 19,470 | **🍴 Forks:** 1,467 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** mikf/gallery-dl
 2. **Brief Introduction:** Command-line program to download image galleries and collections from several image hosting sites
@@ -1342,7 +1311,7 @@ Summary:** Markitdown simplifies converting Office documents and other files to 
 
 ### 📌 [nvbn/thefuck](https://github.com/nvbn/thefuck)
 
-**⭐ Stars:** 97,790 | **🍴 Forks:** 3,960 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 97,794 | **🍴 Forks:** 3,960 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** nvbn/thefuck
 2. **Brief Introduction:** Magnificent app which corrects your previous console command.
@@ -1361,11 +1330,25 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ---
 
+<a id="open-gigaaigiga-brain-0"></a>
+
+### 📌 [open-gigaai/giga-brain-0](https://github.com/open-gigaai/giga-brain-0)
+
+**⭐ Stars:** 2,644 | **🍴 Forks:** 208 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** open-gigaai/giga-brain-0
+2. **Brief Introduction:** GigaBrain-0 is a vision-language-action model powered by world models, designed to enhance the interaction between visual inputs and language processing for intelligent actions.
+3. **Innovations:** This repository features advanced integration of vision and language understanding, enabling dynamic action generation based on contextual visual cues, leveraging world models for improved decision-making.
+4. **Basic Usage:** (No specific usage example provided.)
+5. **Summary:** GigaBrain-0 aims to advance the capabilities of AI in understanding and acting upon visual and linguistic information seamlessly.
+
+---
+
 <a id="opendatalabmineru"></a>
 
 ### 📌 [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
 
-**⭐ Stars:** 79,590 | **🍴 Forks:** 6,662 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 79,658 | **🍴 Forks:** 6,667 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** opendatalab/MinerU
 2. **Brief Introduction:** Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
@@ -1379,7 +1362,7 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ### 📌 [public-apis/public-apis](https://github.com/public-apis/public-apis)
 
-**⭐ Stars:** 478,204 | **🍴 Forks:** 52,780 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 478,695 | **🍴 Forks:** 52,835 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** public-apis/public-apis
 2. **Brief Introduction:** A collective list of free APIs
@@ -1393,7 +1376,7 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ### 📌 [robert-mcdermott/ai-knowledge-graph](https://github.com/robert-mcdermott/ai-knowledge-graph)
 
-**⭐ Stars:** 3,064 | **🍴 Forks:** 414 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 3,067 | **🍴 Forks:** 414 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** robert-mcdermott/ai-knowledge-graph
 2. **Brief Introduction:** AI Powered Knowledge Graph Generator
@@ -1407,7 +1390,7 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ### 📌 [sansan0/TrendRadar](https://github.com/sansan0/TrendRadar)
 
-**⭐ Stars:** 62,155 | **🍴 Forks:** 24,883 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 62,173 | **🍴 Forks:** 24,886 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** sansan0/TrendRadar
 2. **Brief Introduction:** ⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。
@@ -1421,7 +1404,7 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ### 📌 [subframe7536/maple-font](https://github.com/subframe7536/maple-font)
 
-**⭐ Stars:** 28,776 | **🍴 Forks:** 1,182 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 28,797 | **🍴 Forks:** 1,184 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** subframe7536/maple-font
 2. **Brief Introduction:** Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font icons for IDE and terminal, fine-grained customization options. 带连字和控制台图标的圆角等宽字体，中英文宽度完美2:1，细粒度的自定义选项
@@ -1435,7 +1418,7 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ### 📌 [vllm-project/vllm](https://github.com/vllm-project/vllm)
 
-**⭐ Stars:** 91,383 | **🍴 Forks:** 21,991 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 91,452 | **🍴 Forks:** 22,035 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** vllm-project/vllm
 2. **Brief Introduction:** A high-throughput and memory-efficient inference and serving engine for LLMs
@@ -1449,7 +1432,7 @@ Repository URL:** https://github.com/nvbn/thefuck
 
 ### 📌 [xming521/WeClone](https://github.com/xming521/WeClone)
 
-**⭐ Stars:** 18,203 | **🍴 Forks:** 1,526 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 18,203 | **🍴 Forks:** 1,526 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** xming521/WeClone
 2. **Brief Introduction:** 🚀 One-stop solution for creating your AI twin from chat history 💡 Fine-tune LLMs with your chat logs to capture your unique style, then bind to a chatbot to bring your digital self to life.
@@ -1478,11 +1461,25 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ## 🔷 TypeScript(Total 32)
 
+<a id="027xiguapicode-box"></a>
+
+### 📌 [027xiguapi/code-box](https://github.com/027xiguapi/code-box)
+
+**⭐ Stars:** 4,148 | **🍴 Forks:** 295 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** 027xiguapi/code-box
+2. **Brief Introduction:** 本插件可以用于CSDN/知乎/脚本之家/博客园/博客园/51CTO博客/php中文网/掘金/微信等网站,一键下载文章html或markdown文件;实现无需登录一键复制代码;支持选中代码;或者代码右上角按钮的一键复制;解除关注博主即可阅读全文提示;去除登录弹窗;去除跳转APP弹窗.
+3. **Innovations:** One‑click download of HTML/Markdown/PDF, one‑click code copy without login, selectable code support, custom CSS, image download, multi‑site compatibility, removal of login and redirect popups.
+4. **Basic Usage:** Not specified
+5. **Summary:** CodeBox is a browser extension that lets users one‑click download articles or copy code from many Chinese and international sites without logging in, while removing popups and allowing custom styling.
+
+---
+
 <a id="anionexbanana-slides"></a>
 
 ### 📌 [Anionex/banana-slides](https://github.com/Anionex/banana-slides)
 
-**⭐ Stars:** 15,581 | **🍴 Forks:** 1,784 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 15,582 | **🍴 Forks:** 1,784 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Anionex/banana-slides
 2. **Brief Introduction:** An AI-native slide generator based on the nano banana pro🍌, designed to create dynamic "Vibe PPT" presentations effortlessly.
@@ -1496,7 +1493,7 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ### 📌 [CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)
 
-**⭐ Stars:** 51,618 | **🍴 Forks:** 4,946 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 51,662 | **🍴 Forks:** 4,950 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** CherryHQ/cherry-studio
 2. **Brief Introduction:** Cherry Studio is an AI productivity platform that integrates smart chat, autonomous agents, and over 300 assistants, offering unified access to cutting-edge large language models (LLMs).
@@ -1510,7 +1507,7 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ### 📌 [ExplosiveCoderflome/AI-Novel-Writing-Assistant](https://github.com/ExplosiveCoderflome/AI-Novel-Writing-Assistant)
 
-**⭐ Stars:** 2,855 | **🍴 Forks:** 547 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 2,863 | **🍴 Forks:** 548 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ExplosiveCoderflome/AI-Novel-Writing-Assistant
 2. **Brief Introduction:** An AI-native open-source system designed for long-form novel writing, facilitating the journey from a single idea to a complete novel through structured planning and agent-driven workflows.
@@ -1524,7 +1521,7 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ### 📌 [Narcooo/inkos](https://github.com/Narcooo/inkos)
 
-**⭐ Stars:** 9,685 | **🍴 Forks:** 1,790 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 9,709 | **🍴 Forks:** 1,792 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Narcooo/inkos
 2. **Brief Introduction:** An autonomous novel writing CLI agent that utilizes AI to write, audit, and revise novels, incorporating human review checkpoints.
@@ -1534,81 +1531,11 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ---
 
-<a id="anomalycoopencode"></a>
-
-### 📌 [anomalyco/opencode](https://github.com/anomalyco/opencode)
-
-**⭐ Stars:** 206,207 | **🍴 Forks:** 26,944 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** anomalyco/opencode
-2. **Brief Introduction:** An open-source coding agent designed to assist developers in writing and managing code efficiently.
-3. **Innovations:** Features include intelligent code suggestions, real-time collaboration tools, and seamless integration with popular development environments to enhance productivity.
-4. **Basic Usage:** Not specified.
-5. **Summary:** This repository aims to streamline the coding process by providing innovative tools for developers.
-
----
-
-<a id="hacklycmyagents"></a>
-
-### 📌 [hAcKlyc/MyAgents](https://github.com/hAcKlyc/MyAgents)
-
-**⭐ Stars:** 878 | **🍴 Forks:** 101 | **📅 Updated:** 2026-09-09
-
-1. **Repository Name:** hAcKlyc/MyAgents
-2. **Brief Introduction:** MyAgents is a user-friendly desktop application that combines an AI workspace with an active agent system, providing a centralized task management hub for agents.
-3. **Innovations:** The repository features an elegant design, ease of use, and integrates both an AI workspace and a proactive agent system, enhancing productivity and task management.
-4. **Basic Usage:** Not specified.
-5. **Summary:** MyAgents serves as a versatile task center that merges AI capabilities with proactive agent functionalities for efficient desktop management.
-
----
-
-<a id="heygen-comhyperframes"></a>
-
-### 📌 [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)
-
-**⭐ Stars:** 48,470 | **🍴 Forks:** 4,440 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** heygen-com/hyperframes
-2. **Brief Introduction:** Hyperframes is a tool designed for creating HTML content that can be rendered as videos, specifically tailored for agents.
-3. **Innovations:** Key features include seamless HTML rendering into video format, user-friendly interface for content creation, and optimized performance for agent applications.
-4. **Basic Usage:** Not specified.
-5. **Summary:** Hyperframes enables agents to efficiently create and render engaging video content from HTML.
-
----
-
-<a id="openclawopenclaw"></a>
-
-### 📌 [openclaw/openclaw](https://github.com/openclaw/openclaw)
-
-**⭐ Stars:** 389,324 | **🍴 Forks:** 81,817 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** openclaw/openclaw
-2. **Brief Introduction:** OpenClaw is a personal AI assistant designed to work across any operating system and platform, providing a versatile and user-friendly experience.
-3. **Innovations:** Distinctive features include cross-platform compatibility, a customizable interface, and an intuitive design that simplifies user interaction with AI technologies.
-4. **Basic Usage:** Not specified.
-5. **Summary:** OpenClaw serves as a flexible AI assistant, adaptable to various environments and user needs.
-
----
-
-<a id="027xiguapicode-box"></a>
-
-### 📌 [027xiguapi/code-box](https://github.com/027xiguapi/code-box)
-
-**⭐ Stars:** 4,147 | **🍴 Forks:** 295 | **📅 Updated:** 2026-09-07
-
-1. **Repository Name:** 027xiguapi/code-box
-2. **Brief Introduction:** 本插件可以用于CSDN/知乎/脚本之家/博客园/博客园/51CTO博客/php中文网/掘金/微信等网站,一键下载文章html或markdown文件;实现无需登录一键复制代码;支持选中代码;或者代码右上角按钮的一键复制;解除关注博主即可阅读全文提示;去除登录弹窗;去除跳转APP弹窗.
-3. **Innovations:** One‑click download of HTML/Markdown/PDF, one‑click code copy without login, selectable code support, custom CSS, image download, multi‑site compatibility, removal of login and redirect popups.
-4. **Basic Usage:** Not specified
-5. **Summary:** CodeBox is a browser extension that lets users one‑click download articles or copy code from many Chinese and international sites without logging in, while removing popups and allowing custom styling.
-
----
-
 <a id="opencut-appopencut"></a>
 
 ### 📌 [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut)
 
-**⭐ Stars:** 89,126 | **🍴 Forks:** 8,801 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 89,188 | **🍴 Forks:** 8,812 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** OpenCut-app/OpenCut
 2. **Brief Introduction:** The open-source CapCut alternative
@@ -1622,7 +1549,7 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ### 📌 [RSSNext/Folo](https://github.com/RSSNext/Folo)
 
-**⭐ Stars:** 38,934 | **🍴 Forks:** 2,124 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 38,941 | **🍴 Forks:** 2,123 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** RSSNext/Folo
 2. **Brief Introduction:** 🧡 Folo is the AI RSS Reader
@@ -1632,11 +1559,25 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ---
 
+<a id="anomalycoopencode"></a>
+
+### 📌 [anomalyco/opencode](https://github.com/anomalyco/opencode)
+
+**⭐ Stars:** 206,530 | **🍴 Forks:** 27,003 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** anomalyco/opencode
+2. **Brief Introduction:** An open-source coding agent designed to assist developers in writing and managing code efficiently.
+3. **Innovations:** Features include intelligent code suggestions, real-time collaboration tools, and seamless integration with popular development environments to enhance productivity.
+4. **Basic Usage:** Not specified.
+5. **Summary:** This repository aims to streamline the coding process by providing innovative tools for developers.
+
+---
+
 <a id="antvismcp-server-chart"></a>
 
 ### 📌 [antvis/mcp-server-chart](https://github.com/antvis/mcp-server-chart)
 
-**⭐ Stars:** 4,359 | **🍴 Forks:** 415 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 4,362 | **🍴 Forks:** 416 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** antvis/mcp-server-chart
 2. **Brief Introduction:** 🤖 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.
@@ -1646,11 +1587,39 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ---
 
+<a id="hacklycmyagents"></a>
+
+### 📌 [hAcKlyc/MyAgents](https://github.com/hAcKlyc/MyAgents)
+
+**⭐ Stars:** 881 | **🍴 Forks:** 101 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** hAcKlyc/MyAgents
+2. **Brief Introduction:** MyAgents is a user-friendly desktop application that combines an AI workspace with an active agent system, providing a centralized task management hub for agents.
+3. **Innovations:** The repository features an elegant design, ease of use, and integrates both an AI workspace and a proactive agent system, enhancing productivity and task management.
+4. **Basic Usage:** Not specified.
+5. **Summary:** MyAgents serves as a versatile task center that merges AI capabilities with proactive agent functionalities for efficient desktop management.
+
+---
+
+<a id="heygen-comhyperframes"></a>
+
+### 📌 [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)
+
+**⭐ Stars:** 48,820 | **🍴 Forks:** 4,465 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** heygen-com/hyperframes
+2. **Brief Introduction:** Hyperframes is a tool designed for creating HTML content that can be rendered as videos, specifically tailored for agents.
+3. **Innovations:** Key features include seamless HTML rendering into video format, user-friendly interface for content creation, and optimized performance for agent applications.
+4. **Basic Usage:** Not specified.
+5. **Summary:** Hyperframes enables agents to efficiently create and render engaging video content from HTML.
+
+---
+
 <a id="lfnovoopen-notebook"></a>
 
 ### 📌 [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook)
 
-**⭐ Stars:** 38,508 | **🍴 Forks:** 4,450 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 38,554 | **🍴 Forks:** 4,454 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** lfnovo/open-notebook
 2. **Brief Introduction:** An Open Source implementation of Notebook LM with more flexibility and features
@@ -1660,11 +1629,25 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ---
 
+<a id="openclawopenclaw"></a>
+
+### 📌 [openclaw/openclaw](https://github.com/openclaw/openclaw)
+
+**⭐ Stars:** 389,414 | **🍴 Forks:** 81,847 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** openclaw/openclaw
+2. **Brief Introduction:** OpenClaw is a personal AI assistant designed to work across any operating system and platform, providing a versatile and user-friendly experience.
+3. **Innovations:** Distinctive features include cross-platform compatibility, a customizable interface, and an intuitive design that simplifies user interaction with AI technologies.
+4. **Basic Usage:** Not specified.
+5. **Summary:** OpenClaw serves as a flexible AI assistant, adaptable to various environments and user needs.
+
+---
+
 <a id="umami-softwareumami"></a>
 
 ### 📌 [umami-software/umami](https://github.com/umami-software/umami)
 
-**⭐ Stars:** 38,710 | **🍴 Forks:** 7,997 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 38,728 | **🍴 Forks:** 8,000 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** umami-software/umami
 2. **Brief Introduction:** Umami is a privacy-first analytics platform. Traffic, campaigns, behavior, conversions, and revenue in one place — no cookies, no surveillance, self-hosted or in the cloud.
@@ -1674,25 +1657,11 @@ Summary:** PolyWorld provides pretrained Graph Neural Networks for accurate, vec
 
 ---
 
-<a id="antvisinfographic"></a>
-
-### 📌 [antvis/Infographic](https://github.com/antvis/Infographic)
-
-**⭐ Stars:** 6,621 | **🍴 Forks:** 544 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** antvis/Infographic
-2. **Brief Introduction:** An Infographic Generation and Rendering Framework that utilizes AI to transform textual information into engaging visual representations.
-3. **Innovations:** Distinctive features include AI-driven content generation, customizable templates, and a user-friendly interface for creating dynamic infographics effortlessly.
-4. **Basic Usage:** Not provided.
-5. **Summary:** This repository aims to enhance communication by visually representing information through AI-generated infographics.
-
----
-
 <a id="snouzyworkout-cool"></a>
 
 ### 📌 [Snouzy/workout-cool](https://github.com/Snouzy/workout-cool)
 
-**⭐ Stars:** 8,449 | **🍴 Forks:** 746 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 8,453 | **🍴 Forks:** 746 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** Snouzy/workout-cool
 2. **Brief Introduction:** 🏋 Modern open-source fitness coaching platform. Create workout plans, track progress, and access a comprehensive exercise database.
@@ -1727,7 +1696,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [ahmedkhaleel2004/gitdiagram](https://github.com/ahmedkhaleel2004/gitdiagram)
 
-**⭐ Stars:** 15,970 | **🍴 Forks:** 1,238 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 15,974 | **🍴 Forks:** 1,238 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** ahmedkhaleel2004/gitdiagram
 2. **Brief Introduction:** Free, simple, fast interactive diagrams for any GitHub repository
@@ -1740,11 +1709,25 @@ Summary:** A zero‑config web tool that turns any GitHub repo into an interacti
 
 ---
 
+<a id="antvisinfographic"></a>
+
+### 📌 [antvis/Infographic](https://github.com/antvis/Infographic)
+
+**⭐ Stars:** 6,629 | **🍴 Forks:** 544 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** antvis/Infographic
+2. **Brief Introduction:** An Infographic Generation and Rendering Framework that utilizes AI to transform textual information into engaging visual representations.
+3. **Innovations:** Distinctive features include AI-driven content generation, customizable templates, and a user-friendly interface for creating dynamic infographics effortlessly.
+4. **Basic Usage:** Not provided.
+5. **Summary:** This repository aims to enhance communication by visually representing information through AI-generated infographics.
+
+---
+
 <a id="clinecline"></a>
 
 ### 📌 [cline/cline](https://github.com/cline/cline)
 
-**⭐ Stars:** 67,757 | **🍴 Forks:** 7,321 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 67,812 | **🍴 Forks:** 7,325 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** cline/cline
 2. **Brief Introduction:** Autonomous coding agent as an SDK, IDE extension, or CLI assistant.
@@ -1772,7 +1755,7 @@ Summary:** A zero‑config web tool that turns any GitHub repo into an interacti
 
 ### 📌 [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)
 
-**⭐ Stars:** 178,465 | **🍴 Forks:** 9,719 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 178,884 | **🍴 Forks:** 9,735 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** firecrawl/firecrawl
 2. **Brief Introduction:** The context API to search, scrape, and interact with the web at scale. 🔥
@@ -1786,7 +1769,7 @@ Summary:** A zero‑config web tool that turns any GitHub repo into an interacti
 
 ### 📌 [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli)
 
-**⭐ Stars:** 106,885 | **🍴 Forks:** 14,541 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 106,905 | **🍴 Forks:** 14,546 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** google-gemini/gemini-cli
 2. **Brief Introduction:** An open-source AI agent that brings the power of Gemini directly into your terminal.
@@ -1800,7 +1783,7 @@ Summary:** A zero‑config web tool that turns any GitHub repo into an interacti
 
 ### 📌 [hanydd/BilibiliSponsorBlock](https://github.com/hanydd/BilibiliSponsorBlock)
 
-**⭐ Stars:** 6,048 | **🍴 Forks:** 137 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 6,056 | **🍴 Forks:** 137 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** hanydd/BilibiliSponsorBlock
 2. **Brief Introduction:** 一款跳过小电视视频中恰饭片段的浏览器插件，移植自 SponsorBlock。A browser extension to skip sponsored segments in videos, ported from the SponsorBlock
@@ -1814,7 +1797,7 @@ Summary:** A zero‑config web tool that turns any GitHub repo into an interacti
 
 ### 📌 [imsyy/DailyHotApi](https://github.com/imsyy/DailyHotApi)
 
-**⭐ Stars:** 4,049 | **🍴 Forks:** 1,341 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 4,049 | **🍴 Forks:** 1,342 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** imsyy/DailyHotApi
 2. **Brief Introduction:** 🔥 今日热榜 API，一个聚合热门数据的 API 接口，支持 RSS 模式 及 Vercel 部署 | 前端页面：https://github.com/imsyy/DailyHot
@@ -1831,7 +1814,7 @@ Summary:** Provides a unified API (JSON/RSS) for today’s trending topics acros
 
 ### 📌 [iptv-org/iptv](https://github.com/iptv-org/iptv)
 
-**⭐ Stars:** 138,213 | **🍴 Forks:** 8,031 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 138,302 | **🍴 Forks:** 8,037 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** iptv-org/iptv
 2. **Brief Introduction:** Collection of publicly available IPTV (Internet Protocol television) channels from all over the world
@@ -1862,7 +1845,7 @@ Summary:** A privacy‑first Chrome tool that lets users instantly isolate and c
 
 ### 📌 [langgenius/dify](https://github.com/langgenius/dify)
 
-**⭐ Stars:** 155,282 | **🍴 Forks:** 24,513 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 155,377 | **🍴 Forks:** 24,537 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** langgenius/dify
 2. **Brief Introduction:** Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.
@@ -1876,7 +1859,7 @@ Summary:** A privacy‑first Chrome tool that lets users instantly isolate and c
 
 ### 📌 [linshenkx/prompt-optimizer](https://github.com/linshenkx/prompt-optimizer)
 
-**⭐ Stars:** 34,386 | **🍴 Forks:** 4,032 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 34,471 | **🍴 Forks:** 4,035 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** linshenkx/prompt-optimizer
 2. **Brief Introduction:** An AI prompt optimizer for writing better prompts and getting better AI results.
@@ -1897,7 +1880,7 @@ Summary:** A privacy‑first Chrome tool that lets users instantly isolate and c
 
 ### 📌 [n8n-io/n8n](https://github.com/n8n-io/n8n)
 
-**⭐ Stars:** 203,887 | **🍴 Forks:** 60,625 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 203,965 | **🍴 Forks:** 60,629 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** n8n-io/n8n
 2. **Brief Introduction:** Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
@@ -1914,7 +1897,7 @@ Summary:** n8n provides a flexible, open-source platform for building visual aut
 
 ### 📌 [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap)
 
-**⭐ Stars:** 366,753 | **🍴 Forks:** 44,916 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 366,855 | **🍴 Forks:** 44,921 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** nilbuild/developer-roadmap
 2. **Brief Introduction:** Interactive roadmaps, guides and other educational content to help developers grow in their careers.
@@ -1928,7 +1911,7 @@ Summary:** n8n provides a flexible, open-source platform for building visual aut
 
 ### 📌 [teableio/teable](https://github.com/teableio/teable)
 
-**⭐ Stars:** 21,765 | **🍴 Forks:** 1,339 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 21,767 | **🍴 Forks:** 1,340 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** teableio/teable
 2. **Brief Introduction:** ✨ AI Spreadsheet for Business
@@ -1958,13 +1941,13 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ---
 
-## 📦 Other(Total 13)
+## 📦 Other(Total 14)
 
 <a id="btjawabilitools"></a>
 
 ### 📌 [btjawa/BiliTools](https://github.com/btjawa/BiliTools)
 
-**⭐ Stars:** 5,124 | **🍴 Forks:** 363 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 5,123 | **🍴 Forks:** 363 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** btjawa/BiliTools
 2. **Brief Introduction:** 本项目已停止维护。
@@ -1978,7 +1961,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)
 
-**⭐ Stars:** 94,717 | **🍴 Forks:** 15,959 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 94,775 | **🍴 Forks:** 15,994 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** punkpeye/awesome-mcp-servers
 2. **Brief Introduction:** A collection of MCP servers.
@@ -1992,7 +1975,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [AiHubCN/Awesome-Chinese-LLM](https://github.com/AiHubCN/Awesome-Chinese-LLM)
 
-**⭐ Stars:** 22,756 | **🍴 Forks:** 2,136 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 22,756 | **🍴 Forks:** 2,136 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** AiHubCN/Awesome-Chinese-LLM
 2. **Brief Introduction:** 整理开源的中文大语言模型，以规模较小、可私有化部署、训练成本较低的模型为主，包括底座模型，垂直领域微调及应用，数据集与教程等。
@@ -2006,7 +1989,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [lukasmasuch/best-of-ml-python](https://github.com/lukasmasuch/best-of-ml-python)
 
-**⭐ Stars:** 23,796 | **🍴 Forks:** 3,151 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 23,797 | **🍴 Forks:** 3,149 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** lukasmasuch/best-of-ml-python
 2. **Brief Introduction:** 🏆 A ranked list of awesome machine learning Python libraries. Updated weekly.
@@ -2020,7 +2003,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 
-**⭐ Stars:** 211,909 | **🍴 Forks:** 21,496 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 212,150 | **🍴 Forks:** 21,509 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** multica-ai/andrej-karpathy-skills
 2. **Brief Introduction:** A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.
@@ -2034,7 +2017,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [ruanyf/weekly](https://github.com/ruanyf/weekly)
 
-**⭐ Stars:** 102,273 | **🍴 Forks:** 4,396 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 102,327 | **🍴 Forks:** 4,398 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ruanyf/weekly
 2. **Brief Introduction:** 科技爱好者周刊，每周五发布
@@ -2044,11 +2027,28 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ---
 
+<a id="1c7chinese-independent-developer"></a>
+
+### 📌 [1c7/chinese-independent-developer](https://github.com/1c7/chinese-independent-developer)
+
+**⭐ Stars:** 61,386 | **🍴 Forks:** 5,379 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** 1c7/chinese-independent-developer
+2. **Brief Introduction:** 👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
+3. **Innovations:** A community‑curated, continuously updated catalog that aggregates projects from Chinese independent developers across diverse domains, providing links, tags, and descriptions for easy discovery and reference.  
+Basic Usage:** Clone the repository and open the README to browse the curated list of projects.  
+Summary:** A community‑curated catalog of Chinese independent developers’ projects, helping discover and share innovative software across various domains.
+4. **Basic Usage:** Clone the repository and open the README to browse the curated list of projects.  
+Summary:** A community‑curated catalog of Chinese independent developers’ projects, helping discover and share innovative software across various domains.
+5. **Summary:** A community‑curated catalog of Chinese independent developers’ projects, helping discover and share innovative software across various domains.
+
+---
+
 <a id="voltagentawesome-openclaw-skills"></a>
 
 ### 📌 [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
 
-**⭐ Stars:** 52,472 | **🍴 Forks:** 5,017 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 52,491 | **🍴 Forks:** 5,017 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** VoltAgent/awesome-openclaw-skills
 2. **Brief Introduction:** A curated collection of over 5,400 OpenClaw skills, meticulously filtered and categorized from the official OpenClaw Skills Registry.
@@ -2062,7 +2062,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [datawhalechina/so-large-lm](https://github.com/datawhalechina/so-large-lm)
 
-**⭐ Stars:** 7,660 | **🍴 Forks:** 632 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 7,662 | **🍴 Forks:** 632 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** datawhalechina/so-large-lm
 2. **Brief Introduction:** 大模型基础: 一文了解大模型基础知识
@@ -2076,7 +2076,7 @@ Summary:** Teable provides an AI‑enhanced spreadsheet that lets business users
 
 ### 📌 [elder-plinius/CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S)
 
-**⭐ Stars:** 49,258 | **🍴 Forks:** 10,122 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 49,512 | **🍴 Forks:** 10,187 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** elder-plinius/CL4R1T4S
 2. **Brief Introduction:** LEAKED SYSTEM PROMPTS FOR CHATGPT, CLAUDE, GEMINI, GROK, PERPLEXITY, CURSOR, LOVABLE, REPLIT, AND MORE! - AI SYSTEMS TRANSPARENCY FOR ALL! 👐
@@ -2121,7 +2121,7 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ### 📌 [svcvit/Awesome-Dify-Workflow](https://github.com/svcvit/Awesome-Dify-Workflow)
 
-**⭐ Stars:** 10,767 | **🍴 Forks:** 1,084 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 10,767 | **🍴 Forks:** 1,085 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** svcvit/Awesome-Dify-Workflow
 2. **Brief Introduction:** 分享一些好用的 Dify DSL 工作流程，自用、学习两相宜。 Sharing some Dify workflows.
@@ -2135,7 +2135,7 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ### 📌 [zijie0/HumanSystemOptimization](https://github.com/zijie0/HumanSystemOptimization)
 
-**⭐ Stars:** 21,820 | **🍴 Forks:** 1,514 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 21,823 | **🍴 Forks:** 1,514 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** zijie0/HumanSystemOptimization
 2. **Brief Introduction:** 健康学习到150岁 - 人体系统调优不完全指南
@@ -2179,7 +2179,7 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ### 📌 [automeris-io/WebPlotDigitizer](https://github.com/automeris-io/WebPlotDigitizer)
 
-**⭐ Stars:** 3,154 | **🍴 Forks:** 437 | **📅 Updated:** 2026-09-08
+**⭐ Stars:** 3,154 | **🍴 Forks:** 436 | **📅 Updated:** 2026-09-08
 
 1. **Repository Name:** automeris-io/WebPlotDigitizer
 2. **Brief Introduction:** WebPlotDigitizer is a computer vision tool designed to extract numerical data from images of plots, graphs, and other visual data representations.
@@ -2189,25 +2189,11 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ---
 
-<a id="hmjz100linkswift"></a>
-
-### 📌 [hmjz100/LinkSwift](https://github.com/hmjz100/LinkSwift)
-
-**⭐ Stars:** 20,228 | **🍴 Forks:** 1,217 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** hmjz100/LinkSwift
-2. **Brief Introduction:** A JavaScript-based tool for obtaining direct download links from various cloud storage services, including Baidu Cloud and Aliyun Drive.
-3. **Innovations:** Supports multiple cloud storage platforms, providing a streamlined way to retrieve direct download links, enhancing user accessibility and convenience.
-4. **Basic Usage:** No specific usage example provided.
-5. **Summary:** LinkSwift simplifies the process of downloading files from eight major cloud storage services by generating direct download links.
-
----
-
 <a id="decolua9router"></a>
 
 ### 📌 [decolua/9router](https://github.com/decolua/9router)
 
-**⭐ Stars:** 28,223 | **🍴 Forks:** 5,108 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 28,359 | **🍴 Forks:** 5,134 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** decolua/9router
 2. **Brief Introduction:** Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.
@@ -2245,11 +2231,25 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ---
 
+<a id="hmjz100linkswift"></a>
+
+### 📌 [hmjz100/LinkSwift](https://github.com/hmjz100/LinkSwift)
+
+**⭐ Stars:** 20,253 | **🍴 Forks:** 1,218 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** hmjz100/LinkSwift
+2. **Brief Introduction:** A JavaScript-based tool for obtaining direct download links from various cloud storage services, including Baidu Cloud and Aliyun Drive.
+3. **Innovations:** Supports multiple cloud storage platforms, providing a streamlined way to retrieve direct download links, enhancing user accessibility and convenience.
+4. **Basic Usage:** No specific usage example provided.
+5. **Summary:** LinkSwift simplifies the process of downloading files from eight major cloud storage services by generating direct download links.
+
+---
+
 <a id="mrdoobthreejs"></a>
 
 ### 📌 [mrdoob/three.js](https://github.com/mrdoob/three.js)
 
-**⭐ Stars:** 115,354 | **🍴 Forks:** 36,539 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 115,388 | **🍴 Forks:** 36,544 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** mrdoob/three.js
 2. **Brief Introduction:** A popular open-source JavaScript library designed to create 3D graphics in the browser using WebGL technology.
@@ -2263,7 +2263,7 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ### 📌 [playcanvas/engine](https://github.com/playcanvas/engine)
 
-**⭐ Stars:** 16,689 | **🍴 Forks:** 1,975 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 16,695 | **🍴 Forks:** 1,977 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** playcanvas/engine
 2. **Brief Introduction:** Powerful web graphics runtime built on WebGL, WebGPU, WebXR and glTF
@@ -2277,7 +2277,7 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ### 📌 [poloclub/transformer-explainer](https://github.com/poloclub/transformer-explainer)
 
-**⭐ Stars:** 8,556 | **🍴 Forks:** 957 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 8,563 | **🍴 Forks:** 959 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** poloclub/transformer-explainer
 2. **Brief Introduction:** Transformer Explained Visually: Learn How LLM Transformer Models Work with Interactive Visualization
@@ -2294,7 +2294,7 @@ Summary:** A curated collection of useful macOS applications with easy access an
 
 ### 📌 [wordshub/free-font](https://github.com/wordshub/free-font)
 
-**⭐ Stars:** 6,454 | **🍴 Forks:** 443 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 6,457 | **🍴 Forks:** 443 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** wordshub/free-font
 2. **Brief Introduction:** 大概是2020年最全的免费可商用字体，这里收录的商免字体都能找到明确的授权出处，可以放心使用，持续更新中...
@@ -2311,7 +2311,7 @@ Summary:** A curated, up-to-date repository of free, commercially usable fonts w
 
 ### 📌 [xanderfrangos/twinkle-tray](https://github.com/xanderfrangos/twinkle-tray)
 
-**⭐ Stars:** 9,004 | **🍴 Forks:** 321 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 9,008 | **🍴 Forks:** 322 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** xanderfrangos/twinkle-tray
 2. **Brief Introduction:** Easily manage the brightness of your monitors in Windows from the system tray
@@ -2327,7 +2327,7 @@ Summary:** A curated, up-to-date repository of free, commercially usable fonts w
 
 ### 📌 [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms)
 
-**⭐ Stars:** 52,854 | **🍴 Forks:** 6,327 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 53,048 | **🍴 Forks:** 6,352 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Lordog/dive-into-llms
 2. **Brief Introduction:** A practical programming tutorial series focused on large language models (LLMs), designed to help users understand and implement LLMs effectively.
@@ -2337,25 +2337,11 @@ Summary:** A curated, up-to-date repository of free, commercially usable fonts w
 
 ---
 
-<a id="wriglobal-pasture-watch"></a>
-
-### 📌 [wri/global-pasture-watch](https://github.com/wri/global-pasture-watch)
-
-**⭐ Stars:** 67 | **🍴 Forks:** 10 | **📅 Updated:** 2026-09-02
-
-1. **Repository Name:** wri/global-pasture-watch
-2. **Brief Introduction:** This repository focuses on mapping the extent, management, and condition of global grasslands to support sustainable land use and conservation efforts.
-3. **Innovations:** Key features include detailed mapping tools, data visualization capabilities, and integration of various datasets to assess grassland health and management practices.
-4. **Basic Usage:** Not specified.
-5. **Summary:** The project aims to enhance understanding and management of grasslands worldwide for better environmental stewardship.
-
----
-
 <a id="qwenlmqwen3-vl"></a>
 
 ### 📌 [QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL)
 
-**⭐ Stars:** 19,926 | **🍴 Forks:** 1,846 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 19,932 | **🍴 Forks:** 1,847 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** QwenLM/Qwen3-VL
 2. **Brief Introduction:** Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.
@@ -2407,6 +2393,20 @@ Summary:** A curated, up-to-date repository of free, commercially usable fonts w
 
 ---
 
+<a id="wriglobal-pasture-watch"></a>
+
+### 📌 [wri/global-pasture-watch](https://github.com/wri/global-pasture-watch)
+
+**⭐ Stars:** 67 | **🍴 Forks:** 10 | **📅 Updated:** 2026-09-02
+
+1. **Repository Name:** wri/global-pasture-watch
+2. **Brief Introduction:** This repository focuses on mapping the extent, management, and condition of global grasslands to support sustainable land use and conservation efforts.
+3. **Innovations:** Key features include detailed mapping tools, data visualization capabilities, and integration of various datasets to assess grassland health and management practices.
+4. **Basic Usage:** Not specified.
+5. **Summary:** The project aims to enhance understanding and management of grasslands worldwide for better environmental stewardship.
+
+---
+
 <a id="henry-guprompt-engineering-for-developers"></a>
 
 ### 📌 [henry-gu/prompt-engineering-for-developers](https://github.com/henry-gu/prompt-engineering-for-developers)
@@ -2425,7 +2425,7 @@ Summary:** A curated, up-to-date repository of free, commercially usable fonts w
 
 ### 📌 [microsoft/AI-For-Beginners](https://github.com/microsoft/AI-For-Beginners)
 
-**⭐ Stars:** 68,327 | **🍴 Forks:** 13,177 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 68,360 | **🍴 Forks:** 13,191 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** microsoft/AI-For-Beginners
 2. **Brief Introduction:** 12 Weeks, 24 Lessons, AI for All!
@@ -2442,7 +2442,7 @@ Summary:** A curated, up-to-date repository of free, commercially usable fonts w
 
 ### 📌 [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners)
 
-**⭐ Stars:** 119,458 | **🍴 Forks:** 62,915 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 119,509 | **🍴 Forks:** 62,936 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** microsoft/generative-ai-for-beginners
 2. **Brief Introduction:** 21 Lessons, Get Started Building with Generative AI
@@ -2461,7 +2461,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub)
 
-**⭐ Stars:** 37,456 | **🍴 Forks:** 6,181 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 37,474 | **🍴 Forks:** 6,184 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** patchy631/ai-engineering-hub
 2. **Brief Introduction:** In-depth tutorials on LLMs, RAGs and real-world AI agent applications.
@@ -2478,7 +2478,7 @@ Summary:** A comprehensive hub offering detailed tutorials and practical example
 
 ### 📌 [roboflow/notebooks](https://github.com/roboflow/notebooks)
 
-**⭐ Stars:** 9,652 | **🍴 Forks:** 1,492 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 9,657 | **🍴 Forks:** 1,493 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** roboflow/notebooks
 2. **Brief Introduction:** A collection of tutorials on state-of-the-art computer vision models and techniques. Explore everything from foundational architectures like ResNet to cutting-edge models like RF-DETR, YOLO11, SAM 3, and Qwen3-VL.
@@ -2490,11 +2490,28 @@ Summary:** A comprehensive hub offering detailed tutorials and practical example
 
 ## 🐚 Shell(Total 6)
 
+<a id="btbnffmpeg-builds"></a>
+
+### 📌 [BtbN/FFmpeg-Builds](https://github.com/BtbN/FFmpeg-Builds)
+
+**⭐ Stars:** 11,641 | **🍴 Forks:** 1,522 | **📅 Updated:** 2026-09-10
+
+1. **Repository Name:** BtbN/FFmpeg-Builds
+2. **Brief Introduction:** Not specified.
+3. **Innovations:** Provides regularly updated, static FFmpeg binaries for Windows with extensive codec support, GPU acceleration (NVENC, QSV, VAAPI), and multiple build flavors (full, minimal, etc.) via automated GitHub Actions.  
+Basic Usage:** Download the latest release, extract ffmpeg.exe, then run e.g. `ffmpeg -i input.mp4 -c:v libx264 -c:a aac output.mkv`.  
+Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.
+4. **Basic Usage:** Download the latest release, extract ffmpeg.exe, then run e.g. `ffmpeg -i input.mp4 -c:v libx264 -c:a aac output.mkv`.  
+Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.
+5. **Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.
+
+---
+
 <a id="githubnextmonaspace"></a>
 
 ### 📌 [githubnext/monaspace](https://github.com/githubnext/monaspace)
 
-**⭐ Stars:** 19,627 | **🍴 Forks:** 322 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 19,628 | **🍴 Forks:** 322 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** githubnext/monaspace
 2. **Brief Introduction:** Monaspace is a unique superfamily of fonts designed specifically for coding, enhancing readability and aesthetics for developers.
@@ -2522,7 +2539,7 @@ Summary:** A comprehensive hub offering detailed tutorials and practical example
 
 ### 📌 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
 
-**⭐ Stars:** 151,354 | **🍴 Forks:** 24,359 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 151,583 | **🍴 Forks:** 24,414 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** msitarzewski/agency-agents
 2. **Brief Introduction:** A comprehensive AI agency framework featuring specialized agents designed for various tasks, from frontend development to community engagement.
@@ -2532,42 +2549,11 @@ Summary:** A comprehensive hub offering detailed tutorials and practical example
 
 ---
 
-<a id="btbnffmpeg-builds"></a>
-
-### 📌 [BtbN/FFmpeg-Builds](https://github.com/BtbN/FFmpeg-Builds)
-
-**⭐ Stars:** 11,639 | **🍴 Forks:** 1,524 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** BtbN/FFmpeg-Builds
-2. **Brief Introduction:** Not specified.
-3. **Innovations:** Provides regularly updated, static FFmpeg binaries for Windows with extensive codec support, GPU acceleration (NVENC, QSV, VAAPI), and multiple build flavors (full, minimal, etc.) via automated GitHub Actions.  
-Basic Usage:** Download the latest release, extract ffmpeg.exe, then run e.g. `ffmpeg -i input.mp4 -c:v libx264 -c:a aac output.mkv`.  
-Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.
-4. **Basic Usage:** Download the latest release, extract ffmpeg.exe, then run e.g. `ffmpeg -i input.mp4 -c:v libx264 -c:a aac output.mkv`.  
-Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.
-5. **Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.
-
----
-
-<a id="obrasuperpowers"></a>
-
-### 📌 [obra/superpowers](https://github.com/obra/superpowers)
-
-**⭐ Stars:** 284,124 | **🍴 Forks:** 25,421 | **📅 Updated:** 2026-09-10
-
-1. **Repository Name:** obra/superpowers
-2. **Brief Introduction:** An agentic skills framework and software development methodology designed to build effective and reliable AI agents.
-3. **Innovations:** It uniquely combines an agentic skills framework with a proven software development methodology, offering a structured and effective approach to building reliable AI agents.
-4. **Basic Usage:** (Omitted as no specific usage is provided in the description)
-5. **Summary:** This repository provides a practical framework and methodology for developing effective and reliable AI agents by structuring their skills and development process.
-
----
-
 <a id="mattpocockskills"></a>
 
 ### 📌 [mattpocock/skills](https://github.com/mattpocock/skills)
 
-**⭐ Stars:** 258,007 | **🍴 Forks:** 21,732 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 259,008 | **🍴 Forks:** 21,823 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** mattpocock/skills
 2. **Brief Introduction:** Skills for Real Engineers. Straight from my .agents directory.
@@ -2577,13 +2563,27 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ---
 
+<a id="obrasuperpowers"></a>
+
+### 📌 [obra/superpowers](https://github.com/obra/superpowers)
+
+**⭐ Stars:** 284,807 | **🍴 Forks:** 25,477 | **📅 Updated:** 2026-09-11
+
+1. **Repository Name:** obra/superpowers
+2. **Brief Introduction:** An agentic skills framework and software development methodology designed to build effective and reliable AI agents.
+3. **Innovations:** It uniquely combines an agentic skills framework with a proven software development methodology, offering a structured and effective approach to building reliable AI agents.
+4. **Basic Usage:** (Omitted as no specific usage is provided in the description)
+5. **Summary:** This repository provides a practical framework and methodology for developing effective and reliable AI agents by structuring their skills and development process.
+
+---
+
 ## 🐹 Go(Total 6)
 
 <a id="tencentweknora"></a>
 
 ### 📌 [Tencent/WeKnora](https://github.com/Tencent/WeKnora)
 
-**⭐ Stars:** 21,968 | **🍴 Forks:** 3,173 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 22,164 | **🍴 Forks:** 3,196 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Tencent/WeKnora
 2. **Brief Introduction:** WeKnora is an LLM-powered framework designed for deep document understanding, semantic retrieval, and context-aware answers, leveraging the Retrieval-Augmented Generation (RAG) paradigm.
@@ -2597,7 +2597,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [multica-ai/multica](https://github.com/multica-ai/multica)
 
-**⭐ Stars:** 49,411 | **🍴 Forks:** 6,378 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 49,531 | **🍴 Forks:** 6,391 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** multica-ai/multica
 2. **Brief Introduction:** An open-source platform for managed agents that transforms coding agents into collaborative teammates, enabling task assignment, progress tracking, and skill compounding.
@@ -2611,7 +2611,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList)
 
-**⭐ Stars:** 24,561 | **🍴 Forks:** 2,276 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 24,572 | **🍴 Forks:** 2,278 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** OpenListTeam/OpenList
 2. **Brief Introduction:** A new AList Fork to Anti Trust Crisis
@@ -2625,7 +2625,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [fatedier/frp](https://github.com/fatedier/frp)
 
-**⭐ Stars:** 109,301 | **🍴 Forks:** 15,208 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 109,329 | **🍴 Forks:** 15,206 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** fatedier/frp
 2. **Brief Introduction:** A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
@@ -2639,7 +2639,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [ollama/ollama](https://github.com/ollama/ollama)
 
-**⭐ Stars:** 180,539 | **🍴 Forks:** 17,782 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 180,614 | **🍴 Forks:** 17,801 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ollama/ollama
 2. **Brief Introduction:** Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.
@@ -2653,7 +2653,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [router-for-me/CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)
 
-**⭐ Stars:** 51,184 | **🍴 Forks:** 7,762 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 51,332 | **🍴 Forks:** 7,786 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** router-for-me/CLIProxyAPI
 2. **Brief Introduction:** Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 3.1 Pro, GPT 5.6 Series, Grok 4.5, Claude model through API
@@ -2669,7 +2669,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [Diorser/LiteMonitor](https://github.com/Diorser/LiteMonitor)
 
-**⭐ Stars:** 6,322 | **🍴 Forks:** 276 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 6,329 | **🍴 Forks:** 276 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Diorser/LiteMonitor
 2. **Brief Introduction:** LiteMonitor is a lightweight, highly customizable hardware performance monitor for Windows desktop and taskbar. It tracks CPU, GPU, RAM, disk, network, FPS, and supports plugins, plus memory optimization.
@@ -2683,7 +2683,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [Flow-Launcher/Flow.Launcher](https://github.com/Flow-Launcher/Flow.Launcher)
 
-**⭐ Stars:** 15,533 | **🍴 Forks:** 643 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 15,539 | **🍴 Forks:** 642 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Flow-Launcher/Flow.Launcher
 2. **Brief Introduction:** Flow Launcher is a free, open-source quick launcher for Windows, designed to boost productivity. It enables rapid file searching, application launching, and system command execution, extensible through a vibrant ecosystem of community-made plugins.
@@ -2697,7 +2697,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [Sylinko/Everywhere](https://github.com/Sylinko/Everywhere)
 
-**⭐ Stars:** 6,271 | **🍴 Forks:** 389 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 6,273 | **🍴 Forks:** 389 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** Sylinko/Everywhere
 2. **Brief Introduction:** On-screen aware AI assistant for your desktop. Uses current app context, multiple LLMs, and MCP tools to help you act across apps.
@@ -2711,7 +2711,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [ZyperWave/ZyperWinOptimize](https://github.com/ZyperWave/ZyperWinOptimize)
 
-**⭐ Stars:** 8,353 | **🍴 Forks:** 472 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 8,355 | **🍴 Forks:** 472 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ZyperWave/ZyperWinOptimize
 2. **Brief Introduction:** ZyperWin++是一个轻便的Windows优化工具，适用于Win7-Win11最新版的优化，包括性能优化、服务项优化、垃圾清理等操作，还支持系统激活和Office快速安装。
@@ -2725,7 +2725,7 @@ Summary:** Offers ready-to-use, up-to-date FFmpeg executables for Windows, simpl
 
 ### 📌 [randyrants/sharpkeys](https://github.com/randyrants/sharpkeys)
 
-**⭐ Stars:** 6,960 | **🍴 Forks:** 441 | **📅 Updated:** 2026-09-08
+**⭐ Stars:** 6,961 | **🍴 Forks:** 441 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** randyrants/sharpkeys
 2. **Brief Introduction:** SharpKeys is a utility that manages a Registry key that allows Windows to remap one key to any other key.
@@ -2758,7 +2758,7 @@ Summary:** SharpKeys simplifies Windows keyboard remapping by offering a user-fr
 
 ### 📌 [Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
 
-**⭐ Stars:** 20,346 | **🍴 Forks:** 1,230 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 20,355 | **🍴 Forks:** 1,230 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Chuyu-Team/Dism-Multi-language
 2. **Brief Introduction:** Dism++ Multi-language Support & BUG Report
@@ -2772,7 +2772,7 @@ Summary:** SharpKeys simplifies Windows keyboard remapping by offering a user-fr
 
 ### 📌 [Hisn00w/ASu-skills](https://github.com/Hisn00w/ASu-skills)
 
-**⭐ Stars:** 4,186 | **🍴 Forks:** 252 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 4,276 | **🍴 Forks:** 255 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Hisn00w/ASu-skills
 2. **Brief Introduction:** 简历包装
@@ -2786,7 +2786,7 @@ Summary:** SharpKeys simplifies Windows keyboard remapping by offering a user-fr
 
 ### 📌 [Sjj1024/PakePlus](https://github.com/Sjj1024/PakePlus)
 
-**⭐ Stars:** 14,664 | **🍴 Forks:** 6,889 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 14,676 | **🍴 Forks:** 6,897 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** Sjj1024/PakePlus
 2. **Brief Introduction:** Turn any webpage/HTML/Vue/React and so on into desktop and mobile app under 5M with easy in few minutes. 轻松将任意网站/HTML/Vue/React等项目构建为轻量级(小于5M)多端桌面应用和手机应用仅需几分钟. https://ppofficial.netlify.app
@@ -2803,7 +2803,7 @@ Summary:** PakePlus lets developers instantly package any web‑based UI into a 
 
 ### 📌 [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset)
 
-**⭐ Stars:** 21,631 | **🍴 Forks:** 2,745 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 21,675 | **🍴 Forks:** 2,748 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** hasaneyldrm/exercises-dataset
 2. **Brief Introduction:** 1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.
@@ -2820,7 +2820,7 @@ Summary:** This repository offers a comprehensive dataset of 1,324 exercises wit
 
 ### 📌 [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev)
 
-**⭐ Stars:** 137,024 | **🍴 Forks:** 14,414 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 137,089 | **🍴 Forks:** 14,429 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ripienaar/free-for-dev
 2. **Brief Introduction:** A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev
@@ -2839,7 +2839,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
 
-**⭐ Stars:** 70,292 | **🍴 Forks:** 4,494 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 70,429 | **🍴 Forks:** 4,505 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** colbymchenry/codegraph
 2. **Brief Introduction:** Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, and Hermes Agent — fewer tokens, fewer tool calls, 100% local
@@ -2853,7 +2853,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [RamonUnch/AltSnap](https://github.com/RamonUnch/AltSnap)
 
-**⭐ Stars:** 5,187 | **🍴 Forks:** 172 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 5,190 | **🍴 Forks:** 172 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** RamonUnch/AltSnap
 2. **Brief Introduction:** Maintained continuation of Stefan Sundin's AltDrag
@@ -2867,7 +2867,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [microsoft/PowerToys](https://github.com/microsoft/PowerToys)
 
-**⭐ Stars:** 138,524 | **🍴 Forks:** 8,548 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 138,545 | **🍴 Forks:** 8,550 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** microsoft/PowerToys
 2. **Brief Introduction:** Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows
@@ -2881,7 +2881,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [ventoy/Ventoy](https://github.com/ventoy/Ventoy)
 
-**⭐ Stars:** 79,225 | **🍴 Forks:** 4,927 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 79,241 | **🍴 Forks:** 4,927 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ventoy/Ventoy
 2. **Brief Introduction:** A new bootable USB solution.
@@ -2911,7 +2911,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
 
-**⭐ Stars:** 42,317 | **🍴 Forks:** 2,825 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 42,384 | **🍴 Forks:** 2,829 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** vercel-labs/agent-browser
 2. **Brief Introduction:** A command-line interface (CLI) tool designed for browser automation, enabling AI agents to interact with web applications seamlessly.
@@ -2925,7 +2925,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [CapSoftware/Cap](https://github.com/CapSoftware/Cap)
 
-**⭐ Stars:** 22,018 | **🍴 Forks:** 1,892 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 22,073 | **🍴 Forks:** 1,896 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** CapSoftware/Cap
 2. **Brief Introduction:** Open source Loom alternative. Beautiful, shareable screen recordings.
@@ -2939,7 +2939,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [astral-sh/uv](https://github.com/astral-sh/uv)
 
-**⭐ Stars:** 89,670 | **🍴 Forks:** 3,561 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 89,696 | **🍴 Forks:** 3,564 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** astral-sh/uv
 2. **Brief Introduction:** An extremely fast Python package and project manager, written in Rust.
@@ -2953,7 +2953,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [cjpais/Handy](https://github.com/cjpais/Handy)
 
-**⭐ Stars:** 31,296 | **🍴 Forks:** 2,829 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 31,349 | **🍴 Forks:** 2,842 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** cjpais/Handy
 2. **Brief Introduction:** A free, open source, and extensible speech-to-text application that works completely offline.
@@ -2967,7 +2967,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [tw93/Pake](https://github.com/tw93/Pake)
 
-**⭐ Stars:** 61,365 | **🍴 Forks:** 12,636 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 61,384 | **🍴 Forks:** 12,637 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** tw93/Pake
 2. **Brief Introduction:** 🤱🏻 Turn any webpage into a desktop app with one command.
@@ -2983,7 +2983,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [allenk/GeminiWatermarkTool](https://github.com/allenk/GeminiWatermarkTool)
 
-**⭐ Stars:** 3,103 | **🍴 Forks:** 274 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 3,102 | **🍴 Forks:** 274 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** allenk/GeminiWatermarkTool
 2. **Brief Introduction:** A tool designed for maintaining watermarks on Gemini Nano and Pro devices, facilitating efficient management of watermark settings.
@@ -2997,7 +2997,7 @@ Summary: A curated, up-to-date directory of free-tier cloud and infrastructure s
 
 ### 📌 [hluk/CopyQ](https://github.com/hluk/CopyQ)
 
-**⭐ Stars:** 12,223 | **🍴 Forks:** 590 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 12,231 | **🍴 Forks:** 591 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** hluk/CopyQ
 2. **Brief Introduction:** Clipboard manager with advanced features
@@ -3014,7 +3014,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [microsoft/WSL](https://github.com/microsoft/WSL)
 
-**⭐ Stars:** 33,661 | **🍴 Forks:** 1,819 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 33,674 | **🍴 Forks:** 1,821 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** microsoft/WSL
 2. **Brief Introduction:** Windows Subsystem for Linux
@@ -3028,7 +3028,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)
 
-**⭐ Stars:** 77,379 | **🍴 Forks:** 8,289 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 77,390 | **🍴 Forks:** 8,291 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** nomic-ai/gpt4all
 2. **Brief Introduction:** GPT4All: Run Local LLMs on Any Device. Open-source and available for commercial use.
@@ -3044,7 +3044,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [DigitalPlatDev/FreeDomain](https://github.com/DigitalPlatDev/FreeDomain)
 
-**⭐ Stars:** 198,412 | **🍴 Forks:** 4,316 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 198,634 | **🍴 Forks:** 4,331 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** DigitalPlatDev/FreeDomain
 2. **Brief Introduction:** FreeDomain offers users the ability to register and manage free domain names, making web presence accessible to everyone.
@@ -3058,7 +3058,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [tldr-pages/tldr](https://github.com/tldr-pages/tldr)
 
-**⭐ Stars:** 63,646 | **🍴 Forks:** 5,402 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 63,655 | **🍴 Forks:** 5,402 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** tldr-pages/tldr
 2. **Brief Introduction:** Collaborative cheatsheets for console commands 📚.
@@ -3088,7 +3088,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [gkd-kit/gkd](https://github.com/gkd-kit/gkd)
 
-**⭐ Stars:** 41,594 | **🍴 Forks:** 1,963 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 41,627 | **🍴 Forks:** 1,963 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** gkd-kit/gkd
 2. **Brief Introduction:** 基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 | An Android APP with custom screen tapping based on Accessibility, Advanced Selectors, and Subscription Rules
@@ -3104,7 +3104,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [ZCShou/GoGoGo](https://github.com/ZCShou/GoGoGo)
 
-**⭐ Stars:** 11,222 | **🍴 Forks:** 1,279 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 11,229 | **🍴 Forks:** 1,280 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** ZCShou/GoGoGo
 2. **Brief Introduction:** 一个基于 Android 调试 API + 百度地图实现的虚拟定位工具，并且同时实现了一个可以自由移动的摇杆
@@ -3118,7 +3118,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [kknifer7/FreeBox](https://github.com/kknifer7/FreeBox)
 
-**⭐ Stars:** 1,929 | **🍴 Forks:** 179 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 1,932 | **🍴 Forks:** 179 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** kknifer7/FreeBox
 2. **Brief Introduction:** TVBox电脑版/姊妹软件，致力于TVBox功能和生态的跨平台扩展
@@ -3134,7 +3134,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [easychen/opc-methodology](https://github.com/easychen/opc-methodology)
 
-**⭐ Stars:** 16,729 | **🍴 Forks:** 1,903 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 16,735 | **🍴 Forks:** 1,903 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** easychen/opc-methodology
 2. **Brief Introduction:** 《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群。
@@ -3150,7 +3150,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
 
-**⭐ Stars:** 78,155 | **🍴 Forks:** 8,577 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 78,192 | **🍴 Forks:** 8,585 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** dair-ai/Prompt-Engineering-Guide
 2. **Brief Introduction:** 🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.
@@ -3166,7 +3166,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [x-cmd/x-cmd](https://github.com/x-cmd/x-cmd)
 
-**⭐ Stars:** 4,644 | **🍴 Forks:** 162 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 4,644 | **🍴 Forks:** 164 | **📅 Updated:** 2026-09-10
 
 1. **Repository Name:** x-cmd/x-cmd
 2. **Brief Introduction:** Shell Superpowers for AI Agents.
@@ -3182,7 +3182,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [jgm/pandoc](https://github.com/jgm/pandoc)
 
-**⭐ Stars:** 46,208 | **🍴 Forks:** 3,964 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 46,229 | **🍴 Forks:** 3,966 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** jgm/pandoc
 2. **Brief Introduction:** Universal markup converter
@@ -3198,7 +3198,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [MadMaxChow/VLOOK](https://github.com/MadMaxChow/VLOOK)
 
-**⭐ Stars:** 2,593 | **🍴 Forks:** 156 | **📅 Updated:** 2026-09-09
+**⭐ Stars:** 2,595 | **🍴 Forks:** 156 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** MadMaxChow/VLOOK
 2. **Brief Introduction:** VLOOK™ 是优雅好用的 Typora/Markdown 主题包和排版增强插件。  VLOOK™ is an elegant and practical THEME PACKAGE × TYPESETTING PLUS for Typora/Markdown
@@ -3214,7 +3214,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 ### 📌 [penpot/penpot](https://github.com/penpot/penpot)
 
-**⭐ Stars:** 59,813 | **🍴 Forks:** 4,083 | **📅 Updated:** 2026-09-10
+**⭐ Stars:** 59,867 | **🍴 Forks:** 4,092 | **📅 Updated:** 2026-09-11
 
 1. **Repository Name:** penpot/penpot
 2. **Brief Introduction:** Penpot: The open-source design platform for Product teams that need scalable collaboration.
@@ -3229,7 +3229,7 @@ Summary:** A feature-rich, lightweight clipboard manager with search, scripting,
 
 - **Total repositories:** 200
 - **Languages:** 21
-- **Generated on:** 2026-09-10
+- **Generated on:** 2026-09-11
 - **AI Model:** OpenRouter (DeepSeek)
 
 - **API Calls:** Copilot=0, OpenRouter=0, Gemini=0
