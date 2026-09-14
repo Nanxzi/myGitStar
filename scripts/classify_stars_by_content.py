@@ -1758,7 +1758,11 @@ def render_markdown(
 
     for c in ordered:
         anchor = re.sub(r"[^a-z0-9\- ]", "", c["name"].lower()).strip().replace(" ", "-")
-        lines.append(f"- [{c['name']}](#{anchor}) ({len(buckets.get(c['id'], []))})\n")
+        c_desc = str((c.get("description") if isinstance(c, dict) else "") or "").strip()
+        entry = f"- [{c['name']}](#{anchor}) ({len(buckets.get(c['id'], []))})"
+        if c_desc:
+            entry += f" — {c_desc}"
+        lines.append(entry + "\n")
     lines.append("---\n")
 
     for c in ordered:

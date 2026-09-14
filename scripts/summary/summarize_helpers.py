@@ -82,17 +82,62 @@ def _strip_editorial_commentary(text: str) -> str:
     return "\n".join(kept).strip()
 
 
+# Field labels the LLM sometimes re-emits *inside* a single field value to
+# chain several structured fields together (e.g. Innovations bleeding into
+# "Basic Usage:** ..." Summary:** ..."). We strip those labels AND everything
+# that follows them so one field never carries another field's value.
+_EMBEDDED_FIELD_LABELS = r"(?:Repository (?:URL|Description)|Basic Usage|Summary|仓库地址|仓库描述|简单用法|总结)"
+
+
+def _strip_embedded_field_labels(text: str) -> str:
+    """Remove embedded downstream field labels inside a value, plus leftovers.
+
+    When the LLM appends something like ``  \\n**Basic Usage:** <usage>`` (or
+    ``  **Summary:** <text>``) onto the end of an earlier field, we drop the
+    label anchor and everything after it. A label must be followed by a colon
+    and at least one non-trivial char so we do not clip a value that merely
+    mentions the word ``Summary`` in prose.
+    """
+    if not text:
+        return text
+    # Anchor on an embedded field label that carries a colon and real content.
+    pattern = re.compile(
+        rf"(?:\n\s*)?\**\s*{_EMBEDDED_FIELD_LABELS}\s*[:：]\s*\S",
+        flags=re.IGNORECASE,
+    )
+    m = pattern.search(text)
+    if not m:
+        return text
+    return text[: m.start()].rstrip("\n ") or text[: m.start()].strip()
+
+
+def _strip_trailing_asterisk(text: str) -> str:
+    """Remove a dangling asterisk markdown marker that the LLM sometimes leaves
+    at the end of a field value (e.g. ``...\n*``). Only removes an *isolated*
+    marker line, never inline content or trailing emphasis.
+    """
+    if not text:
+        return text
+    # Drop a trailing line that consists only of asterisks (preceded by a
+    # newline or at the start of the string). "word**" emphasis is preserved.
+    text = re.sub(r"(?:\n\s*|\A)\*{1,3}\s*\Z", "", text)
+    return text.rstrip()
+
+
 def _clean_field_value(text: str) -> str:
     """Full cleaning for a single summary field value.
 
-    Combines prompt-leak removal with code-fence unwrapping and editorial
-    commentary stripping so stored/rendered values never break markdown.
+    Combines prompt-leak removal with code-fence unwrapping, embedded-label
+    stripping, trailing-asterisk removal and editorial-commentary removal so
+    stored/rendered values never break markdown.
     """
     if not text:
         return text
     text = _clean_prompt_leak(text)
     text = _strip_code_fences(text)
+    text = _strip_embedded_field_labels(text)
     text = _strip_editorial_commentary(text)
+    text = _strip_trailing_asterisk(text)
     return text
 
 
