@@ -13,6 +13,8 @@ _PROMPT_LEAK_PATTERNS = [
     r"\*\*\s*\(omit if none\)\s*\n?",
     r"\*\*\s*\(如无则略\)\s*\n?",
     r"\*\*\s*\(如无则写 Not specified\)\s*\n?",
+    r"\*\*\s*\(.*?若仓库确实没有可用用法.*?\)\s*\n?",
+    r"\*\*\s*\(Write 'Not specified' ONLY if.*?\)\s*\n?",
     r"\*\*\s*\(One sentence.*?\)\s*\n?",
     r"\*\*\s*\(一句话总结.*?\)\s*\n?",
     r"\*\*\s*\(Briefly describe.*?\)\s*\n?",
@@ -163,7 +165,7 @@ def generate_summarize_prompt(repo: Dict[str, Any], language: str = "zh", readme
             f"1. **仓库名称：** {repo_name}\n"
             f"2. **简要介绍：** {brief_intro}\n"
             f"3. **创新点：** （基于 README 内容，简述本仓库最有特色的地方，50字以内）\n"
-            f"4. **简单用法：** （基于 README 内容，给出最简关键用法，如无则写 Not specified。仅输出一行命令或一行函数调用，禁止多行代码、禁止 import 语句、禁止 ``` 围栏。例如：`watermark embed input.jpg output.jpg` 而非完整 Python 脚本。）\n"
+            f"4. **简单用法：** （基于 README 内容，给出一段简短的使用说明：怎么用、怎么配置、怎么启动，控制在一两句话、50字以内，不要写成单行命令。若仓库确实没有可用用法（如纯数据集、纯论文、纯资料）才写 Not specified。禁止 import 语句、禁止 ``` 围栏、禁止完整代码块。例如：“通过 HTTPS 服务访问、默认端口 8080、可用 Docker 启动”，而非 `watermark embed input.jpg output.jpg`。）\n"
             f"5. **总结：** （一句话总结它的用途/价值，50字以内）\n"
             f"**仓库描述：** {desc}\n"
             f"**仓库地址：** {url}\n"
@@ -179,7 +181,7 @@ def generate_summarize_prompt(repo: Dict[str, Any], language: str = "zh", readme
             f"1. **Repository Name:** {repo_name}\n"
             f"2. **Brief Introduction:** {brief_intro}\n"
             f"3. **Innovations:** (Based on README, briefly describe the most distinctive features, within 50 words)\n"
-            f"4. **Basic Usage:** (Based on README, give the simplest one-line command or function call. Write 'Not specified' if none. Output ONE line only — no multi-line code, no import statements, no ``` fences. E.g. `watermark embed input.jpg output.jpg` not a full Python script.)\n"
+            f"4. **Basic Usage:** (Based on README, give a short description of how to use/configure/start it, keeping it to one or two sentences within 50 words; do NOT write a one-line command. Write 'Not specified' ONLY if the repo truly has no applicable usage, e.g. a pure dataset/paper/material repo. No import statements, no ``` fences, no full code blocks. E.g. `served over HTTPS on :8080, launchable via Docker`, rather than `watermark embed input.jpg output.jpg`.)\n"
             f"5. **Summary:** (One sentence summarizing its purpose/value, within 50 words)\n"
             f"**Repository Description:** {desc}\n"
             f"**Repository URL:** {url}\n"
@@ -219,7 +221,7 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
             "- Repository URL: 仓库地址\n"
             "- Brief Introduction: 直接使用仓库的原始描述（不要改写）\n"
             "- Innovations: 基于 README 内容，创新点（50字以内）\n"
-            "- Basic Usage: 基于 README 内容，最简用法（如无则写 Not specified）。仅输出一行命令或一行函数调用，禁止多行代码、禁止 import、禁止 ``` 围栏。例如：`watermark embed input.jpg output.jpg` 而非完整脚本\n"
+            "- Basic Usage: 基于 README 内容，给出一段简短的使用说明：怎么用、怎么配置、怎么启动，控制在一两句话、50字以内，不要写成单行命令。仅当仓库确实无可用用法（如纯数据集、纯论文、纯资料）才写 Not specified。禁止 import 语句、禁止 ``` 围栏、禁止完整代码块。例如：“通过 HTTPS 服务访问、默认端口 8080、可用 Docker 启动”，而非 `watermark embed input.jpg output.jpg`\n"
             "- Summary: 一句话总结（50字以内）\n"
             "- 只输出JSON数组，不要输出其他内容\n\n"
             "## 待总结的仓库：\n"
@@ -256,7 +258,7 @@ def generate_combined_summarize_prompt(repos: List[Dict[str, Any]], language: st
             "- Repository URL: repository URL\n"
             "- Brief Introduction: use the original description verbatim (do NOT rewrite)\n"
             "- Innovations: based on README, key innovations (within 50 words)\n"
-            "- Basic Usage: based on README, simplest one-line command or function call (write 'Not specified' if none). ONE line only — no multi-line code, no imports, no ``` fences. E.g. `watermark embed input.jpg output.jpg` not a full script\n"
+            "- Basic Usage: based on README, give a short description of how to use/configure/start it, keeping it to one or two sentences within 50 words; do NOT write a one-line command. Write 'Not specified' ONLY if the repo truly has no applicable usage, e.g. a pure dataset/paper/material repo. No import statements, no ``` fences, no full code blocks. E.g. `served over HTTPS on :8080, launchable via Docker`, rather than `watermark embed input.jpg output.jpg`\n"
             "- Summary: one sentence summary (within 50 words)\n"
             "- Output only JSON array, nothing else\n\n"
             "## Repositories to summarize:\n"
