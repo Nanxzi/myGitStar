@@ -3614,5 +3614,20 @@
     },
     "summary": "Nunchaku is a high-performance inference engine for 4‑bit neural networks that uses SVDQuant low‑rank quantization to achieve efficient diffusion model inference with minimal VRAM and LoRA support.",
     "full_name": "nunchux-ai/nunchaku"
+  },
+  "Robbyant/lingbot-world-v2": {
+    "Repository Name": "Robbyant/lingbot-world-v2",
+    "Repository URL": "https://github.com/Robbyant/lingbot-world-v2",
+    "Brief Introduction": "Infinite Worlds with Versatile Interactions",
+    "Innovations": "Unbounded interaction horizon via causal pretraining; real-time distilled variant driving 720p@60fps; diverse interactive elements (archery, spell-casting, shooting); agentic harness with pilot and director agents for world modeling.",
+    "Basic Usage": "Not specified",
+    "Summary": "LingBot-World-V2 is an advanced world model offering infinite interactive environments with real-time generation, diverse character actions, and an agentic harness for planning and synthesizing dynamic scenes.",
+    "__meta__": {
+      "last_summarized_at": "2026-09-14T04:35:38Z",
+      "description_hash": "834def5aa4050f70",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
   }
 }
