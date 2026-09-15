@@ -2935,9 +2935,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "Ollama provides a local LLM runtime with CLI, API, and integrations for running open models like Gemma, DeepSeek, Qwen.",
-    "full_name": "ollama/ollama"
+    }
   },
   "fatedier/frp": {
     "Repository Name": "fatedier/frp",
@@ -3628,6 +3626,8 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "LingBot-World-V2 is an advanced world model offering infinite interactive environments with real-time generation, diverse character actions, and an agentic harness for planning and synthesizing dynamic scenes.",
+    "full_name": "Robbyant/lingbot-world-v2"
   }
 }
