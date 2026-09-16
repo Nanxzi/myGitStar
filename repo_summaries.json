@@ -2783,15 +2783,13 @@
   "allenk/GeminiWatermarkTool": {
     "Repository Name": "allenk/GeminiWatermarkTool",
     "Repository URL": "https://github.com/allenk/GeminiWatermarkTool",
-    "Stars": 2169,
-    "Forks": 183,
-    "updated": "2026-04-25",
     "Brief Introduction": "A tool designed for maintaining watermarks on Gemini Nano and Pro devices, facilitating efficient management of watermark settings.",
     "Innovations": "Features include automated watermark adjustments, user-friendly interface, and compatibility with multiple Gemini models, enhancing the watermarking process.",
     "Basic Usage": "Not specified.",
     "Summary": "This repository provides a specialized tool for managing watermarks on Gemini devices, improving user experience and efficiency.",
-    "summary": "This repository provides a specialized tool for managing watermarks on Gemini devices, improving user experience and efficiency.",
-    "full_name": "allenk/GeminiWatermarkTool",
+    "Stars": 2169,
+    "Forks": 183,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "7b7a9318a6fe1175",
