@@ -2102,9 +2102,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "Firecrawl offers a fast, reliable API for web search, scraping, and interaction, delivering LLM‑ready data with minimal setup and extensive agent integration.",
-    "full_name": "firecrawl/firecrawl"
+    }
   },
   "langgenius/dify": {
     "Repository Name": "langgenius/dify",
