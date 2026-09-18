@@ -339,6 +339,31 @@ def parse_combined_summaries(response_text: str, repos: List[Dict[str, Any]]) ->
     return results
 
 
+# Placeholder values used for Basic Usage when a repo genuinely/nominally
+# has no applicable usage. A repo whose Basic Usage carries one of these is
+# treated by ``missing_only`` mode as "needs update" so a relaxed prompt
+# (descriptive usage, not one-line command) can be given another pass.
+_BASIC_USAGE_MISSING = {
+    "not specified", "not specified.", "n/a", "na",
+    "无", "暂无", "未指定", "--", "-", "—", "",
+}
+
+
+def is_basic_usage_missing(entry) -> bool:
+    """Whether a stored summary entry lacks a usable Basic Usage value.
+
+    Unlike ``is_valid_summary`` (which only requires the overall summary to be
+    structurally sound), this targets just the Basic Usage field. It returns
+    True when the field is absent, empty, or a placeholder such as
+    'Not specified'/'N/A', signalling that ``missing_only`` should re-run this
+    repo so the relaxed prompt can fill it with a short descriptive usage.
+    """
+    if not isinstance(entry, dict):
+        return True
+    val = str(entry.get("Basic Usage") or entry.get("简单用法") or "").strip()
+    return val.lower() in _BASIC_USAGE_MISSING
+
+
 def is_valid_summary(summary: str, language: str = "zh") -> bool:
     """Check whether a raw LLM summary string is structurally valid.
 
@@ -604,7 +629,7 @@ def select_repos_for_update(
                 # don't pass per-repo descriptions.
                 if description_lookup is None:
                     fallback = old_summaries.get(key, "")
-                    if is_valid_summary(fallback, language):
+                    if is_valid_summary(fallback, language) and not is_basic_usage_missing(entry):
                         continue
                     needs_update.append(repo)
                     continue
@@ -612,7 +637,11 @@ def select_repos_for_update(
             # Hash-based freshness check.
             from scripts.core.json_store import is_entry_fresh
             if is_entry_fresh(entry, key, desc, refresh_after_days=refresh_after_days):
-                continue
+                # Keep a fresh entry only if it carries a usable Basic Usage;
+                # otherwise re-run so the relaxed prompt (descriptive usage,
+                # not a one-line command) can fill this field.
+                if not is_basic_usage_missing(entry):
+                    continue
 
             needs_update.append(repo)
         if needs_update:
@@ -711,7 +740,11 @@ def summarize_batch(
                 else:
                     existing_summary_str = existing_entry or ""
                 
-                reuse_existing = (update_mode == "missing_only") and is_valid_summary(existing_summary_str, language)
+                reuse_existing = (
+                    update_mode == "missing_only"
+                    and is_valid_summary(existing_summary_str, language)
+                    and not is_basic_usage_missing(existing_entry)
+                )
                 if reuse_existing:
                     # Return full dict entry to preserve __meta__ metadata
                     summary = existing_entry if isinstance(existing_entry, dict) else existing_summary_str
