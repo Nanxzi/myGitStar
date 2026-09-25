@@ -2079,9 +2079,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "A zero‑config web tool that turns any GitHub repo into an interactive diagram for quick visual exploration.",
-    "full_name": "ahmedkhaleel2004/gitdiagram"
+    }
   },
   "kevmo314/magic-copy": {
     "Repository Name": "kevmo314/magic-copy",
