@@ -3459,5 +3459,20 @@
       "summary_source": "ai",
       "summary_attempts": 1
     }
+  },
+  "kaomei/stickman-video-director": {
+    "Repository Name": "kaomei/stickman-video-director",
+    "Repository URL": "https://github.com/kaomei/stickman-video-director",
+    "Brief Introduction": "Turn copy into rich one-minute Gemini Omni Flash stickman video prompt packages.",
+    "Innovations": "Codex Skill converting copy to Gemini Omni Flash prompt packages; 5-step viral heartflow model; multiple visual styles with consistency locking; aspect-ratio-aware directing; customizable durations.",
+    "Basic Usage": "Use as a Codex Skill by providing copy to receive confirmed narration, director proposal, and production-ready Gemini Omni Flash prompt packages with customizable duration.",
+    "Summary": "A Codex Skill transforming text into structured Gemini Omni Flash stickman video prompt packages with viral story frameworks and multiple visual styles for short-form platforms.",
+    "__meta__": {
+      "last_summarized_at": "2026-10-07T05:35:57Z",
+      "description_hash": "7b4f02d743bb228a",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
   }
 }
