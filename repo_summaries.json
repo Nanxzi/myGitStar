@@ -3473,6 +3473,8 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "A Codex Skill transforming text into structured Gemini Omni Flash stickman video prompt packages with viral story frameworks and multiple visual styles for short-form platforms.",
+    "full_name": "kaomei/stickman-video-director"
   }
 }
