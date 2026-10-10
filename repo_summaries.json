@@ -2644,9 +2644,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "A lightweight tool that converts web pages into compact desktop applications using Rust Tauri, offering fast performance with minimal disk usage.",
-    "full_name": "tw93/Pake"
+    }
   },
   "allenk/GeminiWatermarkTool": {
     "Repository Name": "allenk/GeminiWatermarkTool",
