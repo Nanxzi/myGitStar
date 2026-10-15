@@ -3253,9 +3253,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "CloakBrowser delivers a genuine Chromium with fingerprint patches and human‑like behavior to evade bot detection, usable via simple Python or JavaScript launch calls.",
-    "full_name": "CloakHQ/CloakBrowser"
+    }
   },
   "huggingface/lerobot": {
     "Repository Name": "huggingface/lerobot",
