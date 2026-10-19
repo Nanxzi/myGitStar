@@ -35,7 +35,7 @@
 
 ### 📌 [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap)
 
-**⭐ Stars:** 369,707 | **🍴 Forks:** 45,100 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 369,812 | **🍴 Forks:** 45,107 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Interactive roadmaps, guides and other educational content to help developers grow in their careers.
 
@@ -49,7 +49,7 @@
 
 ### 📌 [huggingface/transformers](https://github.com/huggingface/transformers)
 
-**⭐ Stars:** 167,799 | **🍴 Forks:** 34,889 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 167,831 | **🍴 Forks:** 34,902 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.
 
@@ -745,7 +745,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)
 
-**⭐ Stars:** 132,439 | **🍴 Forks:** 20,880 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 132,859 | **🍴 Forks:** 20,981 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** 利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.
 
@@ -1176,7 +1176,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [obra/superpowers](https://github.com/obra/superpowers)
 
-**⭐ Stars:** 301,272 | **🍴 Forks:** 26,901 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 301,715 | **🍴 Forks:** 26,942 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** An agentic skills framework and software development methodology designed to build effective and reliable AI agents.
 
@@ -1204,7 +1204,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
 
-**⭐ Stars:** 187,630 | **🍴 Forks:** 45,910 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 187,644 | **🍴 Forks:** 45,913 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
 
@@ -1531,7 +1531,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)
 
-**⭐ Stars:** 192,538 | **🍴 Forks:** 10,168 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 192,836 | **🍴 Forks:** 10,184 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** The context API to search, scrape, and interact with the web at scale. 🔥
 
@@ -1545,7 +1545,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [microsoft/markitdown](https://github.com/microsoft/markitdown)
 
-**⭐ Stars:** 190,796 | **🍴 Forks:** 14,193 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 190,955 | **🍴 Forks:** 14,207 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Python tool for converting files and office documents to Markdown.
 
@@ -1629,7 +1629,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [teableio/teable](https://github.com/teableio/teable)
 
-**⭐ Stars:** 21,895 | **🍴 Forks:** 1,357 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 21,899 | **🍴 Forks:** 1,357 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** ✨ AI Spreadsheet for Business
 
@@ -1836,7 +1836,7 @@ print(wm_extracted)
 
 ### 📌 [mattpocock/skills](https://github.com/mattpocock/skills)
 
-**⭐ Stars:** 295,237 | **🍴 Forks:** 24,761 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 296,408 | **🍴 Forks:** 24,885 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Skills for Real Engineers. Straight from my .agents directory.
 
@@ -1850,7 +1850,7 @@ print(wm_extracted)
 
 ### 📌 [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 
-**⭐ Stars:** 220,698 | **🍴 Forks:** 22,169 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 221,007 | **🍴 Forks:** 22,201 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.
 
@@ -1864,7 +1864,7 @@ print(wm_extracted)
 
 ### 📌 [anomalyco/opencode](https://github.com/anomalyco/opencode)
 
-**⭐ Stars:** 215,531 | **🍴 Forks:** 28,875 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 216,784 | **🍴 Forks:** 29,021 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** An open-source coding agent designed to assist developers in writing and managing code efficiently.
 
@@ -1878,7 +1878,7 @@ print(wm_extracted)
 
 ### 📌 [ollama/ollama](https://github.com/ollama/ollama)
 
-**⭐ Stars:** 183,658 | **🍴 Forks:** 18,366 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 183,769 | **🍴 Forks:** 18,399 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.
 
@@ -2107,7 +2107,7 @@ print(wm_extracted)
 
 ### 📌 [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler)
 
-**⭐ Stars:** 67,051 | **🍴 Forks:** 12,815 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 67,142 | **🍴 Forks:** 12,829 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** 一个功能强大的**多平台自媒体数据采集工具**，支持小红书、抖音、快手、B站、微博、贴吧、知乎等主流平台的公开信息抓取。
 
@@ -2121,7 +2121,7 @@ print(wm_extracted)
 
 ### 📌 [Zie619/n8n-workflows](https://github.com/Zie619/n8n-workflows)
 
-**⭐ Stars:** 57,015 | **🍴 Forks:** 7,680 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 57,020 | **🍴 Forks:** 7,681 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** all of the workflows of n8n i could find (also from the site itself)
 
@@ -2191,7 +2191,7 @@ print(wm_extracted)
 
 ### 📌 [ZCShou/GoGoGo](https://github.com/ZCShou/GoGoGo)
 
-**⭐ Stars:** 11,551 | **🍴 Forks:** 1,316 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 11,561 | **🍴 Forks:** 1,317 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** 一个基于 Android 调试 API + 百度地图实现的虚拟定位工具，并且同时实现了一个可以自由移动的摇杆
 
@@ -2336,7 +2336,7 @@ print(wm_extracted)
 
 ### 📌 [fatedier/frp](https://github.com/fatedier/frp)
 
-**⭐ Stars:** 109,967 | **🍴 Forks:** 15,243 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 109,989 | **🍴 Forks:** 15,246 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 
@@ -2350,7 +2350,7 @@ print(wm_extracted)
 
 ### 📌 [nvbn/thefuck](https://github.com/nvbn/thefuck)
 
-**⭐ Stars:** 97,915 | **🍴 Forks:** 3,958 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 97,914 | **🍴 Forks:** 3,958 | **📅 Updated:** 2026-10-18
 
 **Brief Introduction:** Magnificent app which corrects your previous console command.
 
@@ -2448,7 +2448,7 @@ print(wm_extracted)
 
 ### 📌 [aws/aws-cli](https://github.com/aws/aws-cli)
 
-**⭐ Stars:** 17,307 | **🍴 Forks:** 4,729 | **📅 Updated:** 2026-10-17
+**⭐ Stars:** 17,311 | **🍴 Forks:** 4,729 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Universal Command Line Interface for Amazon Web Services
 
@@ -2462,7 +2462,7 @@ print(wm_extracted)
 
 ### 📌 [hluk/CopyQ](https://github.com/hluk/CopyQ)
 
-**⭐ Stars:** 12,499 | **🍴 Forks:** 612 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 12,507 | **🍴 Forks:** 613 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Clipboard manager with advanced features
 
@@ -2476,7 +2476,7 @@ print(wm_extracted)
 
 ### 📌 [EvanLi/Github-Ranking](https://github.com/EvanLi/Github-Ranking)
 
-**⭐ Stars:** 12,433 | **🍴 Forks:** 716 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 12,441 | **🍴 Forks:** 718 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** :star:Github Ranking:star: Github stars and forks ranking list. Github Top100 stars list of different languages. Automatically update daily. | Github仓库排名，每日自动更新
 
@@ -2549,7 +2549,7 @@ print(wm_extracted)
 
 ### 📌 [mrdoob/three.js](https://github.com/mrdoob/three.js)
 
-**⭐ Stars:** 116,555 | **🍴 Forks:** 36,663 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 116,604 | **🍴 Forks:** 36,682 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** A popular open-source JavaScript library designed to create 3D graphics in the browser using WebGL technology.
 
@@ -2577,7 +2577,7 @@ print(wm_extracted)
 
 ### 📌 [penpot/penpot](https://github.com/penpot/penpot)
 
-**⭐ Stars:** 61,301 | **🍴 Forks:** 4,249 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 61,347 | **🍴 Forks:** 4,249 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** Penpot: The open-source design platform for Product teams that need scalable collaboration.
 
@@ -2694,7 +2694,7 @@ print(wm_extracted)
 
 ### 📌 [DigitalPlatDev/FreeDomain](https://github.com/DigitalPlatDev/FreeDomain)
 
-**⭐ Stars:** 204,663 | **🍴 Forks:** 4,526 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 204,817 | **🍴 Forks:** 4,537 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** FreeDomain offers users the ability to register and manage free domain names, making web presence accessible to everyone.
 
@@ -2708,7 +2708,7 @@ print(wm_extracted)
 
 ### 📌 [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev)
 
-**⭐ Stars:** 139,727 | **🍴 Forks:** 14,806 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 139,770 | **🍴 Forks:** 14,816 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev
 
@@ -2722,7 +2722,7 @@ print(wm_extracted)
 
 ### 📌 [ruanyf/weekly](https://github.com/ruanyf/weekly)
 
-**⭐ Stars:** 106,375 | **🍴 Forks:** 4,511 | **📅 Updated:** 2026-10-18
+**⭐ Stars:** 106,430 | **🍴 Forks:** 4,516 | **📅 Updated:** 2026-10-19
 
 **Brief Introduction:** 科技爱好者周刊，每周五发布
 
