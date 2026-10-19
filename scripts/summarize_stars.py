@@ -832,10 +832,21 @@ def main():
                 categories_data.get("assignments", []),
             )
             sort_by_count = config.get("content_sort_categories_by_count", True)
+            category_descriptions = {
+                str(c.get("name") or ""): str(c.get("description") or "")
+                for c in (categories_data.get("taxonomy", {}).get("categories", []) or [])
+            }
 
             content_lines: List[str] = []
             content_lines.extend(build_readme_header(LANGUAGE, GITHUB_USERNAME, api_name, len(starred), current_time))
-            content_lines.extend(build_content_table_of_contents(content_classified, LANGUAGE, sort_by_count=sort_by_count))
+            content_lines.extend(
+                build_content_table_of_contents(
+                    content_classified,
+                    LANGUAGE,
+                    sort_by_count=sort_by_count,
+                    descriptions=category_descriptions,
+                )
+            )
 
             content_printed_repos: set = set()
             content_printed_cats: set = set()
@@ -860,6 +871,7 @@ def main():
                     content_printed_repos,
                     content_printed_cats,
                     content_processed,
+                    category_descriptions.get(cat_name, ""),
                 )
                 content_lines.extend(section_lines)
 
@@ -871,6 +883,7 @@ def main():
                     api_name,
                     (copilot_api_call_count, openrouter_api_call_count, gemini_api_call_count),
                     LANGUAGE,
+                    repos=starred,
                 )
             )
 
@@ -917,6 +930,7 @@ def main():
                 api_name,
                 (copilot_api_call_count, openrouter_api_call_count, gemini_api_call_count),
                 LANGUAGE,
+                repos=starred,
             )
         )
 

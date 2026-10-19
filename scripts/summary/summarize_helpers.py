@@ -339,29 +339,109 @@ def parse_combined_summaries(response_text: str, repos: List[Dict[str, Any]]) ->
     return results
 
 
-# Placeholder values used for Basic Usage when a repo genuinely/nominally
-# has no applicable usage. A repo whose Basic Usage carries one of these is
-# treated by ``missing_only`` mode as "needs update" so a relaxed prompt
-# (descriptive usage, not one-line command) can be given another pass.
-_BASIC_USAGE_MISSING = {
-    "not specified", "not specified.", "n/a", "na",
-    "无", "暂无", "未指定", "--", "-", "—", "",
-}
+# ---------------------------------------------------------------------------
+# Shared placeholder handling — ONE source of truth.
+#
+# Both the update layer (``is_basic_usage_missing``, which decides whether a
+# repo is re-summarised) and the display layer
+# (``scripts.output.readme_builder``, which renders the entry) must agree on
+# what counts as "carries no information".  They used to keep separate sets, so
+# the display layer normalised variants the update layer could not detect —
+# entries stored as "Not provided" / "(Omitted as ...)" were therefore never
+# re-summarised and stayed empty forever.
+# ---------------------------------------------------------------------------
+PLACEHOLDER_EN = "Not specified"
+PLACEHOLDER_ZH = "未指定"
+
+PLACEHOLDER_TOKENS = (
+    "not specified",
+    "not provided",
+    "no usage example",
+    "no usage",
+    "not available",
+    "none",
+    "nan",
+    "n/a",
+    "na",
+    "未指定",
+    "无",
+    "暂无",
+)
+
+# Punctuation-only placeholders carry no word, so they are matched literally
+# rather than through the word-boundary pattern above.
+_PUNCT_PLACEHOLDERS = {"--", "-", "—", "–", "…"}
+
+# A value that is *entirely* a parenthetical excuse, e.g.
+# "(Omitted as no specific usage is provided in the description)".
+_PAREN_KEYWORDS = (
+    "omitted",
+    "not provided",
+    "not available",
+    "not specified",
+    "no specific",
+    "not accessible",
+    "cannot access",
+)
+
+# An exact placeholder, optionally followed by a bracketed note such as
+# "Not specified (README content not provided)".  A placeholder followed by
+# real prose ("Not specified in the description; typically involves ...") is
+# deliberately NOT matched, so that partial information is preserved.
+_PLACEHOLDER_RE = re.compile(
+    r"^(?:" + "|".join(re.escape(t) for t in PLACEHOLDER_TOKENS) + r")\b"
+    r"[\s,;:，；：。.\-–—]*(?:[\(\[（【].*)?$",
+    re.IGNORECASE,
+)
+
+
+def is_placeholder_text(value: Any) -> bool:
+    """Whether a field value carries no information at all.
+
+    True for empty values, punctuation-only values ('-', '—'), exact
+    placeholders ('N/A', 'Not provided.') and a placeholder followed by a
+    bracketed excuse ('Not specified (README content not provided)').
+    """
+    text = str(value or "").strip()
+    if not text:
+        return True
+    if text in _PUNCT_PLACEHOLDERS:
+        return True
+    if _PLACEHOLDER_RE.match(text):
+        return True
+    if text.startswith("(") and text.endswith(")"):
+        inner = text[1:-1].lower()
+        return any(k in inner for k in _PAREN_KEYWORDS)
+    return False
+
+
+def normalize_placeholder(value: Any, language: str = "en") -> str:
+    """Collapse placeholder variants onto one canonical string.
+
+    Empty values are returned unchanged so the caller can decide to skip them.
+    """
+    text = str(value or "").strip()
+    if not text:
+        return ""
+    if is_placeholder_text(text):
+        return PLACEHOLDER_EN if language == "en" else PLACEHOLDER_ZH
+    return text
 
 
 def is_basic_usage_missing(entry) -> bool:
     """Whether a stored summary entry lacks a usable Basic Usage value.
 
     Unlike ``is_valid_summary`` (which only requires the overall summary to be
-    structurally sound), this targets just the Basic Usage field. It returns
-    True when the field is absent, empty, or a placeholder such as
-    'Not specified'/'N/A', signalling that ``missing_only`` should re-run this
-    repo so the relaxed prompt can fill it with a short descriptive usage.
+    structurally sound), this targets just the Basic Usage field.  It shares
+    the placeholder definition above, so ``missing_only`` re-runs exactly the
+    repos whose usage reads 'Not specified' / 'N/A' / 'Not provided' /
+    'Not available' / '(Omitted as ...)' — the same variants the display layer
+    normalises.
     """
     if not isinstance(entry, dict):
         return True
-    val = str(entry.get("Basic Usage") or entry.get("简单用法") or "").strip()
-    return val.lower() in _BASIC_USAGE_MISSING
+    val = entry.get("Basic Usage") or entry.get("简单用法") or ""
+    return is_placeholder_text(val)
 
 
 def is_valid_summary(summary: str, language: str = "zh") -> bool:

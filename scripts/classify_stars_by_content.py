@@ -37,6 +37,7 @@ from scripts.classification import (
     _sample_repos_for_taxonomy,
 )
 from scripts.summary.summarize_helpers import _clean_field_value
+from scripts.output.readme_builder import build_repo_entry_lines, build_content_readme_footer
 
 # NOTE:
 # - This script reuses the same config + env secret strategy as scripts/summarize_stars.py
@@ -1756,6 +1757,10 @@ def render_markdown(
             ),
         )
 
+    # Categories with no repos render as empty sections ("(Total 0)"), which is
+    # pure noise; drop them from both the ToC and the body.
+    ordered = [c for c in ordered if buckets.get(str(c.get("id")), [])]
+
     for c in ordered:
         anchor = re.sub(r"[^a-z0-9\- ]", "", c["name"].lower()).strip().replace(" ", "-")
         c_desc = str((c.get("description") if isinstance(c, dict) else "") or "").strip()
@@ -1772,12 +1777,12 @@ def render_markdown(
         if c.get("description"):
             lines.append(f"> {c['description']}\n\n")
 
-        bucket = sorted(buckets.get(c["id"], []), key=lambda x: (x.get("full_name") or ""))
+        bucket = sorted(buckets.get(c["id"], []), key=lambda x: -(x.get("stargazers_count") or 0))
         for r in bucket:
             full_name = r.get("full_name") or ""
             url = r.get("html_url") or f"https://github.com/{full_name}"
-            stars = r.get("stargazers_count", 0)
-            forks = r.get("forks_count", 0)
+            stars = r.get("stargazers_count", 0) or 0
+            forks = r.get("forks_count", 0) or 0
             updated_at = r.get("updated_at", "")
             if updated_at:
                 try:
@@ -1788,14 +1793,10 @@ def render_markdown(
             else:
                 updated_at_str = ""
 
-            lines.append(f"### 📌 [{full_name}]({url})\n\n")
-            lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **📅 Updated:** {updated_at_str}\n\n")
-
             repo_summary = r.get("summary_data", {})
             if not isinstance(repo_summary, dict):
                 repo_summary = {}
 
-            repo_name = repo_summary.get("Repository Name", full_name)
             # Fall back to the enriched repo fields, then to the upstream
             # GitHub description (P0-3) before giving up with a placeholder.
             brief_intro = repo_summary.get("Brief Introduction", "") or str(r.get("brief_intro") or "")
@@ -1811,15 +1812,34 @@ def render_markdown(
             if not str(brief_intro).strip() or _is_not_specified(brief_intro):
                 brief_intro = str(r.get("github_description") or "").strip()
 
-            lines.append("1. **Repository Name:** " + repo_name + "\n")
-            lines.append("2. **Brief Introduction:** " + _display_field(brief_intro, "No description") + "\n")
-            lines.append("3. **Innovations:** " + _display_field(innovations, "N/A") + "\n")
-            lines.append("4. **Basic Usage:** " + _display_field(basic_usage, "N/A") + "\n")
-            lines.append("5. **Summary:** " + _display_field(summary_text, "N/A") + "\n")
+            lines.extend(
+                build_repo_entry_lines(
+                    full_name,
+                    url,
+                    stars,
+                    forks,
+                    updated_at_str,
+                    brief_intro,
+                    innovations,
+                    basic_usage,
+                    summary_text,
+                    language,
+                )
+            )
 
-            lines.append("---\n\n")
+    lines.extend(
+        build_content_readme_footer(
+            len(repos),
+            len(ordered),
+            generated_at,
+            model_ch,
+            (0, 0, 0),
+            language,
+            repos=repos,
+        )
+    )
 
-    return "\n".join(lines).strip() + "\n"
+    return "".join(lines).strip() + "\n"
 
 
 def main() -> int:

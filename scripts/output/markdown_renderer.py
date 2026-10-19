@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
 from scripts.classification.classification_parser import Taxonomy, _clean_inline_md, _strip_leading_symbols, _trim_repo_block_before_language_section
+from scripts.output.readme_builder import build_content_readme_footer, build_repo_entry_lines
 from scripts.summary.summarize_helpers import _clean_field_value
 
 
@@ -140,7 +141,7 @@ def render_classified_readme(
     lines.append("\n---\n\n")
 
     for c in ordered_categories:
-        bucket = buckets.get(c["id"], [])
+        bucket = sorted(buckets.get(c["id"], []), key=lambda r: -(r.get("stargazers_count") or 0))
         anchor = anchors.get(str(c.get("id")), "")
         if anchor:
             lines.append(f'<a id="{anchor}"></a>\n')
@@ -255,6 +256,10 @@ def render_markdown(
             ),
         )
 
+    # Categories with no repos render as empty sections ("(Total 0)"), which is
+    # pure noise; drop them from both the ToC and the body.
+    ordered = [c for c in ordered if buckets.get(str(c.get("id")), [])]
+
     for c in ordered:
         anchor = re.sub(r"[^a-z0-9\- ]", "", c["name"].lower()).strip().replace(" ", "-")
         lines.append(f"- [{c['name']}](#{anchor}) ({len(buckets.get(c['id'], []))})\n")
@@ -267,12 +272,10 @@ def render_markdown(
         if c.get("description"):
             lines.append(f"> {c['description']}\n\n")
 
-        bucket = sorted(buckets.get(c["id"], []), key=lambda x: (x.get("full_name") or ""))
+        bucket = sorted(buckets.get(c["id"], []), key=lambda x: -(x.get("stargazers_count") or 0))
         for r in bucket:
             full_name = r.get("full_name") or ""
             url = r.get("html_url") or f"https://github.com/{full_name}"
-            stars = r.get("stargazers_count", 0)
-            forks = r.get("forks_count", 0)
             updated_at = r.get("updated_at") or ""
             if updated_at:
                 try:
@@ -283,14 +286,10 @@ def render_markdown(
             else:
                 updated_at_str = ""
 
-            lines.append(f"### 📌 [{full_name}]({url})\n\n")
-            lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **📅 Updated:** {updated_at_str}\n\n")
-
             repo_summary = r.get("summary_data", {})
             if not isinstance(repo_summary, dict):
                 repo_summary = {}
 
-            repo_name = repo_summary.get("Repository Name") or full_name
             brief_intro = _clean_field_value(repo_summary.get("Brief Introduction") or "")
             # Truncate brief to first paragraph to avoid Markdown layout issues
             if brief_intro and ("\n" in brief_intro or "\r" in brief_intro):
@@ -299,15 +298,34 @@ def render_markdown(
             basic_usage = _clean_field_value(repo_summary.get("Basic Usage") or "")
             summary_text = _clean_field_value(repo_summary.get("Summary") or "")
 
-            lines.append("1. **Repository Name:** " + repo_name + "\n")
-            lines.append("2. **Brief Introduction:** " + (brief_intro or "Not specified.") + "\n")
-            lines.append("3. **Innovations:** " + (innovations or "Not specified.") + "\n")
-            lines.append("4. **Basic Usage:** " + (basic_usage or "Not specified.") + "\n")
-            lines.append("5. **Summary:** " + (summary_text or "Not specified.") + "\n")
+            lines.extend(
+                build_repo_entry_lines(
+                    full_name,
+                    url,
+                    r.get("stargazers_count") or 0,
+                    r.get("forks_count") or 0,
+                    updated_at_str,
+                    brief_intro,
+                    innovations,
+                    basic_usage,
+                    summary_text,
+                    language,
+                )
+            )
 
-            lines.append("---\n\n")
+    lines.extend(
+        build_content_readme_footer(
+            len(repos),
+            len(ordered),
+            generated_at,
+            model_choice,
+            (0, 0, 0),
+            language,
+            repos=repos,
+        )
+    )
 
-    return "\n".join(lines).strip() + "\n"
+    return "".join(lines).strip() + "\n"
 
 
 def chunk_list(items: List[Any], size: int) -> List[List[Any]]:

@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple
 # Route legacy call sites through the newer cleaner (also unwraps ``` fences
 # and strips editorial commentary) so existing dirty summaries render clean.
 from scripts.summary.summarize_helpers import _clean_field_value as _clean_prompt_leak
+from scripts.summary.summarize_helpers import normalize_placeholder
 
 
 LANG_ICONS = {
@@ -59,6 +60,64 @@ def _format_updated_at(updated_at: str) -> str:
         return dt.strftime("%Y-%m-%d")
     except Exception:
         return str(updated_at)[:10]
+
+
+def build_repo_entry_lines(
+    full_name: str,
+    url: str,
+    stars: int,
+    forks: int,
+    updated_at: str,
+    brief: str,
+    innovations: str,
+    basic_usage: str,
+    summary_text: str,
+    language: str,
+) -> List[str]:
+    """Render one repo entry: heading, stat line, lead paragraph, detail bullets.
+
+    Two deliberate choices, all about making the output readable:
+    - the 'Repository Name' line is gone (it duplicates the heading);
+    - the numbered pseudo-form becomes a lead paragraph plus bullets.
+
+    Placeholders stay visible (dropping the field hides information) but are
+    normalised to one canonical string, so 'N/A' / 'Not provided.' / 'Not
+    specified (README content not provided)' all read the same.  Only a value
+    that is an empty string is skipped, and '*No AI summary available*' is used
+    only when every field is empty (i.e. no summary data exists at all).
+    """
+    is_en = language == "en"
+    lines: List[str] = []
+    lines.append(f'<a id="{github_anchor(full_name)}"></a>\n\n')
+    lines.append(f"### 📌 [{full_name}]({url})\n\n")
+
+    stats_label = "📅 Updated" if is_en else "📅 更新"
+    lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **{stats_label}:** {updated_at}\n\n")
+
+    has_content = False
+
+    brief_text = normalize_placeholder(brief, language)
+    if brief_text:
+        lead_label = "Brief Introduction" if is_en else "简要介绍"
+        lines.append(f"**{lead_label}:** {brief_text}\n\n")
+        has_content = True
+
+    detail_pairs = [
+        ("Innovations" if is_en else "创新点", normalize_placeholder(innovations, language)),
+        ("Basic Usage" if is_en else "基本用法", normalize_placeholder(basic_usage, language)),
+        ("Summary" if is_en else "总结", normalize_placeholder(summary_text, language)),
+    ]
+    bullets = [f"- **{label}:** {value}" for label, value in detail_pairs if value]
+    if bullets:
+        lines.extend(f"{b}\n" for b in bullets)
+        lines.append("\n")
+        has_content = True
+
+    if not has_content:
+        lines.append("*No AI summary available*\n\n" if is_en else "*暂无AI总结*\n\n")
+
+    lines.append("---\n\n")
+    return lines
 
 
 def _select_repos_for_update(
@@ -159,15 +218,7 @@ def build_table_of_contents(
         anchor = github_anchor(lang)
         count_str = f"（{count}个）" if language != "en" else f"(Total {count})"
         lines.append(f"- [{lang}](#{anchor}) {count_str}\n")
-        
-        # 显示该分类下的仓库列表
-        repos = classified[lang]
-        for repo in repos:
-            repo_name = repo.get("full_name", "")
-            if repo_name:
-                repo_anchor = github_anchor(repo_name)
-                lines.append(f"  - [{repo_name}](#{repo_anchor})\n")
-    
+
     lines.append("\n---\n\n")
     return lines
 
@@ -192,6 +243,7 @@ def build_repo_section(
     count_str = f"（共{len(repos)}个）" if language != "en" else f"(Total {len(repos)})"
     lines.append(f"## {icon} {lang}{count_str}\n\n")
 
+    repos = sorted(repos, key=lambda r: -(r.get("stargazers_count") or 0))
     for repo in repos:
         if repo["full_name"] in printed_repos:
             continue
@@ -200,7 +252,6 @@ def build_repo_section(
         summary_entry = summary_store.get(repo["full_name"], {}) or old_summaries.get(repo["full_name"], {})
 
         if isinstance(summary_entry, dict):
-            repo_name = summary_entry.get("Repository Name") or repo["full_name"]
             brief = _clean_prompt_leak(summary_entry.get("Brief Introduction") or "")
             # Truncate brief to first paragraph to avoid Markdown layout issues
             if brief and ("\n" in brief or "\r" in brief):
@@ -208,57 +259,26 @@ def build_repo_section(
             innovations = _clean_prompt_leak(summary_entry.get("Innovations") or "")
             basic = _clean_prompt_leak(summary_entry.get("Basic Usage") or "")
             summary_text = _clean_prompt_leak(summary_entry.get("Summary") or "")
-
-            if language == "en":
-                summary_parts = []
-                summary_parts.append(f"1. **Repository Name:** {repo_name}")
-                summary_parts.append(f"2. **Brief Introduction:** {(brief or 'Not specified.')}")
-                summary_parts.append(f"3. **Innovations:** {(innovations or 'Not specified.')}")
-                summary_parts.append(f"4. **Basic Usage:** {(basic or 'Not specified.')}")
-                summary_parts.append(f"5. **Summary:** {(summary_text or 'Not specified.')}")
-                summary = "\n".join(summary_parts)
-            else:
-                summary_parts = []
-                summary_parts.append(f"1. **仓库名称：** {repo_name}")
-                summary_parts.append(f"2. **简要介绍：** {(brief or '未指定。')}")
-                summary_parts.append(f"3. **创新点：** {(innovations or '未指定。')}")
-                summary_parts.append(f"4. **基本用法：** {(basic or '未指定。')}")
-                summary_parts.append(f"5. **总结：** {(summary_text or '未指定。')}")
-                summary = "\n".join(summary_parts)
         elif isinstance(summary_entry, str):
-            if language == "en":
-                summary = f"1. **Repository Name:** {repo['full_name']}\n2. **Brief Introduction:** {_clean_prompt_leak(summary_entry)}\n3. **Innovations:** Not specified.\n4. **Basic Usage:** Not specified.\n5. **Summary:** Not specified."
-            else:
-                summary = f"1. **仓库名称：** {repo['full_name']}\n2. **简要介绍：** {_clean_prompt_leak(summary_entry)}\n3. **创新点：** 未指定。\n4. **基本用法：** 未指定。\n5. **总结：** 未指定。"
+            brief = _clean_prompt_leak(summary_entry)
+            innovations = basic = summary_text = ""
         else:
-            if language == "en":
-                summary = f"1. **Repository Name:** {repo['full_name']}\n2. **Brief Introduction:** Not specified.\n3. **Innovations:** Not specified.\n4. **Basic Usage:** Not specified.\n5. **Summary:** Not specified."
-            else:
-                summary = f"1. **仓库名称：** {repo['full_name']}\n2. **简要介绍：** 未指定。\n3. **创新点：** 未指定。\n4. **基本用法：** 未指定。\n5. **总结：** 未指定。"
+            brief = innovations = basic = summary_text = ""
 
-        url = repo.get("html_url") or ""
-        stars = repo.get("stargazers_count") or 0
-        forks = repo.get("forks_count") or 0
-        updated_at = _format_updated_at(repo.get("updated_at") or "")
-
-        repo_anchor = github_anchor(repo['full_name'])
-        lines.append(f'<a id="{repo_anchor}"></a>\n\n')
-        lines.append(f"### 📌 [{repo['full_name']}]({url})\n\n")
-
-        if language == "en":
-            lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **📅 Updated:** {updated_at}\n\n")
-        else:
-            lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **📅 更新:** {updated_at}\n\n")
-
-        if summary and summary.strip():
-            lines.append(f"{summary}\n\n")
-        else:
-            if language == "en":
-                lines.append("*No AI summary available*\n\n")
-            else:
-                lines.append("*暂无AI总结*\n\n")
-
-        lines.append("---\n\n")
+        lines.extend(
+            build_repo_entry_lines(
+                repo["full_name"],
+                repo.get("html_url") or "",
+                repo.get("stargazers_count") or 0,
+                repo.get("forks_count") or 0,
+                _format_updated_at(repo.get("updated_at") or ""),
+                brief,
+                innovations,
+                basic,
+                summary_text,
+                language,
+            )
+        )
         processed_repos += 1
         time.sleep(rate_limit_delay)
 
@@ -329,8 +349,14 @@ def build_content_table_of_contents(
     classified: Dict[str, List[Dict[str, Any]]],
     language: str,
     sort_by_count: bool = True,
+    descriptions: Optional[Dict[str, str]] = None,
 ) -> List[str]:
-    """Build table of contents for content-classified README."""
+    """Build table of contents for content-classified README.
+
+    Lists categories only (name, count, one-line description). Per-repo links
+    are deliberately absent: with 200+ repos they turned the TOC into a
+    multi-screen wall of links that buried the actual content.
+    """
     lines: List[str] = []
     title = "## 📖 目录\n\n" if language != "en" else "## 📖 Table of Contents\n\n"
     lines.append(title)
@@ -348,15 +374,12 @@ def build_content_table_of_contents(
         icon = _get_category_icon(cat_name)
         count = len(repos)
         count_str = f"（{count}个）" if language != "en" else f"({count})"
-        lines.append(f"- [{icon} {cat_name}](#{anchor}) {count_str}\n")
-        
-        # 显示该分类下的仓库列表
-        for repo in repos:
-            repo_name = repo.get("full_name") or ""
-            if repo_name:
-                repo_anchor = github_anchor(repo_name)
-                lines.append(f"  - [{repo_name}](#{repo_anchor})\n")
-    
+        desc = " ".join(str((descriptions or {}).get(cat_name) or "").split())
+        if desc:
+            lines.append(f"- [{icon} {cat_name}](#{anchor}) {count_str} — {desc}\n")
+        else:
+            lines.append(f"- [{icon} {cat_name}](#{anchor}) {count_str}\n")
+
     lines.append("\n---\n\n")
     return lines
 
@@ -371,6 +394,7 @@ def build_content_repo_section(
     printed_repos: set,
     printed_categories: set,
     processed_repos: int,
+    description: str = "",
 ) -> Tuple[List[str], set, set, int]:
     """Build repo section for a content category (similar to build_repo_section but for content)."""
     if category_name in printed_categories:
@@ -381,7 +405,10 @@ def build_content_repo_section(
     icon = _get_category_icon(category_name)
     count_str = f"（共{len(repos)}个）" if language != "en" else f"({len(repos)})"
     lines.append(f"## {icon} {category_name} {count_str}\n\n")
+    if description and description.strip():
+        lines.append(f"> {description.strip()}\n\n")
 
+    repos = sorted(repos, key=lambda r: -(r.get("stargazers_count") or 0))
     for repo in repos:
         if repo["full_name"] in printed_repos:
             continue
@@ -390,7 +417,6 @@ def build_content_repo_section(
         summary_entry = summary_store.get(repo["full_name"], {}) or old_summaries.get(repo["full_name"], {})
 
         if isinstance(summary_entry, dict):
-            repo_name = summary_entry.get("Repository Name") or repo["full_name"]
             brief = _clean_prompt_leak(summary_entry.get("Brief Introduction") or "")
             # Truncate brief to first paragraph to avoid Markdown layout issues
             if brief and ("\n" in brief or "\r" in brief):
@@ -398,61 +424,48 @@ def build_content_repo_section(
             innovations = _clean_prompt_leak(summary_entry.get("Innovations") or "")
             basic = _clean_prompt_leak(summary_entry.get("Basic Usage") or "")
             summary_text = _clean_prompt_leak(summary_entry.get("Summary") or "")
-
-            if language == "en":
-                summary_parts = []
-                summary_parts.append(f"1. **Repository Name:** {repo_name}")
-                summary_parts.append(f"2. **Brief Introduction:** {(brief or 'Not specified.')}")
-                summary_parts.append(f"3. **Innovations:** {(innovations or 'Not specified.')}")
-                summary_parts.append(f"4. **Basic Usage:** {(basic or 'Not specified.')}")
-                summary_parts.append(f"5. **Summary:** {(summary_text or 'Not specified.')}")
-                summary = "\n".join(summary_parts)
-            else:
-                summary_parts = []
-                summary_parts.append(f"1. **仓库名称：** {repo_name}")
-                summary_parts.append(f"2. **简要介绍：** {(brief or '未指定。')}")
-                summary_parts.append(f"3. **创新点：** {(innovations or '未指定。')}")
-                summary_parts.append(f"4. **基本用法：** {(basic or '未指定。')}")
-                summary_parts.append(f"5. **总结：** {(summary_text or '未指定。')}")
-                summary = "\n".join(summary_parts)
         elif isinstance(summary_entry, str):
-            if language == "en":
-                summary = f"1. **Repository Name:** {repo['full_name']}\n2. **Brief Introduction:** {_clean_prompt_leak(summary_entry)}\n3. **Innovations:** Not specified.\n4. **Basic Usage:** Not specified.\n5. **Summary:** Not specified."
-            else:
-                summary = f"1. **仓库名称：** {repo['full_name']}\n2. **简要介绍：** {_clean_prompt_leak(summary_entry)}\n3. **创新点：** 未指定。\n4. **基本用法：** 未指定。\n5. **总结：** 未指定。"
+            brief = _clean_prompt_leak(summary_entry)
+            innovations = basic = summary_text = ""
         else:
-            if language == "en":
-                summary = f"1. **Repository Name:** {repo['full_name']}\n2. **Brief Introduction:** Not specified.\n3. **Innovations:** Not specified.\n4. **Basic Usage:** Not specified.\n5. **Summary:** Not specified."
-            else:
-                summary = f"1. **仓库名称：** {repo['full_name']}\n2. **简要介绍：** 未指定。\n3. **创新点：** 未指定。\n4. **基本用法：** 未指定。\n5. **总结：** 未指定。"
+            brief = innovations = basic = summary_text = ""
 
-        url = repo.get("html_url") or ""
-        stars = repo.get("stargazers_count") or 0
-        forks = repo.get("forks_count") or 0
-        updated_at = _format_updated_at(repo.get("updated_at") or "")
-
-        repo_anchor = github_anchor(repo['full_name'])
-        lines.append(f'<a id="{repo_anchor}"></a>\n\n')
-        lines.append(f"### 📌 [{repo['full_name']}]({url})\n\n")
-
-        if language == "en":
-            lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **📅 Updated:** {updated_at}\n\n")
-        else:
-            lines.append(f"**⭐ Stars:** {stars:,} | **🍴 Forks:** {forks:,} | **📅 更新:** {updated_at}\n\n")
-
-        if summary and summary.strip():
-            lines.append(f"{summary}\n\n")
-        else:
-            if language == "en":
-                lines.append("*No AI summary available*\n\n")
-            else:
-                lines.append("*暂无AI总结*\n\n")
-
-        lines.append("---\n\n")
+        lines.extend(
+            build_repo_entry_lines(
+                repo["full_name"],
+                repo.get("html_url") or "",
+                repo.get("stargazers_count") or 0,
+                repo.get("forks_count") or 0,
+                _format_updated_at(repo.get("updated_at") or ""),
+                brief,
+                innovations,
+                basic,
+                summary_text,
+                language,
+            )
+        )
         processed_repos += 1
         time.sleep(rate_limit_delay)
 
     return lines, printed_repos, printed_categories, processed_repos
+
+
+def _compute_repo_stats(repos: Optional[List[Dict[str, Any]]]) -> Tuple[int, str, int]:
+    """Total stars plus the most common language across the given repos."""
+    total_stars = 0
+    lang_counts: Dict[str, int] = {}
+    for r in repos or []:
+        try:
+            total_stars += int(r.get("stargazers_count") or 0)
+        except Exception:
+            pass
+        lang = str(r.get("language") or "").strip()
+        if lang:
+            lang_counts[lang] = lang_counts.get(lang, 0) + 1
+    if not lang_counts:
+        return total_stars, "", 0
+    top_lang, top_count = max(lang_counts.items(), key=lambda kv: kv[1])
+    return total_stars, top_lang, top_count
 
 
 def build_content_readme_footer(
@@ -462,27 +475,32 @@ def build_content_readme_footer(
     api_name: str,
     api_call_counts: Tuple[int, int, int],
     language: str,
+    repos: Optional[List[Dict[str, Any]]] = None,
 ) -> List[str]:
     """Build footer for content-classified README."""
     lines: List[str] = []
-    copilot_count, openrouter_count, gemini_count = api_call_counts
+    total_stars, top_lang, top_lang_count = _compute_repo_stats(repos)
 
     if language == "en":
         lines.append("\n## 📊 Statistics\n\n")
         lines.append(f"- **Total repositories:** {processed_repos}\n")
         lines.append(f"- **Content categories:** {num_categories}\n")
+        lines.append(f"- **Total stars:** {total_stars:,}\n")
+        if top_lang:
+            lines.append(f"- **Top language:** {top_lang} ({top_lang_count})\n")
         lines.append(f"- **Generated on:** {current_time}\n")
-        lines.append(f"- **AI Model:** {api_name}\n\n")
-        lines.append(f"- **API Calls:** Copilot={copilot_count}, OpenRouter={openrouter_count}, Gemini={gemini_count}\n")
+        lines.append(f"- **AI Model:** {api_name}\n")
         lines.append("---\n\n")
         lines.append("*This document is generated by AI. For any errors, please refer to the original repository information.*\n")
     else:
         lines.append(f"\n## 📊 统计信息\n\n")
         lines.append(f"- **总仓库数：** {processed_repos} 个\n")
         lines.append(f"- **内容分类数：** {num_categories} 类\n")
+        lines.append(f"- **总星标数：** {total_stars:,}\n")
+        if top_lang:
+            lines.append(f"- **最多语言：** {top_lang}（{top_lang_count} 个）\n")
         lines.append(f"- **生成时间：** {current_time}\n")
-        lines.append(f"- **AI模型：** {api_name}\n\n")
-        lines.append(f"- **API 调用次数：** Copilot={copilot_count}，OpenRouter={openrouter_count}，Gemini={gemini_count}\n")
+        lines.append(f"- **AI模型：** {api_name}\n")
         lines.append("---\n\n")
         lines.append("*本文档由AI自动生成，如有错误请以原仓库信息为准。*\n")
 
@@ -496,26 +514,31 @@ def build_readme_footer(
     api_name: str,
     api_call_counts: Tuple[int, int, int],
     language: str,
+    repos: Optional[List[Dict[str, Any]]] = None,
 ) -> List[str]:
     lines: List[str] = []
-    copilot_count, openrouter_count, gemini_count = api_call_counts
+    total_stars, top_lang, top_lang_count = _compute_repo_stats(repos)
 
     if language == "en":
         lines.append("\n## 📊 Statistics\n\n")
         lines.append(f"- **Total repositories:** {processed_repos}\n")
         lines.append(f"- **Languages:** {num_languages}\n")
+        lines.append(f"- **Total stars:** {total_stars:,}\n")
+        if top_lang:
+            lines.append(f"- **Top language:** {top_lang} ({top_lang_count})\n")
         lines.append(f"- **Generated on:** {current_time}\n")
-        lines.append(f"- **AI Model:** {api_name}\n\n")
-        lines.append(f"- **API Calls:** Copilot={copilot_count}, OpenRouter={openrouter_count}, Gemini={gemini_count}\n")
+        lines.append(f"- **AI Model:** {api_name}\n")
         lines.append("---\n\n")
         lines.append("*This document is generated by AI. For any errors, please refer to the original repository information.*\n")
     else:
         lines.append(f"\n## 📊 统计信息\n\n")
         lines.append(f"- **总仓库数：** {processed_repos} 个\n")
         lines.append(f"- **编程语言数：** {num_languages} 种\n")
+        lines.append(f"- **总星标数：** {total_stars:,}\n")
+        if top_lang:
+            lines.append(f"- **最多语言：** {top_lang}（{top_lang_count} 个）\n")
         lines.append(f"- **生成时间：** {current_time}\n")
-        lines.append(f"- **AI模型：** {api_name}\n\n")
-        lines.append(f"- **API 调用次数：** Copilot={copilot_count}，OpenRouter={openrouter_count}，Gemini={gemini_count}\n")
+        lines.append(f"- **AI模型：** {api_name}\n")
         lines.append("---\n\n")
         lines.append("*本文档由AI自动生成，如有错误请以原仓库信息为准。*\n")
 
