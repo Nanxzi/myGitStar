@@ -20,15 +20,13 @@
   "open-gigaai/giga-brain-0": {
     "Repository Name": "open-gigaai/giga-brain-0",
     "Repository URL": "https://github.com/open-gigaai/giga-brain-0",
-    "Stars": 2494,
-    "Forks": 193,
-    "updated": "2026-04-25",
     "Brief Introduction": "GigaBrain-0 is a vision-language-action model powered by world models, designed to enhance the interaction between visual inputs and language processing for intelligent actions.",
     "Innovations": "This repository features advanced integration of vision and language understanding, enabling dynamic action generation based on contextual visual cues, leveraging world models for improved decision-making.",
     "Basic Usage": "(No specific usage example provided.)",
     "Summary": "GigaBrain-0 aims to advance the capabilities of AI in understanding and acting upon visual and linguistic information seamlessly.",
-    "summary": "GigaBrain-0 aims to advance the capabilities of AI in understanding and acting upon visual and linguistic information seamlessly.",
-    "full_name": "open-gigaai/giga-brain-0",
+    "Stars": 2494,
+    "Forks": 193,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "38a80ad6c688e758",
@@ -141,9 +139,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "LangBot is an open-source production-grade platform for building AI-powered instant messaging bots across multiple platforms with agent orchestration, knowledge bases, and plugin ecosystem.",
-    "full_name": "langbot-app/LangBot"
+    }
   },
   "SamuelSchmidgall/AgentLaboratory": {
     "Repository Name": "SamuelSchmidgall/AgentLaboratory",
@@ -454,15 +450,13 @@
   "obra/superpowers": {
     "Repository Name": "obra/superpowers",
     "Repository URL": "https://github.com/obra/superpowers",
-    "Stars": 166948,
-    "Forks": 14683,
-    "updated": "2026-04-25",
     "Brief Introduction": "An agentic skills framework and software development methodology designed to build effective and reliable AI agents.",
     "Innovations": "It uniquely combines an agentic skills framework with a proven software development methodology, offering a structured and effective approach to building reliable AI agents.",
     "Basic Usage": "(Omitted as no specific usage is provided in the description)",
     "Summary": "This repository provides a practical framework and methodology for developing effective and reliable AI agents by structuring their skills and development process.",
-    "summary": "This repository provides a practical framework and methodology for developing effective and reliable AI agents by structuring their skills and development process.",
-    "full_name": "obra/superpowers",
+    "Stars": 166948,
+    "Forks": 14683,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "58fd488732cd23f3",
@@ -689,15 +683,13 @@
   "jingyaogong/minimind-v": {
     "Repository Name": "jingyaogong/minimind-v",
     "Repository URL": "https://github.com/jingyaogong/minimind-v",
-    "Stars": 7631,
-    "Forks": 833,
-    "updated": "2026-04-25",
     "Brief Introduction": "A visual language model (VLM) that allows users to train a 67M-parameter model from scratch in just one hour.",
     "Innovations": "This repository features rapid training capabilities for a large-scale visual model, enabling efficient experimentation and deployment in multimodal tasks.",
     "Basic Usage": "Not provided.",
     "Summary": "Minimind-v offers a quick and efficient way to train a powerful visual language model, enhancing accessibility for developers and researchers in multimodal AI.",
-    "summary": "Minimind-v offers a quick and efficient way to train a powerful visual language model, enhancing accessibility for developers and researchers in multimodal AI.",
-    "full_name": "jingyaogong/minimind-v",
+    "Stars": 7631,
+    "Forks": 833,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "d4417deb1050d6bf",
@@ -709,15 +701,13 @@
   "antvis/Infographic": {
     "Repository Name": "antvis/Infographic",
     "Repository URL": "https://github.com/antvis/Infographic",
-    "Stars": 4947,
-    "Forks": 365,
-    "updated": "2026-04-25",
     "Brief Introduction": "An Infographic Generation and Rendering Framework that utilizes AI to transform textual information into engaging visual representations.",
     "Innovations": "Distinctive features include AI-driven content generation, customizable templates, and a user-friendly interface for creating dynamic infographics effortlessly.",
     "Basic Usage": "Not provided.",
     "Summary": "This repository aims to enhance communication by visually representing information through AI-generated infographics.",
-    "summary": "This repository aims to enhance communication by visually representing information through AI-generated infographics.",
-    "full_name": "antvis/Infographic",
+    "Stars": 4947,
+    "Forks": 365,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "c19b5d388e9a9e05",
@@ -797,15 +787,13 @@
   "UniPat-AI/UniScientist": {
     "Repository Name": "UniPat-AI/UniScientist",
     "Repository URL": "https://github.com/UniPat-AI/UniScientist",
-    "Stars": 160,
-    "Forks": 12,
-    "updated": "2026-04-17",
     "Brief Introduction": "UniScientist aims to enhance scientific research intelligence by providing a unified framework for data integration and analysis across various scientific disciplines.",
     "Innovations": "The repository features advanced algorithms for data synthesis, cross-disciplinary collaboration tools, and a comprehensive knowledge base that supports diverse scientific inquiries.",
     "Basic Usage": "Not provided.",
     "Summary": "UniScientist serves as a powerful tool for fostering collaboration and innovation in scientific research through a unified approach.",
-    "summary": "UniScientist serves as a powerful tool for fostering collaboration and innovation in scientific research through a unified approach.",
-    "full_name": "UniPat-AI/UniScientist",
+    "Stars": 160,
+    "Forks": 12,
+    "updated": "2026-04-17",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "3868d24a91205d74",
@@ -891,15 +879,13 @@
   "Kevin-thu/StoryMem": {
     "Repository Name": "Kevin-thu/StoryMem",
     "Repository URL": "https://github.com/Kevin-thu/StoryMem",
-    "Stars": 726,
-    "Forks": 69,
-    "updated": "2026-04-22",
     "Brief Introduction": "StoryMem is the official code for a system designed for multi-shot long video storytelling. It leverages a memory mechanism to generate coherent narratives from extended video content, addressing challenges in long-form video understanding and summarization.",
     "Innovations": "Its core innovation lies in using a memory mechanism to enable multi-shot storytelling for long videos, ensuring narrative coherence and addressing the challenges of extended video content.",
     "Basic Usage": "(Omitted as specific usage instructions are not provided in the description)",
     "Summary": "StoryMem provides a novel approach to generate coherent, multi-shot narratives from long videos by integrating a memory-based mechanism.",
-    "summary": "StoryMem provides a novel approach to generate coherent, multi-shot narratives from long videos by integrating a memory-based mechanism.",
-    "full_name": "Kevin-thu/StoryMem",
+    "Stars": 726,
+    "Forks": 69,
+    "updated": "2026-04-22",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "bb7570b4b7ccb755",
@@ -911,15 +897,13 @@
   "funstory-ai/BabelDOC": {
     "Repository Name": "funstory-ai/BabelDOC",
     "Repository URL": "https://github.com/funstory-ai/BabelDOC",
-    "Stars": 8316,
-    "Forks": 659,
-    "updated": "2026-04-25",
     "Brief Introduction": "BabelDOC is a document translation tool designed to facilitate seamless language conversion for various document formats.",
     "Innovations": "It supports multiple file types, utilizes advanced translation algorithms, and offers a user-friendly interface for efficient document handling.",
     "Basic Usage": "(No specific usage example provided)",
     "Summary": "BabelDOC aims to simplify the process of translating documents across different languages and formats.",
-    "summary": "BabelDOC aims to simplify the process of translating documents across different languages and formats.",
-    "full_name": "funstory-ai/BabelDOC",
+    "Stars": 8316,
+    "Forks": 659,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "efd3157a4d6fce1e",
@@ -1101,15 +1085,13 @@
   "Anjok07/ultimatevocalremovergui": {
     "Repository Name": "Anjok07/ultimatevocalremovergui",
     "Repository URL": "https://github.com/Anjok07/ultimatevocalremovergui",
-    "Stars": 24413,
-    "Forks": 1825,
-    "updated": "2026-04-25",
     "Brief Introduction": "Ultimate Vocal Remover GUI (UVR) is a user-friendly graphical interface for a powerful vocal removal tool. It leverages advanced deep neural networks to accurately separate vocals, instrumentals, and other components from audio tracks, making high-quality audio source separation accessible to everyone.",
     "Innovations": "Its primary innovation lies in providing an intuitive graphical user interface (GUI) for a highly effective vocal remover powered by state-of-the-art deep neural networks, making complex audio source separation accessible without command-line expertise.",
     "Basic Usage": "(Omitted as no specific key usage or example was provided in the description)",
     "Summary": "Ultimate Vocal Remover GUI simplifies high-quality audio source separation, allowing users to easily remove vocals and other components from songs using deep neural networks through a user-friendly interface.",
-    "summary": "Ultimate Vocal Remover GUI simplifies high-quality audio source separation, allowing users to easily remove vocals and other components from songs using deep neural networks through a user-friendly interface.",
-    "full_name": "Anjok07/ultimatevocalremovergui",
+    "Stars": 24413,
+    "Forks": 1825,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "00d2a2ab3b412993",
@@ -1498,7 +1480,7 @@
   "kijai/ComfyUI-FramePackWrapper": {
     "Repository Name": "kijai/ComfyUI-FramePackWrapper",
     "Repository URL": "https://github.com/kijai/ComfyUI-FramePackWrapper",
-    "Brief Introduction": "Not specified",
+    "Brief Introduction": "",
     "Innovations": "Not available (cannot access README content)",
     "Basic Usage": "Not available (cannot access README content)",
     "Summary": "This appears to be a ComfyUI custom node wrapper for FramePack functionality, likely related to video generation or frame processing workflows, but specific details require access to the repository's README.",
@@ -1508,9 +1490,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "This appears to be a ComfyUI custom node wrapper for FramePack functionality, likely related to video generation or frame processing workflows, but specific details require access to the repository's README.",
-    "full_name": "kijai/ComfyUI-FramePackWrapper"
+    }
   },
   "xming521/WeClone": {
     "Repository Name": "xming521/WeClone",
@@ -2045,9 +2025,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "*   **Repository Name:** linshenkx/prompt-optimizer\n*   **Brief Introduction:** An AI prompt optimizer for writing better prompts and getting better AI results.\n*   **Innovations:** Uses advanced LLMs to automatically rewrite, structure, and refine raw user queries into highly optimized, professional prompts. This significantly enhances output quality, reduces token consumption, and standardizes prompt formats across different AI models.\n*   **Basic Usage:** Not specified (no detailed usage examples were provided in the input text).\n*   **Summary:** This tool helps users transform basic drafts into high-performance prompts, maximizing the output quality and efficiency of AI models through structured optimization.",
-    "full_name": "linshenkx/prompt-optimizer"
+    }
   },
   "Yuiffy/BiliGPT": {
     "Repository Name": "Yuiffy/BiliGPT",
@@ -2426,15 +2404,13 @@
   "Diorser/LiteMonitor": {
     "Repository Name": "Diorser/LiteMonitor",
     "Repository URL": "https://github.com/Diorser/LiteMonitor",
-    "Stars": 4787,
-    "Forks": 199,
-    "updated": "2026-04-25",
     "Brief Introduction": "LiteMonitor is a lightweight, highly customizable hardware performance monitor for Windows desktop and taskbar. It tracks CPU, GPU, RAM, disk, network, FPS, and supports plugins, plus memory optimization.",
     "Innovations": "Its key innovations include being lightweight, highly customizable for desktop/taskbar display, comprehensive hardware monitoring (CPU, GPU, RAM, network, FPS), plugin extensibility, and built-in memory optimization.",
     "Basic Usage": "(Omitted as no specific usage steps were provided in the description)",
     "Summary": "LiteMonitor provides a lightweight, highly customizable, and comprehensive solution for monitoring Windows hardware performance directly on the desktop or taskbar.",
-    "summary": "LiteMonitor provides a lightweight, highly customizable, and comprehensive solution for monitoring Windows hardware performance directly on the desktop or taskbar.",
-    "full_name": "Diorser/LiteMonitor",
+    "Stars": 4787,
+    "Forks": 199,
+    "updated": "2026-04-25",
     "__meta__": {
       "last_summarized_at": "2026-09-11T04:17:38Z",
       "description_hash": "0dab26e27c45efcf",
@@ -3221,9 +3197,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "Unable to summarize purpose or value without access to the repository's README or source code.",
-    "full_name": "Nibir088/PRISM-CAFO"
+    }
   },
   "HKUDS/CLI-Anything": {
     "Repository Name": "HKUDS/CLI-Anything",
