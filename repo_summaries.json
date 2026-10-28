@@ -1505,9 +1505,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "WeClone creates personalized AI digital twins by fine-tuning LLMs on user chat history with multi-modal support and privacy-focused local deployment across multiple messaging platforms.",
-    "full_name": "xming521/WeClone"
+    }
   },
   "happycola233/tchMaterial-parser": {
     "Repository Name": "happycola233/tchMaterial-parser",
