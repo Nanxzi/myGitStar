@@ -3442,5 +3442,20 @@
       "summary_source": "ai",
       "summary_attempts": 1
     }
+  },
+  "bobeff/open-source-games": {
+    "Repository Name": "bobeff/open-source-games",
+    "Repository URL": "https://github.com/bobeff/open-source-games",
+    "Brief Introduction": "A list of open source games.",
+    "Innovations": "Provides a curated list of open-source video games and commercial game remakes, organized by genre.",
+    "Basic Usage": "Not specified",
+    "Summary": "A curated collection of open-source video games and commercial game remakes organized by genre.",
+    "__meta__": {
+      "last_summarized_at": "2026-11-02T05:40:51Z",
+      "description_hash": "9dd89424baec0acd",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
   }
 }
