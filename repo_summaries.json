@@ -2554,7 +2554,9 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "Offers ready-to-use, up-to-date FFmpeg executables for Windows, simplifying multimedia processing without needing to compile from source.",
+    "full_name": "BtbN/FFmpeg-Builds"
   },
   "cjpais/Handy": {
     "Repository Name": "cjpais/Handy",
@@ -3453,6 +3455,36 @@
     "__meta__": {
       "last_summarized_at": "2026-11-02T05:40:51Z",
       "description_hash": "9dd89424baec0acd",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
+  },
+  "Grail926/VideoWatch-Agent": {
+    "Repository Name": "Grail926/VideoWatch-Agent",
+    "Repository URL": "https://github.com/Grail926/VideoWatch-Agent",
+    "Brief Introduction": "Private portable VideoWatch Agent for multimodal video understanding",
+    "Innovations": "Introduces a complete watch for AI agents accepting local or public video URLs, unifies visual, subtitle/ASR, and sound events on a single timeline using limited visual tokens, and returns traceable evidence via GPU/CUDA acceleration.",
+    "Basic Usage": "Run setup.ps1 to create the environment, then use videowatch.exe ingest or video_overview to index videos; optionally install the plugin via codex or the MCP script.",
+    "Summary": "A portable, privacy-focused agent that delivers multimodal video analysis, uniting visual, captions/ASR, and audio events, into traceable evidence for AI agents.",
+    "__meta__": {
+      "last_summarized_at": "2026-11-09T05:54:08Z",
+      "description_hash": "04988e6084960e25",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
+  },
+  "FFmpeg-Builds/FFmpeg-Builds": {
+    "Repository Name": "FFmpeg-Builds/FFmpeg-Builds",
+    "Repository URL": "https://github.com/FFmpeg-Builds/FFmpeg-Builds",
+    "Brief Introduction": "A collection of pre-built FFmpeg binaries and build tools, facilitating easy access to FFmpeg across multiple platforms and architectures.",
+    "Innovations": "Automated multi-architecture builds and distribution of FFmpeg binaries, enabling quick deployment without manual compilation.",
+    "Basic Usage": "The repository provides pre-compiled FFmpeg binaries and build scripts, allowing users to download and run FFmpeg across different platforms without compilation.",
+    "Summary": "This repository simplifies FFmpeg access by offering pre-built binaries and build tools for multiple architectures, streamlining deployment and usage.",
+    "__meta__": {
+      "last_summarized_at": "2026-11-09T05:54:24Z",
+      "description_hash": "60de90b9562ff829",
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
