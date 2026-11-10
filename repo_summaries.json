@@ -3473,7 +3473,9 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "A portable, privacy-focused agent that delivers multimodal video analysis, uniting visual, captions/ASR, and audio events, into traceable evidence for AI agents.",
+    "full_name": "Grail926/VideoWatch-Agent"
   },
   "FFmpeg-Builds/FFmpeg-Builds": {
     "Repository Name": "FFmpeg-Builds/FFmpeg-Builds",
@@ -3488,6 +3490,8 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "This repository simplifies FFmpeg access by offering pre-built binaries and build tools for multiple architectures, streamlining deployment and usage.",
+    "full_name": "FFmpeg-Builds/FFmpeg-Builds"
   }
 }
