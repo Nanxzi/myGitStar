@@ -2333,9 +2333,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "A powerful open-source game engine enabling cross-platform 3D apps and games with WebGL2/WebGPU/WebXR support and first-class Gaussian Splatting rendering.",
-    "full_name": "playcanvas/engine"
+    }
   },
   "xanderfrangos/twinkle-tray": {
     "Repository Name": "xanderfrangos/twinkle-tray",
