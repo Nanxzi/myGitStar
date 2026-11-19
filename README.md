@@ -10,9 +10,9 @@
 <hr/>
 
 <p><b>Current account:</b> <a href="https://github.com/Nanxzi">Nanxzi</a></p>
-<p><b>Generated on:</b> 2026-11-18</p>
+<p><b>Generated on:</b> 2026-11-19</p>
 <p><b>AI Model:</b> OpenRouter (DeepSeek)</p>
-<p><b>Total repositories:</b> 205</p>
+<p><b>Total repositories:</b> 207</p>
 
 </div>
 
@@ -26,7 +26,7 @@
 - [📦 Desktop & Browser Automation](#desktop--browser-automation) (16) — Tools enabling automation of user interface actions, virtual environments, browser interactions, device control, and accessibility-based system manipulation.
 - [📦 Developer Productivity Tools](#developer-productivity-tools) (14) — Infrastructure, CLI tools, package managers, proxy utilities, and utilities boosting developer productivity and environment management.
 - [📦 Design & Creative Systems](#design--creative-systems) (10) — Open-source design tools, font libraries, visualization engines, and platforms supporting graphic design, prototyping, animation, and interactive media creation.
-- [ Other](#other) (25) — Repositories that do not fit clearly into any defined content or domain category based on available information.
+- [ Other](#other) (27) — Repositories that do not fit clearly into any defined content or domain category based on available information.
 
 ---
 
@@ -38,7 +38,7 @@
 
 ### 📌 [nilbuild/developer-roadmap](https://github.com/nilbuild/developer-roadmap)
 
-**⭐ Stars:** 372,264 | **🍴 Forks:** 46,509 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 372,325 | **🍴 Forks:** 46,515 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Interactive roadmaps, guides and other educational content to help developers grow in their careers.
 
@@ -52,7 +52,7 @@
 
 ### 📌 [huggingface/transformers](https://github.com/huggingface/transformers)
 
-**⭐ Stars:** 169,305 | **🍴 Forks:** 35,276 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 169,205 | **🍴 Forks:** 35,232 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.
 
@@ -66,7 +66,7 @@
 
 ### 📌 [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners)
 
-**⭐ Stars:** 123,780 | **🍴 Forks:** 66,615 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 123,834 | **🍴 Forks:** 66,679 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 21 Lessons, Get Started Building with Generative AI
 
@@ -85,7 +85,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [666ghj/MiroFish](https://github.com/666ghj/MiroFish)
 
-**⭐ Stars:** 85,856 | **🍴 Forks:** 13,024 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 85,930 | **🍴 Forks:** 13,034 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** MiroFish is a simple and universal swarm intelligence engine designed for predicting various outcomes using collective behavior models.
 
@@ -99,7 +99,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)
 
-**⭐ Stars:** 80,163 | **🍴 Forks:** 8,789 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 80,200 | **🍴 Forks:** 8,788 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.
 
@@ -113,7 +113,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)
 
-**⭐ Stars:** 79,366 | **🍴 Forks:** 14,162 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 79,538 | **🍴 Forks:** 14,206 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Learn it. Build it. Ship it for others.
 
@@ -127,7 +127,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [microsoft/AI-For-Beginners](https://github.com/microsoft/AI-For-Beginners)
 
-**⭐ Stars:** 70,996 | **🍴 Forks:** 13,841 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 71,021 | **🍴 Forks:** 13,848 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 12 Weeks, 24 Lessons, AI for All!
 
@@ -141,7 +141,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [jingyaogong/minimind](https://github.com/jingyaogong/minimind)
 
-**⭐ Stars:** 66,237 | **🍴 Forks:** 8,686 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 66,564 | **🍴 Forks:** 8,743 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** This repository provides a framework to train a 26M-parameter GPT model from scratch in just two hours, making it accessible for experimentation and learning.
 
@@ -155,7 +155,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [1c7/chinese-independent-developer](https://github.com/1c7/chinese-independent-developer)
 
-**⭐ Stars:** 62,151 | **🍴 Forks:** 5,624 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 62,173 | **🍴 Forks:** 5,629 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么
 
@@ -169,7 +169,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Lordog/dive-into-llms](https://github.com/Lordog/dive-into-llms)
 
-**⭐ Stars:** 60,383 | **🍴 Forks:** 7,224 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 60,536 | **🍴 Forks:** 7,254 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A practical programming tutorial series focused on large language models (LLMs), designed to help users understand and implement LLMs effectively.
 
@@ -183,7 +183,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills)
 
-**⭐ Stars:** 57,379 | **🍴 Forks:** 4,361 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 57,633 | **🍴 Forks:** 4,392 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Academic Research Skills for Claude Code: research → write → review → revise → finalize
 
@@ -197,7 +197,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)
 
-**⭐ Stars:** 53,968 | **🍴 Forks:** 2,804 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 54,138 | **🍴 Forks:** 2,813 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A collection of skills for academic writing aligned with *Nature* journal standards and scientific figure creation.
 
@@ -211,7 +211,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [elder-plinius/CL4R1T4S](https://github.com/elder-plinius/CL4R1T4S)
 
-**⭐ Stars:** 53,638 | **🍴 Forks:** 11,210 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 53,681 | **🍴 Forks:** 11,216 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** LEAKED SYSTEM PROMPTS FOR CHATGPT, CLAUDE, GEMINI, GROK, PERPLEXITY, CURSOR, LOVABLE, REPLIT, AND MORE! - AI SYSTEMS TRANSPARENCY FOR ALL! 👐
 
@@ -225,7 +225,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [roboflow/supervision](https://github.com/roboflow/supervision)
 
-**⭐ Stars:** 51,663 | **🍴 Forks:** 4,960 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 51,672 | **🍴 Forks:** 4,959 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** We write your reusable computer vision tools. 💜
 
@@ -239,7 +239,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub)
 
-**⭐ Stars:** 41,976 | **🍴 Forks:** 6,709 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 42,016 | **🍴 Forks:** 6,720 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** In-depth tutorials on LLMs, RAGs and real-world AI agent applications.
 
@@ -253,7 +253,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects)
 
-**⭐ Stars:** 40,069 | **🍴 Forks:** 7,203 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 40,097 | **🍴 Forks:** 7,211 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** The 500 AI Agents Projects is a curated collection of AI agent use cases across various industries. It showcases practical applications and provides links to open-source projects for implementation, illustrating how AI agents are transforming sectors such as healthcare, finance, education, retail, and more.
 
@@ -267,7 +267,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Tencent/WeKnora](https://github.com/Tencent/WeKnora)
 
-**⭐ Stars:** 37,707 | **🍴 Forks:** 5,240 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 37,773 | **🍴 Forks:** 5,257 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** WeKnora is an LLM-powered framework designed for deep document understanding, semantic retrieval, and context-aware answers, leveraging the Retrieval-Augmented Generation (RAG) paradigm.
 
@@ -281,13 +281,27 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [huggingface/lerobot](https://github.com/huggingface/lerobot)
 
-**⭐ Stars:** 28,951 | **🍴 Forks:** 6,089 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 28,975 | **🍴 Forks:** 6,096 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🤗 LeRobot: Making AI for Robotics more accessible with end-to-end learning
 
 - **Innovations:** Unified, Hugging Face‑compatible framework for robot learning; supports multiple modalities, datasets, and policies; provides end‑to‑end training, evaluation, and deployment tools; simplifies data handling and model integration for robotics research.
 - **Basic Usage:** Not specified
 - **Summary:** LeRobot democratizes robotics AI by offering an integrated, Hugging Face‑friendly platform for end‑to‑end robot learning, reducing complexity and accelerating research.
+
+---
+
+<a id="hasaneyldrmexercises-dataset"></a>
+
+### 📌 [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset)
+
+**⭐ Stars:** 23,884 | **🍴 Forks:** 3,075 | **📅 Updated:** 2026-11-19
+
+**Brief Introduction:** 1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.
+
+- **Innovations:** Provides a unified exercise data layer integrating animated GIFs, 180x180 thumbnails, and detailed muscle-group and equipment metadata, specifically engineered as the foundational resource for the LogPress application.
+- **Basic Usage:** Not specified
+- **Summary:** This repository offers a comprehensive dataset of 1,324 exercises with visual and anatomical details, serving as a critical data layer for fitness tracking applications like LogPress.
 
 ---
 
@@ -305,25 +319,11 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ---
 
-<a id="hasaneyldrmexercises-dataset"></a>
-
-### 📌 [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset)
-
-**⭐ Stars:** 23,852 | **🍴 Forks:** 3,074 | **📅 Updated:** 2026-11-18
-
-**Brief Introduction:** 1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.
-
-- **Innovations:** Provides a unified exercise data layer integrating animated GIFs, 180x180 thumbnails, and detailed muscle-group and equipment metadata, specifically engineered as the foundational resource for the LogPress application.
-- **Basic Usage:** Not specified
-- **Summary:** This repository offers a comprehensive dataset of 1,324 exercises with visual and anatomical details, serving as a critical data layer for fitness tracking applications like LogPress.
-
----
-
 <a id="aihubcnawesome-chinese-llm"></a>
 
 ### 📌 [AiHubCN/Awesome-Chinese-LLM](https://github.com/AiHubCN/Awesome-Chinese-LLM)
 
-**⭐ Stars:** 22,786 | **🍴 Forks:** 2,146 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 22,786 | **🍴 Forks:** 2,145 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 整理开源的中文大语言模型，以规模较小、可私有化部署、训练成本较低的模型为主，包括底座模型，垂直领域微调及应用，数据集与教程等。
 
@@ -337,7 +337,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL)
 
-**⭐ Stars:** 20,229 | **🍴 Forks:** 1,899 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 20,240 | **🍴 Forks:** 1,901 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.
 
@@ -351,7 +351,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [aiming-lab/AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw)
 
-**⭐ Stars:** 14,893 | **🍴 Forks:** 1,715 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 14,901 | **🍴 Forks:** 1,714 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** AutoResearchClaw enables fully autonomous and self-evolving research processes, transforming ideas into academic papers through an interactive chat interface.
 
@@ -379,7 +379,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [poloclub/transformer-explainer](https://github.com/poloclub/transformer-explainer)
 
-**⭐ Stars:** 9,180 | **🍴 Forks:** 1,082 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 9,189 | **🍴 Forks:** 1,084 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Transformer Explained Visually: Learn How LLM Transformer Models Work with Interactive Visualization
 
@@ -393,7 +393,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [jingyaogong/minimind-v](https://github.com/jingyaogong/minimind-v)
 
-**⭐ Stars:** 8,846 | **🍴 Forks:** 990 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 8,853 | **🍴 Forks:** 990 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A visual language model (VLM) that allows users to train a 67M-parameter model from scratch in just one hour.
 
@@ -407,7 +407,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [datawhalechina/so-large-lm](https://github.com/datawhalechina/so-large-lm)
 
-**⭐ Stars:** 7,787 | **🍴 Forks:** 647 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 7,788 | **🍴 Forks:** 648 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 大模型基础: 一文了解大模型基础知识
 
@@ -421,7 +421,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [facebookresearch/sam-3d-objects](https://github.com/facebookresearch/sam-3d-objects)
 
-**⭐ Stars:** 7,695 | **🍴 Forks:** 911 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 7,697 | **🍴 Forks:** 911 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** SAM 3D Objects
 
@@ -435,7 +435,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [arcee-ai/mergekit](https://github.com/arcee-ai/mergekit)
 
-**⭐ Stars:** 7,475 | **🍴 Forks:** 808 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 7,479 | **🍴 Forks:** 810 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Tools for merging pretrained large language models.
 
@@ -463,7 +463,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [SamuelSchmidgall/AgentLaboratory](https://github.com/SamuelSchmidgall/AgentLaboratory)
 
-**⭐ Stars:** 5,932 | **🍴 Forks:** 806 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 5,933 | **🍴 Forks:** 806 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** Agent Laboratory is an end-to-end autonomous research workflow meant to assist you as the human researcher toward implementing your research ideas
 
@@ -477,7 +477,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [datawhalechina/every-embodied](https://github.com/datawhalechina/every-embodied)
 
-**⭐ Stars:** 4,511 | **🍴 Forks:** 439 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 4,521 | **🍴 Forks:** 439 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A project designed for beginners to build their own embodied intelligent robots from scratch using Python, focusing on various models like VLA, OpenVLA, SmolVLA, and Pi0.
 
@@ -491,7 +491,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [facebookresearch/sam-3d-body](https://github.com/facebookresearch/sam-3d-body)
 
-**⭐ Stars:** 3,739 | **🍴 Forks:** 446 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 3,741 | **🍴 Forks:** 446 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** The repository provides code for running inference with the SAM 3D Body Model (3DB), links for downloading the trained model checkpoints and datasets, and example notebooks that show how to use the model.
 
@@ -519,7 +519,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Peterande/D-FINE](https://github.com/Peterande/D-FINE)
 
-**⭐ Stars:** 3,412 | **🍴 Forks:** 336 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 3,415 | **🍴 Forks:** 337 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** D-FINE: Redefine Regression Task of DETRs as Fine-grained Distribution Refinement  [ICLR 2025 Spotlight]
 
@@ -547,7 +547,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [zhu-xlab/GlobalBuildingAtlas](https://github.com/zhu-xlab/GlobalBuildingAtlas)
 
-**⭐ Stars:** 2,275 | **🍴 Forks:** 221 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 2,276 | **🍴 Forks:** 221 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** An open global dataset providing comprehensive building polygons, heights, and Level of Detail 1 (LoD1) 3D models for urban analysis and development.
 
@@ -719,7 +719,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
-**⭐ Stars:** 165,335 | **🍴 Forks:** 31,117 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 165,340 | **🍴 Forks:** 31,107 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Stable Diffusion web UI
 
@@ -733,7 +733,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [harry0703/MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)
 
-**⭐ Stars:** 144,276 | **🍴 Forks:** 23,152 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 144,566 | **🍴 Forks:** 23,223 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.
 
@@ -747,7 +747,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)
 
-**⭐ Stars:** 86,141 | **🍴 Forks:** 7,981 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 86,668 | **🍴 Forks:** 8,051 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Hyperframes is a tool designed for creating HTML content that can be rendered as videos, specifically tailored for agents.
 
@@ -761,7 +761,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM)
 
-**⭐ Stars:** 42,602 | **🍴 Forks:** 4,875 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 42,640 | **🍴 Forks:** 4,882 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning
 
@@ -775,7 +775,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook)
 
-**⭐ Stars:** 42,055 | **🍴 Forks:** 4,828 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 42,073 | **🍴 Forks:** 4,830 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An Open Source implementation of Notebook LM with more flexibility and features
 
@@ -789,7 +789,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [linshenkx/prompt-optimizer](https://github.com/linshenkx/prompt-optimizer)
 
-**⭐ Stars:** 41,862 | **🍴 Forks:** 4,702 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 41,930 | **🍴 Forks:** 4,712 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An AI prompt optimizer for writing better prompts and getting better AI results.
 
@@ -805,7 +805,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [cjpais/Handy](https://github.com/cjpais/Handy)
 
-**⭐ Stars:** 39,137 | **🍴 Forks:** 3,701 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 39,246 | **🍴 Forks:** 3,708 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A free, open source, and extensible speech-to-text application that works completely offline.
 
@@ -819,7 +819,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [PDFMathTranslate/PDFMathTranslate](https://github.com/PDFMathTranslate/PDFMathTranslate)
 
-**⭐ Stars:** 38,506 | **🍴 Forks:** 3,454 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 38,530 | **🍴 Forks:** 3,454 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** PDFMathTranslate offers a tool for translating PDF scientific papers while preserving their original formatting, utilizing various AI translation services.
 
@@ -833,7 +833,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video)
 
-**⭐ Stars:** 30,201 | **🍴 Forks:** 4,384 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 30,239 | **🍴 Forks:** 4,386 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine
 
@@ -847,7 +847,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)
 
-**⭐ Stars:** 29,946 | **🍴 Forks:** 3,096 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 29,944 | **🍴 Forks:** 3,096 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Open-Sora: Democratizing Efficient Video Production for All
 
@@ -861,7 +861,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Anjok07/ultimatevocalremovergui](https://github.com/Anjok07/ultimatevocalremovergui)
 
-**⭐ Stars:** 27,226 | **🍴 Forks:** 2,094 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 27,247 | **🍴 Forks:** 2,094 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Ultimate Vocal Remover GUI (UVR) is a user-friendly graphical interface for a powerful vocal removal tool. It leverages advanced deep neural networks to accurately separate vocals, instrumentals, and other components from audio tracks, making high-quality audio source separation accessible to everyone.
 
@@ -875,7 +875,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [CapSoftware/Cap](https://github.com/CapSoftware/Cap)
 
-**⭐ Stars:** 25,205 | **🍴 Forks:** 2,373 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 25,254 | **🍴 Forks:** 2,380 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Open source Loom alternative. Beautiful, shareable screen recordings.
 
@@ -889,7 +889,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [jianchang512/pyvideotrans](https://github.com/jianchang512/pyvideotrans)
 
-**⭐ Stars:** 19,770 | **🍴 Forks:** 2,463 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 19,774 | **🍴 Forks:** 2,465 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Translate the video from one language to another and embed dubbing & subtitles.
 
@@ -903,7 +903,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [lllyasviel/FramePack](https://github.com/lllyasviel/FramePack)
 
-**⭐ Stars:** 17,362 | **🍴 Forks:** 1,751 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 17,368 | **🍴 Forks:** 1,751 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Lets make video diffusion practical!
 
@@ -917,7 +917,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Anionex/banana-slides](https://github.com/Anionex/banana-slides)
 
-**⭐ Stars:** 16,025 | **🍴 Forks:** 1,802 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 16,039 | **🍴 Forks:** 1,800 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An AI-native slide generator based on the nano banana pro🍌, designed to create dynamic "Vibe PPT" presentations effortlessly.
 
@@ -931,7 +931,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [Narcooo/inkos](https://github.com/Narcooo/inkos)
 
-**⭐ Stars:** 11,296 | **🍴 Forks:** 2,034 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 11,313 | **🍴 Forks:** 2,039 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An autonomous novel writing CLI agent that utilizes AI to write, audit, and revise novels, incorporating human review checkpoints.
 
@@ -945,7 +945,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip)
 
-**⭐ Stars:** 10,720 | **🍴 Forks:** 1,887 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 10,830 | **🍴 Forks:** 1,913 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具
 
@@ -959,7 +959,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [funstory-ai/BabelDOC](https://github.com/funstory-ai/BabelDOC)
 
-**⭐ Stars:** 9,887 | **🍴 Forks:** 830 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 9,889 | **🍴 Forks:** 831 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** BabelDOC is a document translation tool designed to facilitate seamless language conversion for various document formats.
 
@@ -973,7 +973,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [antvis/Infographic](https://github.com/antvis/Infographic)
 
-**⭐ Stars:** 7,109 | **🍴 Forks:** 568 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 7,113 | **🍴 Forks:** 568 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An Infographic Generation and Rendering Framework that utilizes AI to transform textual information into engaging visual representations.
 
@@ -987,7 +987,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [YILING0013/AI_NovelGenerator](https://github.com/YILING0013/AI_NovelGenerator)
 
-**⭐ Stars:** 6,493 | **🍴 Forks:** 1,124 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 6,501 | **🍴 Forks:** 1,125 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 使用ai生成多章节的长篇小说，自动衔接上下文、伏笔
 
@@ -1001,7 +1001,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [HisMax/RedInk](https://github.com/HisMax/RedInk)
 
-**⭐ Stars:** 5,722 | **🍴 Forks:** 1,055 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 5,725 | **🍴 Forks:** 1,054 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Red Ink - A one-stop Xiaohongshu image-and-text generator based on the 🍌Nano Banana Pro🍌, "One Sentence, One Image: Generate Xiaohongshu Text and Images."
 
@@ -1029,7 +1029,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [ExplosiveCoderflome/AI-Novel-Writing-Assistant](https://github.com/ExplosiveCoderflome/AI-Novel-Writing-Assistant)
 
-**⭐ Stars:** 3,494 | **🍴 Forks:** 660 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 3,502 | **🍴 Forks:** 661 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An AI-native open-source system designed for long-form novel writing, facilitating the journey from a single idea to a complete novel through structured planning and agent-driven workflows.
 
@@ -1043,7 +1043,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [robert-mcdermott/ai-knowledge-graph](https://github.com/robert-mcdermott/ai-knowledge-graph)
 
-**⭐ Stars:** 3,140 | **🍴 Forks:** 418 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 3,141 | **🍴 Forks:** 418 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** AI Powered Knowledge Graph Generator
 
@@ -1057,7 +1057,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [fogsightai/fogsight](https://github.com/fogsightai/fogsight)
 
-**⭐ Stars:** 2,566 | **🍴 Forks:** 388 | **📅 Updated:** 2026-11-14
+**⭐ Stars:** 2,566 | **🍴 Forks:** 387 | **📅 Updated:** 2026-11-14
 
 **Brief Introduction:** Fogsight is an AI agent and animation engine powered by Large Language Models.
 
@@ -1071,7 +1071,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [glidea/banana-prompt-quicker](https://github.com/glidea/banana-prompt-quicker)
 
-**⭐ Stars:** 2,403 | **🍴 Forks:** 183 | **📅 Updated:** 2026-11-15
+**⭐ Stars:** 2,404 | **🍴 Forks:** 183 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🍌Awesome Prompts; Nano Banana；Banana Pro; Gemini；AI Studio；Prompt Quickly
 
@@ -1085,7 +1085,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [xyTom/snippai](https://github.com/xyTom/snippai)
 
-**⭐ Stars:** 1,951 | **🍴 Forks:** 134 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 1,950 | **🍴 Forks:** 134 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** Snip Anything Solve Everything
 
@@ -1113,7 +1113,7 @@ git clone https://github.com/microsoft/generative-ai-for-beginners.git
 
 ### 📌 [0xsline/GeminiImageApp](https://github.com/0xsline/GeminiImageApp)
 
-**⭐ Stars:** 248 | **🍴 Forks:** 41 | **📅 Updated:** 2026-10-07
+**⭐ Stars:** 249 | **🍴 Forks:** 41 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 基于 Google Gemini AI 的全功能图像处理应用
 
@@ -1149,7 +1149,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [openclaw/openclaw](https://github.com/openclaw/openclaw)
 
-**⭐ Stars:** 394,699 | **🍴 Forks:** 82,918 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 394,782 | **🍴 Forks:** 82,927 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** OpenClaw is a personal AI assistant designed to work across any operating system and platform, providing a versatile and user-friendly experience.
 
@@ -1163,7 +1163,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [obra/superpowers](https://github.com/obra/superpowers)
 
-**⭐ Stars:** 319,545 | **🍴 Forks:** 28,487 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 321,489 | **🍴 Forks:** 28,577 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An agentic skills framework and software development methodology designed to build effective and reliable AI agents.
 
@@ -1177,7 +1177,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 
-**⭐ Stars:** 264,301 | **🍴 Forks:** 59,636 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 264,568 | **🍴 Forks:** 59,732 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Hermes Agent is an adaptive agent designed to evolve alongside user needs, enhancing interaction and efficiency in various tasks.
 
@@ -1191,7 +1191,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [anthropics/skills](https://github.com/anthropics/skills)
 
-**⭐ Stars:** 196,884 | **🍴 Forks:** 23,074 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 197,352 | **🍴 Forks:** 23,107 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** This repository contains various agent skills designed to enhance the capabilities of AI models, facilitating more sophisticated interactions and tasks.
 
@@ -1205,7 +1205,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT)
 
-**⭐ Stars:** 188,082 | **🍴 Forks:** 45,864 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 188,096 | **🍴 Forks:** 45,857 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.
 
@@ -1219,7 +1219,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
 
-**⭐ Stars:** 169,067 | **🍴 Forks:** 27,452 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 169,258 | **🍴 Forks:** 27,494 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A comprehensive AI agency framework featuring specialized agents designed for various tasks, from frontend development to community engagement.
 
@@ -1233,7 +1233,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [langgenius/dify](https://github.com/langgenius/dify)
 
-**⭐ Stars:** 161,394 | **🍴 Forks:** 25,523 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 161,469 | **🍴 Forks:** 25,529 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.
 
@@ -1247,7 +1247,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)
 
-**⭐ Stars:** 144,988 | **🍴 Forks:** 21,355 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 145,042 | **🍴 Forks:** 21,360 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.
 
@@ -1261,7 +1261,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)
 
-**⭐ Stars:** 97,832 | **🍴 Forks:** 20,261 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 98,139 | **🍴 Forks:** 20,373 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A collection of MCP servers.
 
@@ -1275,7 +1275,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
 
-**⭐ Stars:** 79,758 | **🍴 Forks:** 9,773 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 79,843 | **🍴 Forks:** 9,788 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A curated collection of exceptional Claude Skills, resources, and tools designed to enhance and customize Claude AI workflows.
 
@@ -1289,7 +1289,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [sansan0/TrendRadar](https://github.com/sansan0/TrendRadar)
 
-**⭐ Stars:** 63,708 | **🍴 Forks:** 24,923 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 63,732 | **🍴 Forks:** 24,931 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** ⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。
 
@@ -1303,7 +1303,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [multica-ai/multica](https://github.com/multica-ai/multica)
 
-**⭐ Stars:** 56,525 | **🍴 Forks:** 7,455 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 56,667 | **🍴 Forks:** 7,467 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An open-source platform for managed agents that transforms coding agents into collaborative teammates, enabling task assignment, progress tracking, and skill compounding.
 
@@ -1317,7 +1317,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
 
-**⭐ Stars:** 53,850 | **🍴 Forks:** 5,071 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 53,858 | **🍴 Forks:** 5,071 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A curated collection of over 5,400 OpenClaw skills, meticulously filtered and categorized from the official OpenClaw Skills Registry.
 
@@ -1331,7 +1331,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio)
 
-**⭐ Stars:** 53,615 | **🍴 Forks:** 5,234 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 53,650 | **🍴 Forks:** 5,237 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Cherry Studio is an AI productivity platform that integrates smart chat, autonomous agents, and over 300 assistants, offering unified access to cutting-edge large language models (LLMs).
 
@@ -1345,7 +1345,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [666ghj/BettaFish](https://github.com/666ghj/BettaFish)
 
-**⭐ Stars:** 42,736 | **🍴 Forks:** 7,648 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 42,741 | **🍴 Forks:** 7,649 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。
 
@@ -1359,7 +1359,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [RSSNext/Folo](https://github.com/RSSNext/Folo)
 
-**⭐ Stars:** 39,313 | **🍴 Forks:** 2,161 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 39,319 | **🍴 Forks:** 2,161 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🧡 Folo is the AI RSS Reader
 
@@ -1373,7 +1373,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [Fosowl/agenticSeek](https://github.com/Fosowl/agenticSeek)
 
-**⭐ Stars:** 27,674 | **🍴 Forks:** 3,108 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 27,674 | **🍴 Forks:** 3,108 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.
 
@@ -1387,7 +1387,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [1Panel-dev/MaxKB](https://github.com/1Panel-dev/MaxKB)
 
-**⭐ Stars:** 23,169 | **🍴 Forks:** 3,225 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 23,169 | **🍴 Forks:** 3,225 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🔥 MaxKB is an open-source platform for building enterprise-grade agents.  强大易用的开源企业级智能体平台。
 
@@ -1401,7 +1401,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [langbot-app/LangBot](https://github.com/langbot-app/LangBot)
 
-**⭐ Stars:** 19,072 | **🍴 Forks:** 1,713 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 19,086 | **🍴 Forks:** 1,713 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM, Ollama, SiliconFlow, Moonshot, openclaw / hermes agent, deerflow
 
@@ -1415,7 +1415,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [xming521/WeClone](https://github.com/xming521/WeClone)
 
-**⭐ Stars:** 18,414 | **🍴 Forks:** 1,552 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 18,421 | **🍴 Forks:** 1,552 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🚀 One-stop solution for creating your AI twin from chat history 💡 Fine-tune LLMs with your chat logs to capture your unique style, then bind to a chatbot to bring your digital self to life.
 
@@ -1429,7 +1429,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [tadata-org/fastapi_mcp](https://github.com/tadata-org/fastapi_mcp)
 
-**⭐ Stars:** 12,029 | **🍴 Forks:** 965 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 12,030 | **🍴 Forks:** 965 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!
 
@@ -1443,7 +1443,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [Sylinko/Everywhere](https://github.com/Sylinko/Everywhere)
 
-**⭐ Stars:** 6,362 | **🍴 Forks:** 393 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 6,362 | **🍴 Forks:** 393 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** On-screen aware AI assistant for your desktop. Uses current app context, multiple LLMs, and MCP tools to help you act across apps.
 
@@ -1457,7 +1457,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [justlovemaki/openclaw-china-docker](https://github.com/justlovemaki/openclaw-china-docker)
 
-**⭐ Stars:** 3,703 | **🍴 Forks:** 440 | **📅 Updated:** 2026-11-14
+**⭐ Stars:** 3,702 | **🍴 Forks:** 440 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** This repository provides a Docker version of OpenClaw tailored for the Chinese market, pre-configured with plugins for popular IM platforms like Feishu, DingTalk, QQ, and WeChat.
 
@@ -1489,7 +1489,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [public-apis/public-apis](https://github.com/public-apis/public-apis)
 
-**⭐ Stars:** 499,925 | **🍴 Forks:** 56,078 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 500,141 | **🍴 Forks:** 56,113 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A collective list of free APIs
 
@@ -1503,7 +1503,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)
 
-**⭐ Stars:** 202,721 | **🍴 Forks:** 10,621 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 203,381 | **🍴 Forks:** 10,656 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** The context API to search, scrape, and interact with the web at scale. 🔥
 
@@ -1517,7 +1517,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [microsoft/markitdown](https://github.com/microsoft/markitdown)
 
-**⭐ Stars:** 196,255 | **🍴 Forks:** 14,849 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 196,797 | **🍴 Forks:** 14,907 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Python tool for converting files and office documents to Markdown.
 
@@ -1531,7 +1531,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [iptv-org/iptv](https://github.com/iptv-org/iptv)
 
-**⭐ Stars:** 144,255 | **🍴 Forks:** 8,616 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 144,320 | **🍴 Forks:** 8,618 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Collection of publicly available IPTV (Internet Protocol television) channels from all over the world
 
@@ -1545,7 +1545,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
 
-**⭐ Stars:** 83,899 | **🍴 Forks:** 6,947 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 83,972 | **🍴 Forks:** 6,955 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
 
@@ -1559,7 +1559,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [hmjz100/LinkSwift](https://github.com/hmjz100/LinkSwift)
 
-**⭐ Stars:** 40,371 | **🍴 Forks:** 2,909 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 40,505 | **🍴 Forks:** 2,916 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A JavaScript-based tool for obtaining direct download links from various cloud storage services, including Baidu Cloud and Aliyun Drive.
 
@@ -1573,7 +1573,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [umami-software/umami](https://github.com/umami-software/umami)
 
-**⭐ Stars:** 40,213 | **🍴 Forks:** 8,574 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 40,226 | **🍴 Forks:** 8,583 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Umami is a privacy-first analytics platform. Traffic, campaigns, behavior, conversions, and revenue in one place — no cookies, no surveillance, self-hosted or in the cloud.
 
@@ -1587,7 +1587,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [OpenListTeam/OpenList](https://github.com/OpenListTeam/OpenList)
 
-**⭐ Stars:** 25,691 | **🍴 Forks:** 2,482 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 25,699 | **🍴 Forks:** 2,488 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A new AList Fork to Anti Trust Crisis
 
@@ -1601,7 +1601,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [teableio/teable](https://github.com/teableio/teable)
 
-**⭐ Stars:** 22,000 | **🍴 Forks:** 1,366 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 22,003 | **🍴 Forks:** 1,366 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** ✨ AI Spreadsheet for Business
 
@@ -1615,7 +1615,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [mikf/gallery-dl](https://github.com/mikf/gallery-dl)
 
-**⭐ Stars:** 20,556 | **🍴 Forks:** 1,535 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 20,567 | **🍴 Forks:** 1,535 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Command-line program to download image galleries and collections from several image hosting sites
 
@@ -1629,7 +1629,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [Usagi-org/ai-goofish-monitor](https://github.com/Usagi-org/ai-goofish-monitor)
 
-**⭐ Stars:** 20,164 | **🍴 Forks:** 3,260 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 20,230 | **🍴 Forks:** 3,274 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A multi-task real-time/timed monitoring and intelligent analysis system for Xianyu, built on Playwright and AI, featuring a comprehensive backend management UI.
 
@@ -1643,7 +1643,7 @@ biligpt summarize https://www.bilibili.com/video/BV1234567890
 
 ### 📌 [guofei9987/blind_watermark](https://github.com/guofei9987/blind_watermark)
 
-**⭐ Stars:** 14,861 | **🍴 Forks:** 1,450 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 14,866 | **🍴 Forks:** 1,450 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Blind&Invisible Watermark ，图片盲水印，提取水印无须原图！
 
@@ -1663,7 +1663,7 @@ print(wm_extracted)
 
 ### 📌 [happycola233/tchMaterial-parser](https://github.com/happycola233/tchMaterial-parser)
 
-**⭐ Stars:** 7,840 | **🍴 Forks:** 1,003 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 7,847 | **🍴 Forks:** 1,005 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 国家中小学智慧教育平台 电子课本下载工具，帮助您从智慧教育平台中获取电子课本的 PDF 文件网址并进行下载，让您更方便地获取课本内容。
 
@@ -1677,7 +1677,7 @@ print(wm_extracted)
 
 ### 📌 [btjawa/BiliTools](https://github.com/btjawa/BiliTools)
 
-**⭐ Stars:** 4,991 | **🍴 Forks:** 365 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 4,990 | **🍴 Forks:** 365 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 本项目已停止维护。
 
@@ -1705,7 +1705,7 @@ print(wm_extracted)
 
 ### 📌 [imsyy/DailyHotApi](https://github.com/imsyy/DailyHotApi)
 
-**⭐ Stars:** 4,106 | **🍴 Forks:** 1,340 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 4,107 | **🍴 Forks:** 1,341 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 🔥 今日热榜 API，一个聚合热门数据的 API 接口，支持 RSS 模式 及 Vercel 部署 | 前端页面：https://github.com/imsyy/DailyHot
 
@@ -1719,7 +1719,7 @@ print(wm_extracted)
 
 ### 📌 [automeris-io/WebPlotDigitizer](https://github.com/automeris-io/WebPlotDigitizer)
 
-**⭐ Stars:** 3,191 | **🍴 Forks:** 441 | **📅 Updated:** 2026-11-16
+**⭐ Stars:** 3,192 | **🍴 Forks:** 441 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** WebPlotDigitizer is a computer vision tool designed to extract numerical data from images of plots, graphs, and other visual data representations.
 
@@ -1807,7 +1807,7 @@ print(wm_extracted)
 
 ### 📌 [mattpocock/skills](https://github.com/mattpocock/skills)
 
-**⭐ Stars:** 326,955 | **🍴 Forks:** 27,457 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 327,628 | **🍴 Forks:** 27,515 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Skills for Real Engineers. Straight from my .agents directory.
 
@@ -1821,7 +1821,7 @@ print(wm_extracted)
 
 ### 📌 [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 
-**⭐ Stars:** 234,076 | **🍴 Forks:** 23,281 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 234,329 | **🍴 Forks:** 23,293 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.
 
@@ -1835,7 +1835,7 @@ print(wm_extracted)
 
 ### 📌 [anomalyco/opencode](https://github.com/anomalyco/opencode)
 
-**⭐ Stars:** 227,668 | **🍴 Forks:** 30,872 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 227,883 | **🍴 Forks:** 30,920 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An open-source coding agent designed to assist developers in writing and managing code efficiently.
 
@@ -1849,7 +1849,7 @@ print(wm_extracted)
 
 ### 📌 [ollama/ollama](https://github.com/ollama/ollama)
 
-**⭐ Stars:** 187,477 | **🍴 Forks:** 19,133 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 187,570 | **🍴 Forks:** 19,156 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.
 
@@ -1863,7 +1863,7 @@ print(wm_extracted)
 
 ### 📌 [anthropics/claude-code](https://github.com/anthropics/claude-code)
 
-**⭐ Stars:** 156,073 | **🍴 Forks:** 25,029 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 156,208 | **🍴 Forks:** 25,038 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.
 
@@ -1877,7 +1877,7 @@ print(wm_extracted)
 
 ### 📌 [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli)
 
-**⭐ Stars:** 108,913 | **🍴 Forks:** 14,961 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 108,934 | **🍴 Forks:** 14,963 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An open-source AI agent that brings the power of Gemini directly into your terminal.
 
@@ -1891,7 +1891,7 @@ print(wm_extracted)
 
 ### 📌 [vllm-project/vllm](https://github.com/vllm-project/vllm)
 
-**⭐ Stars:** 97,131 | **🍴 Forks:** 24,955 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 97,196 | **🍴 Forks:** 24,999 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A high-throughput and memory-efficient inference and serving engine for LLMs
 
@@ -1905,7 +1905,7 @@ print(wm_extracted)
 
 ### 📌 [headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)
 
-**⭐ Stars:** 79,952 | **🍴 Forks:** 6,267 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 80,122 | **🍴 Forks:** 6,281 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.
 
@@ -1919,7 +1919,7 @@ print(wm_extracted)
 
 ### 📌 [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
 
-**⭐ Stars:** 77,912 | **🍴 Forks:** 5,199 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 78,031 | **🍴 Forks:** 5,206 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, and Hermes Agent — fewer tokens, fewer tool calls, 100% local
 
@@ -1933,7 +1933,7 @@ print(wm_extracted)
 
 ### 📌 [nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)
 
-**⭐ Stars:** 77,345 | **🍴 Forks:** 8,262 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 77,339 | **🍴 Forks:** 8,262 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** GPT4All: Run Local LLMs on Any Device. Open-source and available for commercial use.
 
@@ -1947,7 +1947,7 @@ print(wm_extracted)
 
 ### 📌 [cline/cline](https://github.com/cline/cline)
 
-**⭐ Stars:** 71,741 | **🍴 Forks:** 7,938 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 71,762 | **🍴 Forks:** 7,938 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Autonomous coding agent as an SDK, IDE extension, or CLI assistant.
 
@@ -1961,7 +1961,7 @@ print(wm_extracted)
 
 ### 📌 [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything)
 
-**⭐ Stars:** 59,241 | **🍴 Forks:** 5,353 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 60,002 | **🍴 Forks:** 5,448 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/
 
@@ -1975,7 +1975,7 @@ print(wm_extracted)
 
 ### 📌 [router-for-me/CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)
 
-**⭐ Stars:** 58,905 | **🍴 Forks:** 9,023 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 58,972 | **🍴 Forks:** 9,045 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 3.1 Pro, GPT 5.6 Series, Grok 4.5, Claude model through API
 
@@ -1989,7 +1989,7 @@ print(wm_extracted)
 
 ### 📌 [decolua/9router](https://github.com/decolua/9router)
 
-**⭐ Stars:** 32,585 | **🍴 Forks:** 6,390 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 32,626 | **🍴 Forks:** 6,398 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.
 
@@ -2003,7 +2003,7 @@ print(wm_extracted)
 
 ### 📌 [svcvit/Awesome-Dify-Workflow](https://github.com/svcvit/Awesome-Dify-Workflow)
 
-**⭐ Stars:** 10,799 | **🍴 Forks:** 1,091 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 10,802 | **🍴 Forks:** 1,091 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 分享一些好用的 Dify DSL 工作流程，自用、学习两相宜。 Sharing some Dify workflows.
 
@@ -2017,7 +2017,7 @@ print(wm_extracted)
 
 ### 📌 [x-cmd/x-cmd](https://github.com/x-cmd/x-cmd)
 
-**⭐ Stars:** 4,756 | **🍴 Forks:** 175 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 4,757 | **🍴 Forks:** 175 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Shell Superpowers for AI Agents.
 
@@ -2035,7 +2035,7 @@ print(wm_extracted)
 
 ### 📌 [n8n-io/n8n](https://github.com/n8n-io/n8n)
 
-**⭐ Stars:** 210,895 | **🍴 Forks:** 61,591 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 211,245 | **🍴 Forks:** 61,577 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
 
@@ -2049,7 +2049,7 @@ print(wm_extracted)
 
 ### 📌 [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler)
 
-**⭐ Stars:** 71,306 | **🍴 Forks:** 13,457 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 71,366 | **🍴 Forks:** 13,463 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 一个功能强大的**多平台自媒体数据采集工具**，支持小红书、抖音、快手、B站、微博、贴吧、知乎等主流平台的公开信息抓取。
 
@@ -2063,7 +2063,7 @@ print(wm_extracted)
 
 ### 📌 [Zie619/n8n-workflows](https://github.com/Zie619/n8n-workflows)
 
-**⭐ Stars:** 57,269 | **🍴 Forks:** 7,704 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 57,281 | **🍴 Forks:** 7,704 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** all of the workflows of n8n i could find (also from the site itself)
 
@@ -2077,7 +2077,7 @@ print(wm_extracted)
 
 ### 📌 [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
 
-**⭐ Stars:** 52,458 | **🍴 Forks:** 3,669 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 52,712 | **🍴 Forks:** 3,690 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A command-line interface (CLI) tool designed for browser automation, enabling AI agents to interact with web applications seamlessly.
 
@@ -2091,7 +2091,7 @@ print(wm_extracted)
 
 ### 📌 [gkd-kit/gkd](https://github.com/gkd-kit/gkd)
 
-**⭐ Stars:** 44,976 | **🍴 Forks:** 2,140 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 45,027 | **🍴 Forks:** 2,142 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 基于无障碍，高级选择器，订阅规则的自定义屏幕点击安卓应用 | An Android APP with custom screen tapping based on Accessibility, Advanced Selectors, and Subscription Rules
 
@@ -2105,7 +2105,7 @@ print(wm_extracted)
 
 ### 📌 [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser)
 
-**⭐ Stars:** 32,960 | **🍴 Forks:** 2,735 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 32,975 | **🍴 Forks:** 2,737 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Stealth Chromium that passes every bot detection test.
 
@@ -2119,7 +2119,7 @@ print(wm_extracted)
 
 ### 📌 [Flow-Launcher/Flow.Launcher](https://github.com/Flow-Launcher/Flow.Launcher)
 
-**⭐ Stars:** 16,044 | **🍴 Forks:** 684 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 16,051 | **🍴 Forks:** 686 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Flow Launcher is a free, open-source quick launcher for Windows, designed to boost productivity. It enables rapid file searching, application launching, and system command execution, extensible through a vibrant ecosystem of community-made plugins.
 
@@ -2133,7 +2133,7 @@ print(wm_extracted)
 
 ### 📌 [ZCShou/GoGoGo](https://github.com/ZCShou/GoGoGo)
 
-**⭐ Stars:** 11,859 | **🍴 Forks:** 1,350 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 11,873 | **🍴 Forks:** 1,350 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 一个基于 Android 调试 API + 百度地图实现的虚拟定位工具，并且同时实现了一个可以自由移动的摇杆
 
@@ -2147,7 +2147,7 @@ print(wm_extracted)
 
 ### 📌 [xanderfrangos/twinkle-tray](https://github.com/xanderfrangos/twinkle-tray)
 
-**⭐ Stars:** 9,373 | **🍴 Forks:** 356 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 9,374 | **🍴 Forks:** 356 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Easily manage the brightness of your monitors in Windows from the system tray
 
@@ -2161,7 +2161,7 @@ print(wm_extracted)
 
 ### 📌 [ZyperWave/ZyperWinOptimize](https://github.com/ZyperWave/ZyperWinOptimize)
 
-**⭐ Stars:** 8,533 | **🍴 Forks:** 482 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 8,531 | **🍴 Forks:** 482 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** ZyperWin++是一个轻便的Windows优化工具，适用于Win7-Win11最新版的优化，包括性能优化、服务项优化、垃圾清理等操作，还支持系统激活和Office快速安装。
 
@@ -2175,7 +2175,7 @@ print(wm_extracted)
 
 ### 📌 [randyrants/sharpkeys](https://github.com/randyrants/sharpkeys)
 
-**⭐ Stars:** 6,989 | **🍴 Forks:** 437 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 6,990 | **🍴 Forks:** 437 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** SharpKeys is a utility that manages a Registry key that allows Windows to remap one key to any other key.
 
@@ -2189,7 +2189,7 @@ print(wm_extracted)
 
 ### 📌 [Diorser/LiteMonitor](https://github.com/Diorser/LiteMonitor)
 
-**⭐ Stars:** 6,960 | **🍴 Forks:** 343 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 6,967 | **🍴 Forks:** 345 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** LiteMonitor is a lightweight, highly customizable hardware performance monitor for Windows desktop and taskbar. It tracks CPU, GPU, RAM, disk, network, FPS, and supports plugins, plus memory optimization.
 
@@ -2203,7 +2203,7 @@ print(wm_extracted)
 
 ### 📌 [hanydd/BilibiliSponsorBlock](https://github.com/hanydd/BilibiliSponsorBlock)
 
-**⭐ Stars:** 6,396 | **🍴 Forks:** 146 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 6,398 | **🍴 Forks:** 146 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 一款跳过小电视视频中恰饭片段的浏览器插件，移植自 SponsorBlock。A browser extension to skip sponsored segments in videos, ported from the SponsorBlock
 
@@ -2217,7 +2217,7 @@ print(wm_extracted)
 
 ### 📌 [RamonUnch/AltSnap](https://github.com/RamonUnch/AltSnap)
 
-**⭐ Stars:** 5,400 | **🍴 Forks:** 180 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 5,403 | **🍴 Forks:** 180 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** Maintained continuation of Stefan Sundin's AltDrag
 
@@ -2263,7 +2263,7 @@ print(wm_extracted)
 
 ### 📌 [microsoft/PowerToys](https://github.com/microsoft/PowerToys)
 
-**⭐ Stars:** 141,119 | **🍴 Forks:** 8,748 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 141,153 | **🍴 Forks:** 8,750 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows
 
@@ -2277,7 +2277,7 @@ print(wm_extracted)
 
 ### 📌 [fatedier/frp](https://github.com/fatedier/frp)
 
-**⭐ Stars:** 110,647 | **🍴 Forks:** 15,325 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 110,663 | **🍴 Forks:** 15,329 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 
@@ -2291,7 +2291,7 @@ print(wm_extracted)
 
 ### 📌 [nvbn/thefuck](https://github.com/nvbn/thefuck)
 
-**⭐ Stars:** 97,961 | **🍴 Forks:** 3,980 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 97,963 | **🍴 Forks:** 3,980 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Magnificent app which corrects your previous console command.
 
@@ -2305,7 +2305,7 @@ print(wm_extracted)
 
 ### 📌 [astral-sh/uv](https://github.com/astral-sh/uv)
 
-**⭐ Stars:** 92,194 | **🍴 Forks:** 3,930 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 92,308 | **🍴 Forks:** 3,925 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** An extremely fast Python package and project manager, written in Rust.
 
@@ -2319,7 +2319,7 @@ print(wm_extracted)
 
 ### 📌 [ventoy/Ventoy](https://github.com/ventoy/Ventoy)
 
-**⭐ Stars:** 81,065 | **🍴 Forks:** 5,145 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 80,962 | **🍴 Forks:** 5,081 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A new bootable USB solution.
 
@@ -2333,7 +2333,7 @@ print(wm_extracted)
 
 ### 📌 [tldr-pages/tldr](https://github.com/tldr-pages/tldr)
 
-**⭐ Stars:** 64,239 | **🍴 Forks:** 5,663 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 64,246 | **🍴 Forks:** 5,665 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Collaborative cheatsheets for console commands 📚.
 
@@ -2347,7 +2347,7 @@ print(wm_extracted)
 
 ### 📌 [jgm/pandoc](https://github.com/jgm/pandoc)
 
-**⭐ Stars:** 46,959 | **🍴 Forks:** 4,435 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 46,997 | **🍴 Forks:** 4,432 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Universal markup converter
 
@@ -2361,7 +2361,7 @@ print(wm_extracted)
 
 ### 📌 [microsoft/WSL](https://github.com/microsoft/WSL)
 
-**⭐ Stars:** 34,396 | **🍴 Forks:** 1,888 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 34,406 | **🍴 Forks:** 1,888 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Windows Subsystem for Linux
 
@@ -2375,7 +2375,7 @@ print(wm_extracted)
 
 ### 📌 [aws/aws-cli](https://github.com/aws/aws-cli)
 
-**⭐ Stars:** 17,373 | **🍴 Forks:** 4,766 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 17,376 | **🍴 Forks:** 4,769 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Universal Command Line Interface for Amazon Web Services
 
@@ -2389,7 +2389,7 @@ print(wm_extracted)
 
 ### 📌 [EvanLi/Github-Ranking](https://github.com/EvanLi/Github-Ranking)
 
-**⭐ Stars:** 13,080 | **🍴 Forks:** 751 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 13,097 | **🍴 Forks:** 751 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** :star:Github Ranking:star: Github stars and forks ranking list. Github Top100 stars list of different languages. Automatically update daily. | Github仓库排名，每日自动更新
 
@@ -2403,7 +2403,7 @@ print(wm_extracted)
 
 ### 📌 [hluk/CopyQ](https://github.com/hluk/CopyQ)
 
-**⭐ Stars:** 12,650 | **🍴 Forks:** 636 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 12,668 | **🍴 Forks:** 639 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Clipboard manager with advanced features
 
@@ -2417,7 +2417,7 @@ print(wm_extracted)
 
 ### 📌 [Snouzy/workout-cool](https://github.com/Snouzy/workout-cool)
 
-**⭐ Stars:** 8,696 | **🍴 Forks:** 771 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 8,696 | **🍴 Forks:** 771 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🏋 Modern open-source fitness coaching platform. Create workout plans, track progress, and access a comprehensive exercise database.
 
@@ -2431,7 +2431,7 @@ print(wm_extracted)
 
 ### 📌 [antvis/mcp-server-chart](https://github.com/antvis/mcp-server-chart)
 
-**⭐ Stars:** 4,420 | **🍴 Forks:** 424 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 4,421 | **🍴 Forks:** 424 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🤖 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.
 
@@ -2463,7 +2463,7 @@ print(wm_extracted)
 
 ### 📌 [mrdoob/three.js](https://github.com/mrdoob/three.js)
 
-**⭐ Stars:** 118,788 | **🍴 Forks:** 37,024 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 118,884 | **🍴 Forks:** 37,036 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A popular open-source JavaScript library designed to create 3D graphics in the browser using WebGL technology.
 
@@ -2477,7 +2477,7 @@ print(wm_extracted)
 
 ### 📌 [OpenCut-app/OpenCut](https://github.com/OpenCut-app/OpenCut)
 
-**⭐ Stars:** 98,791 | **🍴 Forks:** 9,896 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 98,879 | **🍴 Forks:** 9,901 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** The open-source CapCut alternative
 
@@ -2491,7 +2491,7 @@ print(wm_extracted)
 
 ### 📌 [penpot/penpot](https://github.com/penpot/penpot)
 
-**⭐ Stars:** 62,492 | **🍴 Forks:** 4,434 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 62,539 | **🍴 Forks:** 4,440 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Penpot: The open-source design platform for Product teams that need scalable collaboration.
 
@@ -2505,7 +2505,7 @@ print(wm_extracted)
 
 ### 📌 [subframe7536/maple-font](https://github.com/subframe7536/maple-font)
 
-**⭐ Stars:** 29,804 | **🍴 Forks:** 1,225 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 29,813 | **🍴 Forks:** 1,224 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font icons for IDE and terminal, fine-grained customization options. 带连字和控制台图标的圆角等宽字体，中英文宽度完美2:1，细粒度的自定义选项
 
@@ -2519,7 +2519,7 @@ print(wm_extracted)
 
 ### 📌 [githubnext/monaspace](https://github.com/githubnext/monaspace)
 
-**⭐ Stars:** 19,836 | **🍴 Forks:** 327 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 19,836 | **🍴 Forks:** 327 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Monaspace is a unique superfamily of fonts designed specifically for coding, enhancing readability and aesthetics for developers.
 
@@ -2533,7 +2533,7 @@ print(wm_extracted)
 
 ### 📌 [ahmedkhaleel2004/gitdiagram](https://github.com/ahmedkhaleel2004/gitdiagram)
 
-**⭐ Stars:** 18,979 | **🍴 Forks:** 1,449 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 18,997 | **🍴 Forks:** 1,451 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Free, simple, fast interactive diagrams for any GitHub repository
 
@@ -2547,7 +2547,7 @@ print(wm_extracted)
 
 ### 📌 [playcanvas/engine](https://github.com/playcanvas/engine)
 
-**⭐ Stars:** 17,324 | **🍴 Forks:** 2,067 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 17,328 | **🍴 Forks:** 2,068 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Powerful web graphics runtime built on WebGL, WebGPU, WebXR and glTF
 
@@ -2561,7 +2561,7 @@ print(wm_extracted)
 
 ### 📌 [wordshub/free-font](https://github.com/wordshub/free-font)
 
-**⭐ Stars:** 6,528 | **🍴 Forks:** 451 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 6,530 | **🍴 Forks:** 451 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 大概是2020年最全的免费可商用字体，这里收录的商免字体都能找到明确的授权出处，可以放心使用，持续更新中...
 
@@ -2589,7 +2589,7 @@ print(wm_extracted)
 
 ### 📌 [kevmo314/magic-copy](https://github.com/kevmo314/magic-copy)
 
-**⭐ Stars:** 2,450 | **🍴 Forks:** 150 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 2,448 | **🍴 Forks:** 150 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** Magic Copy is a Chrome extension that uses Meta's Segment Anything Model to extract a foreground object from an image and copy it to the clipboard.
 
@@ -2599,7 +2599,7 @@ print(wm_extracted)
 
 ---
 
-##  Other (25)
+##  Other (27)
 
 > Repositories that do not fit clearly into any defined content or domain category based on available information.
 
@@ -2607,7 +2607,7 @@ print(wm_extracted)
 
 ### 📌 [DigitalPlatDev/FreeDomain](https://github.com/DigitalPlatDev/FreeDomain)
 
-**⭐ Stars:** 208,551 | **🍴 Forks:** 4,696 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 208,649 | **🍴 Forks:** 4,698 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** FreeDomain offers users the ability to register and manage free domain names, making web presence accessible to everyone.
 
@@ -2621,7 +2621,7 @@ print(wm_extracted)
 
 ### 📌 [ripienaar/free-for-dev](https://github.com/ripienaar/free-for-dev)
 
-**⭐ Stars:** 143,096 | **🍴 Forks:** 15,399 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 143,166 | **🍴 Forks:** 15,411 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev
 
@@ -2635,7 +2635,7 @@ print(wm_extracted)
 
 ### 📌 [ruanyf/weekly](https://github.com/ruanyf/weekly)
 
-**⭐ Stars:** 108,274 | **🍴 Forks:** 4,588 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 108,328 | **🍴 Forks:** 4,592 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 科技爱好者周刊，每周五发布
 
@@ -2649,7 +2649,7 @@ print(wm_extracted)
 
 ### 📌 [TapXWorld/ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook)
 
-**⭐ Stars:** 84,725 | **🍴 Forks:** 19,285 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 84,761 | **🍴 Forks:** 19,296 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 所有小初高、大学PDF教材。
 
@@ -2663,7 +2663,7 @@ print(wm_extracted)
 
 ### 📌 [tw93/Pake](https://github.com/tw93/Pake)
 
-**⭐ Stars:** 63,763 | **🍴 Forks:** 13,038 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 63,834 | **🍴 Forks:** 13,044 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 🤱🏻 Turn any webpage into a desktop app with one command.
 
@@ -2677,7 +2677,7 @@ print(wm_extracted)
 
 ### 📌 [zijie0/HumanSystemOptimization](https://github.com/zijie0/HumanSystemOptimization)
 
-**⭐ Stars:** 21,927 | **🍴 Forks:** 1,511 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 21,929 | **🍴 Forks:** 1,511 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 健康学习到150岁 - 人体系统调优不完全指南
 
@@ -2691,7 +2691,7 @@ print(wm_extracted)
 
 ### 📌 [Chuyu-Team/Dism-Multi-language](https://github.com/Chuyu-Team/Dism-Multi-language)
 
-**⭐ Stars:** 20,792 | **🍴 Forks:** 1,244 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 20,797 | **🍴 Forks:** 1,244 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Dism++ Multi-language Support & BUG Report
 
@@ -2705,7 +2705,7 @@ print(wm_extracted)
 
 ### 📌 [bobeff/open-source-games](https://github.com/bobeff/open-source-games)
 
-**⭐ Stars:** 18,441 | **🍴 Forks:** 1,765 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 18,476 | **🍴 Forks:** 1,774 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A list of open source games.
 
@@ -2719,7 +2719,7 @@ print(wm_extracted)
 
 ### 📌 [easychen/opc-methodology](https://github.com/easychen/opc-methodology)
 
-**⭐ Stars:** 17,085 | **🍴 Forks:** 1,928 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 17,091 | **🍴 Forks:** 1,928 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 《一人企业方法论》第二版，也适合做其他副业（比如自媒体、电商、数字商品）的非技术人群。
 
@@ -2733,7 +2733,7 @@ print(wm_extracted)
 
 ### 📌 [Sjj1024/PakePlus](https://github.com/Sjj1024/PakePlus)
 
-**⭐ Stars:** 16,084 | **🍴 Forks:** 8,036 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 16,111 | **🍴 Forks:** 8,052 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Turn any webpage/HTML/Vue/React and so on into desktop and mobile app under 5M with easy in few minutes. 轻松将任意网站/HTML/Vue/React等项目构建为轻量级(小于5M)多端桌面应用和手机应用仅需几分钟. https://ppofficial.netlify.app
 
@@ -2747,7 +2747,7 @@ print(wm_extracted)
 
 ### 📌 [FFmpeg-Builds/FFmpeg-Builds](https://github.com/FFmpeg-Builds/FFmpeg-Builds)
 
-**⭐ Stars:** 11,998 | **🍴 Forks:** 1,580 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 12,003 | **🍴 Forks:** 1,581 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A collection of pre-built FFmpeg binaries and build tools, facilitating easy access to FFmpeg across multiple platforms and architectures.
 
@@ -2761,7 +2761,7 @@ print(wm_extracted)
 
 ### 📌 [kaomei/stickman-video-director](https://github.com/kaomei/stickman-video-director)
 
-**⭐ Stars:** 6,837 | **🍴 Forks:** 1,198 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 6,972 | **🍴 Forks:** 1,225 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Turn copy into rich one-minute Gemini Omni Flash stickman video prompt packages.
 
@@ -2775,7 +2775,7 @@ print(wm_extracted)
 
 ### 📌 [Hisn00w/ASu-skills](https://github.com/Hisn00w/ASu-skills)
 
-**⭐ Stars:** 6,463 | **🍴 Forks:** 335 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 6,513 | **🍴 Forks:** 336 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** 简历包装
 
@@ -2803,7 +2803,7 @@ print(wm_extracted)
 
 ### 📌 [allenk/GeminiWatermarkTool](https://github.com/allenk/GeminiWatermarkTool)
 
-**⭐ Stars:** 3,134 | **🍴 Forks:** 274 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 3,134 | **🍴 Forks:** 274 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** A tool designed for maintaining watermarks on Gemini Nano and Pro devices, facilitating efficient management of watermark settings.
 
@@ -2817,7 +2817,7 @@ print(wm_extracted)
 
 ### 📌 [SheepChef/Abracadabra](https://github.com/SheepChef/Abracadabra)
 
-**⭐ Stars:** 2,539 | **🍴 Forks:** 229 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 2,539 | **🍴 Forks:** 229 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** Abracadabra 魔曰，古文风文本加密工具
 
@@ -2831,7 +2831,7 @@ print(wm_extracted)
 
 ### 📌 [kknifer7/FreeBox](https://github.com/kknifer7/FreeBox)
 
-**⭐ Stars:** 2,152 | **🍴 Forks:** 208 | **📅 Updated:** 2026-11-18
+**⭐ Stars:** 2,153 | **🍴 Forks:** 208 | **📅 Updated:** 2026-11-19
 
 **Brief Introduction:** TVBox电脑版/姊妹软件，致力于TVBox功能和生态的跨平台扩展
 
@@ -2859,7 +2859,7 @@ print(wm_extracted)
 
 ### 📌 [Robbyant/lingbot-world-v2](https://github.com/Robbyant/lingbot-world-v2)
 
-**⭐ Stars:** 1,908 | **🍴 Forks:** 151 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 1,909 | **🍴 Forks:** 151 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** Infinite Worlds with Versatile Interactions
 
@@ -2885,7 +2885,7 @@ print(wm_extracted)
 
 ### 📌 [Tosencen/XMSLEEP](https://github.com/Tosencen/XMSLEEP)
 
-**⭐ Stars:** 1,428 | **🍴 Forks:** 79 | **📅 Updated:** 2026-11-16
+**⭐ Stars:** 1,429 | **🍴 Forks:** 79 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** 一款白噪音应用送给你，祝您牛掰，有的是钱
 
@@ -2899,13 +2899,27 @@ print(wm_extracted)
 
 ### 📌 [Rimagination/scansci-pdf](https://github.com/Rimagination/scansci-pdf)
 
-**⭐ Stars:** 1,253 | **🍴 Forks:** 111 | **📅 Updated:** 2026-11-17
+**⭐ Stars:** 1,256 | **🍴 Forks:** 111 | **📅 Updated:** 2026-11-18
 
 **Brief Introduction:** No description available
 
 - **Innovations:** Automates the conversion of scanned documents into searchable PDFs using advanced computer vision algorithms for accurate layout reconstruction.
 - **Basic Usage:** Not specified
 - **Summary:** This repository provides tools for efficiently transforming scanned documents into clean, searchable PDF formats.
+
+---
+
+<a id="zephyr4123snug"></a>
+
+### 📌 [zephyr4123/snug](https://github.com/zephyr4123/snug)
+
+**⭐ Stars:** 1,030 | **🍴 Forks:** 78 | **📅 Updated:** 2026-11-19
+
+**Brief Introduction:** 让远程 Mac 在任意设备上获得原生级体验。专为 UU远程 打造的显示与触控增强：手机、平板、电脑各有专属屏幕，画面铺满、字号随屏，原生触屏手势，App 资源库。Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.
+
+- **Innovations:** Dedicated screen per phone, tablet, or computer; screen-filling display; font size adapts to screen; native touch gestures; App Library. The standout is making remote Mac feel native on any device.
+- **Basic Usage:** Configure the display and touch enhancement for each connected device, then start the experience through the UU Remote workflow. Setup details are not included in the provided summary.
+- **Summary:** Snug provides display and touch enhancements that make remote Mac use on phones, tablets, and computers feel native, with per-device screens and gestures.
 
 ---
 
@@ -2920,6 +2934,20 @@ print(wm_extracted)
 - **Innovations:** Curated list of macOS apps with categories, descriptions, and one‑click download links; includes installation scripts and system requirements.
 - **Basic Usage:** Clone the repository, read the README.md for categories, and follow the provided links or scripts to install the apps.
 - **Summary:** A curated collection of useful macOS applications with easy access and installation guidance.
+
+---
+
+<a id="nicocartsnug-win"></a>
+
+### 📌 [nicocart/snug-win](https://github.com/nicocart/snug-win)
+
+**⭐ Stars:** 41 | **🍴 Forks:** 5 | **📅 Updated:** 2026-11-19
+
+**Brief Introduction:** A native‑grade iPhone workspace for controlling Windows via UU Remote, featuring a vertical screen, adaptive windows, scalable text, and iOS‑style touch interactions.
+
+- **Innovations:** Vertical‑only display, windows automatically fill the screen, font size scales with screen size, and touch gestures follow iOS conventions, delivering a native‑like Mac experience on iPhone.
+- **Basic Usage:** Install the Snug‑Win app on your iPhone, link it to your UU Remote session, and the Windows desktop appears in a vertical, adaptive window that you can control with touch.
+- **Summary:** Provides a native‑grade, iOS‑styled Windows workspace on iPhone, enabling seamless, touch‑friendly remote control of a Windows machine via UU Remote.
 
 ---
 
@@ -2954,11 +2982,11 @@ print(wm_extracted)
 
 ## 📊 Statistics
 
-- **Total repositories:** 205
+- **Total repositories:** 207
 - **Content categories:** 9
-- **Total stars:** 10,543,538
+- **Total stars:** 10,557,481
 - **Top language:** Python (84)
-- **Generated on:** 2026-11-18
+- **Generated on:** 2026-11-19
 - **AI Model:** OpenRouter (DeepSeek)
 ---
 

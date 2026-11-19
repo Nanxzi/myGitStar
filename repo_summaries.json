@@ -3491,5 +3491,35 @@
     },
     "summary": "This repository simplifies FFmpeg access by offering pre-built binaries and build tools for multiple architectures, streamlining deployment and usage.",
     "full_name": "FFmpeg-Builds/FFmpeg-Builds"
+  },
+  "nicocart/snug-win": {
+    "Repository Name": "nicocart/snug-win",
+    "Repository URL": "https://github.com/nicocart/snug-win",
+    "Brief Introduction": "A native‑grade iPhone workspace for controlling Windows via UU Remote, featuring a vertical screen, adaptive windows, scalable text, and iOS‑style touch interactions.",
+    "Innovations": "Vertical‑only display, windows automatically fill the screen, font size scales with screen size, and touch gestures follow iOS conventions, delivering a native‑like Mac experience on iPhone.",
+    "Basic Usage": "Install the Snug‑Win app on your iPhone, link it to your UU Remote session, and the Windows desktop appears in a vertical, adaptive window that you can control with touch.",
+    "Summary": "Provides a native‑grade, iOS‑styled Windows workspace on iPhone, enabling seamless, touch‑friendly remote control of a Windows machine via UU Remote.",
+    "__meta__": {
+      "last_summarized_at": "2026-11-19T07:03:09Z",
+      "description_hash": "bd34474e6922558c",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
+  },
+  "zephyr4123/snug": {
+    "Repository Name": "zephyr4123/snug",
+    "Repository URL": "https://github.com/zephyr4123/snug",
+    "Brief Introduction": "让远程 Mac 在任意设备上获得原生级体验。专为 UU远程 打造的显示与触控增强：手机、平板、电脑各有专属屏幕，画面铺满、字号随屏，原生触屏手势，App 资源库。Make UU Remote native on any device: a dedicated screen for every phone, tablet and computer, with native touch gestures and an App Library.",
+    "Innovations": "Dedicated screen per phone, tablet, or computer; screen-filling display; font size adapts to screen; native touch gestures; App Library. The standout is making remote Mac feel native on any device.",
+    "Basic Usage": "Configure the display and touch enhancement for each connected device, then start the experience through the UU Remote workflow. Setup details are not included in the provided summary.",
+    "Summary": "Snug provides display and touch enhancements that make remote Mac use on phones, tablets, and computers feel native, with per-device screens and gestures.",
+    "__meta__": {
+      "last_summarized_at": "2026-11-19T07:03:09Z",
+      "description_hash": "fb1b982c16105a44",
+      "summary_model": "openrouter/free",
+      "summary_source": "ai",
+      "summary_attempts": 1
+    }
   }
 }
