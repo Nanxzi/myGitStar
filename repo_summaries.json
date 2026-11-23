@@ -1164,9 +1164,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "TrendRadar is an AI-powered tool that aggregates and analyzes public opinion across multiple platforms, offering smart alerts, real-time insights, and seamless integration with various communication channels to help users stay informed without information overload.",
-    "full_name": "sansan0/TrendRadar"
+    }
   },
   "jianchang512/pyvideotrans": {
     "Repository Name": "jianchang512/pyvideotrans",
@@ -3505,7 +3503,9 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "Provides a native‑grade, iOS‑styled Windows workspace on iPhone, enabling seamless, touch‑friendly remote control of a Windows machine via UU Remote.",
+    "full_name": "nicocart/snug-win"
   },
   "zephyr4123/snug": {
     "Repository Name": "zephyr4123/snug",
@@ -3520,6 +3520,8 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    }
+    },
+    "summary": "Snug provides display and touch enhancements that make remote Mac use on phones, tablets, and computers feel native, with per-device screens and gestures.",
+    "full_name": "zephyr4123/snug"
   }
 }
