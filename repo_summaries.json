@@ -3520,8 +3520,6 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "Snug provides display and touch enhancements that make remote Mac use on phones, tablets, and computers feel native, with per-device screens and gestures.",
-    "full_name": "zephyr4123/snug"
+    }
   }
 }
