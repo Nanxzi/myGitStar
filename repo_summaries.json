@@ -3503,9 +3503,7 @@
       "summary_model": "openrouter/free",
       "summary_source": "ai",
       "summary_attempts": 1
-    },
-    "summary": "Provides a native‑grade, iOS‑styled Windows workspace on iPhone, enabling seamless, touch‑friendly remote control of a Windows machine via UU Remote.",
-    "full_name": "nicocart/snug-win"
+    }
   },
   "zephyr4123/snug": {
     "Repository Name": "zephyr4123/snug",
